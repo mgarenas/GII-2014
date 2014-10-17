@@ -12,7 +12,7 @@ Si queremos que sea a 7 años tendriamos entonces por ejemplo:
 (Lo que hace un total de 5625.0 €)
 5. el sexto año al 20% con un total de 7125.0 €.
 6. y el último año al 5% con una suma de 375.0 €
-
-
+.........
+---------
 
 
