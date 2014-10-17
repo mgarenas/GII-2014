@@ -1,5 +1,5 @@
-Lista de objetivos del profe
-============================
+Lista de objetivos de Luis B.
+=============================
 
 - [x] Entender el soporte en hardware de las técnicas de virtualización y cómo se extiende ese soporte al núcleo de los sistemas operativos. Saber si el ordenador habitual lo usa.
 
