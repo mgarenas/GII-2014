@@ -37,16 +37,17 @@ Coste usando el 10% del tiempo:
 ### Ejercicio 4
 
 Respuestas:
-0. docker version
-1. docker search tutorial
-2. docker pull learn/tutorial
-3. docker run learn/tutorial echo "hello world"
-4. docker run learn/tutorial apt-get install -y ping
-5. docker commit 698 learn/ping
-6. docker run learn/ping www.google.com
-7. docker ps
-   docker inspect efefdc74a1d5
-8. docker push learn/ping
+1. docker version
+2. docker search tutorial
+3. docker pull learn/tutorial
+4. docker run learn/tutorial echo "hello world"
+5. docker run learn/tutorial apt-get install -y ping
+6. docker commit 698 learn/ping
+7. docker run learn/ping www.google.com
+8. 
+	- docker ps 
+	- docker inspect efefdc74a1d5
+9. docker push learn/ping
 
 ### Ejercicio 5
 

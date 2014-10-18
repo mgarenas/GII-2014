@@ -16,4 +16,4 @@ Lista de objetivos de David González Sola
 - [ ] Usar los métodos de entrega de ejercicios propuestos para la asignatura (usando GitHub)(../ejercicios/README.md). 
 - [X] Manejar de forma básica la línea de órdenes de Linux.
 - [X] Aprender a instalar software libre en Linux. 
-- Entender el concepto de sistema de ficheros virtual usado en Linux para diferentes menesteres.
+- [ ] Entender el concepto de sistema de ficheros virtual usado en Linux para diferentes menesteres.
