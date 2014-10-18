@@ -37,6 +37,7 @@ Coste usando el 10% del tiempo:
 ### Ejercicio 4
 
 Respuestas:
+
 1. docker version
 2. docker search tutorial
 3. docker pull learn/tutorial
