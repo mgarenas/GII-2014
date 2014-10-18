@@ -59,3 +59,46 @@ apt-get install git
 Se crea desde la web www.github.com el repositorio. Posteriormente es necesario descargarlo en local utilizando el comando 'git clone http://www.github.com/DavidGSola/CloudComputing.git'. Se modifica el fichero README con cualquier editor de textos y finalmente se vuelve a subir al repositorio en la nube utilizando el comando 'git commit' y 'git push'.
 
 ### Ejercicio 7
+
+En Ubuntu 12.04 se encuentra montado en /sys/fs/cgroups. Contiene gran cantidad de archivos como por ejemplo:
+blkio.io_merged                   cpuset.memory_spread_page
+blkio.io_queued                   cpuset.memory_spread_slab
+blkio.io_service_bytes            cpuset.mems
+blkio.io_serviced                 cpuset.sched_load_balance
+blkio.io_service_time             cpuset.sched_relax_domain_level
+
+### Ejercicio 8.1
+
+Se han creado tres grupos:
+	- **Buenos:** ejecutarán el navegador. (cpu usage: 31107072)
+	- **Regulares:** ejecutarán el procesador de textos. (cpu usage: 1094374)
+	- **Malos:** ejecutarán gimp. (cpu usage: 176661809)
+
+### Ejercicio 8.2
+
+
+### Ejercicio 9.1
+
+### Ejercicio 9.2
+
+Se debe crear el archivo de configuración '/etc/cgconfig.conf'. Un ejemplo de este archivo donde se de prioridad a los procesos del usuario sería:
+
+mount {
+	cpu = /cgroup/cpu
+}
+
+group usuario {
+	cpu {
+		cpu.shares="900";
+	}
+}
+
+group sistema {
+	cpu {
+		cpu.shares="100";
+	}
+}
+
+### Ejercicio 9.3
+
+
