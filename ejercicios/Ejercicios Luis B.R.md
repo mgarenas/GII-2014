@@ -4,7 +4,7 @@ __Ejercicio 1__
 
 La máxima amortización sería del 25%. Luego si tenemos un servidor de 7500 € sin IVA, a 4 años sería por año unos 1875 €.
 
-Si queremos que sea a 7 años tendriamos entonces por ejemplo:
+Si queremos que sea a 7 años tendriamos, variando el porcentaje de amortización (opcional), entonces por ejemplo:
 1. el primer año el 20%: 1500.0 €. 
 
 2. el segundo año el 15%: 1125.0 €.
