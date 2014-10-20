@@ -104,6 +104,26 @@ group sistema {
 He utilizado el programa GIMP para comprobar los efectos de la migración del proceso.
 Se han utilizado dos grupos, el grupo *bueno* se ejecutará en el núcleo 1 y el grupo *malo* en el núcleo 7. Se empieza a ejecutar en el grupo *bueno* y el núcleo 7 se encuentra totalmente ocioso. Una vez se realiza el intercambio con el comando 'cgclassify -g memory,cpu:malos 8031' el núcleo 7 empieza a ser usado un poco más (~2.5%) pero si se empieza a utilizar GIMP esta cantidad sube hasta el ~20%. Si se vuelve a intercambiar al núcleo 1 con el comando 'cgclassify -g memory,cpu:buenos 8031' el núcleo 7 vuelve a estar practicamente ocioso y el uso del núcleo 1 sube hasta el ~20%.
 
+### Ejercicio 9.4
+
+Utilizando el fichero de configuración /etc/cgconfig.conf podemos obligar al sistema a darle mayor prioridad entrada/salida al servidor. En este caso, se crean dos grupos (servidor y otros. El parámetro weight del subdirectorio blkio controla la proporción de acceso al sistema de entrada/salida. Con un número mayor, mayor prioridad de entrada/salida tendrá el grupo.
+
+mount {
+	blkio = /cgroup/blkio;
+}
+
+group servidor {
+		blkio {
+					blkio.weight="900"
+		}
+}
+
+group others {
+		blkio {
+					blkio.weight="100"
+		}
+}
+
 ### Ejercicio 10
 
 **Modelo de procesador:** Intel® Core™ i7-3630QM CPU @ 2.40GHz x 8
