@@ -1,0 +1,79 @@
+#Sesion del 17 de Octubre
+
+##Ejercicio 01
+
+El Servidor escogido para el coste de amortización se puede encontrar en la siguiente url[Servidor](http://www.dynos.es/servidor-hp-proliant-ml350p-g8-xeon-e5-2609-2.4-ghz-4gb-disco-duro-hdd-2.5-sff-p420i-512mb-fbwc-460w-cs-gold--887111139054__470065-666.html)
+
+1441,32 es el precio del Servidor sin iva.
+
+La amortización a cuatro años es: 360,33€ por año
+La amortización a siete años es: 205,90# por año
+
+##Ejercicio 2
+
+Los servicios escogidos son AWS y Azure. El procesador de amazon es un ce.2xlarge y el de Azure es el A4.
+
+El precio por hora de Amazon es 0,209.
+El precio por hora de azure es 0,5362.
+
+El precio con un uso del 1% del servicio de Amazon es: 18,3€
+Por tanto el precio con un uso del 10% es: 183€
+
+El precio con un uso del 1% del servicio de Azure es: 47€
+Por tanto el precio con un uso del 10% es: 470€
+
+##Ejercicio 3
+
+**Comentario Foro**
+
+* Al igual que el resto pienso que para alojar varios clientes en un servidor, lo mas adecuado sería la utilización de una virtualización a nivel de sistema operativo. De esta manera el administrador solo se encarga de las tareas de administración dejando al resto de los usuarios fuera de esta labor y centrandose en el uso que le quieran dar.
+
+* Para crear un sistema eficiente de web + middleware + base de datos, utilizaría una virtualización plena ya que de esta manera tendríamos un sistema mas potente que nos permitiría poder realizar las tareas de una manera mas rápida y eficiente.
+
+* Para un sistema de prueba de software e integración continua utilizaría la virtualización de entornos de desarrollo, de esta manera podríamos probar en diferentes versiones de una manera rápida y fácil
+
+**Empaquetado con CDE**
+
+Para poder realizara el ejercicio se siguio el siguiente [tutorial](http://terminus.ignaciocano.com/k/2012/06/11/cde-creando-aplicaciones-portables-en-gnulinux/) pero usando el programa gedit.
+
+##Ejercicio 4
+Realizado el tutorial indicado.
+
+##Ejercicio 5
+Git instalado **git version 1.9.1**
+
+##Ejercicio 6
+ Ejercicio Realizado.
+
+##Ejercicio 7
+jorge@jorge-MacBookPro:/sys/fs/cgroup$ ls
+blkio  cpuacct  devices  hugetlb  perf_event
+cpu    cpuset   freezer  memory   systemd
+
+##Ejercicio 8
+No se ha realizado por ahora.
+
+##Ejercicio 9
+No se ha realizado por ahora.
+
+##Ejercicio 10
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx lm constant_tsc arch_perfmon pebs bts aperfmperf pni dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx lm constant_tsc arch_perfmon pebs bts aperfmperf pni dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+
+El modelo de procesador es un **intel core 2 duo**.
+
+##Ejercicio 11
+El programa «kvm» no está instalado. Puede instalarlo escribiendo:
+sudo apt-get install qemu-kvm
+
+##Ejercicio 12
+Las aplicaciones que se ejecutan en servidores remotos son Saas. Un ejemplo de estos son el WebMail de gmail o Google Docs. La principal ventaje que tiene este tipo de servicio es que puedes acceder a este desde cualquier punto siempre que tengas acceso a internet. De esta manera se ahorran costes y tiempos de instalación. Sin embargo tienen una gran desventaje y es el tema de la seguridad, ya que la información se encuentra alojada en un servidor remoto al que las compañias tienen acceso, si lo desean, y pueden observar lo que haces. Además estos servicios suelen ser atacados muy a menudo por hackers para intentar obtener información de los usuarios.
+
+
+
+
+
+
+
+
+
