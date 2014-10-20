@@ -66,6 +66,7 @@ Lista de comandos realizados:
 - docker push learn/ping
 
 Resultado final:
+
               _ _       _                    _
 __      _____| | |   __| | ___  _ __   ___  | |
 \ \ /\ / / _ \ | |  / _` |/ _ \| '_ \ / _ \ | |
