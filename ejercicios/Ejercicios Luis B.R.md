@@ -23,5 +23,24 @@ Si queremos que sea a 7 años tendriamos, variando el porcentaje de amortizació
 __Ejercicio 2__
 
 Podemos encontrar:
-- **City Network (Servidor Cloud):**  desde 0.11 $ / hora.
+- **City Network (Servidor Cloud):** 0.11 $ / hora.
+- **AWS | Amazon EC2 (m3.medium):**  0.07 $ / hora.
 
+Un año tiene 24 h/dia * 365 dia/año = **8760 horas / año**
+
+Por un lado al *1%* tenemos:
+- **City Network (Servidor Cloud):** 0.11 $ / hora * 0.01 * 8760 horas = **9.636 $**
+- **AWS | Amazon EC2 (m3.medium):** 0.07 $ / hora * 0.01 * 8760 horas = **6.132 $**
+
+Por otro lado al *10%* sería:
+- **City Network (Servidor Cloud):** 0.11 $ / hora * 0.1 * 8760 horas = **96.36 $**
+- **AWS | Amazon EC2 (m3.medium):** 0.07 $ / hora * 0.1 * 8760 horas = **61.32 $**
+
+
+**Referencias:**
+  
+  * https://www.citynetwork.es/
+  * http://aws.amazon.com/es/ec2/pricing/
+  
+  
+  
