@@ -51,3 +51,44 @@ Optaría por la *virtualización a nivel de sistema operativo* ya que con esta o
 Escogería la *virtualización completa*, esta opción no necesita de modificaciones en el sistema operativo host. Se vale de traducción binaria combinando con la ejecución directa. El sistema opertavido se desacopla en su totalidad del hardware que hay por debajo. 
 - **Prueba de software e integración continua:**
 Elegiría la *virtualización por entornos de desarrollo* ya que nos permite reproducir entornos lo más similar que puede. Se pueden realizar distintas ejecuciones de multiples aplicaciones en distintos lenguajes. 
+
+.........
+---------
+__Ejercicio 4__
+Lista de comandos realizados:
+- docker version
+- docker search tutorial
+- docker run learn/tutorial echo "Hello world!"
+- docker run learn/tutorial apt-get install -y ping
+- docker commit 698 learn/ping
+- docker run learn/ping ping google.com
+- docker inspect efe
+- docker push learn/ping
+
+Resultado final:
+              _ _       _                    _
+__      _____| | |   __| | ___  _ __   ___  | |
+\ \ /\ / / _ \ | |  / _` |/ _ \| '_ \ / _ \ | |
+ \ V  V /  __/ | | | (_| | (_) | | | |  __/ |_|
+  \_/\_/ \___|_|_|  \__,_|\___/|_| |_|\___| (_)
+                                              
+ 
+ 
+ 
+                        ##        .
+                  ## ## ##       ==
+               ## ## ## ##      ===
+           /""""""""""""""""\___/ ===
+      ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
+           \______ o          __/
+             \    \        __/
+              \____\______/
+ 
+              |          |
+           __ |  __   __ | _  __   _
+          /  \| /  \ /   |/  / _\ |
+          \__/| \__/ \__ |\_ \__  |
+          
+.........
+---------
+__Ejercicio 5__
