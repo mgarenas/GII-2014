@@ -41,6 +41,13 @@ Por otro lado al *10%* sería:
   
   * https://www.citynetwork.es/
   * http://aws.amazon.com/es/ec2/pricing/
-  
-  modificación
-  
+
+.........
+---------
+__Ejercicio 3__
+- **Alojamiento de varios clientes en un servidor:** 
+Optaría por la *virtualización a nivel de sistema operativo* ya que con esta opción la capa de virtualización se ejecuta como una aplicación en el sistema operativo. De este modo el núcleo del sistema operativo se ejecuta sobre el nodo de hardware con varias máquinas virtuales invitadas aisladas puesto que están instaladas sobre el mismo. De esta manera no hay sobrecarga alguna asociada con tener a cada huésped ejecutando un sistema operativo totalmente instalado. Mejorando así el rendimiento.
+- **Sistema *web + middleware + BD*:**
+Escogería la *virtualización completa*, esta opción no necesita de modificaciones en el sistema operativo host. Se vale de traducción binaria combinando con la ejecución directa. El sistema opertavido se desacopla en su totalidad del hardware que hay por debajo. 
+- **Prueba de software e integración continua:**
+Elegiría la *virtualización por entornos de desarrollo* ya que nos permite reproducir entornos lo más similar que puede. Se pueden realizar distintas ejecuciones de multiples aplicaciones en distintos lenguajes. 
