@@ -51,16 +51,40 @@ blkio  cpuacct  devices  hugetlb  perf_event
 cpu    cpuset   freezer  memory   systemd
 
 ##Ejercicio 8
-No se ha realizado por ahora.
+**Ejercicio8.1**
+Se han creado tres grupos:
+	- **Buenos:** ejecutarán el navegador. (cpu usage:323429397 )
+	- **Regulares:** ejecutarán el gimp. (cpu usage:129458 )
+	- **Malos:** ejecutarán gedit. (cpu usage: 304051)
 
 ##Ejercicio 9
 No se ha realizado por ahora.
+
+### Ejercicio 9.2
+
+Para realizar el ejercicio se debe de crear un archivo llamado /etc/cgconfig.conf donde se debe escribir lo siguiente :
+
+mount {
+	cpu = /cgroup/cpu
+}
+
+group usuario {
+	cpu {
+		cpu.shares="600";
+	}
+}
+
+group sistema {
+	cpu {
+		cpu.shares="400";
+	}
+}
 
 ##Ejercicio 10
 flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx lm constant_tsc arch_perfmon pebs bts aperfmperf pni dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
 flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx lm constant_tsc arch_perfmon pebs bts aperfmperf pni dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
 
-El modelo de procesador es un **intel core 2 duo**.
+El modelo de procesador es un **Intel® Core™2 Duo CPU P8700 @ 2.53GHz × 2**.
 
 ##Ejercicio 11
 El programa «kvm» no está instalado. Puede instalarlo escribiendo:
