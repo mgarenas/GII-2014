@@ -20,4 +20,8 @@ Si queremos que sea a 7 años tendriamos, variando el porcentaje de amortizació
 .........
 ---------
 
+__Ejercicio 2__
+
+Podemos encontrar:
+- **City Network (Servidor Cloud):**  desde 0.11 $ / hora.
 
