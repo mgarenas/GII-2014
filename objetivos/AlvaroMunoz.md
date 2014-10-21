@@ -12,10 +12,10 @@ Lista de objetivos de Álvaro Muñoz
 
 ###Objetivos de la clase
 
-[] Entender los conceptos fundamentales relacionados con la virtualización.
-[] Comprender las técnicas de cálculo del coste de amortización de un equipo informático y aplicarlo al cálculo del coste de uso de un recurso.
-[] Aplicar y consolidar técnicas básicas de aislamiento de recursos en el sistema operativo Linux.
-[] Comenzar a usar git desde línea de órdenes y comprender su papel como sistema para trabajo colaborativo y despliegue de aplicaciones.
+- [ ] Entender los conceptos fundamentales relacionados con la virtualización.
+- [ ] Comprender las técnicas de cálculo del coste de amortización de un equipo informático y aplicarlo al cálculo del coste de uso de un recurso.
+- [ ] Aplicar y consolidar técnicas básicas de aislamiento de recursos en el sistema operativo Linux.
+- [X] Comenzar a usar git desde línea de órdenes y comprender su papel como sistema para trabajo colaborativo y despliegue de aplicaciones.
 
 ###Otros objetivos
 
