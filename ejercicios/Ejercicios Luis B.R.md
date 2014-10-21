@@ -45,6 +45,7 @@ Por otro lado al *10%* sería:
 .........
 ---------
 __Ejercicio 3__
+
 - **Alojamiento de varios clientes en un servidor:** 
 Optaría por la *virtualización a nivel de sistema operativo* ya que con esta opción la capa de virtualización se ejecuta como una aplicación en el sistema operativo. De este modo el núcleo del sistema operativo se ejecuta sobre el nodo de hardware con varias máquinas virtuales invitadas aisladas puesto que están instaladas sobre el mismo. De esta manera no hay sobrecarga alguna asociada con tener a cada huésped ejecutando un sistema operativo totalmente instalado. Mejorando así el rendimiento.
 - **Sistema *web + middleware + BD*:**
@@ -55,6 +56,7 @@ Elegiría la *virtualización por entornos de desarrollo* ya que nos permite rep
 .........
 ---------
 __Ejercicio 4__
+
 Lista de comandos realizados:
 - docker version
 - docker search tutorial
@@ -86,3 +88,26 @@ Resultado final:
 .........
 ---------
 __Ejercicio 5__
+
+Instalado con el siguiente comando desde la shell de Ubuntu:
+> sudo apt-get instal git
+
+.........
+---------
+__Ejercicio 6__
+Descargamos el repositorio a nuestro ordenador con la siguiente orden:
+> git clone https://github.com/eleion/CloudComputing
+
+Una vez realizadas todas las modificaciones a un fichero, se ejecuta el siguiente comando:
+> git add .
+
+Se puede comprobar el estado del respositorio por si hemos cambiado algo con:
+> git status
+
+Veremos que lo que hemos modificado aparece en la salida del anterior comando. A continuación utilizamos el comando:
+> git commit
+
+Para hacer válido el cambio. Y por último utilizamos:
+> git push origin master
+
+Este útlimo comando nos permite subirlo al repositorio original.
