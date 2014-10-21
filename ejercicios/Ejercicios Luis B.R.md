@@ -149,3 +149,19 @@ Para ver el modelo del procesador podemos ir a `/proc/cpuinfo` y allí lo tenemo
 
 * **Modelo del procesador:** Intel(R) Core(TM) i7-4500U CPU @ 1.80GHz.
 * **Salida del comando:** ```flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid```
+
+.........
+---------
+__Ejercicio 11__
+
+Comprobamos si está instalado `kvm-ok` y nos dice en este caso que no: `El programa «kvm-ok» no está instalado. Puede instalarlo escribiendo: sudo apt-get install cpu-checker`
+
+.........
+---------
+__Ejercicio 12__
+
+El _software como servicio (SaaS)_ es un modelo de soporte lógico. El cliente accede a un servidor por medio de Internet y este servidor se encarga del mantenimiento y soporte del software que el cliente utiliza. Con el modelo _SaaS_ el cliente se despreocupa de instalaciones, configuraciones, etc. 
+
+Ejemplos podrían ser _Google Apps, Microsoft Office 365, Gmail, Yahoo mail..._ Puesto que todos estos servicios se encuentran hospedados en un servidor que no es el nuestro y nosostros accedemos sin necesidad de instalar nada a estas aplicaciones mediante Internet.
+
+
