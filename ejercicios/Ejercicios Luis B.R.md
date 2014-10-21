@@ -130,7 +130,8 @@ Al crear el directorio no se genera automáticamente los subdirectorios que debe
 ---------
 __Ejercicio 9__
 
-#### Ejercicio 9.2
+
+__Ejercicio 9.2__
 
 Una vez creado el archivo de configuración `/etc/cgconfig.conf`. Se podría dar priorirdad a los procesos de la siguiente manera:
 
@@ -140,9 +141,11 @@ group my_user { cpu { cpu.shares = "500"; } }
 group my_user2 { cpu { cpu.shares = "400"; } }
 ```
 
-
 .........
 ---------
 __Ejercicio 10__
 
+Para ver el modelo del procesador podemos ir a `/proc/cpuinfo` y allí lo tenemos.
 
+* **Modelo del procesador:** Intel(R) Core(TM) i7-4500U CPU @ 1.80GHz.
+* **Salida del comando:** ```flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid```
