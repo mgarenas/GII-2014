@@ -117,8 +117,32 @@ Este útlimo comando nos permite subirlo al repositorio original.
 ---------
 __Ejercicio 7__
 
-En la carpeta `/sys/fs/cgroup` podemos encontrar el siguiente contenido:
+Una vez instalado el `cgroup-lite`, enn la carpeta `/sys/fs/cgroup` podemos encontrar el siguiente contenido:
+`blkio, cpu, cpuacct, cpuset, devices, freezer, hugetlb, memory, perf_event, systemd`
 
-`systemd`
-  `cgroup.clone_children  cgroup.procs notify_on_release tasks cgroup.event_control cgroup.sane_behavior release_agent user`
+.........
+---------
+__Ejercicio 8__
+
+Al crear el directorio no se genera automáticamente los subdirectorios que deberían, luego esta parte no se ha podido realizar.
+
+.........
+---------
+__Ejercicio 9__
+
+#### Ejercicio 9.2
+
+Una vez creado el archivo de configuración `/etc/cgconfig.conf`. Se podría dar priorirdad a los procesos de la siguiente manera:
+
+```
+mount { cpu = /cgroup/cpu }
+group my_user { cpu { cpu.shares = "500"; } }
+group my_user2 { cpu { cpu.shares = "400"; } }
+```
+
+
+.........
+---------
+__Ejercicio 10__
+
 
