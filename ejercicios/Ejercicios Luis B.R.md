@@ -111,3 +111,8 @@ Para hacer válido el cambio. Y por último utilizamos:
 > git push origin master
 
 Este útlimo comando nos permite subirlo al repositorio original.
+
+```
+x = 0
+x / 2 = 2 + 2
+```
