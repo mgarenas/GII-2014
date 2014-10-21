@@ -10,7 +10,7 @@ Ejercicio 2
 -----------
 
 Para este ejercicio he elegido estos dos servicios:
-[### Google Cloud Platform ###](https://cloud.google.com/products/calculator/ "Google Cloud")
+###[Google Cloud Platform](https://cloud.google.com/products/calculator/ "Google Cloud")###
 Un servidor con:
 - 2 cores.
 - 7.5 GB de RAM.
@@ -29,7 +29,7 @@ Un disco persistente con:
 - Precio por usarlo un 10%:
     + Precio servidor por año = 27.28512 $/año
     + **Precio total: 325 $/año + 27.28512 $/año = 352.29 €/año**      
-[### Microsoft Azure ###](http://azure.microsoft.com/es-es/pricing/calculator/?scenario=cloud "Microsoft Azure")
+###[Microsoft Azure](http://azure.microsoft.com/es-es/pricing/calculator/?scenario=cloud "Microsoft Azure")##
 Una Instancia de rol web y de trabajo con un D2 que tiene:
 - 2 cores.
 - 7 GB de RAM.
@@ -51,7 +51,7 @@ La segunda parte se tarda demasiado tiempo.
 
 Ejercicio 4
 ------------
-![El resultado del tutorial está guardado en la imagen Daniel Díaz Salas - Ejercicio 4.jpg](/Daniel Díaz Salas - Ejercicio 4.jpg)
+![El resultado del tutorial está guardado en la imagen Daniel Díaz Salas - Ejercicio 4.jpg](/Daniel%20Díaz%20Salas%20-%20Ejercicio%204.jpg)
 
 Ejercicio 5
 -----------
