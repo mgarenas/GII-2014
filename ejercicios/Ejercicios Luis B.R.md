@@ -95,6 +95,7 @@ Instalado con el siguiente comando desde la shell de Ubuntu:
 .........
 ---------
 __Ejercicio 6__
+
 Descargamos el repositorio a nuestro ordenador con la siguiente orden:
 > git clone https://github.com/eleion/CloudComputing
 
@@ -112,7 +113,12 @@ Para hacer válido el cambio. Y por último utilizamos:
 
 Este útlimo comando nos permite subirlo al repositorio original.
 
-```
-x = 0
-x / 2 = 2 + 2
-```
+.........
+---------
+__Ejercicio 7__
+
+En la carpeta `/sys/fs/cgroup` podemos encontrar el siguiente contenido:
+
+`systemd`
+  `cgroup.clone_children  cgroup.procs notify_on_release tasks cgroup.event_control cgroup.sane_behavior release_agent user`
+
