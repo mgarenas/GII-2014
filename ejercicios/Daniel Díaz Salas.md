@@ -45,4 +45,14 @@ Ejercicio 3
 -----------
 - **Varios clientes en un servidor**: usaría virtualización a nivel de sistema operativo, ya que aisla los invitados y el anfitrión.
 - **Un sistema eficiente de web + middleware + base de datos**: como se necesita tanto espacio de disco, mucha memoria y un procesador para hacer las consultas no queda otra que utilizar virtualización plena.
-- **Un sistema de prueba de software e integración continua**: usaría virtualización de entornos de desarrollo, de todas las opciones es la más obvia.
+- **Un sistema de prueba de software e integración continua**: usaría virtualización de entornos de desarrollo, de todas las opciones es la más obvia
+
+La segunda parte se tarda demasiado tiempo.
+
+Ejercicio 4
+------------
+![El resultado del tutorial está guardado en la imagen Daniel Díaz Salas - Ejercicio 4.jpg](/Daniel Díaz Salas - Ejercicio 4.jpg)
+
+Ejercicio 5
+-----------
+
