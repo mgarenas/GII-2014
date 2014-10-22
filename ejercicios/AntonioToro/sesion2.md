@@ -37,4 +37,18 @@ Para un __10%__ de uso:
 - __Sistema web + middleware + BD__: En este caso utilizaría una __virtualización plena__ para separar este sistema completamente del resto.
 - __Sistema de prueba de software e integración continua__: Para este supuesto elegiría una __virtualización de entornos de desarrollo__ para reproducir de la manera más precisa posible entornos concretos.
 
+## Ejercicio 4
+Hacer el [tutorial de línea de órdenes de docker](https://www.docker.com/tryit/) para comprender cómo funciona.
+
+- `~$ docker version`
+- `~$ docker search tutorial`
+- `~$ docker pull learn/tutorial`
+- `~$ docker run learn/tutorial echo "hello world"`
+- `~$ docker run learn/tutorial apt-get install -y ping`
+- 
+  - `~$ docker ps -l`
+  - `~$ docker commit 698 learn/ping`
+- `~$ docker run learn/ping ping www.google.com`
+- `~$ docker inspect efe`
+- `~$ docker push learn/ping`
 
