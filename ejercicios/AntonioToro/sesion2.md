@@ -29,3 +29,12 @@ Para un __1%__ de uso:
 Para un __10%__ de uso:
 - __Microsoft Azure__: 0.1 * 8760 * _0,35$/h_ = __306.6 $__
 - __Google Compute Engine__: 0.1 * 8760 * _0,18$/h_ = __157.68 $__
+
+## Ejercicio 3
+¿Qué tipo de virtualización usarías en cada caso?
+
+- __Alojamiento de varios clientes en un servidor__: Utilizaría una __virtualización a nivel de sistema operativo__ para que los clientes compartieran el _SO_ a la vez que cada uno estuviera aislado de los demás.
+- __Sistema web + middleware + BD__: En este caso utilizaría una __virtualización plena__ para separar este sistema completamente del resto.
+- __Sistema de prueba de software e integración continua__: Para este supuesto elegiría una __virtualización de entornos de desarrollo__ para reproducir de la manera más precisa posible entornos concretos.
+
+
