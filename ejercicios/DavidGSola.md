@@ -52,11 +52,17 @@ Respuestas:
 
 ### Ejercicio 5
 
-apt-get install git
+> apt-get install git
 
 ### Ejercicio 6
 
-Se crea desde la web www.github.com el repositorio. Posteriormente es necesario descargarlo en local utilizando el comando 'git clone http://www.github.com/DavidGSola/CloudComputing.git'. Se modifica el fichero README con cualquier editor de textos y finalmente se vuelve a subir al repositorio en la nube utilizando el comando 'git commit' y 'git push'.
+Se crea desde la web www.github.com el repositorio. Posteriormente es necesario descargarlo en local utilizando el comando:
+> git clone http://www.github.com/DavidGSola/CloudComputing.git
+
+Se modifica el fichero README con cualquier editor de textos y finalmente se vuelve a subir al repositorio en la nube utilizando los comandos: 
+> git commit -m 'comentario'
+
+> git push
 
 ### Ejercicio 7
 
