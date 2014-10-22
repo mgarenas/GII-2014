@@ -52,3 +52,9 @@ Hacer el [tutorial de línea de órdenes de docker](https://www.docker.com/tryit
 - `~$ docker inspect efe`
 - `~$ docker push learn/ping`
 
+## Ejercicio 5
+Instala el sistema de gestión de fuentes __git__.
+
+En Ubuntu se instala con la orden `sudo apt-get install git`.
+
+
