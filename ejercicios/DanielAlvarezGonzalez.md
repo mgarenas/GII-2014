@@ -83,9 +83,23 @@ Instrucciones para [descargar e instalar docker](https://docs.docker.com/install
 
 ##Ejercicio 08
 
-grupo **good** ejecutando firefox, uso de cpu 3161809980
-grupo **regular** ejecutando libreoffice, uso de cpu 2969369788
-grupo **bad** ejecutando el editor de imágenes gimp, uso de cpu 4422939045
+	Para este ejercicio se han creado tres grupos de control *good*, *regular* y *bad* dentro del directorio cgroup. Para ello se ha utilizado las líneas de comandos:
+
+		- **sudo cgcreate -g memory,cpu,cpuacct:good**
+		- **sudo cgcreate -g memory,cpu,cpuacct:regular**
+		- **sudo cgcreate -g memory,cpu,cpuacct:bad**
+	
+	Una vez creados los grupos de control, se han lanzado procesos en cada uno de ellos con los siguientes comandos:
+		- **sudo cgexec -g memory,cpu,cpuacct:good firefox &**
+		- **sudo cgexec -g memory,cpu,cpuacct:resgular lowriter &**
+		- **sudo cgexec -g memory,cpu,cpuacct:bad gimp &**
+
+
+	Los resultados obtenidos de uso de cpu, consultando en cada grupo control: **cat /sys/fs/cgroup/cpuacct/good|regular|bad/cpuacct.usage** son los siguientes:
+
+		- grupo **good** ejecutando firefox, uso de cpu 3161809980
+		- grupo **regular** ejecutando libreoffice, uso de cpu 2969369788
+		- grupo **bad** ejecutando el editor de imágenes gimp, uso de cpu 4422939045
 
 
 
