@@ -66,6 +66,9 @@ En Ubuntu se instala con la orden `sudo apt-get install git`.
 -  Ya en nuestra máquina podemos modificar el README con un editor de texto. Despues confirmamos los cambios con 
 `git commit -a .m "mensaje del commit"` y los subimos con `git push origin master`.
 
+## Ejercicio 7
+_Comprobar si en la instalación hecha se ha instalado cgroups y en qué punto está montado, así como qué contiene._
 
+En mi instalación de linux (Ubuntu 14.04) se encuentra en `/sys/fs/cgroup` y contiene una sola carpeta llamada `systemd`.
 
 
