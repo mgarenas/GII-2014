@@ -52,7 +52,7 @@ La segunda parte se tarda demasiado tiempo.
 
 Ejercicio 4
 ------------
-![El resultado del tutorial está guardado en la imagen Daniel Díaz Salas - Ejercicio 4.jpg](/Daniel\%20Díaz\%20Salas\%20-\%20Ejercicio\%204.jpg)
+![El resultado del tutorial está guardado en la imagen Daniel Díaz Salas - Ejercicio 4.jpg](/DanielDíazSalas-Ejercicio4.jpg)
 
 Ejercicio 5
 -----------
