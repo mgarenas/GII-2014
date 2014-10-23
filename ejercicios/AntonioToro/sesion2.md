@@ -45,7 +45,7 @@ Hacer el [tutorial de línea de órdenes de docker](https://www.docker.com/tryit
 - `~$ docker pull learn/tutorial`
 - `~$ docker run learn/tutorial echo "hello world"`
 - `~$ docker run learn/tutorial apt-get install -y ping`
-- 
+- ` `
   - `~$ docker ps -l`
   - `~$ docker commit 698 learn/ping`
 - `~$ docker run learn/ping ping www.google.com`
