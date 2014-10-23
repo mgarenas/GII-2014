@@ -57,4 +57,15 @@ _Instala el sistema de gestión de fuentes **git**._
 
 En Ubuntu se instala con la orden `sudo apt-get install git`.
 
+## Ejercicio 6
+1. _Crear un proyecto y descargárselo con git. Al crearlo se marca la opción de incluir el fichero README._
+2. _Modificar el readme y subir el fichero modificado._
+
+-  Creamos el proyecto desde la web de GitHub y pinchamos en la casilla de que nos dice si queremos incluir un README.
+   A continuación, en nuestro ordenador, ejecutamos `git clone https://github.com/antorof/nombre-del-proyecto.git`.
+-  Ya en nuestra máquina podemos modificar el README con un editor de texto. Despues confirmamos los cambios con 
+`git commit -a .m "mensaje del commit"` y los subimos con `git push origin master`.
+
+
+
 
