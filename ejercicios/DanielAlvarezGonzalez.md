@@ -61,6 +61,19 @@ Instrucciones para [descargar e instalar docker](https://docs.docker.com/install
 
 
 
+##Ejercicio 07
+	En mi instalación de Ubuntu 12.04 LTS se hizo la instalación de cgroups en el punto **/sys/fs/cgroup/ y contiene los siguientes directorios:
+		- blkio
+		- cpu
+		- cpuacct
+		- cpuset
+		- devices
+		- freezer
+		- hugetlb
+		- memory
+		- perf_event
+
+	Dentro de estos directorios se encuentran los ficheros que se muestran como ejemplo en el fichero de objetivos y muchos más.
 
 
 
@@ -68,7 +81,11 @@ Instrucciones para [descargar e instalar docker](https://docs.docker.com/install
 
 
 
+##Ejercicio 08
 
+grupo **good** ejecutando firefox, uso de cpu 3161809980
+grupo **regular** ejecutando libreoffice, uso de cpu 2969369788
+grupo **bad** ejecutando el editor de imágenes gimp, uso de cpu 4422939045
 
 
 
