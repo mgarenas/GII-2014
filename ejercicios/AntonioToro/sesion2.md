@@ -71,4 +71,17 @@ _Comprobar si en la instalación hecha se ha instalado cgroups y en qué punto e
 
 En mi instalación de linux (Ubuntu 14.04) se encuentra en `/sys/fs/cgroup` y contiene una sola carpeta llamada `systemd`.
 
+## Ejercicio 8
+1. _Crear diferentes grupos de control sobre un sistema operativo Linux. 
+Ejecutar en uno de ellos el navegador, en otro un procesador de textos y en uno último cualquier otro proceso. 
+Comparar el uso de recursos de unos y otros durante un tiempo determinado. _
+2. _Calcular el coste real de uso de recursos de un ordenador teniendo en cuenta sus costes de amortización. 
+Añadir los costes eléctricos correspondientes. _
+
+- Voy a la carpeta de `cgroup` (`/sys/fs/cgroup/`) y creo los grupos con `mkdir grupoff`, `mkdir grupotxt	`, `mkdir grupoaux`.
+   _Se ve que non se crean los grupos y no me sale nada en las carpetas.
+   Tampoco me deja lanzar los programas con `cgexec`_.
+- _No he podido realizarlo, al igual que el apartado anterior_.
+
+
 
