@@ -116,13 +116,43 @@ Una vez que hemos instalado docker, podemos instalar una aplicación siguiendo l
 
 
 
+##Ejercicio 09
+
+**Apartado 9.1**
+
+
+**Apartado 9.2**
+
+
+**Apartado 9.3**
+
+
+**Apartado 9.4**
+
+##Ejercicio 10
+	**Modelo de procesado:** Intel® Core™ i5-2450M CPU @ 2.50GHz × 4
+	**Salida por pantalla:** flags: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse 					sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc 					aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 					x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi 					flexpriority ept vpid
 
 
 
 
 
+##Ejercicio 11
+
+	Salida tras ejecutar el comand *kvm-ok*:
+		INFO: /dev/kvm does not exist
+		HINT:   sudo modprobe kvm_intel
+		INFO: For more detailed results, you should run this as root
+		HINT:   sudo /usr/sbin/kvm-ok
+
+	Tras ejecutar el comando que se sugiere (sudo modprobe kvm_intel) y volver a consultar (kvm-ok), la salida es:
+		INFO: /dev/kvm exists
+		KVM acceleration can be used
 
 
+##Ejercicio 12
+
+	
 
 
 
