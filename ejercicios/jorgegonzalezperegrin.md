@@ -39,4 +39,34 @@ Teniendo esto en cuenta realizamos los calulos para
 
 ### Ejercicio 4
 
+Para realizar el ejercicio se han introducido dentro del simulador, se han seguido los siguientes:
+- docker version
+- docker search tutorial
+- docker pull learn/tutorial
+- docker run learn/tutorial apt-get install -y ping
+- docker ps -l
+- docker commit 6982 learn/ping
+- docker ps -l
+- docker run learn/ping ping google.com
+- docker ps -l
+- docker inspect efe
+
+### Ejercicio 5
+
+Se ha instalado el sistema de gestión de fuentes git con el commando:
+- sudo apt-get install git
+
+### Ejercicio 6
+
+Para realizar este ejercicio se han seguido las siguientes órdenes.
+- He creado en GitHub un nuevo repositorio con el nombre "MiProyecto" junto con el archivo README
+- git clone https://github.com/Georgevik/MiProyecto.git
+- cd MiProyecto
+- gedit README.md
+- git commit -m "Primera modificacion"
+
+### Ejercicio 7
+
+
+
 
