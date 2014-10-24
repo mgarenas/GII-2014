@@ -124,12 +124,18 @@ Una vez instalado el `cgroup-lite`, enn la carpeta `/sys/fs/cgroup` podemos enco
 ---------
 __Ejercicio 8__
 
-Al crear el directorio no se genera automáticamente los subdirectorios que deberían, luego esta parte no se ha podido realizar.
+Al crear el directorio no se genera automáticamente los subdirectorios que deberían, luego esta parte no se ha podido realizar. 
+
+He estado mirando distintas páginas pero no ha habido manera posible de encontrar el fallo, por ejemplo se ha intentado seguir también esta página:
+
+http://www.janoszen.com/2013/02/06/limiting-linux-processes-cgroups-explained/
+
+
 
 .........
 ---------
 __Ejercicio 9__
-
+Arrastramos el mismo problema que en el ejercicio 8 para realizarlo.
 
 __Ejercicio 9.2__
 
