@@ -108,3 +108,27 @@ cpuset.mem_exclusive              notify_on_release
 cpuset.mem_hardwall               release_agent
 cpuset.memory_migrate             tasks
 
+Ejercicio 8
+-----------
+**Crear grupos de control**
+mkdir patata
+mkdir cebolla
+mkdir zanahoria
+**Poner los ceros necesarios**
+echo 0 >patata/cpuset.cpus
+echo 0 >cebolla/cpuset.cpus
+echo 0 >zanahoria/cpuset.cpus
+echo 0 >patata/cpuset.mems
+echo 0 >cebolla/cpuset.mems
+echo 0 >zanahoria/cpuset.mems
+**Asignar tareas**
+- Procesador de textos: echo 8017 > patata/tasks 
+- Navegador: echo 2167 > cebolla/tasks
+- Otro (Sublime Text 2): echo 7559 > zanahoria/tasks
+**Uso de la CPU**
+cat patata/cpuacct.usage;cat cebolla/cpuacct.usage;cat zanahoria/cpuacct.usage
+>28005970
+2857766542
+128580041
+
+Claramente el navegador usa más recursos, seguido de Sublime Text.
