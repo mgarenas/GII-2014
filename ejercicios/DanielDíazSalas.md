@@ -56,4 +56,55 @@ Ejercicio 4
 
 Ejercicio 5
 -----------
+sudo apt-get install git
+
+Ejercicio 6
+-----------
+[El readme está aquí](https://github.com/potray/Ejercicio6CC/blob/master/README.md)
+
+Ejercicio 7
+-----------
+Tras montarlo hay todo esto:
+
+>blkio.io_merged                   cpuset.memory_pressure
+blkio.io_merged_recursive         cpuset.memory_pressure_enabled
+blkio.io_queued                   cpuset.memory_spread_page
+blkio.io_queued_recursive         cpuset.memory_spread_slab
+blkio.io_service_bytes            cpuset.mems
+blkio.io_service_bytes_recursive  cpuset.sched_load_balance
+blkio.io_serviced                 cpuset.sched_relax_domain_level
+blkio.io_serviced_recursive       cpu.shares
+blkio.io_service_time             cpu.stat
+blkio.io_service_time_recursive   devices.allow
+blkio.io_wait_time                devices.deny
+blkio.io_wait_time_recursive      devices.list
+blkio.leaf_weight                 hugetlb.2MB.failcnt
+blkio.leaf_weight_device          hugetlb.2MB.limit_in_bytes
+blkio.reset_stats                 hugetlb.2MB.max_usage_in_bytes
+blkio.sectors                     hugetlb.2MB.usage_in_bytes
+blkio.sectors_recursive           memory.failcnt
+blkio.throttle.io_service_bytes   memory.force_empty
+blkio.throttle.io_serviced        memory.kmem.failcnt
+blkio.throttle.read_bps_device    memory.kmem.limit_in_bytes
+blkio.throttle.read_iops_device   memory.kmem.max_usage_in_bytes
+blkio.throttle.write_bps_device   memory.kmem.slabinfo
+blkio.throttle.write_iops_device  memory.kmem.tcp.failcnt
+blkio.time                        memory.kmem.tcp.limit_in_bytes
+blkio.time_recursive              memory.kmem.tcp.max_usage_in_bytes
+blkio.weight                      memory.kmem.tcp.usage_in_bytes
+blkio.weight_device               memory.kmem.usage_in_bytes
+cgroup.clone_children             memory.limit_in_bytes
+cgroup.event_control              memory.max_usage_in_bytes
+cgroup.procs                      memory.move_charge_at_immigrate
+cgroup.sane_behavior              memory.numa_stat
+cpuacct.stat                      memory.oom_control
+cpuacct.usage                     memory.pressure_level
+cpuacct.usage_percpu              memory.soft_limit_in_bytes
+cpu.cfs_period_us                 memory.stat
+cpu.cfs_quota_us                  memory.swappiness
+cpuset.cpu_exclusive              memory.usage_in_bytes
+cpuset.cpus                       memory.use_hierarchy
+cpuset.mem_exclusive              notify_on_release
+cpuset.mem_hardwall               release_agent
+cpuset.memory_migrate             tasks
 
