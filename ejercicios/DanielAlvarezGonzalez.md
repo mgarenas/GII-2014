@@ -34,8 +34,21 @@ Para instalar CDE seguir el siguiente [tutorial](http://www.pgbovine.net/cde.htm
 
 
 ##Ejercicio 04
+
+**Descarga e instalación de docker**
 Instrucciones para [descargar e instalar docker](https://docs.docker.com/installation/ubuntulinux/#ubuntu-precise-1204-lts-64-bit)
 
+Una vez que hemos instalado docker, podemos instalar una aplicación siguiendo los pasos del [tutorial](https://www.docker.com/tryit/#1)
+	1- docker search tutorial
+	2- docker pull learn/tutorial
+	3- docker run learn/turorkal echo 'Hello World'
+	4- docker run learn/tutorial apt-get install -y ping
+	5- docker commit *ContainerID* learn/ping (docker ps -l para encontrar el ID de nuestro contenedor)
+	6- docker run learn/ping www.google.es
+	7- Para obtener información acerca de nuestros contenedores en funcionamiento 
+		- docker ps (para obtener los IDs)
+		- docker inspect
+	8- docker push learn/ping
 
 
 ##Ejercicio 05
@@ -53,7 +66,7 @@ Instrucciones para [descargar e instalar docker](https://docs.docker.com/install
 	
 
 ##Ejercicio 06
-	Para crear un nuevo proyecto o repositorio en gitHub, pinchamos en la pestaña **Create New --> New Repository** al lado de nuestro nombre de usuario. Nos pide un nombre para el proyecto y nos da la opción de inicializarlo con un fichero README.
+	Para crear un nuevo proyecto o repositorio en gitHub, pinchamos en la pestaña **Create New --> New Repository** al lado de nuestro nombre de usuario en la web de GitHub. Nos pide un nombre para el proyecto y nos da la opción de inicializarlo con un fichero README.
 	Una vez creado el nuevo repositorio, lo clonamos a nuestro directorio de trabajo git con el comando  **git clone *url_proyecto*
 	Cuando se ha modificado el README como pide el ejercicio, hay que formalizar dicho cambio. Para ello hay que hacer un **commit** de la siguiente forma --> **git commit -a -m "comentario que define el cambio realizado"**.
 	Ya que se ha formalizado el cambio, solo queda subir dicho cambio al repositorio de GitHub haciendo un **git push**. 
