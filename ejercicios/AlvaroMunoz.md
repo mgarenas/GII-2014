@@ -156,4 +156,4 @@ El paquete **kvm-ok** no existe en *Fedora* pero el archivo */dev/kvm* existe, p
 ***
 ## Sesión 24-octubre-2014
 
-## Ejercicio 12
+### Ejercicio 12
