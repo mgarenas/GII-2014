@@ -46,12 +46,12 @@ Lista de objetivos de Álvaro Muñoz
 
 ### Objetivos de la clase
 
-- [ ] Comprender los niveles de virtualización y sus denominaciones genéricas.
-- [ ] Comprender el concepto de ''software as a service'' y comprender los criterios necesarios para su elección.
+- [X] Comprender los niveles de virtualización y sus denominaciones genéricas.
+- [X] Comprender el concepto de ''software as a service'' y comprender los criterios necesarios para su elección.
 
 ### Otros objetivos
 
 - [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
-- [ ] Contestar a la encuesta sobre la metodología de clase
-- [ ] Consolidar el uso de la línea de órdenes para administración y desarrollo de software.
+- [X] Contestar a la encuesta sobre la metodología de clase
+- [X] Consolidar el uso de la línea de órdenes para administración y desarrollo de software.
