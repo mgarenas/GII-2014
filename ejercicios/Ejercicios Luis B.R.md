@@ -128,7 +128,8 @@ Al crear el directorio no se genera automáticamente los subdirectorios que debe
 
 He estado mirando distintas páginas pero no ha habido manera posible de encontrar el fallo, por ejemplo se ha intentado seguir también esta página:
 
-http://www.janoszen.com/2013/02/06/limiting-linux-processes-cgroups-explained/
+  * http://www.janoszen.com/2013/02/06/limiting-linux-processes-cgroups-explained/
+  * http://linuxaria.com/article/introduction-to-cgroups-the-linux-conrol-group
 
 
 
