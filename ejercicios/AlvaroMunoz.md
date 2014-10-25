@@ -132,11 +132,50 @@ Para ver cualquier información sobre el uso de cada *cgroup* podemos mostrar lo
 
 ### Ejercicio 9.1
 
+El enlace no funciona.
+
+
 ### Ejercicio 9.2
+
+Una vez creados los dos grupos, debemos modificar el fichero `etc/cgconfig.conf`, añadiendo:
+
+	mount { cpu = /cgroup/cpu }
+
+	group system {
+	        cpu {
+	                cpu.shares="600";
+	        }
+	}
+
+	group users {
+	        cpu {
+	                cpu.shares="400";
+	        }
+	}
+
 
 ### Ejercicio 9.3
 
+Durante la migración de procesos livianos no se nota gran variabilidad en cuanto al uso de las CPU. La migración de procesos más contundentes se observa en el aumento de uso de la CPU.
+
+
 ### Ejercicio 9.4
+
+Similar al ejercicio 9.2 pero cambiando el nombre del recurso al que le damos prioridad:
+
+	mount { blkio = /cgroup/blkio }
+
+	group httpd { 
+		blkio { 
+			blkio.weight="700"; 
+		} 
+	}
+
+	group users { 
+		blkio { 
+			blkio.weight="300"; 
+		} 
+	}
 
 
 ### Ejercicio 10
@@ -145,7 +184,13 @@ El procesador sí tiene activados los flags de virtualización a nivel de hardwa
 El modelo de procesador es *Intel(R) Core(TM) i7-3930K CPU @ 3.20GHz* (información extraída del archivo */proc/cpuinfo*).
 La salida del comando (por cada núcleo) es:
 
-	flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+	flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov
+	pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb 
+	rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology 
+	nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est 
+	tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt 
+	tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm 
+	tpr_shadow vnmi flexpriority ept vpid
 
 
 ### Ejercicio 11
@@ -157,3 +202,18 @@ El paquete **kvm-ok** no existe en *Fedora* pero el archivo */dev/kvm* existe, p
 ## Sesión 24-octubre-2014
 
 ### Ejercicio 12
+
+Lo comentado en el foro ha sido:
+
+Los sistemas [SaaS](http://es.wikipedia.org/wiki/Software_como_servicio), como Gmail, Google Docs, Google Calendar, [www.imedicplus.com](http://www.imedicplus.com), Salesforce o Basecamp son un modelo de distribución de software donde una empresa sirve el mantenimiento, soporte y operación que usará el cliente durante el tiempo que haya contratado el servicio. Algunas de sus ventajas son:
+
+- Se puede pagar por cuota de uso, no por acceso.
+- El cliente suele acceder mediante un navegador web, por lo que suelen ser servicios multiplataforma.
+- La actualización de los productos corre por cuenta de la empresa, siendo totalmente transparente al usuario.
+
+Algunos inconvenientes podrían ser:
+
+- Necesidad de conexión a Internet.
+- Posible exposición de datos sensibles por accesos indebidos de terceros (políticas de seguridad pobres).
+- Necesidad de confianza en la empresa, ya que tienen la posibilidad de usar los datos del usuario.
+
