@@ -83,5 +83,13 @@ Añadir los costes eléctricos correspondientes. _
    Tampoco me deja lanzar los programas con `cgexec`_.
 - _No he podido realizarlo, al igual que el apartado anterior_.
 
+## Ejercicio 9
+2. Implementar usando el fichero de configuración de `cgcreate` una política que dé menos prioridad a los procesos de usuario que 
+a los procesos del sistema (o viceversa).
+3. Usar un programa que muestre en tiempo real la carga del sistema tal como `htop` y comprobar los efectos de la migración en tiempo 
+real de una tarea pesada de un procesador a otro (si se tiene dos núcleos en el sistema).
+4. Configurar un servidor para que el servidor web que se ejecute reciba mayor prioridad de entrada/salida que el resto de los usuarios.
 
+- Tenemos que crear el archivo `/etc/cgconfig.conf` y su contenido sería:
+   ` `
 
