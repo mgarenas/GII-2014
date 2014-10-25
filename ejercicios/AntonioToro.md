@@ -1,5 +1,5 @@
-﻿Sesión 2
-========
+﻿Ejercicios
+==========
 
 ## Ejercicio 1
 _Consultar en el catálogo de alguna tienda de informática el precio de un 
@@ -90,6 +90,27 @@ a los procesos del sistema (o viceversa).
 real de una tarea pesada de un procesador a otro (si se tiene dos núcleos en el sistema).
 4. Configurar un servidor para que el servidor web que se ejecute reciba mayor prioridad de entrada/salida que el resto de los usuarios.
 
-- Tenemos que crear el archivo `/etc/cgconfig.conf` y su contenido sería:
-   ` `
+
+## Ejercicio 10
+_Comprobar si el procesador o procesadores instalados tienen estos _flags_. ¿Qué modelo de procesador es? ¿Qué aparece como salida de esa orden?_
+
+- Procesador: __Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz__ (máquina virtual)
+- Salida de `flags: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc aperfmperf eagerfpu pni pclmulqdq ssse3 cx16 pcid sse4_1 sse4_2 x2apic popcnt xsave avx f16c hypervisor lahf_lm arat epb xsaveopt pln pts dtherm fsgsbase smep`
+
+## Ejercicio 11
+_Comprobar si el núcleo instalado en tu ordenador contiene este módulo del kernel usando la orden `kvm-ok`._
+
+El comando `kvm-ok` devuelve: 
+
+```
+INFO: Your CPU does not support KVM extensions
+INFO: For more detailed results, you should run this as root
+HINT:   sudo /usr/sbin/kvm-ok
+```
+
+## Ejercicio 12
+_Comentar diferentes soluciones de Software as a Service de uso habitual_
+
+Son aplicaciones a las que accedemos por internet, y en la actualizad utilizamos Saas a diario, muchas veces sin tener constancia, ya que lo vemos cada vez más normal, pudiendo empezar por Gmail. 
+Existen muchas otras, como los editores de texto y de hojas de cálculo de Google Drive, Google calendar, Outlook.com, Yahoo! Mail, Hangouts, PDFscape (editor online de pdf), Autocad360...
 
