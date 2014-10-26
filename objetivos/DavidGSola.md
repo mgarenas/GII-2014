@@ -19,7 +19,7 @@ Lista de objetivos de David González Sola
 - [X] Entender el concepto de sistema de ficheros virtual usado en Linux para diferentes menesteres.
 
 
-## Sesión 17-octubre-2014
+## Sesión 20-octubre-2014
 
 ### Objetivos de la clase
 
@@ -32,3 +32,17 @@ Lista de objetivos de David González Sola
 - [X] Entender el concepto de sistema de ficheros virtual usado en Linux para diferentes menesteres.
 - [X] Tener a punto una instalación Linux para llevar a cabo las actividades de la asignatura
 - [ ] Usar git para hacer *check-in* en clase y (expresar al final de la misma los objetivos alcanzados)(Cumpliendo_Objetivos.md).
+
+## Sesión 24 Octubre-2014
+
+##Objetivos de esta sesión
+
+- [X] Comprender los niveles de virtualización y sus denominaciones genéricas.
+- [X] Comprender el concepto de ''software as a service'' y comprender los criterios necesarios para su elección.
+
+##Otros objetivos
+
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Contestar a la encuesta sobre la metodología de clase.
+- [X] Consolidar el uso de la línea de órdenes para administración y desarrollo de software.
