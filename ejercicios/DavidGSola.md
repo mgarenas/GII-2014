@@ -10,7 +10,7 @@ Ejercicios de David González Sola
 - **Precio (sin IVA):** 688.43€
 - **Amortización en 4 años:** 172.11€ por año
 - **Amortización en 7 años:** 98.35€ por año
-- **Referencia:** http://www.pccomponentes.com/hp_proliant_ml310e_g8_xe_e3_1220_8gb_2tb___foundation_2012.html
+- [**Referencia:**](http://www.pccomponentes.com/hp_proliant_ml310e_g8_xe_e3_1220_8gb_2tb___foundation_2012.html)
 
 ### Ejercicio 2
 
