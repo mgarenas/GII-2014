@@ -90,6 +90,9 @@ a los procesos del sistema (o viceversa).
 real de una tarea pesada de un procesador a otro (si se tiene dos núcleos en el sistema).
 4. Configurar un servidor para que el servidor web que se ejecute reciba mayor prioridad de entrada/salida que el resto de los usuarios.
 
+## Ejercicio 9.2
+
+Te pongo un enlace por si te ayuda para hacer este ejercicio. [Link](http://docs.oracle.com/cd/E37670_01/E37355/html/ol_use_cases_cgroups.html)
 
 ## Ejercicio 10
 _Comprobar si el procesador o procesadores instalados tienen estos _flags_. ¿Qué modelo de procesador es? ¿Qué aparece como salida de esa orden?_
