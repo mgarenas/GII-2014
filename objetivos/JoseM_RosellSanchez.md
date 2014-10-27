@@ -56,3 +56,16 @@ Lista de objetivos de Jose Manuel Rosell Sánchez
 - [X] Contestar a la encuesta sobre la metodología de clase
 - [X] Consolidar el uso de la línea de órdenes para administración y desarrollo de software.
 
+## Sesión 27-octubre-2014
+
+###Objetivos de la clase
+
+- [X] Conocer los diferentes [proyectos propuestos](../proyectos_propuestos.md) para llevarlos a cabo a lo largo de la asignatura.
+
+###Otros objetivos
+
+- [X] Usar *exclusivamente* la línea de órdenes para trabajar con GitHub.
+- [X] Dar de alta la clave SSH para trabajar con GitHub más cómodamente. 
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
