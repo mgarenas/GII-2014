@@ -52,27 +52,34 @@ Respuestas:
 
 ### Ejercicio 5
 
-apt-get install git
+> apt-get install git
 
 ### Ejercicio 6
 
-Se crea desde la web www.github.com el repositorio. Posteriormente es necesario descargarlo en local utilizando el comando 'git clone http://www.github.com/DavidGSola/CloudComputing.git'. Se modifica el fichero README con cualquier editor de textos y finalmente se vuelve a subir al repositorio en la nube utilizando el comando 'git commit' y 'git push'.
+Se crea desde la web www.github.com el repositorio. Posteriormente es necesario descargarlo en local utilizando el comando:
+> git clone http://www.github.com/DavidGSola/CloudComputing.git
+
+Se modifica el fichero README con cualquier editor de textos y finalmente se vuelve a subir al repositorio en la nube utilizando los comandos: 
+> git commit -m 'comentario'
+
+> git push
 
 ### Ejercicio 7
 
 En Ubuntu 12.04 se encuentra montado en /sys/fs/cgroups. Contiene gran cantidad de archivos como por ejemplo:
+```
 blkio.io_merged                   cpuset.memory_spread_page
 blkio.io_queued                   cpuset.memory_spread_slab
 blkio.io_service_bytes            cpuset.mems
 blkio.io_serviced                 cpuset.sched_load_balance
 blkio.io_service_time             cpuset.sched_relax_domain_level
-
+```
 ### Ejercicio 8.1
 
 Se han creado tres grupos:
-	- **Buenos:** ejecutarán el navegador. (cpu usage: 31107072)
-	- **Regulares:** ejecutarán el procesador de textos. (cpu usage: 1094374)
-	- **Malos:** ejecutarán gimp. (cpu usage: 176661809)
+- **Buenos:** ejecutarán el navegador. (cpu usage: 31107072)
+- **Regulares:** ejecutarán el procesador de textos. (cpu usage: 1094374)
+- **Malos:** ejecutarán gimp. (cpu usage: 176661809)
 
 ### Ejercicio 8.2
 
@@ -83,6 +90,7 @@ Se han creado tres grupos:
 
 Se debe crear el archivo de configuración '/etc/cgconfig.conf'. Un ejemplo de este archivo donde se de prioridad a los procesos del usuario sería:
 
+```
 mount {
 	cpu = /cgroup/cpu
 }
@@ -98,23 +106,46 @@ group sistema {
 		cpu.shares="100";
 	}
 }
-
+```
 ### Ejercicio 9.3
 
 He utilizado el programa GIMP para comprobar los efectos de la migración del proceso.
 Se han utilizado dos grupos, el grupo *bueno* se ejecutará en el núcleo 1 y el grupo *malo* en el núcleo 7. Se empieza a ejecutar en el grupo *bueno* y el núcleo 7 se encuentra totalmente ocioso. Una vez se realiza el intercambio con el comando 'cgclassify -g memory,cpu:malos 8031' el núcleo 7 empieza a ser usado un poco más (~2.5%) pero si se empieza a utilizar GIMP esta cantidad sube hasta el ~20%. Si se vuelve a intercambiar al núcleo 1 con el comando 'cgclassify -g memory,cpu:buenos 8031' el núcleo 7 vuelve a estar practicamente ocioso y el uso del núcleo 1 sube hasta el ~20%.
 
+### Ejercicio 9.4
+
+Utilizando el fichero de configuración /etc/cgconfig.conf podemos obligar al sistema a darle mayor prioridad entrada/salida al servidor. En este caso, se crean dos grupos (servidor y otros. El parámetro weight del subdirectorio blkio controla la proporción de acceso al sistema de entrada/salida. Con un número mayor, mayor prioridad de entrada/salida tendrá el grupo.
+
+
+```
+mount {
+	blkio = /cgroup/blkio;
+}
+
+group servidor {
+	blkio {
+		blkio.weight="900"
+	}
+}
+
+group others {
+	blkio {
+		blkio.weight="100"
+	}
+}
+```
 ### Ejercicio 10
 
-**Modelo de procesador:** Intel® Core™ i7-3630QM CPU @ 2.40GHz x 8
-**Salida por pantalla:** flags: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+- **Modelo de procesador:** Intel® Core™ i7-3630QM CPU @ 2.40GHz x 8
+- **Salida por pantalla:** flags: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
 
 ### Ejercicio 11
 
 Tras ejecutar el comando 'kvm-ok' aparece la siguiente información en la consola:
+```
 	INFO: /dev/kvm exists
 	KVM acceleration can be used
-
+```
 ### Ejercicio 12
 
 Un ejemplo de Saas al que accede a diario gran parte de la población *conectada* es Facebook. No es necesaria ningún tipo de instalación en el ordenador personal del cliente y simplemente utilizando el navegador web (siempre que el servicio se encuentre disponible en ese país) se podrá utilizar este. Por supuesto, esta libertad a la hora de acceder al servicio tiene sus incovenientes, como por ejemplo la falta de poder sobre tus propios datos y los problemas de privacidad que conlleva.
