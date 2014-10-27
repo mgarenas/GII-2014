@@ -1,4 +1,4 @@
-Ejercicios de Daniel Díaz Salas
+Objetivos de Daniel Díaz Salas
 ===============================
 Ejercicio 1
 -----------
