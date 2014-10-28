@@ -1,6 +1,6 @@
 #Sesión del 17 de Octubre
 ##Ejercicio 01
-
+ 
 Servidor en la dirección [Servidor](http://www.dell.com/es/empresas/p/poweredge-t630/pd?~ck=anav)
 Precio 5007€, precio sin IVA 4138.016
 Amortización a 4 años --> 1034.50
