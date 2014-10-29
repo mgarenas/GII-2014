@@ -34,8 +34,21 @@ Para instalar CDE seguir el siguiente [tutorial](http://www.pgbovine.net/cde.htm
 
 
 ##Ejercicio 04
+
+**Descarga e instalación de docker**
 Instrucciones para [descargar e instalar docker](https://docs.docker.com/installation/ubuntulinux/#ubuntu-precise-1204-lts-64-bit)
 
+Una vez que hemos instalado docker, podemos instalar una aplicación siguiendo los pasos del [tutorial](https://www.docker.com/tryit/#1)
+	1- docker search tutorial
+	2- docker pull learn/tutorial
+	3- docker run learn/turorkal echo 'Hello World'
+	4- docker run learn/tutorial apt-get install -y ping
+	5- docker commit *ContainerID* learn/ping (docker ps -l para encontrar el ID de nuestro contenedor)
+	6- docker run learn/ping www.google.es
+	7- Para obtener información acerca de nuestros contenedores en funcionamiento 
+		- docker ps (para obtener los IDs)
+		- docker inspect
+	8- docker push learn/ping
 
 
 ##Ejercicio 05
@@ -53,7 +66,7 @@ Instrucciones para [descargar e instalar docker](https://docs.docker.com/install
 	
 
 ##Ejercicio 06
-	Para crear un nuevo proyecto o repositorio en gitHub, pinchamos en la pestaña **Create New --> New Repository** al lado de nuestro nombre de usuario. Nos pide un nombre para el proyecto y nos da la opción de inicializarlo con un fichero README.
+	Para crear un nuevo proyecto o repositorio en gitHub, pinchamos en la pestaña **Create New --> New Repository** al lado de nuestro nombre de usuario en la web de GitHub. Nos pide un nombre para el proyecto y nos da la opción de inicializarlo con un fichero README.
 	Una vez creado el nuevo repositorio, lo clonamos a nuestro directorio de trabajo git con el comando  **git clone *url_proyecto*
 	Cuando se ha modificado el README como pide el ejercicio, hay que formalizar dicho cambio. Para ello hay que hacer un **commit** de la siguiente forma --> **git commit -a -m "comentario que define el cambio realizado"**.
 	Ya que se ha formalizado el cambio, solo queda subir dicho cambio al repositorio de GitHub haciendo un **git push**. 
@@ -83,19 +96,63 @@ Instrucciones para [descargar e instalar docker](https://docs.docker.com/install
 
 ##Ejercicio 08
 
-grupo **good** ejecutando firefox, uso de cpu 3161809980
-grupo **regular** ejecutando libreoffice, uso de cpu 2969369788
-grupo **bad** ejecutando el editor de imágenes gimp, uso de cpu 4422939045
+	Para este ejercicio se han creado tres grupos de control *good*, *regular* y *bad* dentro del directorio cgroup. Para ello se ha utilizado las líneas de comandos:
+
+		- **sudo cgcreate -g memory,cpu,cpuacct:good**
+		- **sudo cgcreate -g memory,cpu,cpuacct:regular**
+		- **sudo cgcreate -g memory,cpu,cpuacct:bad**
+	
+	Una vez creados los grupos de control, se han lanzado procesos en cada uno de ellos con los siguientes comandos:
+		- **sudo cgexec -g memory,cpu,cpuacct:good firefox &**
+		- **sudo cgexec -g memory,cpu,cpuacct:resgular lowriter &**
+		- **sudo cgexec -g memory,cpu,cpuacct:bad gimp &**
+
+
+	Los resultados obtenidos de uso de cpu, consultando en cada grupo control: **cat /sys/fs/cgroup/cpuacct/good|regular|bad/cpuacct.usage** son los siguientes:
+
+		- grupo **good** ejecutando firefox, uso de cpu 3161809980
+		- grupo **regular** ejecutando libreoffice, uso de cpu 2969369788
+		- grupo **bad** ejecutando el editor de imágenes gimp, uso de cpu 4422939045
+
+
+
+##Ejercicio 09
+
+**Apartado 9.1**
+
+
+**Apartado 9.2**
+
+
+**Apartado 9.3**
+
+
+**Apartado 9.4**
+
+##Ejercicio 10
+	**Modelo de procesado:** Intel® Core™ i5-2450M CPU @ 2.50GHz × 4
+	**Salida por pantalla:** flags: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse 					sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc 					aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 					x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi 					flexpriority ept vpid
 
 
 
 
 
+##Ejercicio 11
+
+	Salida tras ejecutar el comand *kvm-ok*:
+		INFO: /dev/kvm does not exist
+		HINT:   sudo modprobe kvm_intel
+		INFO: For more detailed results, you should run this as root
+		HINT:   sudo /usr/sbin/kvm-ok
+
+	Tras ejecutar el comando que se sugiere (sudo modprobe kvm_intel) y volver a consultar (kvm-ok), la salida es:
+		INFO: /dev/kvm exists
+		KVM acceleration can be used
 
 
+##Ejercicio 12
 
-
-
+	
 
 
 
