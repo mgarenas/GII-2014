@@ -40,17 +40,17 @@ _¿Qué tipo de virtualización usarías en cada caso?_
 ## Ejercicio 4
 _Hacer el [tutorial de línea de órdenes de docker](https://www.docker.com/tryit/) para comprender cómo funciona._
 
-- `~$ docker version`
-- `~$ docker search tutorial`
-- `~$ docker pull learn/tutorial`
-- `~$ docker run learn/tutorial echo "hello world"`
-- `~$ docker run learn/tutorial apt-get install -y ping`
-- ` `
-  - `~$ docker ps -l`
-  - `~$ docker commit 698 learn/ping`
-- `~$ docker run learn/ping ping www.google.com`
-- `~$ docker inspect efe`
-- `~$ docker push learn/ping`
+1. `~$ docker version`
+2. `~$ docker search tutorial`
+3. `~$ docker pull learn/tutorial`
+4. `~$ docker run learn/tutorial echo "hello world"`
+5. `~$ docker run learn/tutorial apt-get install -y ping`
+6. 
+  + `~$ docker ps -l`
+  + `~$ docker commit 698 learn/ping`
+7. `~$ docker run learn/ping ping www.google.com`
+8. `~$ docker inspect efe`
+9. `~$ docker push learn/ping`
 
 ## Ejercicio 5
 _Instala el sistema de gestión de fuentes **git**._
@@ -72,14 +72,13 @@ _Comprobar si en la instalación hecha se ha instalado cgroups y en qué punto e
 En mi instalación de linux (Ubuntu 14.04) se encuentra en `/sys/fs/cgroup` y contiene una sola carpeta llamada `systemd`.
 
 ## Ejercicio 8
-1. _Crear diferentes grupos de control sobre un sistema operativo Linux. 
-Ejecutar en uno de ellos el navegador, en otro un procesador de textos y en uno último cualquier otro proceso. 
-Comparar el uso de recursos de unos y otros durante un tiempo determinado. _
-2. _Calcular el coste real de uso de recursos de un ordenador teniendo en cuenta sus costes de amortización. 
-Añadir los costes eléctricos correspondientes. _
+1. _Crear diferentes grupos de control sobre un sistema operativo Linux._ 
+   _Ejecutar en uno de ellos el navegador, en otro un procesador de textos y en uno último cualquier otro proceso._      _Comparar el uso de recursos de unos y otros durante un tiempo determinado._
+2. _Calcular el coste real de uso de recursos de un ordenador teniendo en cuenta sus costes de amortización._
+   _Añadir los costes eléctricos correspondientes._
 
 - Voy a la carpeta de `cgroup` (`/sys/fs/cgroup/`) y creo los grupos con `mkdir grupoff`, `mkdir grupotxt	`, `mkdir grupoaux`.
-   _Se ve que non se crean los grupos y no me sale nada en las carpetas.
+   _Se ve que no se crean los grupos y no me sale nada en las carpetas.
    Tampoco me deja lanzar los programas con `cgexec`_.
 - _No he podido realizarlo, al igual que el apartado anterior_.
 
@@ -98,7 +97,7 @@ Te pongo un enlace por si te ayuda para hacer este ejercicio. [Link](http://docs
 _Comprobar si el procesador o procesadores instalados tienen estos _flags_. ¿Qué modelo de procesador es? ¿Qué aparece como salida de esa orden?_
 
 - Procesador: __Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz__ (máquina virtual)
-- Salida de `flags: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc aperfmperf eagerfpu pni pclmulqdq ssse3 cx16 pcid sse4_1 sse4_2 x2apic popcnt xsave avx f16c hypervisor lahf_lm arat epb xsaveopt pln pts dtherm fsgsbase smep`
+- Salida de `flags`: `fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc aperfmperf eagerfpu pni pclmulqdq ssse3 cx16 pcid sse4_1 sse4_2 x2apic popcnt xsave avx f16c hypervisor lahf_lm arat epb xsaveopt pln pts dtherm fsgsbase smep`
 
 ## Ejercicio 11
 _Comprobar si el núcleo instalado en tu ordenador contiene este módulo del kernel usando la orden `kvm-ok`._
