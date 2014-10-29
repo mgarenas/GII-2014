@@ -94,7 +94,7 @@ real de una tarea pesada de un procesador a otro (si se tiene dos núcleos en el
 Te pongo un enlace por si te ayuda para hacer este ejercicio. [Link](http://docs.oracle.com/cd/E37670_01/E37355/html/ol_use_cases_cgroups.html)
 
 ## Ejercicio 10
-_Comprobar si el procesador o procesadores instalados tienen estos _flags_. ¿Qué modelo de procesador es? ¿Qué aparece como salida de esa orden?_
+_Comprobar si el procesador o procesadores instalados tienen estos_ flags. _¿Qué modelo de procesador es? ¿Qué aparece como salida de esa orden?_
 
 - Procesador: __Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz__ (máquina virtual)
 - Salida de `flags`: `fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc aperfmperf eagerfpu pni pclmulqdq ssse3 cx16 pcid sse4_1 sse4_2 x2apic popcnt xsave avx f16c hypervisor lahf_lm arat epb xsaveopt pln pts dtherm fsgsbase smep`
