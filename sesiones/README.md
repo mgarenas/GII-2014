@@ -6,3 +6,5 @@
 * [Clase del 17 de octubre de 2014](2.md).
 * [Clase del 20 de octubre de 2014](3.md).
 * [Clase del 24 de octubre de 2014](4.md).
+* [Clase del 27 de octubre de 2014](5.md).
+* [Clase del 31 de octubre de 2014](6.md).
