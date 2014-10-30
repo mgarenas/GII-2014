@@ -10,7 +10,7 @@ Ejercicios de David González Sola
 - **Precio (sin IVA):** 688.43€
 - **Amortización en 4 años:** 172.11€ por año
 - **Amortización en 7 años:** 98.35€ por año
-- [**Referencia:**](http://www.pccomponentes.com/hp_proliant_ml310e_g8_xe_e3_1220_8gb_2tb___foundation_2012.html)
+- [**Referencia**](http://www.pccomponentes.com/hp_proliant_ml310e_g8_xe_e3_1220_8gb_2tb___foundation_2012.html)
 
 ### Ejercicio 2
 
@@ -63,6 +63,8 @@ Se modifica el fichero README con cualquier editor de textos y finalmente se vue
 > git commit -m 'comentario'
 
 > git push
+
+## Sesión 20-octubre-2014
 
 ### Ejercicio 7
 
@@ -137,7 +139,7 @@ group others {
 ### Ejercicio 10
 
 - **Modelo de procesador:** Intel® Core™ i7-3630QM CPU @ 2.40GHz x 8
-- **Salida por pantalla:** flags: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+- **Salida por pantalla:** `flags`: `fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms`
 
 ### Ejercicio 11
 
@@ -146,6 +148,9 @@ Tras ejecutar el comando 'kvm-ok' aparece la siguiente información en la consol
 	INFO: /dev/kvm exists
 	KVM acceleration can be used
 ```
+
+## Sesión 24-octubre-2014
+
 ### Ejercicio 12
 
 Un ejemplo de Saas al que accede a diario gran parte de la población *conectada* es Facebook. No es necesaria ningún tipo de instalación en el ordenador personal del cliente y simplemente utilizando el navegador web (siempre que el servicio se encuentre disponible en ese país) se podrá utilizar este. Por supuesto, esta libertad a la hora de acceder al servicio tiene sus incovenientes, como por ejemplo la falta de poder sobre tus propios datos y los problemas de privacidad que conlleva.
