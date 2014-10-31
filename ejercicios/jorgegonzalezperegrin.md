@@ -66,6 +66,57 @@ Para realizar este ejercicio se han seguido las siguientes órdenes.
 - git commit -m "Primera modificacion"
 
 ### Ejercicio 7
+- apt-get install cgroup-lite
+- ls blkio cpuacct devices hugetlb perf_event cpu cpuset freezer memory systemd
+
+### Ejercicio 8
+
+No he podido realizarlo porque al intentar montar el cgroup me dice que ya se encuentra montado y no me crea los subdirectorios que debería.
+
+
+### Ejercicio 9
+**Parte 1**
+La limitacion de recursos o de asignación puede ser muy útil en el momento en el que tenemos que tenemos que modificar partes de un servicio que no puede pararse. Podemos poner por ejemplo un servidor que esta dando soporte a aplicaciones Android. Es clave que el servicio no se interrumpa, sin embargo podemos realizar tareas bajando el rendimiento a este servicio. De este modo, podemos modificar la parte del servidor necesaria sin tener que interrumpir el servicio.
+
+Otro escenerio es cuando dos usuarios interactúan con los recursos de un mismo ordenador. Esto permite que ambos usuarios puedan trabajar sin "molestarse" entre ellos.
+
+Tambien es util en el momento de proveer una granja de hosting. Con un solo ordenador particionamos los recursos y se lo vendemos a los clientes.
+
+**Parte 2**
+
+No he podido hacer el ejercicio ya que no me deja montar el cgroup. No obstante, en teoria una vez creado los procesos, la prioridad se estableceria de la siguiente forma en el fichero "cgconfig.conf"
+
+group procesos_usuario{ 
+    cpu{
+       cpu.shares = "200"; 
+    } 
+ } 
+group procesos_sistema{ 
+    cpu{ 
+       cpu.shares = "800"; 
+    }
+}
+
+**Parte 3, 4**
+
+No he podido realizarlo por el problema que he tenido en el Ejercicio 8.
+
+
+### Ejercicio 10
+
+El modelo de procesador es: Intel(R) Core(TM) i5-3427U CPU @ 1.80GHz
+
+La salida que obtengo con el comando es:
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor **vmx** ds_cpl smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+
+Como podemos ver, mi procesador tiene activado el flag de vmx
+
+### Ejercicio 11
+
+He tenido que instalar el paquete cpu-checker y la salida al comando "kvm-ok" es la siguiente:
+INFO: /dev/kvm exists
+KVM acceleration can be used
+
 
 
 
