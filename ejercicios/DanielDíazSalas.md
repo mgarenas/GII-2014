@@ -117,16 +117,16 @@ Ejercicio 8
 -----------
 ###Primera parte###
 **Crear grupos de control**
-mkdir patata
-mkdir cebolla
-mkdir zanahoria
+- mkdir patata
+- mkdir cebolla
+- mkdir zanahoria
 **Poner los ceros necesarios**
-echo 0 >patata/cpuset.cpus
-echo 0 >cebolla/cpuset.cpus
-echo 0 >zanahoria/cpuset.cpus
-echo 0 >patata/cpuset.mems
-echo 0 >cebolla/cpuset.mems
-echo 0 >zanahoria/cpuset.mems
+- echo 0 >patata/cpuset.cpus
+- echo 0 >cebolla/cpuset.cpus
+- echo 0 >zanahoria/cpuset.cpus
+- echo 0 >patata/cpuset.mems
+- echo 0 >cebolla/cpuset.mems
+- echo 0 >zanahoria/cpuset.mems
 **Asignar tareas**
 - Procesador de textos: echo 8017 > patata/tasks 
 - Navegador: echo 2167 > cebolla/tasks
