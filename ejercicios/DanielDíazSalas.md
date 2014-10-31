@@ -44,12 +44,12 @@ Una Instancia de rol web y de trabajo con un D2 que tiene:
 
 Ejercicio 3
 -----------
-##Primera parte##
+###Primera parte###
 - **Varios clientes en un servidor**: usaría virtualización a nivel de sistema operativo, ya que aisla los invitados y el anfitrión.
 - **Un sistema eficiente de web + middleware + base de datos**: como se necesita tanto espacio de disco, mucha memoria y un procesador para hacer las consultas no queda otra que utilizar virtualización plena.
 - **Un sistema de prueba de software e integración continua**: usaría virtualización de entornos de desarrollo, de todas las opciones es la más obvia
 
-##Segunda parte##
+###Segunda parte###
 La segunda parte se tarda demasiado tiempo.
 
 Ejercicio 4
@@ -62,9 +62,9 @@ sudo apt-get install git
 
 Ejercicio 6
 -----------
-##Primera parte##
+###Primera parte###
 Se ha creado [este](https://github.com/potray/Ejercicio6CC) repositorio.
-##Segunda parte##
+###Segunda parte###
 [El readme está aquí](https://github.com/potray/Ejercicio6CC/blob/master/README.md)
 
 Ejercicio 7
@@ -115,7 +115,7 @@ cpuset.memory_migrate             tasks
 
 Ejercicio 8
 -----------
-##Primera parte##
+###Primera parte###
 **Crear grupos de control**
 mkdir patata
 mkdir cebolla
@@ -139,7 +139,7 @@ cat patata/cpuacct.usage;cat cebolla/cpuacct.usage;cat zanahoria/cpuacct.usage
 
 Claramente el navegador usa más recursos, seguido de Sublime Text.
 
-##Segunda parte##
+###Segunda parte###
 Demasiado confusa.
 
 Ejercicio 9
