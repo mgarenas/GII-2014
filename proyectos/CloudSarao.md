@@ -1,0 +1,3 @@
+- Nombre del proyecto: **CloudSarao**
+- Equipo de desarrollo: [BabelTowerTeam](https://github.com/babeltowerteam/cloudsarao/README.md)
+- Repositorio del proyecto: https://github.com/babeltowerteam/cloudsarao/
