@@ -83,15 +83,37 @@ En mi instalación de linux (Ubuntu 14.04) se encuentra en `/sys/fs/cgroup` y co
 - _No he podido realizarlo, al igual que el apartado anterior_.
 
 ## Ejercicio 9
+1. ~~Discutir diferentes escenarios de limitación de uso de recursos o de asignación de los mismos a una u otra CPU.~~
 2. Implementar usando el fichero de configuración de `cgcreate` una política que dé menos prioridad a los procesos de usuario que 
 a los procesos del sistema (o viceversa).
 3. Usar un programa que muestre en tiempo real la carga del sistema tal como `htop` y comprobar los efectos de la migración en tiempo 
 real de una tarea pesada de un procesador a otro (si se tiene dos núcleos en el sistema).
 4. Configurar un servidor para que el servidor web que se ejecute reciba mayor prioridad de entrada/salida que el resto de los usuarios.
 
-## Ejercicio 9.2
-
-Te pongo un enlace por si te ayuda para hacer este ejercicio. [Link](http://docs.oracle.com/cd/E37670_01/E37355/html/ol_use_cases_cgroups.html)
+- ### Apartado 2
+  > [DavidGSola](https://github.com/DavidGSola) dijo: 
+  
+  > Te pongo un enlace por si te ayuda para hacer este ejercicio. [Link](http://docs.oracle.com/cd/E37670_01/E37355/html/ol_use_cases_cgroups.html)
+  
+  Con la ayuda del [enlace](http://docs.oracle.com/cd/E37670_01/E37355/html/ol_use_cases_cgroups.html), que son unos **casos de uso** de *Oracle*, asignamos baja prioridad al grupo "usuarios".
+  
+  ```
+  mount {
+  	cpu = /sys/fs/cgroup/cpu
+  }
+  
+  group usuarios {
+  	cpu {
+  		cpu.shares="250";
+  	}
+  }
+  
+  group sistema {
+  	cpu {
+  		cpu.shares="750";
+  	}
+  }
+  ```
 
 ## Ejercicio 10
 _Comprobar si el procesador o procesadores instalados tienen estos_ flags. _¿Qué modelo de procesador es? ¿Qué aparece como salida de esa orden?_
