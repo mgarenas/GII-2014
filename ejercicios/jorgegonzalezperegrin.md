@@ -15,19 +15,21 @@ Cuatro años: 396,49€ por año
 Siete años: 226,56€ por año
 
 ### Ejercicio 2
-Se han comparado una instancia virtual de **Google Compute Ingine** con una de **Amazon Web Service**. Ambas poseen 4 nucleos virtuales de procesadores similares al Intel Xeon E5-2670 con 16GB de RAM.
+Se van a comparar un servidor VPS de **1&1 Hosting** con un servidor cloud de **Google Compute Ingine**. Elegimos dos servidores de caracteristicas parecidas y hacemos los siguientes calculos
 
-La instancia de Google es la **n1-standard-4** que cuesta 0,276$/h
-La instancia de Amazon es la **m3.xlarge** que cuesta un primer pago anticipado $439 mas una cuota de 0,308$/h
+La instancia de Google es la **n1-standard-1**
+El servido VPS de de 1&1 Hosting equivalente sería el **Servidor Virtual XL** 
 
 Teniendo esto en cuenta realizamos los calulos para
 **1%**
--Amazon: 439$ + 87,6h * 0,308$/h = 465,98$
--Google: 87,6h * 0,276$/h = 24,17 $
+-Google: 87,6h * 0.0551€/h = 4,83€
+-1&1 Hosting: 20€/mes * 12 meses = 240€
+-1&1 Hosting: 10€/mes * 12 meses = 120€ (con la oferta del primer año de descuento)
 
 **10%**
--Amazon: 439$ + 876h * 0,308$/h =4659,8 $
--Google: 876h * 0,276$/h = 241,77 $
+-Google: 876h * 0.0551€/h = 48.34 €
+-1&1 Hosting: 20€/mes * 12 meses = 240€
+-1&1 Hosting: 10€/mes * 12 meses = 120€ (con la oferta del primer año de descuento)
 
 ### Ejercicio 3
 
