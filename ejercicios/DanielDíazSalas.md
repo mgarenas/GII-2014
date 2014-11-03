@@ -144,3 +144,38 @@ Demasiado confusa.
 
 Ejercicio 9
 ------------
+
+###Primera parte###
+404 not found
+
+###Segunda parte###
+mount {cpu = /cgroup/cpu}
+
+group usuarios {
+    cpu {
+        cpu.shares="250";
+    }
+}
+
+group sistema {
+    cpu {
+        cpu.shares="500";
+    }
+}
+
+###Tercera parte###
+
+Creé los grupos "teveo" y "usuarios" utilizando la órden cgcreate. A continuación edité los ficheros /sys/fs/cgroup/cpu/<grupo>/cpu.shares para cambiarle a 250 el de usuarios y a 750 el de sistema.
+
+Para ejecutar el procesador de textos de OpenOffice bajo el grupo "usuarios":
+
+>sudo cgexec -g memory,cpu,cpuacct:usuarios lowriter
+
+Para cambiarlo:
+
+>sudo cgclassify -g memory,cpu,cpuacct:teveo 10047
+
+En mi caso no se observan cambios.
+
+###Cuarta parte###
+

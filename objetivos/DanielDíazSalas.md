@@ -60,3 +60,13 @@ Lista de objetivos de Daniel Díaz Salas
 [x] Dar de alta la clave SSH para trabajar con GitHub más cómodamente. 
 [] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 [] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+#Clase del 3 de noviembre de 2014
+##Objetivos de esta sesión
+[x] Si todavía no se ha hecho, [leed los proyectos propuestos y elegir uno](../proyectos_propuestos.md). 
+[x] [Continuar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura). El plazo para entregar las prácticas es de dos semanas: hasta el final de la sesión del 10 de octubre. 
+
+##Otros objetivos
+
+[] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+[] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
