@@ -22,14 +22,14 @@ El servido VPS de de 1&1 Hosting equivalente sería el **Servidor Virtual XL**
 
 Teniendo esto en cuenta realizamos los calulos para
 **1%**
--Google: 87,6h * 0.0551€/h = 4,83€
--1&1 Hosting: 20€/mes * 12 meses = 240€
--1&1 Hosting: 10€/mes * 12 meses = 120€ (con la oferta del primer año de descuento)
+- Google: 87,6h * 0.0551€/h = 4,83€
+- 1&1 Hosting: 20€/mes * 12 meses = 240€
+- 1&1 Hosting: 10€/mes * 12 meses = 120€ (con la oferta del primer año de descuento)
 
 **10%**
--Google: 876h * 0.0551€/h = 48.34 €
--1&1 Hosting: 20€/mes * 12 meses = 240€
--1&1 Hosting: 10€/mes * 12 meses = 120€ (con la oferta del primer año de descuento)
+- Google: 876h * 0.0551€/h = 48.34 €
+- 1&1 Hosting: 20€/mes * 12 meses = 240€
+- 1&1 Hosting: 10€/mes * 12 meses = 120€ (con la oferta del primer año de descuento)
 
 ### Ejercicio 3
 
