@@ -7,3 +7,10 @@ CloudSarao
 - Descripción del proyecto: aplicación para la gestión de eventos de la OSL.
 - Equipo de desarrollo: [BabelTowerTeam](https://github.com/babeltowerteam/cloudsarao/blob/master/README.md)
 - Repositorio del proyecto: https://github.com/babeltowerteam/cloudsarao/
+
+
+HarmacenCloud
+-------------
+- Descripción del proyecto: aplicación para la gestión de un almacén
+- Equipo de desarrollo: [HarmaDev](https://github.com/orgs/HarmaDev/people)
+- Repositorio del proyecto: https://github.com/HarmaDev/HarmacenCloud
