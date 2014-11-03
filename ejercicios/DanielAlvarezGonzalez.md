@@ -20,7 +20,7 @@ En el servicio de Microsoft, el precio por el uso durante un 1% del año sería 
 Por lo tanto, el precio por el servicio durante un 10% del año es 469.71€.
 
 Correción por parte de Jesús Maillo:
-Por un error de compresión común en la mayoría de la clase paso a comparar tu máquina de Azure con una de pago por mensualidades de características similares.
+Por un error de comprensión común en la mayoría de la clase paso a comparar tu máquina de Azure con una de pago por mensualidades de características similares.
 
 Mirando en la [calculadora de precios de Azure](http://azure.microsoft.com/es-es/pricing/calculator/?scenario=cloud) he comprobado que el pago anual de la máquina A4 es de 354€ lo que lleva a:
 * El precio por el uso durante un 1% del año sería 46.97€ + 354 = 400.97€.
