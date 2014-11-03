@@ -2,10 +2,10 @@ Lista de objetivos de Daniel Díaz Salas
 ============================
 #Clase del 10 de octubre de 2014
 ##Objetivos a cubrir en la sesión
-- [x]. Entender la *metodología docente*, de evaluación y de interacción de la asignatura
-- [x]. Darse de alta y comprender el funcionamiento básico de GitHub y la lista de correo de la asignatura
-- [x]. Entender el concepto de software libre y su aplicación práctica en clase.
-- [x]. Vernos las caras.
+- [x] Entender la *metodología docente*, de evaluación y de interacción de la asignatura
+- [x] Darse de alta y comprender el funcionamiento básico de GitHub y la lista de correo de la asignatura
+- [x] Entender el concepto de software libre y su aplicación práctica en clase.
+- [x] Vernos las caras.
 
 #Clase del 17 de octubre de 2014
 ##Objetivos de la clase
