@@ -1,6 +1,6 @@
 #Sesión del 17 de Octubre
 ##Ejercicio 01
-
+ 
 Servidor en la dirección [Servidor](http://www.dell.com/es/empresas/p/poweredge-t630/pd?~ck=anav)
 Precio 5007€, precio sin IVA 4138.016
 Amortización a 4 años --> 1034.50
@@ -49,6 +49,8 @@ Una vez que hemos instalado docker, podemos instalar una aplicación siguiendo l
 		- docker ps (para obtener los IDs)
 		- docker inspect
 	8- docker push learn/ping
+
+Todos estos pasos los he seguido en mi ordenador, he instalado dockers y he seguido el tutorial completo del enlace que se facilita en el enunciado del ejercicio.
 
 
 ##Ejercicio 05
@@ -151,7 +153,7 @@ Una vez que hemos instalado docker, podemos instalar una aplicación siguiendo l
 
 
 ##Ejercicio 12
-
+	Una aplicación SaaS es aquella en la que el soporte lógico y los datos que se manejan se alojan en el servidor que proporciona el servicio. Por esto, normalmente el usuario no tiene que instalar nada en su ordenador, bastando con un navegador web para hacer uso de dicho servicio. Algunos ejemplos de este tipo de software es la gama de servicios que ofrece Google tales como Gmail, Google Maps, Google Drive, etc. También son de este tipo los servicios de almacenamiento en la nube como Dropbox o Mega.
 	
 
 
