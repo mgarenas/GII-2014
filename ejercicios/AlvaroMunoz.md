@@ -38,6 +38,7 @@ El servidor elegido ha sido un [HP ProLiant ML310e G8 XE E3-1220/8GB/2TB](http:/
 	- Amazon c3.xlarge: 145 €
 
 *Nota: la conversión entre $ y € se hizo el día 23/10/2014 con 0.21USD = 0.166040EUR*
+*Aclaración: el servidor escogido de OVH es de tipo VPS, dedicado, que se paga con mensualidades, que es la comparación que el ejercicio pedía.*
 
 
 ### Ejercicio 3.1
