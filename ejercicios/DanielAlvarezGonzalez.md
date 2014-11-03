@@ -50,6 +50,8 @@ Una vez que hemos instalado docker, podemos instalar una aplicación siguiendo l
 		- docker inspect
 	8- docker push learn/ping
 
+Todos estos pasos los he seguido en mi ordenador, he instalado dockers y he seguido el tutorial completo del enlace que se facilita en el enunciado del ejercicio.
+
 
 ##Ejercicio 05
 	[Instalación y configuración ubuntu 12.04](http://www.liquidweb.com/kb/how-to-install-git-on-ubuntu-12-04/)
