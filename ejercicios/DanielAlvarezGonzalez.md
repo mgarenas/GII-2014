@@ -19,6 +19,20 @@ A4	8 núcleos	14,00 GB RAM	605 GB	de disco --> 0,5362€ por hora
 En el servicio de Microsoft, el precio por el uso durante un 1% del año sería 46.97€.
 Por lo tanto, el precio por el servicio durante un 10% del año es 469.71€.
 
+Correción por parte de Jesús Maillo:
+Por un error de compresión común en la mayoría de la clase paso a comparar tu máquina de Azure con una de pago por mensualidades de características similares.
+
+Mirando en la [calculadora de precios de Azure](http://azure.microsoft.com/es-es/pricing/calculator/?scenario=cloud) he comprobado que el pago anual de la máquina A4 es de 354€ lo que lleva a:
+* El precio por el uso durante un 1% del año sería 46.97€ + 354 = 400.97€.
+* El precio por el servicio durante un 10% del año es 469.71€ + 354 = 823.71€.
+
+El servidor encontrado es: [OVZ-12GB](https://demonvps.com/vps-hosting/)
+
+Tiene 8 cores, 12 de Ram y un almacenamiento similar sale por 47.94€ mensuales o si se paga anualmente por un total de 558.04€
+
+Merece la pena en ambos casos, sin tener en cuenta que tiene menos capacidad de memoria.
+
+
 
 ##Ejercicio 03
 Tipo de virtualización que utilizaría en cada caso y por qué
