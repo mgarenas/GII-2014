@@ -165,7 +165,7 @@ group sistema {
 
 ###Tercera parte###
 
-Creé los grupos "teveo" y "usuarios" utilizando la órden cgcreate. A continuación edité los ficheros /sys/fs/cgroup/cpu/<grupo>/cpu.shares para cambiarle a 250 el de usuarios y a 750 el de sistema.
+Creé los grupos "teveo" y "usuarios" utilizando la órden cgcreate. A continuación edité los ficheros /sys/fs/cgroup/cpu/<grupo>/cpu.shares para cambiarle a 250 el de usuarios y a 750 el de teveo.
 
 Para ejecutar el procesador de textos de OpenOffice bajo el grupo "usuarios":
 
@@ -175,7 +175,38 @@ Para cambiarlo:
 
 >sudo cgclassify -g memory,cpu,cpuacct:teveo 10047
 
-En mi caso no se observan cambios.
+Se observa una diferencia mínima: del 1.2% ha pasado al 1.5%, siendo estos valores máximos alcanzados, ya que el uso de la CPU ha ido oscilando.
 
 ###Cuarta parte###
 
+group servidorWeb {
+    blkio{
+        blkio.weigh="500";
+    }
+}
+
+group otros {
+    blkio{
+        blkio.weigh="250";
+    }
+}
+
+Ejercicio 10
+------------
+
+Mi procesador es un Intel(R) Core(TM) i5 CPU M 450  @ 2.40GHz. 
+
+Los flags que tengo son los siguientes:
+>fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 popcnt lahf_lm ida arat dtherm tpr_shadow vnmi flexpriority ept vpid
+
+Ejercicio 11
+------------
+
+Esta es la salida de la orden:
+
+>INFO: /dev/kvm exists
+KVM acceleration can be used
+
+Por lo que si que tiene el módulo.
+
+Ejercicio 12
