@@ -8,3 +8,6 @@
 * [Clase del 24 de octubre de 2014](4.md).
 * [Clase del 27 de octubre de 2014](5.md).
 * [Clase del 31 de octubre de 2014](6.md).
+* [Clase del  3 de noviembre de 2014](7.md).
+* [Clase del  7 de noviembre de 2014](8.md).
+* [Clase del 10 de noviembre de 2014](9.md).
