@@ -15,27 +15,17 @@ SERVIDOR HP PROLIANT ML350P G8 XEON E5-2609 2.4 GHz 4GB DISCO DURO HDD 2.5" SFF 
 
 ### Ejercicio 2:
 
-| Servicio | vCores | HDD (GB) | RAM (GB) | Factura/año ($)   | Factura/h  ($) |
-|----------|--------|----------|----------|-------------------|----------------|
-|Azure     | 4      | 120      | 7        |     1771.56    	  | 0.1983         |
-|Amazon    | 4 	    | 80	   | 7.5      |  	333     	  | 0.186          |
-|Google    | 4 	    | -	       | 14       |  	2207.52       | 0.252          |
+| Servicio | vCores | HDD (GB) | RAM (GB) | Factura/mes ($)   | Factura/h  ($) | Pago anticipado ($) |
+|----------|--------|----------|----------|-------------------|----------------|---------------------|
+|1and1     | 4      | 1000     | 16       |     100     	  | -              |     -      	     |
+|Amazon    | 4 	    | 800	   | 30.5     |  	-       	  | 0.369          |     644    	     |
 
-* Para el 1% del año (3,65 dias, 88 horas):
+* Para el 1% del año (3,65 dias, 88 horas) y 10% del año (36,5 dias, 880 horas):
 
-| Servicio | Precio ($) |
-|----------|------------|
-|Azure     | 17,45      | 
-|Amazon    | 16,368 	|
-|Google    | 22,176 	|
-
-* Para el 10% del año (36,5 dias, 88 horas):
-
-| Servicio | Precio ($) |
-|----------|------------|
-|Azure     | 174,5      | 
-|Amazon    | 163,68 	|
-|Google    | 221,76 	|
+| Servicio | Precio ($)/1% año  | Precio ($)/10% año |
+|----------|--------------------|--------------------|
+|VPS 1and1 | 1200               | 1200  	         |
+|Amazon    | 676,47 	        | 968,72 	         |
 
 
 ### Ejercicio 3:
@@ -122,6 +112,6 @@ kvm-ok no estaba instalado de serie, en parte por estar trabajando en virtual. P
 
 Un SaaS o Software as a Service es una aplicación normalmente de escritorio que se lleva a internet, con el objetivo de permitir al usuario deshacerse de tareas tan engorrosas como la instalación, mantenimiento propio, actualización, etc. Así como ofreciendo la gran ventaja de poder acceder a dicha aplicación y al trabajo relacionado con esta en cualquier tipo de dispositivo.
 
-Un gran ejemplo de estos SaaS son las aplicaciones de ofimática en la nube que todas las grandes empresas ya han incorporado como Microsoft office 375, Google Docs, writer y iCloud Pages, Keynote y Numbers de Apple.
+Un gran ejemplo de estos SaaS son las aplicaciones de ofimática en la nube que todas las grandes empresas ya han incorporado como Microsoft office 365, Google Docs, writer y iCloud Pages, Keynote y Numbers de Apple.
 
 Unas de las aplicaciones que me han parecido bastante interesantes dentro de este sector son las aplicaciones web para el desarrollo del software. Son aplicaciones que no uso muy habitualmente pero cuando necesito de ellas no me apetece instalarlas ya que son para un momento, cómo desarrollar un diagrama de flujo o un diagrama UML  para algún ejercicio. Y estas son igual de potentes que las que vayamos a instalar.
