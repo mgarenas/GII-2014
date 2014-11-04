@@ -61,10 +61,10 @@ Objetivos de Sergio
 
 ##Objetivos de estas sesiones
 
-[X] Si todavía no se ha hecho, [leed los proyectos propuestos y elegir uno](../proyectos_propuestos.md). 
-[X] [Continuar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura). El plazo para entregar las prácticas es de dos semanas: hasta el final de la sesión del 10 de noviembre. 
+- [X] Si todavía no se ha hecho, [leed los proyectos propuestos y elegir uno](../proyectos_propuestos.md).
+- [X] [Continuar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura). El plazo para entregar las prácticas es de dos semanas: hasta el final de la sesión del 10 de noviembre. 
 
 ##Otros objetivos
 
-[ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
-[ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
