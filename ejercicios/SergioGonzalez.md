@@ -74,6 +74,7 @@ Para el mac, lo he instalado descargandolo de http://git-scm.com/downloads
 
 ### Ejercicio 6:
 
+El repositorio generado se puede encontrar en el siguiente [enlace](https://github.com/sergiogvz/prueba) y el archivo README, [aquí](https://github.com/sergiogvz/prueba/blob/master/README.md).
 
 
 ### Ejercicio 7:
@@ -97,7 +98,7 @@ cgroup.event_control   cgroup.sane_behavior  release_agent      user
 
 ### Ejercicio 10:
 
-Actualmente estoy trbajando en una máquina virtual por lo que la sentencia  egrep '^flags.*(vmx|svm)' /proc/cpuinfo no la puedo utilizar, ya que no me mostrará dichas flags.
+Actualmente estoy trabajando en una máquina virtual por lo que la sentencia  egrep '^flags.*(vmx|svm)' /proc/cpuinfo no la puedo utilizar, ya que no me mostrará dichas flags.
 
 Inspeccionando cpuinfo, puedo obtener el modelo de mi cpu: Intel(R) Core(TM) i5-2415M CPU @ 2.30GHz
 
@@ -111,9 +112,16 @@ Como vemos el procesador realmente incluye y está activada la opción de virtua
 
 ### Ejercicio 11:
 
+kvm-ok no estaba instalado de serie, en parte por estar trabajando en virtual. Para instalarlo, he usado sudo apt-get install qemu-kvm. Al ejecularlo como cabía esperar, lo que nos devuelve kvm-ok es lo siguiente:
+	INFO: Your CPU does not support KVM extensions
+	INFO: For more detailed results, you should run this as root
+	HINT:   sudo /usr/sbin/kvm-ok
+
 
 ### Ejercicio 12:
 
+Un SaaS o Software as a Service es una aplicación normalmente de escritorio que se lleva a internet, con el objetivo de permitir al usuario deshacerse de tareas tan engorrosas como la instalación, mantenimiento propio, actualización, etc. Así como ofreciendo la gran ventaja de poder acceder a dicha aplicación y al trabajo relacionado con esta en cualquier tipo de dispositivo.
 
+Un gran ejemplo de estos SaaS son las aplicaciones de ofimática en la nube que todas las grandes empresas ya han incorporado como Microsoft office 375, Google Docs, writer y iCloud Pages, Keynote y Numbers de Apple.
 
-
+Unas de las aplicaciones que me han parecido bastante interesantes dentro de este sector son las aplicaciones web para el desarrollo del software. Son aplicaciones que no uso muy habitualmente pero cuando necesito de ellas no me apetece instalarlas ya que son para un momento, cómo desarrollar un diagrama de flujo o un diagrama UML  para algún ejercicio. Y estas son igual de potentes que las que vayamos a instalar.
