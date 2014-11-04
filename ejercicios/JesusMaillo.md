@@ -207,6 +207,7 @@ Puesto que no soporta virtualización hardware, lo otra opción es instalar la v
 
 Existen numerosas aplicaciones que pueden ser incluidas dentro del concepto SaaS. Veamos con algunos ejemplos de los más conocidos a que se refiere:
 
+Los servicios de almacenamiento en la nube son un claro ejemplo de aplicación SaaS: Dropbox, Google Drive y Mega son algunas de las más conocidas.
 Gestores de correo electrónico como Gmail, Outlook y Yahoo también son ejemplos de aplicaciones SaaS.
 Google Docs permite trabajar con un editor de textos desde la web. 
 
@@ -215,5 +216,3 @@ Todas ellas son consideradas como SaaS (Software as a Service – Software como 
 * El cliente disfruta del servicio mediante internet.
 * El servidor es el encargado del mantenimiento, copias de respaldo, configuración, actualización, etc.
 * El cliente solo se debe de preocupar de la configuración personal sobre las características del servicio que va a utilizar, pero no debe hacerlo de instalaciones, mantenimiento, etc.
-
-Corrección de sergiogvz: Los servicios de almacenamiento suele no considerarse SaaS, ya que proveen eso, solo almacenamiento. Los SaaS son más aquellos servicios encontrados normalmente en aplicaciones de escritorio, por ejemplo, como bien has indicado: gestores de correo o aplicaciones de ofimática.
