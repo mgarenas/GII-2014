@@ -51,3 +51,16 @@ Sesión 4 - Clase del 24 de octubre de 2014
 - [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [x] Consolidar el uso de la línea de órdenes para administración y desarrollo de software.
 - [x] Contestar a la encuesta sobre la metodología de clase
+
+
+Sesión 5 - Clase del 27 de octubre de 2014
+------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Conocer los diferentes _proyectos propuestos_ para llevarlos a cabo a lo largo de la asignatura.
+
+### Otros objetivos
+- [ ] Usar *exclusivamente* la línea de órdenes para trabajar con GitHub.
+- [ ] Dar de alta la clave SSH para trabajar con GitHub más cómodamente. 
+- [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
