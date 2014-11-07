@@ -36,15 +36,43 @@ El tiempo por horas utilizado al 10% es de 269,808€. Haven un total de 708,808
  
 El segundo lo podemos encontrar [aqui](http://azure.microsoft.com/es-es/pricing/calculator/?scenario=cloud) con unas características:
 
-4 CPU, 14 G Ram, 250 SSD.
+>4 CPU, 14 G Ram, 250 SSD.
+>
+>352,39€ el pago del servicio anual y un costo de 0.474€ la hora.
+>
+>El tiempo por horas utilizado al 1% es de 41,5224€. Hacen un total de 393,9124€
+>
+>El tiempo por horas utilizado al 10% es de 415,224€. Haven un total de 767,614€
+>
+>Para unas características similares, incluso Azure posee algo más de disco SSD, los precios son muy similares, lo suficiente como para tener que centrarse realmente en la funcionalidad y las características que deseemos más que en las diferencias en precio ya se con un uso del 1% o del 10%.
 
-352,39€ el pago del servicio anual y un costo de 0.474€ la hora.
 
-El tiempo por horas utilizado al 1% es de 41,5224€. Hacen un total de 393,9124€
+*Corrección de Luis Baca Ruiz*
 
-El tiempo por horas utilizado al 10% es de 415,224€. Haven un total de 767,614€
+Si cogemos el primer caso que expones 
 
-Para unas características similares, incluso Azure posee algo más de disco SSD, los precios son muy similares, lo suficiente como para tener que centrarse realmente en la funcionalidad y las características que deseemos más que en las diferencias en precio ya se con un uso del 1% o del 10%.
+* 4 CPU, 15 GB Ram, 80 SSD
+
+* 439€ el pago del servicio anual y un costo de 0.308€ la hora.
+
+* El tiempo por horas utilizado al 1% es de 26.31552€. Hacen un total de 465,315€
+
+* El tiempo por horas utilizado al 10% es de 269,808€. Haven un total de 708,808€
+
+Podemos encontrar en la siguiente url:
+
+https://www.ovh.es/vps/vps-classic.xml
+
+el siguiente servidor:
+
+  * VPS Classic 4.
+  * 18.14 € IVA incl / mes.
+  * 4 vCores.
+  * 8 GB.
+  * 100 GB Raid 10.
+
+que es muy similar al que expones. De modo que tendrías un coste de 0.025 € / hora. Puede verse la diferencia entre el precio la horas en este caso sale mucho más barato esta segunda opción.
+
 
 ###Ejercicio 3:
 **1 -¿Qué tipo de virtualización usarías en cada caso? Comentar en el foro.**
@@ -207,7 +235,6 @@ Puesto que no soporta virtualización hardware, lo otra opción es instalar la v
 
 Existen numerosas aplicaciones que pueden ser incluidas dentro del concepto SaaS. Veamos con algunos ejemplos de los más conocidos a que se refiere:
 
-Los servicios de almacenamiento en la nube son un claro ejemplo de aplicación SaaS: Dropbox, Google Drive y Mega son algunas de las más conocidas.
 Gestores de correo electrónico como Gmail, Outlook y Yahoo también son ejemplos de aplicaciones SaaS.
 Google Docs permite trabajar con un editor de textos desde la web. 
 
@@ -216,3 +243,5 @@ Todas ellas son consideradas como SaaS (Software as a Service – Software como 
 * El cliente disfruta del servicio mediante internet.
 * El servidor es el encargado del mantenimiento, copias de respaldo, configuración, actualización, etc.
 * El cliente solo se debe de preocupar de la configuración personal sobre las características del servicio que va a utilizar, pero no debe hacerlo de instalaciones, mantenimiento, etc.
+
+*Corrección de sergiogvz: Los servicios de almacenamiento suele no considerarse SaaS, ya que proveen eso, solo almacenamiento. Los SaaS son más aquellos servicios encontrados normalmente en aplicaciones de escritorio, por ejemplo, como bien has indicado: gestores de correo o aplicaciones de ofimática.*

@@ -2,9 +2,9 @@ Ejercicios
 ======
 
 Tema1
-======
+-----
 
-1 Consultar en el catálogo de alguna tienda de informática el precio de un ordenador tipo servidor y calcular su coste de amortización a cuatro y siete años. Consultar este artículo en Infoautónomos sobre el tema. 
+###Ejercicio 1 Consultar en el catálogo de alguna tienda de informática el precio de un ordenador tipo servidor y calcular su coste de amortización a cuatro y siete años. Consultar este artículo en Infoautónomos sobre el tema. 
 
 	Servidor Dell PowerEdge T110 II: 329€ 
 	(http://www.dell.com/es/empresas/p/poweredge-t110-2/pd)
@@ -13,60 +13,133 @@ Tema1
 
 	Para amortizarlo en siete años, su coste de amortización es de 3'92€/mes, 47€ al año, un 14'29% al año.
 
-2 Usando las tablas de precios de servicios de alojamiento en Internet y de proveedores de servicios en la nube, Comparar el coste durante un año de un ordenador con un procesador estándar (escogerlo de forma que sea el mismo tipo de procesador en los dos vendedores) y con el resto de las características similares (tamaño de disco duro equivalente a transferencia de disco duro) si la infraestructura comprada se usa sólo el 1% o el 10% del tiempo
+###Ejercicio 2 Usando las tablas de precios de servicios de alojamiento en Internet y de proveedores de servicios en la nube, Comparar el coste durante un año de un ordenador con un procesador estándar (escogerlo de forma que sea el mismo tipo de procesador en los dos vendedores) y con el resto de las características similares (tamaño de disco duro equivalente a transferencia de disco duro) si la infraestructura comprada se usa sólo el 1% o el 10% del tiempo.
+
+	Google Cloud Platform
+
+		1 Servidor 
+		SO CentOS
+		2 Cores 
+		7.5GB RAM
+		HD 375GB
+		SSD storage 50 GB 16'25$
+		22'74$/mes Uso > 25%
+			
+		TOTAL (Tanto al 1% como al 10%): 38'99 $/mes = 31'13€/mes
+
+	1&1
+		1 Servidor
+		SO CentOS
+		2 Cores		0.02 €/h
+		7 GB RAM	0.07 €/h
+		HD 400GB	0.04 €/h
+		SSD storage 50 GB	29'99€/mes
+		93'60€/mes
+
+		Si se utilizase sólo al 10% = 72 horas => (0.13 *72) + 29'99 = 39'35€/mes
+		Si se utilizase sólo al 1% = 7.2 horas => (0.13*7'2) + 29,99 = 30'94€/mes
 	
-3.1 ¿Qué tipo de virtualización usarías en cada caso? Comentar en el foro
+###Ejercicio 3.1 ¿Qué tipo de virtualización usarías en cada caso? Comentar en el foro
 
-Alojar varios clientes en un sólo servidor: A nivel de Sistema Operativo, ya que permite que los todos invitados posean cuentas totalmente independientes unas de otras y, como han comentado mis compañeros, al utilizar el mismo sistema operativo que el anfitrión, éstos pueden despreocuparse de las actualizaciones y demás tareas de administración, las cuales serían llevadas por el administrador.
+-**Alojar varios clientes en un sólo servidor:** A nivel de Sistema Operativo, ya que permite que los todos invitados posean cuentas totalmente independientes unas de otras y, como han comentado mis compañeros, al utilizar el mismo sistema operativo que el anfitrión, éstos pueden despreocuparse de las actualizaciones y demás tareas de administración, las cuales serían llevadas por el administrador.
 
-Crear un sistema eficiente de web + middleware + base de datos: Al igual que DavidGSola, utilizaría una virtualización a nivel de aplicación, dado que considero esencial reducir al máximo el uso de los recursos y, en el caso de una virtualización plena o de sistema operativo, es necesario consumir gran cantidad de recursos.
+-**Crear un sistema eficiente de web + middleware + base de datos:** Al igual que DavidGSola, utilizaría una virtualización a nivel de aplicación, dado que considero esencial reducir al máximo el uso de los recursos y, en el caso de una virtualización plena o de sistema operativo, es necesario consumir gran cantidad de recursos.
 
-Sistema de prueba de software e integración continua: Virtualización de entornos para así poder probar el comportamiento del software generado en los distintos entornos que se deseen probar.
+-**Sistema de prueba de software e integración continua:** Virtualización de entornos para así poder probar el comportamiento del software generado en los distintos entornos que se deseen probar.
 
-3.2Crear un programa simple en cualquier lenguaje interpretado para Linux, empaquetarlo con CDE y probarlo en diferentes distribuciones.
+###Ejercicio 3.2 Crear un programa simple en cualquier lenguaje interpretado para Linux, empaquetarlo con CDE y probarlo en diferentes distribuciones.
+	Instalar CDE: sudo apt-get install cde
+	Programa a empaquetar: helloworld.py
+		#!/usr/bin/python
+		# Hello world python program
+		print "Hello World!";
+	Para generar el paquete:
+	1. Descargar el binario cde de la página http://www.pgbovine.net/cde.html
+	2. Se copia en el directorio del script
+	3. Se asigna permiso de ejecución para ambos ficheros chmod +x ./*
+	4. Se ejecuta ./cde_2011-08-15_64bit ./helloworld.py
+	5. Automáticamente se generan el fichero "cde.options" y el directorio "cde-package"
+	6. Ejecutar ./cde-package/cde-exec ./helloworld.py desde el directorio que contiene tanto al script como al paquete.
+	
 
+###Ejercicio 4.1 Hacer el tutorial de línea de órdenes de docker para comprender cómo funciona.
+	Los comandos introducidos fueron:
+	docker version
+	docker search tutorial
+	docker pull learn/tutorial
+	docker run learn/tutorial echo "hello world"
+	docker run learn/tutorial apt-get install -y ping
+	docker commit 698 learn/ping
+	docker run learn/ping ping www.google.com
+	docker inspect efe
+	docker push learn/ping
 
+	![Imagen almacenada en /ejercicios/CarlosTorresGarcíaDocker.png]
+###Ejercicio 4.2 Avanzado Instalarlo y crear una aplicación contenedorizada.
+	sudo apt-get install docker.io
+	
 
-4.1 Hacer el tutorial de línea de órdenes de docker para comprender cómo funciona.
-4.2Avanzado Instalarlo y crear una aplicación contenedorizada.
-
-5.Instala el sistema de gestión de fuentes git
+###Ejercicio 5 Instala el sistema de gestión de fuentes git
 	sudo apt-get install git
 
-6.1 Crear un proyecto y descargárselo con git. Al crearlo se marca la opción de incluir el fichero README.
-6.2 Modificar el readme y subir el fichero modificado
+###Ejercicio 6.1 Crear un proyecto y descargárselo con git. Al crearlo se marca la opción de incluir el fichero README.
+###Ejercicio 6.2 Modificar el readme y subir el fichero modificado
+	*Una vez creado se clona el repositorio: git clone git@github.com:Appsamblea/Appsamblea.git
+	*Se edita el fichero
+	*Se realiza un pull-request:
+
+###Ejercicio 7 Comprobar si en la instalación hecha se ha instalado cgroups y en qué punto está montado, así como qué contiene.
+	Se encuentra en /sys/fs y contiene los siguientes directorios:
+	
+		blkio  cpuacct  devices  hugetlb  perf_event
+		cpu    cpuset   freezer  memory   systemd
+	
+
+###Ejercicio 8.1 Crear diferentes grupos de control sobre un sistema operativo Linux. Ejecutar en uno de ellos el navegador, en otro un procesador de textos y en uno último cualquier otro proceso. Comparar el uso de recursos de unos y otros durante un tiempo determinado.
+		
+	sudo su	
+	cd /sys/fs/cgroup
+	mkdir gp1 gp2 gp3
+	
+###Ejercicio 8.2 Calcular el coste real de uso de recursos de un ordenador teniendo en cuenta sus costes de amortización. Añadir los costes eléctricos correspondientes.
 
 
-7.Comprobar si en la instalación hecha se ha instalado cgroups y en qué punto está montado, así como qué contiene.
 
+###Ejercicio 9.1 Discutir diferentes escenarios de limitación de uso de recursos o de asignación de los mismos a una u otra CPU.
+###Ejercicio 9.2 Implementar usando el fichero de configuración de cgcreate una política que dé menos prioridad a los procesos de usuario que a los procesos del sistema (o viceversa).
+###Ejercicio 9.3 Usar un programa que muestre en tiempo real la carga del sistema tal como htopy comprobar los efectos de la migración en tiempo real de una tarea pesada de un procesador a otro (si se tiene dos núcleos en el sistema).
+###Ejercicio 9.4 Configurar un servidor para que el servidor web que se ejecute reciba mayor prioridad de entrada/salida que el resto de los usuarios.
 
- 8.1Crear diferentes grupos de control sobre un sistema operativo Linux. Ejecutar en uno de ellos el navegador, en otro un procesador de textos y en uno último cualquier otro proceso. Comparar el uso de recursos de unos y otros durante un tiempo determinado.
+###Ejercicio 10.1 Comprobar si el procesador o procesadores instalados tienen estos flags. ¿Qué modelo de procesador es? 
+	Intel Core i5 M 430
 
- 8.2Calcular el coste real de uso de recursos de un ordenador teniendo en cuenta sus costes de amortización. Añadir los costes eléctricos correspondientes.
+###Ejercicio 10.2¿Qué aparece como salida de esa orden?
+	Aparece el siguiente mensaje repetido 4 veces (uno por cada núcleo del procesador):
+	
+	flags: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx 
+	est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt lahf_lm arat dtherm tpr_shadow vnmi flexpriority ept vpid
+	
+	Únicamente la fila de abajo aparece en color blanco, las otras dos líneas están en color rojo.	
 
+###Ejercicio 11 Comprobar si el núcleo instalado en tu ordenador contiene este módulo del kernel usando la orden kvm-ok
+	Sí lo tiene. Al ejecutar la orden kvm-ok me da el siguiente mensaje:
 
+	INFO: /dev/kvm exists\n
+	KVM acceleration can be used
 
-9.1Discutir diferentes escenarios de limitación de uso de recursos o de asignación de los mismos a una u otra CPU.
-9.2Implementar usando el fichero de configuración de cgcreate una política que dé menos prioridad a los procesos de usuario que a los procesos del sistema (o viceversa).
-9.3Usar un programa que muestre en tiempo real la carga del sistema tal como htopy comprobar los efectos de la migración en tiempo real de una tarea pesada de un procesador a otro (si se tiene dos núcleos en el sistema).
-9.4Configurar un servidor para que el servidor web que se ejecute reciba mayor prioridad de entrada/salida que el resto de los usuarios.
-
-10.1Comprobar si el procesador o procesadores instalados tienen estos flags. ¿Qué modelo de procesador es? 
-Intel Core i5 <....>
-10.2¿Qué aparece como salida de esa orden?
-
-11.Comprobar si el núcleo instalado en tu ordenador contiene este módulo del kernel usando la orden kvm-ok
-
-12.Comentar diferentes soluciones de Software as a Service de uso habitual
+###Ejercicio 12 Comentar diferentes soluciones de Software as a Service de uso habitual
+	Cualquier servidor de correo electrónico es un SaS de uso habitual (hotmail, gmail, yahoo, etc.)
+	Las aplicaciones de ofimática incluídas en Google Drive son otro ejemplo de SaS.
 
 Seminario Ruby
-======
-1 Instalar Ruby y usar ruby –version
+-----
+###Ejercicio 1 Instalar Ruby y usar ruby –version
 	ruby 1.9.3p484 (2013-11-22 revision 43786) [x86_64-linux]
 	Los paquetes irb, rubygems y rdoc ya se instalaron con el paquete ruby.
 
 
-2 Crear un programa en Ruby que imprima los números desde el 1 hasta otro contenido en una variable
+###Ejercicio 2 Crear un programa en Ruby que imprima los números desde el 1 hasta otro contenido en una variable
+		
 	#!/usr/bin/ruby 
 	numero = 10 
 	i = 1 
@@ -74,5 +147,17 @@ Seminario Ruby
 		puts i 
 		i +=1 
 	end
+	
+###Ejercicio 3 ¿Se pueden crear estructuras de datos mixtas en Ruby? Crear un array de hashes de arrays e imprimirlo.
 
-3 ¿Se pueden crear estructuras de datos mixtas en Ruby? Crear un array de hashes de arrays e imprimirlo.
+	#!/usr/bin/ruby
+	$array = [
+	 	{ :a => ["a", "aa"], :b => ["b", "bb"] },
+
+	 	{ :c => ["c", "cc"], :d => ["d", "dd"] }
+		]
+
+	$array.each do |item|
+		item.each{|key, value| puts value}
+	end
+

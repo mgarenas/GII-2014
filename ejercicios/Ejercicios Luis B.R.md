@@ -129,9 +129,49 @@ Al crear el directorio no se genera automáticamente los subdirectorios que debe
 He estado mirando distintas páginas pero no ha habido manera posible de encontrar el fallo, por ejemplo se ha intentado seguir también esta página:
 
   * http://www.janoszen.com/2013/02/06/limiting-linux-processes-cgroups-explained/
-  * http://linuxaria.com/article/introduction-to-cgroups-the-linux-conrol-group
+  * http://linuxaria.com/article/introduction-to-cgroups-the-linux-conrol-group 
 
+Corrección: Me sucedía el mismo problema. En ubuntu 14.04 parece ser que se tiene que instalar cgroup-bin y crear los frupos usando el comando cgcreate.
+Por ejemplo, el ejercicio se haría:
+```
+sudo su
+cd /sys/fs/cgroup/cpuset
 
+#Crear los grupos
+cgcreate -g cpu,cpuset,cpuacct:/malos
+cgcreate -g cpu,cpuset,cpuacct:/regulares
+cgcreate -g cpu,cpuset,cpuacct:/buenos
+
+#Asignarles recursos
+echo 0 > ./malos/cpuset.cpus
+echo 0 > ./malos/cpuset.mems
+echo 1 > ./regulares/cpuset.cpus
+echo 0 > ./regulares/cpuset.mems
+echo 2-3 > ./buenos/cpuset.cpus
+echo 0 > ./buenos/cpuset.mems
+
+#Lanzar los programas
+gedit &
+firefox &
+spyder &
+
+#Gedit
+echo 3258 > ./malos/tasks
+#Firefox
+echo 3304 > ./regulares/tasks
+#Spyder
+echo 3376 > ./buenos/tasks
+
+#Comprobar el uso de recursos
+cat ./malos/cpuacct.usage
+10751854
+	
+cat ./regulares/cpuacct.usage
+7580394
+
+cat ./buenos/cpuacct.usage
+263514072
+```
 
 .........
 ---------
