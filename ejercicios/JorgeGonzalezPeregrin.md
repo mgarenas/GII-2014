@@ -119,7 +119,8 @@ He tenido que instalar el paquete cpu-checker y la salida al comando "kvm-ok" es
 INFO: /dev/kvm exists
 KVM acceleration can be used
 
+### Ejercicio 12
 
+Un ejemplo claro de de SaaS son los servicios de correo como Gmail, Yahoo o Hotmail. Además de servicios de correo electrónico tambien herramientas como Drive o incluso Dropbox, en algunos aspectos, también podemos considerarlo ejemplos de servicios SaaS de almacenamiento en la "nube".
 
-
-
+Últimamente se han añadido servicios SaaS para la generación de documentos en línea como puede ser GitHub o para la gestión de nominas como los distintos ERP
