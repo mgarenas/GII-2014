@@ -115,7 +115,7 @@ Como podemos ver, mi procesador tiene activado el flag de vmx
 
 ### Ejercicio 11
 
-He tenido que instalar el paquete cpu-checker y la salida al comando "kvm-ok" es laser siguiente:
+He tenido que instalar el paquete cpu-checker y la salida al comando "kvm-ok" es la siguiente:
 INFO: /dev/kvm exists
 KVM acceleration can be used
 
