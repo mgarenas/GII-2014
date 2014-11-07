@@ -7,7 +7,7 @@ El Servidor escogido para el coste de amortización se puede encontrar en la sig
 1441,32 es el precio del Servidor sin iva.
 
 La amortización a cuatro años es: 360,33€ por año
-La amortización a siete años es: 205,90# por año
+La amortización a siete años es: 205,90€ por año
 
 ##Ejercicio 2
 
