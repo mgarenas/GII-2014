@@ -80,7 +80,7 @@ Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 
 Sesión 8 - Clase del 7 de noviembre de 2014
 -------------------------------------------
-- [ ]Entender el concepto de entorno virtual de desarrollo y comenzar a usarlo.
+- [ ] Entender el concepto de entorno virtual de desarrollo y comenzar a usarlo.
 - [ ] Darse de alta en un PaaS y comprender los mecanismos usados para despliegue de aplicaciones así como el uso de los entornos virtuales anteriores.
 - [ ] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS
 - [ ] Si todavía no se ha hecho, leed los proyectos propuestos y elegir uno.
