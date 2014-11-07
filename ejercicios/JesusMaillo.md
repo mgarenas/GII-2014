@@ -57,7 +57,7 @@ Si cogemos el primer caso que expones
 
 * El tiempo por horas utilizado al 1% es de 26.31552€. Hacen un total de 465,315€
 
-* El tiempo por horas utilizado al 10% es de 269,808€. Haven un total de 708,808€
+* El tiempo por horas utilizado al 10% es de 269,808€. Hacen un total de 708,808€
 
 Podemos encontrar en la siguiente url:
 
@@ -71,7 +71,9 @@ el siguiente servidor:
   * 8 GB.
   * 100 GB Raid 10.
 
-que es muy similar al que expones. De modo que tendrías un coste de 0.025 € / hora. Puede verse la diferencia entre el precio la horas en este caso sale mucho más barato esta segunda opción.
+que es muy similar al que expones. Lo que tenemos que hacer es 18.14 * 12 = **217.68 € / año.**
+
+El caso que tú expones sería de **465,315 € / año** que sale más caro.
 
 
 ###Ejercicio 3:
