@@ -82,7 +82,7 @@ cgroup.event_control   cgroup.sane_behavior  release_agent      user
  
  Cuando realizo esto, no genera los archivos que debería, por lo que añadir los ficheros con el echo no tiene mucho sentido, aun así intentandolo obtengo un error de disco lleno. Probando intenté hacerlo en systemd, ya que pensé que quizás solo podría realizarlo ahí. Al generar los nuevos subdirectorios es cierto que sí generaba lo ficheros correctos. Pero no me permite configurarlo indicandome que no tengo permisos para ello, cuando estoy trabajando desde el root.
 
- ¿Es posible que estés trabajando con una máquina virtualizada? 
+ Aunque estés trabajando como super usuario, prueba a invocar las órdenes con el comando `sudo` delante. Por ejemplo: `sudo mkdir grupo1`
 
 
 ### Ejercicio 9:
