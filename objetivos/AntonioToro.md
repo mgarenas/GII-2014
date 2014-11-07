@@ -51,3 +51,40 @@ Sesión 4 - Clase del 24 de octubre de 2014
 - [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [x] Consolidar el uso de la línea de órdenes para administración y desarrollo de software.
 - [x] Contestar a la encuesta sobre la metodología de clase
+
+
+Sesión 5 - Clase del 27 de octubre de 2014
+------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Conocer los diferentes _proyectos propuestos_ para llevarlos a cabo a lo largo de la asignatura.
+
+### Otros objetivos
+- [ ] Usar *exclusivamente* la línea de órdenes para trabajar con GitHub.
+- [ ] Dar de alta la clave SSH para trabajar con GitHub más cómodamente. 
+- [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+
+Sesión 6 - Clase del 31 de octubre de 2014
+------------------------------------------
+
+### Objetivos de esta sesión
+- [x] Leer los proyectos propuestos y elegir uno. Si ninguno encaja, se puede proponer otro (mediante edición y pull request). 
+- [ ] [Comenzar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura). El plazo para entregar las prácticas son dos semanas: hasta el final de la sesión del 10 de noviembre. 
+
+### Otros objetivos
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+
+Sesión 7 - Clase del 3 de noviembre de 2014
+-------------------------------------------
+
+### Objetivos de esta sesión
+- [x] Si todavía no se ha hecho, leed los proyectos propuestos y elegir uno. 
+- [ ] [Continuar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura). El plazo para entregar las prácticas es de dos semanas: hasta el final de la sesión del 10 de noviembre. 
+
+### Otros objetivos
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.

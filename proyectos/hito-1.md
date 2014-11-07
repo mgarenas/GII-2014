@@ -13,3 +13,9 @@ Appsamblea
 - Descripción del proyecto: aplicación para gestionar asambleas y reuniones.
 - Equipo de desarrollo: [Appsamblea](https://github.com/Appsamblea)
 - Repositorio del proyecto: https://github.com/Appsamblea/Appsamblea
+
+HarmacenCloud
+-------------
+- Descripción del proyecto: aplicación para la gestión de un almacén.
+- Equipo de desarrollo: [HarmaDev](https://github.com/HarmaDev)
+- Repositorio del proyecto: https://github.com/HarmaDev/HarmacenCloud
