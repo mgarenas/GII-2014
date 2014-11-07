@@ -217,3 +217,6 @@ El _software como servicio (SaaS)_ es un modelo de soporte lógico. El cliente a
 Ejemplos podrían ser _Google Apps, Microsoft Office 365, Gmail, Yahoo mail..._ Puesto que todos estos servicios se encuentran hospedados en un servidor que no es el nuestro y nosostros accedemos sin necesidad de instalar nada a estas aplicaciones mediante Internet.
 
 
+
+
+
