@@ -50,3 +50,47 @@ Sesión 4 - Clase del 24 de octubre de 2014
 - [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [x] Consolidar el uso de la línea de órdenes para administración y desarrollo de software.
 - [x] Contestar a la encuesta sobre la metodología de clase
+
+
+Sesión 5 - Clase del 27 de octubre de 2014
+------------------------------------------
+- [X] Conocer los diferentes proyectos propuestos para llevarlos a cabo a lo largo de la asignatura.
+
+- [X] Usar exclusivamente la línea de órdenes para trabajar con GitHub.
+- [X] Dar de alta la clave SSH para trabajar con GitHub más cómodamente.
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos
+
+
+Sesión 6 - Clase del 31 de octubre de 2014
+------------------------------------------
+- [X] Leer los proyectos propuestos y elegir uno. Si ninguno encaja, se puede proponer otro (mediante edición y pull request).
+- [X] Comenzar con la primera práctica: elección de proyecto y grupo. El plazo para entregar las prácticas son dos semanas: hasta el final de la sesión del 10 de noviembre.
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+
+Sesión 7 - Clase del 3 de noviembre de 2014
+-------------------------------------------
+- [ ]Si todavía no se ha hecho, leed los proyectos propuestos y elegir uno
+- [X]Continuar con la primera práctica: elección de proyecto y grupo. El plazo para entregar las prácticas es de dos semanas: hasta el final de la sesión del 10 de noviembre.
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+
+Sesión 8 - Clase del 7 de noviembre de 2014
+-------------------------------------------
+- [ ] Entender el concepto de entorno virtual de desarrollo y comenzar a usarlo.
+- [ ] Darse de alta en un PaaS y comprender los mecanismos usados para despliegue de aplicaciones así como el uso de los entornos virtuales anteriores.
+- [ ] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS
+- [ ] Si todavía no se ha hecho, leed los proyectos propuestos y elegir uno.
+- [X] Continuar con la primera práctica: elección de proyecto y grupo. El plazo para entregar las prácticas es de dos semanas: hasta el final de la sesión del 10 de noviembre.
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
+- [ ] Comprender el método de entrega de las prácticas de la asignatura.
+
+
+
+
+

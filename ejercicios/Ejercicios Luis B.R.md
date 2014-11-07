@@ -177,7 +177,11 @@ cat ./buenos/cpuacct.usage
 ---------
 __Ejercicio 9__
 
-Arrastramos el mismo problema que en el ejercicio 8 para realizarlo.
+**Corrección del ejercicio.** 
+
+1. Es interesante limitar los recursos para evitar modificaciones de un servicio establecido para no realizar ningún *halt* en la misma. Se podría establecer un servidor para dar servicio a aplicaciones IOS. Para ello es imporante no interrumpir la ejecución de la aplicación. 
+
+2. También en la interacción de varios usuario que hacen uso de una serie de recursos compartidos. De esta forma el trabajo de ambos usuarios se realiza interrumpidamente.
 
 __Ejercicio 9.2__
 
@@ -211,5 +215,8 @@ __Ejercicio 12__
 El _software como servicio (SaaS)_ es un modelo de soporte lógico. El cliente accede a un servidor por medio de Internet y este servidor se encarga del mantenimiento y soporte del software que el cliente utiliza. Con el modelo _SaaS_ el cliente se despreocupa de instalaciones, configuraciones, etc. 
 
 Ejemplos podrían ser _Google Apps, Microsoft Office 365, Gmail, Yahoo mail..._ Puesto que todos estos servicios se encuentran hospedados en un servidor que no es el nuestro y nosostros accedemos sin necesidad de instalar nada a estas aplicaciones mediante Internet.
+
+
+
 
 

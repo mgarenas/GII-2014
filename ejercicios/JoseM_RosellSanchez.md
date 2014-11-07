@@ -161,6 +161,22 @@ KVM acceleration can be used
 
 Un ejemplo de Saas sería la web de [phixr](http://es.phixr.com/photo/userindex), que es un editor de fotos online. No necesitas instalar nada en la máquina local, solo tienes que acceder a la web y subir la foto que deseas modificar. Esto tiene evidentes problemas de privacidad y la incertidumbre de como la web puede utilizar las fotos que edites desde su web.
 
+## Sesión 7-Noviembre-2014
+
+###Ejercicio 1
+
+Se instala **virtualenv** para Python con la orden `sudo apt-get install libc6-dev python-dev python-virtualenv`.
+
+###Ejercicio 2
+
+He creado una cuenta gratuita en **Heroku**, con mi dirección de correo electrónico.
+
+###Ejercicio 3
+
+Se puede acceder al blog creado en WordPress desde OpenShift [en la esta URL](http://php-primeraapp.rhcloud.com/).
+
+
+
 
 
 
