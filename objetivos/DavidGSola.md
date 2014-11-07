@@ -47,7 +47,7 @@ Lista de objetivos de David González Sola
 - [X] Contestar a la encuesta sobre la metodología de clase.
 - [X] Consolidar el uso de la línea de órdenes para administración y desarrollo de software.
 
-## Sesiñon 27 Octubre-2014
+## Sesión 27 Octubre-2014
 
 ### Objetivos de esta sesión
 
@@ -60,4 +60,44 @@ Lista de objetivos de David González Sola
 - [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 
+## Sesión 31 Octubre-2014
+
+### Objetivos de esta sesión
+
+- [X] [Leer los proyectos propuestos y elegir uno](../proyectos_propuestos.md). Si ninguno encaja, se puede proponer otro (mediante edición y pull request). 
+- [X] [Comenzar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura). El plazo para entregar las prácticas son dos semanas: hasta el final de la sesión del 10 de noviembre. 
+
+### Otros objetivos
+
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+## Sesión 3 Noviembre-2014
+
+### Objetivos de esta sesión
+
+- [X] Si todavía no se ha hecho, [leed los proyectos propuestos y elegir uno](../proyectos_propuestos.md). 
+- [X] [Continuar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura). El plazo para entregar las prácticas es de dos semanas: hasta el final de la sesión del 10 de noviembre. 
+
+### Otros objetivos
+
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+## Sesión 7 Noviembre-2014
+
+### Objetivos de esta sesión
+
+- [] Entender el concepto de entorno virtual de desarrollo y comenzar a usarlo.
+- [] Darse de alta en un PaaS y comprender los mecanismos usados para despliegue de aplicaciones así como el uso de los entornos virtuales anteriores.
+- [] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS
+- [] Si todavía no se ha hecho, [leed los proyectos propuestos y elegir uno](../proyectos_propuestos.md). 
+- [] [Continuar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura). El plazo para entregar las prácticas es de dos semanas: hasta el final de la sesión del 10 de noviembre. 
+
+### Otros objetivos
+
+- [] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
+- [] Comprender el método de entrega de las prácticas de la asignatura.
 
