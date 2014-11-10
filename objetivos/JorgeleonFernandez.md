@@ -46,3 +46,38 @@
 - [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [x] Consolidar el uso de la línea de órdenes para administración y desarrollo de software.
 - [x] Contestar a la encuesta sobre la metodología de clase
+
+#Tema 2
+
+#Ejercicio 7 Noviembre
+
+##Objetivos de esta sesión
+
+- [x] Entender el concepto de entorno virtual de desarrollo y comenzar a usarlo.
+- [x] Darse de alta en un PaaS y comprender los mecanismos usados para despliegue de aplicaciones así como el uso de los entornos virtuales anteriores.
+- [x] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS
+- [x] Si todavía no se ha hecho, [leed los proyectos propuestos y elegir uno](../proyectos_propuestos.md). 
+- [x] Continuar con la primera práctica: elección de proyecto y grupo http://jj.github.io/CC/documentos/practicas/1.Infraestructura . El plazo para entregar las prácticas es de dos semanas: hasta el final de la sesión del 10 de noviembre. 
+
+##Otros objetivos
+
+- [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [x] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
+- [x] Comprender el método de entrega de las prácticas de la asignatura.
+
+#Ejercicio 10 Noviembre
+
+##Objetivos de esta sesión
+
+- [x] Darse de alta en uno de ellos y comprender los mecanismos usados para despliegue de aplicaciones
+- [] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
+- [] Crear nuevas funciones en un SaaS.
+
+##Otros objetivos
+
+- [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [x] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+- [x] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
+- [] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request.
