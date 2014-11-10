@@ -151,7 +151,7 @@ Todos estos pasos los he seguido en mi ordenador, he instalado dockers y he segu
 
 
 
-
+ eso
 
 ##Ejercicio 11
 
@@ -163,7 +163,7 @@ Todos estos pasos los he seguido en mi ordenador, he instalado dockers y he segu
 
 	Tras ejecutar el comando que se sugiere (sudo modprobe kvm_intel) y volver a consultar (kvm-ok), la salida es:
 		INFO: /dev/kvm exists
-		KVM acceleration can be used
+		KVM a-cceleration can be used
 
 
 ##Ejercicio 12
@@ -172,7 +172,21 @@ Todos estos pasos los he seguido en mi ordenador, he instalado dockers y he segu
 
 
 
+#Sesión del 3 de Noviembre
+##Ejercicio 01
+	
+He escogido instalar **virtualenv** para python. Los pasos que he seguido han sido:
+	- $ [sudo] pip install virtualenv para instalar virtualenv en mi equipo.
+	- $ virtualenv ENV para crear el directorio ENV, donde se almacenarán todas las librerías que instale.
 
+
+##Ejercicio 02
+	He escogido [Openshift](https://www.openshift.com/)
+
+##Ejercicio 03
+
+
+##Ejercicio 04
 
 
 
