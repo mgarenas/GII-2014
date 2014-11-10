@@ -166,7 +166,7 @@ _Buscar un sistema de automatización de la construcción para el lenguaje de pr
 
 ## Ejercicio 6
 _Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de 
-construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma. _
+construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma._
 
 En _OpenShift_ se puede configurar el proceso de construcción de las aplicaciones mediante _Jenkins_.
 El proceso de construcción comienza cuando el usuario realiza un `git push` hacia el repositorio de la aplicación
