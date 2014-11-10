@@ -169,3 +169,12 @@ _Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de a
 construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma. _
 
 En _OpenShift_ se puede configurar el proceso de construcción de las aplicaciones mediante _Jenkins_.
+El proceso de construcción comienza cuando el usuario realiza un `git push` hacia el repositorio de la aplicación
+en _OpenShift_. Después, se realiza la construcción de la aplicación (que se puede personalizar con _Jenkins_).
+
+Se puede ver de manera resumida en el [workflow de OpenShift](https://www.openshift.com/walkthrough/developer-workflow), y 
+más explicada [aquí](https://www.openshift.com/products/architecture).
+
+## Ejercicio 7
+_Buscar un entorno de pruebas para el lenguaje de programación y entorno de desarrollo que usemos habitualmente._
+
