@@ -253,20 +253,20 @@ Todas ellas son consideradas como SaaS (Software as a Service – Software como 
 ##Tema 2
 
 ###Ejercicio 1:
-*Instalar un entorno virtual para tu lenguaje de programación favorito (uno de los mencionados arriba, obviamente).*
+**Instalar un entorno virtual para tu lenguaje de programación favorito (uno de los mencionados arriba, obviamente).**
 
 He decidido instalar virtualenv para Python, por tener algo más de conocimiento sobre Python que sobre los demás lenguajes.
 
 ###Ejercicio 2:
-*Darse de alta en algún servicio PaaS tal como Heroku, Nodejitsu u OpenShift.*
+**Darse de alta en algún servicio PaaS tal como Heroku, Nodejitsu u OpenShift.**
 
 He decidido hacerme la cuenta en Heroku. También me la he hecho en OpenShift puesto que lo pide el siguiente ejercicio.
 
 ###Ejercicio 3:
-*Crear una aplicación en OpenShift y dentro de ella instalar WordPress.*
+**Crear una aplicación en OpenShift y dentro de ella instalar WordPress.**
 
 Solo me ha dado tiempo de registrarme.
 
 ###Ejercicio4:
-*Crear un script para un documento Google y cambiarle el nombre con el que aparece en el menú, así como la función a la que llama.*
+**Crear un script para un documento Google y cambiarle el nombre con el que aparece en el menú, así como la función a la que llama.**
 
