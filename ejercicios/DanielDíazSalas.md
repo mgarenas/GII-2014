@@ -57,7 +57,7 @@ La segunda parte se tarda demasiado tiempo.
 
 Ejercicio 4
 ------------
-![El resultado del tutorial está guardado en la imagen Daniel Díaz Salas - Ejercicio 4.jpg](/ejercicios/DanielDíazSalas-Ejercicio4.jpg)
+![El resultado del tutorial está guardado en la imagen DanielDíazSalas-Ejercicio4Tema1.jpg](/ejercicios/DanielDíazSalas-Ejercicio4Tema1.jpg)
 
 Ejercicio 5
 -----------
@@ -239,3 +239,7 @@ Ejercicio 3
 Desaprovecho el que ya estaba dado de alta en **Heroku** y doy de alta en **Openshift**
 
 [WordPress instalado](http://potray-wordpressejer3cc.rhcloud.com/)
+
+Ejercicio 4
+-----------
+![El resultado del tutorial está guardado en la imagen DanielDíazSalas-Ejercicio4Tema2.jpg](/ejercicios/DanielDíazSalas-Ejercicio4Tema2.jpg)
