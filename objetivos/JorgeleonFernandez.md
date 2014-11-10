@@ -71,8 +71,8 @@
 ##Objetivos de esta sesión
 
 - [x] Darse de alta en uno de ellos y comprender los mecanismos usados para despliegue de aplicaciones
-- [] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
-- [] Crear nuevas funciones en un SaaS.
+- [ ] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
+- [ ] Crear nuevas funciones en un SaaS.
 
 ##Otros objetivos
 
@@ -80,4 +80,4 @@
 - [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [x] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 - [x] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
-- [] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request.
+- [ ] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request.
