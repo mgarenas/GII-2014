@@ -243,3 +243,11 @@ Desaprovecho el que ya estaba dado de alta en **Heroku** y doy de alta en **Open
 Ejercicio 4
 -----------
 ![El resultado del tutorial está guardado en la imagen DanielDíazSalas-Ejercicio4Tema2.jpg](/ejercicios/DanielDíazSalas-Ejercicio4Tema2.jpg)
+
+Ejercicio 5
+-----------
+Para Python (Django) se pueden usar Make.
+
+Ejercicio 6
+-----------
+
