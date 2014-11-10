@@ -246,7 +246,7 @@ Como he elegido **Heroku** voy a realizar la [instalación de Wordpress](https:/
 
 Se ha creado una función con un código de prueba que aparece en el tutorial de [GoogleDrive](https://developers.google.com/apps-script/overview).
 
-```JavaScript
+```js
 
 function fucncionDePrueba() {
   // Creamos un nuevo documento de Google llamado 'hola mundo'
