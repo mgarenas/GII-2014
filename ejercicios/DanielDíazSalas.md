@@ -222,3 +222,20 @@ Uno de los inconvenientes de lo que no he visto que nadie haya comentado es el q
 
 Ejercicio 1
 -----------
+He elegido Virtualenv.  
+
+Primero instalo python:
+>sudo apt-get install python-pip
+
+Después instalo Virutalenv:
+>sudo pip install virtualenv
+
+Ejercicio 2
+-----------
+Aprovecho que ya estaba dado de alta en **Heroku**.
+
+Ejercicio 3
+----------
+Desaprovecho el que ya estaba dado de alta en **Heroku** y doy de alta en **Openshift**
+
+[WordPress instalado](http://potray-wordpressejer3cc.rhcloud.com/)
