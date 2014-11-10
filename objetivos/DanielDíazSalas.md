@@ -70,3 +70,17 @@ Lista de objetivos de Daniel Díaz Salas
 
 - [] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+#Clase del 10 de noviembre de 2014
+- [] Darse de alta en uno de ellos y comprender los mecanismos usados para despliegue de aplicaciones
+- [] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
+- [] Crear nuevas funciones en un SaaS.
+
+##Otros objetivos
+
+- [] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+- [] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
+- [] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request. 
+
