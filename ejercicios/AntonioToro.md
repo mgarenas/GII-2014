@@ -138,3 +138,34 @@ _Comentar diferentes soluciones de Software as a Service de uso habitual_
 Son aplicaciones a las que accedemos por internet, y en la actualizad utilizamos Saas a diario, muchas veces sin tener constancia, ya que lo vemos cada vez más normal, pudiendo empezar por Gmail. 
 Existen muchas otras, como los editores de texto y de hojas de cálculo de Google Drive, Google calendar, Outlook.com, Yahoo! Mail, Hangouts, PDFscape (editor online de pdf), Autocad360...
 
+
+Creando aplicaciones en la nube: Uso de PaaS y SaaS
+===================================================
+
+## Ejercicio 1
+_Instalar un entorno virtual para tu lenguaje de programación favorito (uno de los mencionados arriba, obviamente)._
+
+## Ejercicio 2
+_Darse de alta en algún servicio PaaS tal como Heroku, Nodejitsu u OpenShift._
+
+Registrado en _Openshift_ y _Heroku_.
+
+## Ejercicio 3
+_Crear una aplicación en OpenShift y dentro de ella instalar WordPress._
+
+Creada y en marcha en https://wordpress-tfgos2.rhcloud.com/
+
+## Ejercicio 4
+_Crear un script para un documento Google y cambiarle el nombre con el que aparece en el menú, así como la función a la que llama._
+
+Script creado: https://script.google.com/d/1CDot9JH09oTQa2WqSPx0kZmVN3wZ3TT8-ZZfCfMier6Gnh9sk9gdaQVK/edit?usp=sharing
+
+## Ejercicio 5
+_Buscar un sistema de automatización de la construcción para el lenguaje de programación y entorno de desarrollo que usemos habitualmente._
+
+
+## Ejercicio 6
+_Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de 
+construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma. _
+
+En _OpenShift_ se puede configurar el proceso de construcción de las aplicaciones mediante _Jenkins_.
