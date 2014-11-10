@@ -135,6 +135,10 @@ php-jorgeles.rhcloud.com
 
 ##Ejercicio 5
 
+MakeFile para la compilación de programas en C/C++. Este nos permite contruir de una manera muy automática nuestro programa en C/C++ y disponer los archivos del programa donde queramos.
+ 
+##Ejercicio 6
+
 
 ##Ejercicio 7
 Este plugin permite realizar pruebas funcionalidades a aplicaciones web.
