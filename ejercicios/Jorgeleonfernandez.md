@@ -111,6 +111,35 @@ sudo apt-get install qemu-kvm
 ##Ejercicio 12
 Las aplicaciones que se ejecutan en servidores remotos son Saas. Un ejemplo de estos son el WebMail de gmail o Google Docs. La principal ventaje que tiene este tipo de servicio es que puedes acceder a este desde cualquier punto siempre que tengas acceso a internet. De esta manera se ahorran costes y tiempos de instalación. Sin embargo tienen una gran desventaje y es el tema de la seguridad, ya que la información se encuentra alojada en un servidor remoto al que las compañias tienen acceso, si lo desean, y pueden observar lo que haces. Además estos servicios suelen ser atacados muy a menudo por hackers para intentar obtener información de los usuarios.
 
+#Tema 2
+
+#Sesion del 7 de Noviembre
+
+##Ejercicio 1
+
+jorge@jorge-MacBookPro:~/Escritorio$ sudo pip install virtualenv
+Requirement already satisfied (use --upgrade to upgrade): virtualenv in /usr/local/lib/python2.7/dist-packages
+Cleaning up...
+
+#Sesion del 10 de Noviembre
+
+##Ejercicio 2
+Registrado en OpenShift
+
+##Ejercicio 3
+php-jorgeles.rhcloud.com
+
+##Ejercicio 4
+
+[Enlace](https://script.google.com/d/1IKzOI9_kknCZkqV5QqBuOaPlqFLDsJtZfTnPqrEAe5L2Yuo_ht3FrSqa/edit?usp=sharing) que redirige al archivo script que está en Drive
+
+##Ejercicio 5
+
+
+##Ejercicio 7
+Este plugin permite realizar pruebas funcionalidades a aplicaciones web.
+[Automatizacion Selenium IDE + Python](http://www.taringa.net/posts/info/14190878/Automatizacion-Selenium-IDE-Python.html)
+
 
 
 
