@@ -169,11 +169,51 @@ Se instala **virtualenv** para Python con la orden `sudo apt-get install libc6-d
 
 ###Ejercicio 2
 
-He creado una cuenta gratuita en **Heroku**, con mi dirección de correo electrónico.
+He creado una cuenta gratuita en **OpenShift**, con mi dirección de correo electrónico.
 
 ###Ejercicio 3
 
 Se puede acceder al blog creado en WordPress desde OpenShift [en la esta URL](http://php-primeraapp.rhcloud.com/).
+
+###Ejercicio 4
+
+Para crear un script para un documento desde la dirección [script.google.com](script.google.com), de elige la opción *Drive* del menu que aparece. Se abre una ventana de script con dos funciones por defecto: 
+```
+function listFilesInFolder(id) {
+  var folder = DriveApp.getFolderById(id);
+  var contents = folder.getFiles();
+  var file;
+  var name;
+
+  while(contents.hasNext()) {
+    file = contents.next();
+    name = file.getName();
+    Logger.log(name);
+  }
+};
+
+function moveFileToFolder(fileId, targetFolderId) {
+  var targetFolder = DriveApp.getFolderById(targetFolderId);
+  var file = DriveApp.getFileById(fileId);
+  var currentFolders = file.getParents();
+  while (currentFolders.hasNext()) {
+    var currentFolder = currentFolders.next();
+    currentFolder.removeFile(file);
+  }
+  targetFolder.addFile(file);
+};
+```
+Se puede cambiar el nombre del proyecto en la parte superior izquierda pinchando y poniendo el nombre que se desee. En la parte de debajo de la barra de herramientas, donde aparece el simbolo del play, a la derecha de esta posición se puede seleccionar la función que se va a ejecutar.
+
+###Ejercicio 5
+
+El lenguaje de programación que utilizo habitualmente es **JAVA** y el sistema de automatización para la construcción que utilizo es **ant**. Para compilar un proyecto en JAVA utilizando ant se puede utilizar la instrucción: `ant -buildfile build.xml`.
+
+###Ejercicio 6
+
+###Ejercicio 7
+
+El entorno de pruebas para el lenguaje de programación *Python* es *UnitTest*, aunque comúnmente se denomina *PyUnit*. [En este enlace](http://magmax.org/blog/2011/09/27/python-pruebas-2/) podemos encontrar un pequeño ejemplo de como hacer pruebas a una función en Python, codificado desde cualquier editor de texto y ejecutado desde la línea de comandos.
 
 
 
