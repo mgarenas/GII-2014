@@ -158,3 +158,45 @@ Tras ejecutar el comando 'kvm-ok' aparece la siguiente información en la consol
 ### Ejercicio 12
 
 Un ejemplo de Saas al que accede a diario gran parte de la población *conectada* es Facebook. No es necesaria ningún tipo de instalación en el ordenador personal del cliente y simplemente utilizando el navegador web (siempre que el servicio se encuentre disponible en ese país) se podrá utilizar este. Por supuesto, esta libertad a la hora de acceder al servicio tiene sus incovenientes, como por ejemplo la falta de poder sobre tus propios datos y los problemas de privacidad que conlleva.
+
+## Sesión 7-noviembre-2013
+
+## Tema 2
+
+### Ejercicio 1
+
+Se ha instalado utilizando aptitude:
+> apt-get install phyton-virtualenv
+
+### Ejercicio 2
+
+Registrado correctamente en [OpenShift](https://www.openshift.com/).
+
+### Ejercicio 3
+
+Se ha creado la aplicación de WordPress desde la web de OpenShift.
+[Enlace](https://php-davidgsola.rhcloud.com/)
+
+### Ejercicio 4
+
+Creado el script correctamente. Le proporciono un enlace para que lo compruebe:
+[Enlace](https://script.google.com/d/1LLGse1RZyNFlgqg172FNTtUR2PhH2RY1cS83XOmighXdMWGjwC2kidLY/edit?usp=sharing)
+
+### Ejercicio 5
+
+Uno de los lenguajes que utilizo habitualmente es C++. Para C++ existen los ficheros Makefile, que permiten automatizar la compilación, así como el enlazado de las librerías y la creación del ejecutable.
+
+### Ejercicio 6
+
+
+
+### Ejercicio 7
+
+El lenguaje que utilizo habitualmente suele ser Java para desarrollar aplicaciones Android. Existe un entorno de pruebas para este caso específico que se llama Android JUnit.
+Funciona de la siguiente manera:
+1. Añadir un proyecto de Test a un proyecto ya existente.
+2. Configurar el proyecto de Test seleccionando un nombre, la versión Android para la cual se construirá, etc.
+3. Crear un JUnit Test Case.
+4. Modificar el constructor y el método setUp de la clase Test creada.
+5. Añadir el método de test.
+6. Ejecutar test.
