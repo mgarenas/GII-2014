@@ -1,4 +1,4 @@
-# Ejercicios
+# Introducción a la infraestructura virtual: concepto y soporte físico
 
 __Ejercicio 1__ 
 
@@ -218,5 +218,58 @@ Ejemplos podrían ser _Google Apps, Microsoft Office 365, Gmail, Yahoo mail..._ 
 
 
 
+-------------
+
+# Creando aplicaciones en la nube: Uso de PaaS y SaaS
+
+## Ejercicio 1.
+
+Se ha instalado el entorno virtual **virtualenv para Python**. Mediante el comando:
+
+> sudo apt-get install python-virtualenv
+
+Para generar un proyecto se usa la siguiente instrucción:
+
+> virtualenv <NOMBRE>
+
+## Ejercicio 2. 
+
+Me he dado de alta en **Heroku**. Y lo he instalado en Ubuntu para poder ejecutar comandos desde la línea de ordenes con el siguientes comando:
+
+> wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
+## Ejercicio 3. 
+
+Como he elegido **Heroku** voy a realizar la [instalación de Wordpress](https://github.com/mhoofman/wordpress-heroku) allí.
+
+## Ejercicio 4. 
+
+Se ha creado una función con un código de prueba que aparece en el tutorial de [GoogleDrive](https://developers.google.com/apps-script/overview).
+
+```js
+
+function fucncionDePrueba() {
+  // Creamos un nuevo documento de Google llamado 'hola mundo'
+  var doc = DocumentApp.create("Hola mundo");
+  
+  // Accedemos al cuerpo del documento.
+  doc.getBody().appendParagraph('Este documento ha sido creado por un Script.');
+  
+  // Obtenemos la URL del documento.
+  var url = doc.getUrl();
+  
+  // Obtenemos el correo del usuario activo (el mío).
+  var email = Session.getActiveUser().getEmail();
+  
+  // Obtenemos el nombre del documento.
+  var subject = doc.getName();
+  
+  // Juntamos el nombre del documento con la url.
+  var body = 'Enlace del documento: ' +  url;
+  
+  // Nos enviamos a nosostros mismos el documento.
+  GmailApp.sendEmail(email, subject, body);
+}
+```
 
 
