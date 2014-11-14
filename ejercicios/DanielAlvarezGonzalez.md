@@ -155,19 +155,20 @@ Todos estos pasos los he seguido en mi ordenador, he instalado dockers y he segu
 
 ##Ejercicio 11
 
-	Salida tras ejecutar el comand *kvm-ok*:
-		INFO: /dev/kvm does not exist
-		HINT:   sudo modprobe kvm_intel
-		INFO: For more detailed results, you should run this as root
-		HINT:   sudo /usr/sbin/kvm-ok
+Salida tras ejecutar el comand *kvm-ok*:
+	INFO: /dev/kvm does not exist
+	HINT:   sudo modprobe kvm_intel
+	INFO: For more detailed results, you should run this as root
+	HINT:   sudo /usr/sbin/kvm-ok
 
-	Tras ejecutar el comando que se sugiere (sudo modprobe kvm_intel) y volver a consultar (kvm-ok), la salida es:
-		INFO: /dev/kvm exists
-		KVM a-cceleration can be used
+Tras ejecutar el comando que se sugiere (sudo modprobe kvm_intel) y volver a consultar (kvm-ok), la salida es:
+	INFO: /dev/kvm exists
+	KVM a-cceleration can be used
 
 
 ##Ejercicio 12
-	Una aplicación SaaS es aquella en la que el soporte lógico y los datos que se manejan se alojan en el servidor que proporciona el servicio. Por esto, normalmente el usuario no tiene que instalar nada en su ordenador, bastando con un navegador web para hacer uso de dicho servicio. Algunos ejemplos de este tipo de software es la gama de servicios que ofrece Google tales como Gmail, Google Maps, Google Drive, etc. También son de este tipo los servicios de almacenamiento en la nube como Dropbox o Mega.
+
+Una aplicación SaaS es aquella en la que el soporte lógico y los datos que se manejan se alojan en el servidor que proporciona el servicio. Por esto, normalmente el usuario no tiene que instalar nada en su ordenador, bastando con un navegador web para hacer uso de dicho servicio. Algunos ejemplos de este tipo de software es la gama de servicios que ofrece Google tales como Gmail, Google Maps, Google Drive, etc. También son de este tipo los servicios de almacenamiento en la nube como Dropbox o Mega.
 	
 
 
@@ -184,34 +185,35 @@ He escogido instalar **virtualenv** para python. Los pasos que he seguido han si
 	He escogido [Openshift](https://www.openshift.com/)
 
 ##Ejercicio 03
-	Para instalar wordpress en una aplicación de OpenShift, lo primero es crear la aplicación. Para ello, desde la interfaz web de OpenShift, en la pestaña *Applications* se escoge la opción de añadir una nueva aplicación o crear tu primera aplicación (si es el caso).
+
+Para instalar wordpress en una aplicación de OpenShift, lo primero es crear la aplicación. Para ello, desde la interfaz web de OpenShift, en la pestaña *Applications* se escoge la opción de añadir una nueva aplicación o crear tu primera aplicación (si es el caso).
 Dentro de las opciones, escoger una aplicación de tipo *Wordpress 4* y se configura, entre otras cosas, dándole una URL con la que acceder al wordpress. Por último, se crea un blog y una entrada para comprobar que funciona.
 	[Enlace a mi blog](https://php-crixo24.rhcloud.com/) creado desde la aplicación hecha en Openshift.
 
 ##Ejercicio 04
-	:::js
+:::js
 		function CrearDocumento() {
-		// Crea el documento con el nombre 'Hello, world!'
-		var doc = DocumentApp.create('Hello, world!');
+	// Crea el documento con el nombre 'Hello, world!'
+	var doc = DocumentApp.create('Hello, world!');
 
-		// Accede al fichero y escribe en él
-		doc.getBody().appendParagraph('This document was created by Google Apps Script.');
-	
-		// Obtiene la url del fichero creado
-		var url = doc.getUrl();
+	// Accede al fichero y escribe en él
+	doc.getBody().appendParagraph('This document was created by Google Apps Script.');
 
-		// Obtiene la dirección de correo del usuario que crea este script (yo)
-		var email = Session.getActiveUser().getEmail();
+	// Obtiene la url del fichero creado
+	var url = doc.getUrl();
 
-		// Coge el nombre del fichero para usarlo como asunto en el correo que va a mandar
-		var subject = doc.getName();
+	// Obtiene la dirección de correo del usuario que crea este script (yo)
+	var email = Session.getActiveUser().getEmail();
 
-		// Añade texto al email
-		var body = 'Link to your doc: ' + url;
-	
-		// Envía el email con el enlace al fichero creado.
-		GmailApp.sendEmail(email, subject, body);
-		}
+	// Coge el nombre del fichero para usarlo como asunto en el correo que va a mandar
+	var subject = doc.getName();
+
+	// Añade texto al email
+	var body = 'Link to your doc: ' + url;
+
+	// Envía el email con el enlace al fichero creado.
+	GmailApp.sendEmail(email, subject, body);
+	}
 	
 	[Enlace al documento creado con el script](https://docs.google.com/open?id=1wuByz3d-V16syNIh-RxfgqSTx4Cl3dnrnetZLfNDzfo)
 	
