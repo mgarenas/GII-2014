@@ -265,8 +265,38 @@ He decidido hacerme la cuenta en Heroku. También me la he hecho en OpenShift pu
 ###Ejercicio 3:
 **Crear una aplicación en OpenShift y dentro de ella instalar WordPress.**
 
-Solo me ha dado tiempo de registrarme.
+Ya he creado el WordPress. En el siguiente enlace se puede ver. Lo he realizado con OpenShift
+
+https://jmailloh-wpejercicio3.rhcloud.com/
 
 ###Ejercicio4:
 **Crear un script para un documento Google y cambiarle el nombre con el que aparece en el menú, así como la función a la que llama.**
 
+El código que va a ser ejecutado es el del tutorial de google.
+
+```
+function createAndSendDocument() {
+ // Create a new Google Doc named 'Hello, world!'
+ var doc = DocumentApp.create('Hello, world!');
+
+ // Access the body of the document, then add a paragraph.
+ doc.getBody().appendParagraph('This document was created by Google Apps Script.');
+
+ // Get the URL of the document.
+ var url = doc.getUrl();
+
+ // Get the email address of the active user - that's you.
+ var email = Session.getActiveUser().getEmail();
+
+ // Get the name of the document to use as an email subject line.
+ var subject = doc.getName();
+
+ // Append a new string to the "url" variable to use as an email body.
+ var body = 'Link to your doc: ' + url;
+
+ // Send yourself an email with a link to the document.
+ GmailApp.sendEmail(email, subject, body);
+}
+```
+
+ En esta función se crea un documento llamado hello, world!, se escribe una frase en el y se envia por correo al usuario activo, que somos nosotros mismos.
