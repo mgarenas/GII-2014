@@ -1,13 +1,9 @@
 Ejercicios de Álvaro Muñoz
 ============================
 
-## Sesión 10-octubre-2014
-
-Sin ejercicios.
+## TEMA 1
 
 ***
-## Sesión 17-octubre-2014
-
 ### Ejercicio 1
 
 Según la [tabla de amortizaciones simplificada](http://www.infoautonomos.com/informacion-al-dia/fiscalidad/gastos-deducibles-autonomos-irpf-estimacion-directa/) la amortización anual no puede superar el 26% de la base imponible.
@@ -21,7 +17,7 @@ El servidor elegido ha sido un [HP ProLiant ML310e G8 XE E3-1220/8GB/2TB](http:/
 	* Cuatro años al 10% (2 primeros y 2 últimos): 532.23 x 0.1 = 53.23€/año
 	* Cuatro años al 20% (los restantes): 532.23 x 0.2 = 106.46€/año
 
-
+***
 ### Ejercicio 2
 
 | Máquina/Modelo | vCores | HDD (GB) | RAM (GB) | Factura/año (€) | Factura/hora (€) |
@@ -40,7 +36,7 @@ El servidor elegido ha sido un [HP ProLiant ML310e G8 XE E3-1220/8GB/2TB](http:/
 *Nota: la conversión entre $ y € se hizo el día 23/10/2014 con 0.21USD = 0.166040EUR*
 *Aclaración: el servidor escogido de OVH es de tipo VPS, dedicado, que se paga con mensualidades, que es la comparación que el ejercicio pedía.*
 
-
+***
 ### Ejercicio 3.1
 
 Lo comentado en el foro ha sido:
@@ -68,7 +64,7 @@ Los pasos seguidos para *enjaularlo* han sido:
 
 Se creará una estructura de directorios denominada **cde-package**. Para ejecutar nuestro script en cualquier plataforma de forma *enjaulada*, debemos invocar el binario **cde-exec** y la ruta relativa a nuestro script (`cde-package/cde-root/home/user/script/`).
 
-
+***
 ### Ejercicio 4
 
 Los comandos introducidos durante el tutorial han sido:
@@ -83,12 +79,12 @@ Los comandos introducidos durante el tutorial han sido:
 	docker inspect efe
 	docker push learn/ping
 
-
+***
 ### Ejercicio 5
 
 Bastaría con ejecutar `apt-get install git`.
 
-
+***
 ### Ejercicios 6.1 y 6.2
 
 1. Crear un nuevo repositorio desde nuestro perfil de *GitHub* a través de la web
@@ -99,8 +95,6 @@ Bastaría con ejecutar `apt-get install git`.
 
 
 ***
-## Sesión 20-octubre-2014
-
 ### Ejercicio 7
 
 En *Fedora release 19* viene instalado por defecto en */sys/fs/cgroup/*. El contenido del directorio contiene:
@@ -119,6 +113,7 @@ En *Fedora release 19* viene instalado por defecto en */sys/fs/cgroup/*. El cont
 	drwxr-xr-x. 5 root root  0 oct 23 21:42 systemd
 
 
+***
 ### Ejercicio 8.1
 
 1. Para cada grupo de control debemos crear una carpeta en el directorio `/sys/fs/cgroup`
@@ -131,6 +126,7 @@ Para ver cualquier información sobre el uso de cada *cgroup* podemos mostrar lo
 ### Ejercicio 8.2
 
 
+***
 ### Ejercicio 9.1
 
 El enlace no funciona.
@@ -178,7 +174,7 @@ Similar al ejercicio 9.2 pero cambiando el nombre del recurso al que le damos pr
 		} 
 	}
 
-
+***
 ### Ejercicio 10
 
 El procesador sí tiene activados los flags de virtualización a nivel de hardware (flag *vmx*). 
@@ -194,14 +190,13 @@ La salida del comando (por cada núcleo) es:
 	tpr_shadow vnmi flexpriority ept vpid
 
 
+***
 ### Ejercicio 11
 
 El paquete **kvm-ok** no existe en *Fedora* pero el archivo */dev/kvm* existe, por lo que el núclo del *kernel* actual sí contiene el módulo KVM.
 
 
 ***
-## Sesión 24-octubre-2014
-
 ### Ejercicio 12
 
 Lo comentado en el foro ha sido:
@@ -217,4 +212,29 @@ Algunos inconvenientes podrían ser:
 - Necesidad de conexión a Internet.
 - Posible exposición de datos sensibles por accesos indebidos de terceros (políticas de seguridad pobres).
 - Necesidad de confianza en la empresa, ya que tienen la posibilidad de usar los datos del usuario.
+
+
+## TEMA2
+
+* * *
+### Ejercicio 1
+
+* * *
+### Ejercicio 2
+
+* * *
+### Ejercicio 3
+
+* * *
+### Ejercicio 4
+
+* * *
+### Ejercicio 5
+
+* * *
+### Ejercicio 6
+
+* * *
+### Ejercicio 7
+
 
