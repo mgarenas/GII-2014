@@ -184,9 +184,35 @@ He escogido instalar **virtualenv** para python. Los pasos que he seguido han si
 	He escogido [Openshift](https://www.openshift.com/)
 
 ##Ejercicio 03
-
+	Para instalar wordpress en una aplicación de OpenShift, lo primero es crear la aplicación. Para ello, desde la interfaz web de OpenShift, en la pestaña *Applications* se escoge la opción de añadir una nueva aplicación o crear tu primera aplicación (si es el caso).
+Dentro de las opciones, escoger una aplicación de tipo *Wordpress 4* y se configura, entre otras cosas, dándole una URL con la que acceder al wordpress. Por último, se crea un blog y una entrada para comprobar que funciona.
+	[Enlace a mi blog](https://php-crixo24.rhcloud.com/) creado desde la aplicación hecha en Openshift.
 
 ##Ejercicio 04
+	:::js
+		function CrearDocumento() {
+	  // Crea el documento con el nombre 'Hello, world!'
+	  var doc = DocumentApp.create('Hello, world!');
 
+	  // Accede al fichero y escribe en él
+	  doc.getBody().appendParagraph('This document was created by Google Apps Script.');
 
+	  // Obtiene la url del fichero creado
+	  var url = doc.getUrl();
+
+	  // Obtiene la dirección de correo del usuario que crea este script (yo)
+	  var email = Session.getActiveUser().getEmail();
+
+	  // Coge el nombre del fichero para usarlo como asunto en el correo que va a mandar
+	  var subject = doc.getName();
+
+	  // Añade texto al email
+	  var body = 'Link to your doc: ' + url;
+
+	  // Envía el email con el enlace al fichero creado.
+	  GmailApp.sendEmail(email, subject, body);
+	}
+	
+	[Enlace al documento creado con el script](https://docs.google.com/open?id=1wuByz3d-V16syNIh-RxfgqSTx4Cl3dnrnetZLfNDzfo)
+	
 
