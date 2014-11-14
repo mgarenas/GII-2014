@@ -1,4 +1,4 @@
-# Ejercicios
+# Introducción a la infraestructura virtual: concepto y soporte físico
 
 __Ejercicio 1__ 
 
@@ -177,7 +177,11 @@ cat ./buenos/cpuacct.usage
 ---------
 __Ejercicio 9__
 
-Arrastramos el mismo problema que en el ejercicio 8 para realizarlo.
+**Corrección del ejercicio.** 
+
+1. Es interesante limitar los recursos para evitar modificaciones de un servicio establecido para no realizar ningún *halt* en la misma. Se podría establecer un servidor para dar servicio a aplicaciones IOS. Para ello es imporante no interrumpir la ejecución de la aplicación. 
+
+2. También en la interacción de varios usuario que hacen uso de una serie de recursos compartidos. De esta forma el trabajo de ambos usuarios se realiza interrumpidamente.
 
 __Ejercicio 9.2__
 
@@ -211,5 +215,61 @@ __Ejercicio 12__
 El _software como servicio (SaaS)_ es un modelo de soporte lógico. El cliente accede a un servidor por medio de Internet y este servidor se encarga del mantenimiento y soporte del software que el cliente utiliza. Con el modelo _SaaS_ el cliente se despreocupa de instalaciones, configuraciones, etc. 
 
 Ejemplos podrían ser _Google Apps, Microsoft Office 365, Gmail, Yahoo mail..._ Puesto que todos estos servicios se encuentran hospedados en un servidor que no es el nuestro y nosostros accedemos sin necesidad de instalar nada a estas aplicaciones mediante Internet.
+
+
+
+-------------
+
+# Creando aplicaciones en la nube: Uso de PaaS y SaaS
+
+## Ejercicio 1.
+
+Se ha instalado el entorno virtual **virtualenv para Python**. Mediante el comando:
+
+> sudo apt-get install python-virtualenv
+
+Para generar un proyecto se usa la siguiente instrucción:
+
+> virtualenv <NOMBRE>
+
+## Ejercicio 2. 
+
+Me he dado de alta en **Heroku**. Y lo he instalado en Ubuntu para poder ejecutar comandos desde la línea de ordenes con el siguientes comando:
+
+> wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
+## Ejercicio 3. 
+
+Como he elegido **Heroku** voy a realizar la [instalación de Wordpress](https://github.com/mhoofman/wordpress-heroku) allí.
+
+## Ejercicio 4. 
+
+Se ha creado una función con un código de prueba que aparece en el tutorial de [GoogleDrive](https://developers.google.com/apps-script/overview).
+
+```js
+
+function fucncionDePrueba() {
+  // Creamos un nuevo documento de Google llamado 'hola mundo'
+  var doc = DocumentApp.create("Hola mundo");
+  
+  // Accedemos al cuerpo del documento.
+  doc.getBody().appendParagraph('Este documento ha sido creado por un Script.');
+  
+  // Obtenemos la URL del documento.
+  var url = doc.getUrl();
+  
+  // Obtenemos el correo del usuario activo (el mío).
+  var email = Session.getActiveUser().getEmail();
+  
+  // Obtenemos el nombre del documento.
+  var subject = doc.getName();
+  
+  // Juntamos el nombre del documento con la url.
+  var body = 'Enlace del documento: ' +  url;
+  
+  // Nos enviamos a nosostros mismos el documento.
+  GmailApp.sendEmail(email, subject, body);
+}
+```
 
 

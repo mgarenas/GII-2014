@@ -69,3 +69,39 @@ Lista de objetivos de Jose Manuel Rosell Sánchez
 - [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 
+
+## Sesión 7-Noviembre-2014
+
+###Objetivos de la clase
+
+- [X] Entender el concepto de entorno virtual de desarrollo y comenzar a usarlo.
+- [X] Darse de alta en un PaaS y comprender los mecanismos usados para despliegue de aplicaciones así como el uso de los entornos virtuales anteriores.
+- [X] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS
+- [X] Si todavía no se ha hecho, leed los proyectos propuestos y elegir uno.
+- [X] Continuar con la primera práctica: elección de proyecto y grupo. El plazo para entregar las prácticas es de dos semanas: hasta el final de la sesión del 10 de noviembre.
+
+
+###Otros objetivos
+
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
+- [X] Comprender el método de entrega de las prácticas de la asignatura.
+
+## Sesión 10-Noviembre-2014
+
+###Objetivos de esta sesión
+
+- [X] Darse de alta en uno de ellos y comprender los mecanismos usados para despliegue de aplicaciones
+- [X] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
+- [X] Crear nuevas funciones en un SaaS.
+
+###Otros objetivos
+
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+- [ ] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
+- [ ] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request. 
+
+

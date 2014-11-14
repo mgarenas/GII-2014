@@ -15,29 +15,21 @@ Tema1
 
 ###Ejercicio 2 Usando las tablas de precios de servicios de alojamiento en Internet y de proveedores de servicios en la nube, Comparar el coste durante un año de un ordenador con un procesador estándar (escogerlo de forma que sea el mismo tipo de procesador en los dos vendedores) y con el resto de las características similares (tamaño de disco duro equivalente a transferencia de disco duro) si la infraestructura comprada se usa sólo el 1% o el 10% del tiempo.
 
-	Google Cloud Platform
-
-		1 Servidor 
-		SO CentOS
-		2 Cores 
-		7.5GB RAM
-		HD 375GB
-		SSD storage 50 GB 16'25$
-		22'74$/mes Uso > 25%
-			
-		TOTAL (Tanto al 1% como al 10%): 38'99 $/mes = 31'13€/mes
-
-	1&1
+	1&1 Servidor VPS
 		1 Servidor
 		SO CentOS
-		2 Cores		0.02 €/h
-		7 GB RAM	0.07 €/h
-		HD 400GB	0.04 €/h
-		SSD storage 50 GB	29'99€/mes
-		93'60€/mes
-
-		Si se utilizase sólo al 10% = 72 horas => (0.13 *72) + 29'99 = 39'35€/mes
-		Si se utilizase sólo al 1% = 7.2 horas => (0.13*7'2) + 29,99 = 30'94€/mes
+		7 GB RAM
+		HD 200GB
+		29'99€/mes
+	
+	1&1 Servidor Cloud dinámico
+		1 Servidor
+		SO CentOS
+		1 Core		0.01 €/h
+		8 GB RAM	0.08 €/h
+		HD 200GB	0.02 €/h
+		79'20€/mes
+		
 	
 ###Ejercicio 3.1 ¿Qué tipo de virtualización usarías en cada caso? Comentar en el foro
 
@@ -86,8 +78,12 @@ Tema1
 ###Ejercicio 6.2 Modificar el readme y subir el fichero modificado
 	*Una vez creado se clona el repositorio: git clone git@github.com:Appsamblea/Appsamblea.git
 	*Se edita el fichero
-	*Se realiza un pull-request:
-
+	*Se sube el fichero al repositorio local:
+		1. git add README.md
+		2. git commit
+		3. git push
+	*Se hace un pull request
+		
 ###Ejercicio 7 Comprobar si en la instalación hecha se ha instalado cgroups y en qué punto está montado, así como qué contiene.
 	Se encuentra en /sys/fs y contiene los siguientes directorios:
 	
@@ -99,7 +95,21 @@ Tema1
 		
 	sudo su	
 	cd /sys/fs/cgroup
-	mkdir gp1 gp2 gp3
+	apt-get install cgroup-bin
+	cgcreate -a carlos -g cpuset:grupo1
+	cgcreate -a carlos -g cpuset:grupo2
+	cgcreate -a carlos -g cpuset:grupo3
+
+	echo 0> cpuset/grupo1/cpuset.mems
+	echo 0> cpuset/grupo2/cpuset.mems
+	echo 0> cpuset/grupo3/cpuset.mems
+	echo 0> cpuset/grupo1/cpuset.cpus
+	echo 0> cpuset/grupo2/cpuset.cpus
+	echo 0> cpuset/grupo3/cpuset.cpus
+
+	<Incompleto>
+	
+	
 	
 ###Ejercicio 8.2 Calcular el coste real de uso de recursos de un ordenador teniendo en cuenta sus costes de amortización. Añadir los costes eléctricos correspondientes.
 
@@ -107,7 +117,29 @@ Tema1
 
 ###Ejercicio 9.1 Discutir diferentes escenarios de limitación de uso de recursos o de asignación de los mismos a una u otra CPU.
 ###Ejercicio 9.2 Implementar usando el fichero de configuración de cgcreate una política que dé menos prioridad a los procesos de usuario que a los procesos del sistema (o viceversa).
+- Hay que generar el fichero gconfig.conf en el directorio /etc/ con el siguiente contenido:
+```
+mount {
+	cpu = /cgroup/cpu
+}
+
+group usuario {
+	cpu {
+		cpu.shares="200";
+	}
+}
+
+group sistema {
+	cpu {
+		cpu.shares="800";
+	}
+}
+```
+
 ###Ejercicio 9.3 Usar un programa que muestre en tiempo real la carga del sistema tal como htopy comprobar los efectos de la migración en tiempo real de una tarea pesada de un procesador a otro (si se tiene dos núcleos en el sistema).
+
+
+
 ###Ejercicio 9.4 Configurar un servidor para que el servidor web que se ejecute reciba mayor prioridad de entrada/salida que el resto de los usuarios.
 
 ###Ejercicio 10.1 Comprobar si el procesador o procesadores instalados tienen estos flags. ¿Qué modelo de procesador es? 
@@ -130,6 +162,32 @@ Tema1
 ###Ejercicio 12 Comentar diferentes soluciones de Software as a Service de uso habitual
 	Cualquier servidor de correo electrónico es un SaS de uso habitual (hotmail, gmail, yahoo, etc.)
 	Las aplicaciones de ofimática incluídas en Google Drive son otro ejemplo de SaS.
+
+Tema 2
+-----
+###Ejercicio 1 Instalar un entorno virtual para tu lenguaje de programación favorito (uno de los mencionados arriba, obviamente)
+- He descargado la última versión de virtualenv (1.9) de https://pypi.python.org/packages/source/v/virtualenv/
+- Se descomprime el fichero
+- cd virualenv-1.9
+- sudo python setup.py install
+
+###Ejercicio 2 Darse de alta en algún servicio PaaS tal como Heroku, Nodejitsu u OpenShift
+- Me he dado de alta en Openshift
+
+###Ejercicio 3 Crear una aplicación en OpenShift y dentro de ella instalar WordPress
+- Antes de crearla, hice un fork al repositorio https://github.com/openshift/wordpress-example
+- El repositorio de la aplicación es: https://github.com/carltorres/wordpress-example
+- He generado directamente una aplicación Wordpress 4.0
+- La URL de la aplicación es: http:blog-carltorres.rhcloud.com 
+
+###Ejercicio 4 Crear un script para un documento Google y cambiarle el nombre con el que aparece en el menú, así como la función a la que llama
+
+###Ejercicio 5 Buscar un sistema de automatización de la construcción para el lenguaje de programación y entorno de desarrollo que usemos habitualmente
+
+###Ejercicio 6 Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma
+
+###Ejercicio 7 Buscar un entorno de pruebas para el lenguaje de programación y entorno de desarrollo que usemos habitualmente
+
 
 Seminario Ruby
 -----
