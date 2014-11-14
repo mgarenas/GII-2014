@@ -1,7 +1,8 @@
 Ejercicios de Álvaro Muñoz
 ============================
 
-## TEMA 1
+TEMA 1
+======
 
 ***
 ### Ejercicio 1
@@ -214,7 +215,8 @@ Algunos inconvenientes podrían ser:
 - Necesidad de confianza en la empresa, ya que tienen la posibilidad de usar los datos del usuario.
 
 
-## TEMA2
+TEMA 2 
+======
 
 * * *
 ### Ejercicio 1
