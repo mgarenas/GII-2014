@@ -191,31 +191,32 @@ Dentro de las opciones, escoger una aplicación de tipo *Wordpress 4* y se confi
 	[Enlace a mi blog](https://php-crixo24.rhcloud.com/) creado desde la aplicación hecha en Openshift.
 
 ##Ejercicio 04
-:::js
-~~~~~~~~~~~~~~~~~~
-function CrearDocumento() {
-// Crea el documento con el nombre 'Hello, world!'
-var doc = DocumentApp.create('Hello, world!');
 
-// Accede al fichero y escribe en él
-doc.getBody().appendParagraph('This document was created by Google Apps Script.');
+js:
 
-// Obtiene la url del fichero creado
-var url = doc.getUrl();
+	function CrearDocumento() {
+		// Crea el documento con el nombre 'Hello, world!'
+		var doc = DocumentApp.create('Hello, world!');
 
-// Obtiene la dirección de correo del usuario que crea este script (yo)
-var email = Session.getActiveUser().getEmail();
+		// Accede al fichero y escribe en él
+		doc.getBody().appendParagraph('This document was created by Google Apps Script.');
 
-// Coge el nombre del fichero para usarlo como asunto en el correo que va a mandar
-var subject = doc.getName();
+		// Obtiene la url del fichero creado
+		var url = doc.getUrl();
 
-// Añade texto al email
-var body = 'Link to your doc: ' + url;
+		// Obtiene la dirección de correo del usuario que crea este script (yo)
+		var email = Session.getActiveUser().getEmail();
 
-// Envía el email con el enlace al fichero creado.
-GmailApp.sendEmail(email, subject, body);
-}
-~~~~~~~~~~~~~~~~~~
+		// Coge el nombre del fichero para usarlo como asunto en el correo que va a mandar
+		var subject = doc.getName();
+
+		// Añade texto al email
+		var body = 'Link to your doc: ' + url;
+
+		// Envía el email con el enlace al fichero creado.
+		GmailApp.sendEmail(email, subject, body);
+	}
+
 
 [Enlace al documento creado con el script](https://docs.google.com/open?id=1wuByz3d-V16syNIh-RxfgqSTx4Cl3dnrnetZLfNDzfo)
 	
