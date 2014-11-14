@@ -216,7 +216,7 @@ js:
 		// Envía el email con el enlace al fichero creado.
 		GmailApp.sendEmail(email, subject, body);
 	}
-
+[highlight.js]: http://softwaremaniacs.org/soft/highlight/en/
 
 [Enlace al documento creado con el script](https://docs.google.com/open?id=1wuByz3d-V16syNIh-RxfgqSTx4Cl3dnrnetZLfNDzfo)
 	
