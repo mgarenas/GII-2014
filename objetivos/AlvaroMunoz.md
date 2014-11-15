@@ -100,7 +100,7 @@ Lista de objetivos de Álvaro Muñoz
 
 - [X] Entender el concepto de entorno virtual de desarrollo y comenzar a usarlo.
 - [X] Darse de alta en un PaaS y comprender los mecanismos usados para despliegue de aplicaciones así como el uso de los entornos virtuales anteriores.
-- [ ] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS
+- [X] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS
 - [X] [Continuar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura).
 
 ###Otros objetivos
