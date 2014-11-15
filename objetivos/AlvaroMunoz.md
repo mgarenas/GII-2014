@@ -126,7 +126,7 @@ Lista de objetivos de Álvaro Muñoz
 [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 [ ] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
-[ ] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request. 
+[X] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request. 
 
 
 * * *
