@@ -99,7 +99,7 @@ Lista de objetivos de Álvaro Muñoz
 ###Objetivos de esta sesión
 
 - [X] Entender el concepto de entorno virtual de desarrollo y comenzar a usarlo.
-- [ ] Darse de alta en un PaaS y comprender los mecanismos usados para despliegue de aplicaciones así como el uso de los entornos virtuales anteriores.
+- [X] Darse de alta en un PaaS y comprender los mecanismos usados para despliegue de aplicaciones así como el uso de los entornos virtuales anteriores.
 - [ ] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS
 - [X] [Continuar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura).
 
@@ -116,9 +116,9 @@ Lista de objetivos de Álvaro Muñoz
 
 ###Objetivos de esta sesión
 
-[ ] Darse de alta en uno de ellos y comprender los mecanismos usados para despliegue de aplicaciones
-[ ] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
-[ ] Crear nuevas funciones en un SaaS.
+[X] Darse de alta en uno de ellos y comprender los mecanismos usados para despliegue de aplicaciones
+[X] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
+[X] Crear nuevas funciones en un SaaS.
 
 ###Otros objetivos
 
@@ -134,13 +134,12 @@ Lista de objetivos de Álvaro Muñoz
 
 ###Objetivos de esta sesión
 
-[ ] Consolidar el uso de PaaS/SaaS
-[ ] Entender los sistemas de automatización de la construcción de aplicaciones
+[X] Consolidar el uso de PaaS/SaaS
+[X] Entender los sistemas de automatización de la construcción de aplicaciones
 
 ###Otros objetivos
 
-[ ] Último día de entrega de la primera práctica. 
 [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
 [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
-[ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+[X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 

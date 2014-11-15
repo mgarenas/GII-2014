@@ -220,23 +220,69 @@ TEMA 2
 
 * * *
 ### Ejercicio 1
+Para instalarlo podemos usar la órden `sudo pip install virtualenv`.
+Si no tenemos instalado *pip* (el gestor de paquetes de Python), podemos seguir el siguiente enlace http://pip.readthedocs.org/en/latest/installing.html
 
 * * *
 ### Ejercicio 2
+Me he dado de alta en **OpenShift**. Para ello hay que seguir los pasos clásicos de creación de una nueva cuenta, como en cualquier otra plataforma.
+OpenShift sólo permite 3 aplicaciones de forma gratuíta.
 
 * * *
 ### Ejercicio 3
+La URL de Wordpress es http://morciblog-morcicloud.rhcloud.com
+
 
 * * *
 ### Ejercicio 4
+Siguiendo los pasos indicados he creado un menú para un archivo de Google. El menú contiene una única opción, la cual abre un cuadro de diálogo y pone una frase tan original como *"Hola Mundo!"*. 
+
+El código usado ha sido:
+
+`
+function onOpen() {
+  // Añade un menú con un botón que salude
+  DocumentApp.getUi().createMenu('Mi menú')
+      .addItem('Saluda', 'saluda')
+      .addToUi();
+}
+
+function saluda() {
+  DocumentApp.getUi().showDialog(
+      HtmlService
+          .createHtmlOutput('<p>Hola Mundo!</p>')
+          .setTitle('Ventana Saludona'))
+}
+`
 
 * * *
 ### Ejercicio 5
+El lenguaje que utilizo habitualmente es **Python**. Un sistema de automatización para el mismo es **Pynt** (https://github.com/rags/pynt), el cual gestiona las dependencias entre tareas de construcción y permite el paso de parámetros mediante línea de comandos. 
+
 
 * * *
 ### Ejercicio 6
+La plataforma OpenShift no provee al usuario de ningún sistema de automatización de construcción, al menos de forma directa. Simplemente propociona ciertos contenedores ya integrados cuya creación es transparente al usuario, permitiendo una configuración básica.
+
+OpenShift trabaja sobre Jenkins, y éste sí proporciona herramientas para gestionar la integración contínua y la compilación de nuevos ficheros fuente desplegados. Más info: https://developers.openshift.com/en/managing-continuous-integration.html
+
+*Si algún compañero tiene información al respecto, ruego me corrija y haga un pull-request.*
+
 
 * * *
 ### Ejercicio 7
+Python incorpora *unittest* en sus librerías estándares. Con ella se pueden realizar baterías de pruebas de forma sencilla. Un ejemplo de prueba sería la siguiente:
 
+`
+import unittest
+
+def fun(x):
+    return x + 1
+
+class MyTest(unittest.TestCase):
+    def test(self):
+        self.assertEqual(fun(3), 4)
+`
+
+Más info en: http://docs.python-guide.org/en/latest/writing/tests/ 
 
