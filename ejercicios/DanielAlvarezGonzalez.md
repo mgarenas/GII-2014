@@ -68,21 +68,21 @@ Todos estos pasos los he seguido en mi ordenador, he instalado dockers y he segu
 
 
 ##Ejercicio 05
-	[Instalación y configuración ubuntu 12.04](http://www.liquidweb.com/kb/how-to-install-git-on-ubuntu-12-04/)
-	Instalar el sistema de gestión de fuentes **git** es tan sencillo como introducir dos líneas de comando:
-		1- apt-get update
-		2- apt-get install git-core
+[Instalación y configuración ubuntu 12.04](http://www.liquidweb.com/kb/how-to-install-git-on-ubuntu-12-04/)
+Instalar el sistema de gestión de fuentes **git** es tan sencillo como introducir dos líneas de comando:
+	1- apt-get update
+	2- apt-get install git-core
 
-	Una vez que lo tenemos instalado, hay que configurarlo, asignándote un usuario y un correo que te identifiquen y ayuden a prevenir errores de commit. Este proceso es igualmente sencillo:
-		1- git config --global user.name "Tu Usuario"
-		2- git config --global user.email "tucorreo@ejemplo.com"
+Una vez que lo tenemos instalado, hay que configurarlo, asignándote un usuario y un correo que te identifiquen y ayuden a prevenir errores de commit. Este proceso es igualmente sencillo:
+	1- git config --global user.name "Tu Usuario"
+	2- git config --global user.email "tucorreo@ejemplo.com"
 
-	Puedes comprobar los datos de configuración de tu git de la siguiente forma:
-		- git config --list
+Puedes comprobar los datos de configuración de tu git de la siguiente forma:
+	- git config --list
 	
 
 ##Ejercicio 06
-	Para crear un nuevo proyecto o repositorio en gitHub, pinchamos en la pestaña **Create New --> New Repository** al lado de nuestro nombre de usuario en la web de GitHub. Nos pide un nombre para el proyecto y nos da la opción de inicializarlo con un fichero README.
+Para crear un nuevo proyecto o repositorio en gitHub, pinchamos en la pestaña **Create New --> New Repository** al lado de nuestro nombre de usuario en la web de GitHub. Nos pide un nombre para el proyecto y nos da la opción de inicializarlo con un fichero README.
 	Una vez creado el nuevo repositorio, lo clonamos a nuestro directorio de trabajo git con el comando  **git clone *url_proyecto*
 	Cuando se ha modificado el README como pide el ejercicio, hay que formalizar dicho cambio. Para ello hay que hacer un **commit** de la siguiente forma --> **git commit -a -m "comentario que define el cambio realizado"**.
 	Ya que se ha formalizado el cambio, solo queda subir dicho cambio al repositorio de GitHub haciendo un **git push**. 
@@ -91,7 +91,7 @@ Todos estos pasos los he seguido en mi ordenador, he instalado dockers y he segu
 
 
 ##Ejercicio 07
-	En mi instalación de Ubuntu 12.04 LTS se hizo la instalación de cgroups en el punto **/sys/fs/cgroup/ y contiene los siguientes directorios:
+En mi instalación de Ubuntu 12.04 LTS se hizo la instalación de cgroups en el punto **/sys/fs/cgroup/ y contiene los siguientes directorios:
 		- blkio
 		- cpu
 		- cpuacct
@@ -102,7 +102,7 @@ Todos estos pasos los he seguido en mi ordenador, he instalado dockers y he segu
 		- memory
 		- perf_event
 
-	Dentro de estos directorios se encuentran los ficheros que se muestran como ejemplo en el fichero de objetivos y muchos más.
+Dentro de estos directorios se encuentran los ficheros que se muestran como ejemplo en el fichero de objetivos y muchos más.
 
 
 
@@ -112,23 +112,23 @@ Todos estos pasos los he seguido en mi ordenador, he instalado dockers y he segu
 
 ##Ejercicio 08
 
-	Para este ejercicio se han creado tres grupos de control *good*, *regular* y *bad* dentro del directorio cgroup. Para ello se ha utilizado las líneas de comandos:
+Para este ejercicio se han creado tres grupos de control *good*, *regular* y *bad* dentro del directorio cgroup. Para ello se ha utilizado las líneas de comandos:
 
-		- **sudo cgcreate -g memory,cpu,cpuacct:good**
-		- **sudo cgcreate -g memory,cpu,cpuacct:regular**
-		- **sudo cgcreate -g memory,cpu,cpuacct:bad**
-	
-	Una vez creados los grupos de control, se han lanzado procesos en cada uno de ellos con los siguientes comandos:
-		- **sudo cgexec -g memory,cpu,cpuacct:good firefox &**
-		- **sudo cgexec -g memory,cpu,cpuacct:resgular lowriter &**
-		- **sudo cgexec -g memory,cpu,cpuacct:bad gimp &**
+	- **sudo cgcreate -g memory,cpu,cpuacct:good**
+	- **sudo cgcreate -g memory,cpu,cpuacct:regular**
+	- **sudo cgcreate -g memory,cpu,cpuacct:bad**
+
+Una vez creados los grupos de control, se han lanzado procesos en cada uno de ellos con los siguientes comandos:
+	- **sudo cgexec -g memory,cpu,cpuacct:good firefox &**
+	- **sudo cgexec -g memory,cpu,cpuacct:resgular lowriter &**
+	- **sudo cgexec -g memory,cpu,cpuacct:bad gimp &**
 
 
-	Los resultados obtenidos de uso de cpu, consultando en cada grupo control: **cat /sys/fs/cgroup/cpuacct/good|regular|bad/cpuacct.usage** son los siguientes:
+Los resultados obtenidos de uso de cpu, consultando en cada grupo control: **cat /sys/fs/cgroup/cpuacct/good|regular|bad/cpuacct.usage** son los siguientes:
 
-		- grupo **good** ejecutando firefox, uso de cpu 3161809980
-		- grupo **regular** ejecutando libreoffice, uso de cpu 2969369788
-		- grupo **bad** ejecutando el editor de imágenes gimp, uso de cpu 4422939045
+	- grupo **good** ejecutando firefox, uso de cpu 3161809980
+	- grupo **regular** ejecutando libreoffice, uso de cpu 2969369788
+	- grupo **bad** ejecutando el editor de imágenes gimp, uso de cpu 4422939045
 
 
 
@@ -182,7 +182,7 @@ He escogido instalar **virtualenv** para python. Los pasos que he seguido han si
 
 
 ##Ejercicio 02
-	He escogido [Openshift](https://www.openshift.com/)
+He escogido [Openshift](https://www.openshift.com/)
 
 ##Ejercicio 03
 
@@ -221,3 +221,6 @@ js:
 [Enlace al documento creado con el script](https://docs.google.com/open?id=1wuByz3d-V16syNIh-RxfgqSTx4Cl3dnrnetZLfNDzfo)
 	
 
+##Ejercicio 05
+
+El software que he encontrado para el proceso de autmatización de la construcción para Python (Build automation) es [PyBuilder](http://pybuilder.github.io/). Está escrito completamente en Python y orientado principalmente para aplicaciones Python. Está basado en el concepto de programación basado en dependencias, pero además incluye una gran cantidad de plugins, que permiten la creación de ciclos de construcción, similar al funcionamiento de las herramientas de este tipo para Java. En este repositorio de [GitHub](https://github.com/pybuilder/pybuilder) se explica cómo instalarlo y algunos de los plugins más usados.
