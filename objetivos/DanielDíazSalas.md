@@ -88,8 +88,8 @@ Lista de objetivos de Daniel Díaz Salas
 #Clase del 14 de noviembre de 2014
 ##Objetivos de esta sesión
 
-- [] Consolidar el uso de PaaS/SaaS
-- [] Entender los sistemas de automatización de la construcción de aplicaciones
+- [x] Consolidar el uso de PaaS/SaaS
+- [x] Entender los sistemas de automatización de la construcción de aplicaciones
 
 ##Otros objetivos
 
@@ -101,8 +101,8 @@ Lista de objetivos de Daniel Díaz Salas
 #Clase del 17 de noviembre de 2014
 ##Objetivos de esta sesión
 
-- [] Consolidar el uso de PaaS/SaaS
-- [] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
+- [x] Consolidar el uso de PaaS/SaaS
+- [x] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
 - [] Comenzar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md)
 
 ##Otros objetivos
