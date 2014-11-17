@@ -8,6 +8,7 @@ Lista de objetivos de Álvaro Muñoz
 - [X] Darse de alta y comprender el funcionamiento básico de GitHub y la lista de correo de la asignatura
 - [X] Entender el concepto de software libre y su aplicación práctica en clase.
 
+* * *
 ## Sesión 17-octubre-2014
 
 ###Objetivos de la clase
@@ -26,6 +27,7 @@ Lista de objetivos de Álvaro Muñoz
 - [X] Entender el concepto de sistema de ficheros virtual usado en Linux para diferentes menesteres.
 
 
+* * *
 ## Sesión 20-octubre-2014
 
 ###Objetivos de la clase
@@ -41,7 +43,7 @@ Lista de objetivos de Álvaro Muñoz
 - [X] Tener a punto una instalación Linux para llevar a cabo las actividades de la asignatura
 - [X] Usar git para hacer *check-in* en clase y [expresar al final de la misma los objetivos alcanzados](Cumpliendo_Objetivos.md).
 
-
+* * *
 ## Sesión 24-octubre-2014
 
 ### Objetivos de la clase
@@ -57,53 +59,87 @@ Lista de objetivos de Álvaro Muñoz
 - [X] Consolidar el uso de la línea de órdenes para administración y desarrollo de software.
 
 
-#Clase-seminario del 27 de octubre de 2014
+* * *
+##Clase-seminario 27-octubre-2014
 
-##Objetivos de esta sesión
+###Objetivos de esta sesión
 
 - [X] Conocer los diferentes [proyectos propuestos](../proyectos_propuestos.md) para llevarlos a cabo a lo largo de la asignatura.
 
+* * *
+##Clase del 31 de octubre de 2014
 
-#Clase del 31 de octubre de 2014
-
-##Objetivos de esta sesión
+###Objetivos de esta sesión
 
 - [X] [Leer los proyectos propuestos y elegir uno](../proyectos_propuestos.md). Si ninguno encaja, se puede proponer otro (mediante edición y pull request). 
 - [X] [Comenzar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura). El plazo para entregar las prácticas son dos semanas: hasta el final de la sesión del 10 de noviembre. 
 
-##Otros objetivos
+###Otros objetivos
 
 - [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 
 
+* * *
+#Clase 3-noviembre-2014
 
-#Clase del 3 de noviembre de 2014
-
-##Objetivos de esta sesión
+###Objetivos de esta sesión
 
 - [X] [Continuar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura). El plazo para entregar las prácticas es de dos semanas: hasta el final de la sesión del 10 de noviembre. 
 
-##Otros objetivos
+###Otros objetivos
 
 - [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 
 
+* * *
+##Clase del 7-noviembre-2014
 
-#Clase del 7 de noviembre de 2014
-
-##Objetivos de esta sesión
+###Objetivos de esta sesión
 
 - [X] Entender el concepto de entorno virtual de desarrollo y comenzar a usarlo.
-- [ ] Darse de alta en un PaaS y comprender los mecanismos usados para despliegue de aplicaciones así como el uso de los entornos virtuales anteriores.
-- [ ] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS
+- [X] Darse de alta en un PaaS y comprender los mecanismos usados para despliegue de aplicaciones así como el uso de los entornos virtuales anteriores.
+- [X] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS
 - [X] [Continuar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura).
 
-##Otros objetivos
+###Otros objetivos
 
 - [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
 - [X] Comprender el método de entrega de las prácticas de la asignatura.
+
+
+* * *
+##Clase del 10-noviembre-2014
+
+###Objetivos de esta sesión
+
+[X] Darse de alta en uno de ellos y comprender los mecanismos usados para despliegue de aplicaciones
+[X] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
+[X] Crear nuevas funciones en un SaaS.
+
+###Otros objetivos
+
+[ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+[ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+[X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+[ ] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
+[X] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request. 
+
+
+* * *
+##Clase del 14-noviembre-2014
+
+###Objetivos de esta sesión
+
+[X] Consolidar el uso de PaaS/SaaS
+[X] Entender los sistemas de automatización de la construcción de aplicaciones
+
+###Otros objetivos
+
+[ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
+[ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+[X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 
