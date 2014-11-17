@@ -281,6 +281,7 @@ function fucncionDePrueba() {
 
 ## Ejercicio 6.
 
+Con **Heroku** las dependencias vienen gestionadas vía [pip](https://devcenter.heroku.com/articles/python-pip).
 
 ## Ejercicio 7.
 

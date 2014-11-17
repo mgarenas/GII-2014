@@ -105,21 +105,21 @@ Sesión 9 - Clase del 10 de noviembre de 2014
 
 Sesión 10 - Clase del 14 de noviembre de 2014
 ---------------------------------------------
-- [ ] Consolidar el uso de PaaS/SaaS.
-- [ ] Entender los sistemas de automatización de la construcción de aplicaciones.
-- [ ] Último día de entrega de la primera práctica. 
+- [X] Consolidar el uso de PaaS/SaaS.
+- [X] Entender los sistemas de automatización de la construcción de aplicaciones.
+- [X] Último día de entrega de la primera práctica. 
 - [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
-- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
-- [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
 
 Sesión 11 - Clase del 17 de noviembre de 2014
 ---------------------------------------------
 
-- [ ] Consolidar el uso de PaaS/SaaS
-- [ ] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
+- [X] Consolidar el uso de PaaS/SaaS
+- [X] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
 - [ ] Comenzar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md).
 - [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
-- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
-- [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 
 
