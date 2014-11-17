@@ -88,7 +88,7 @@ Sesión 8 - Clase del 7 de noviembre de 2014
 - [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
-- [ ] Comprender el método de entrega de las prácticas de la asignatura.
+- [X] Comprender el método de entrega de las prácticas de la asignatura.
 
 
 Sesión 9 - Clase del 10 de noviembre de 2014
@@ -97,11 +97,29 @@ Sesión 9 - Clase del 10 de noviembre de 2014
 - [X] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
 - [X] Crear nuevas funciones en un SaaS.
 - [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
-- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
-- [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 - [ ] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
 - [X] Usar el apartado de Material adicional abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request.
 
 
+Sesión 10 - Clase del 14 de noviembre de 2014
+---------------------------------------------
+- [ ] Consolidar el uso de PaaS/SaaS.
+- [ ] Entender los sistemas de automatización de la construcción de aplicaciones.
+- [ ] Último día de entrega de la primera práctica. 
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
+
+Sesión 11 - Clase del 17 de noviembre de 2014
+---------------------------------------------
+
+- [ ] Consolidar el uso de PaaS/SaaS
+- [ ] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
+- [ ] Comenzar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md).
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 
 
