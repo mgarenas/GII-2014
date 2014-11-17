@@ -68,21 +68,21 @@ Todos estos pasos los he seguido en mi ordenador, he instalado dockers y he segu
 
 
 ##Ejercicio 05
-	[Instalación y configuración ubuntu 12.04](http://www.liquidweb.com/kb/how-to-install-git-on-ubuntu-12-04/)
-	Instalar el sistema de gestión de fuentes **git** es tan sencillo como introducir dos líneas de comando:
-		1- apt-get update
-		2- apt-get install git-core
+[Instalación y configuración ubuntu 12.04](http://www.liquidweb.com/kb/how-to-install-git-on-ubuntu-12-04/)
+Instalar el sistema de gestión de fuentes **git** es tan sencillo como introducir dos líneas de comando:
+	1- apt-get update
+	2- apt-get install git-core
 
-	Una vez que lo tenemos instalado, hay que configurarlo, asignándote un usuario y un correo que te identifiquen y ayuden a prevenir errores de commit. Este proceso es igualmente sencillo:
-		1- git config --global user.name "Tu Usuario"
-		2- git config --global user.email "tucorreo@ejemplo.com"
+Una vez que lo tenemos instalado, hay que configurarlo, asignándote un usuario y un correo que te identifiquen y ayuden a prevenir errores de commit. Este proceso es igualmente sencillo:
+	1- git config --global user.name "Tu Usuario"
+	2- git config --global user.email "tucorreo@ejemplo.com"
 
-	Puedes comprobar los datos de configuración de tu git de la siguiente forma:
-		- git config --list
+Puedes comprobar los datos de configuración de tu git de la siguiente forma:
+	- git config --list
 	
 
 ##Ejercicio 06
-	Para crear un nuevo proyecto o repositorio en gitHub, pinchamos en la pestaña **Create New --> New Repository** al lado de nuestro nombre de usuario en la web de GitHub. Nos pide un nombre para el proyecto y nos da la opción de inicializarlo con un fichero README.
+Para crear un nuevo proyecto o repositorio en gitHub, pinchamos en la pestaña **Create New --> New Repository** al lado de nuestro nombre de usuario en la web de GitHub. Nos pide un nombre para el proyecto y nos da la opción de inicializarlo con un fichero README.
 	Una vez creado el nuevo repositorio, lo clonamos a nuestro directorio de trabajo git con el comando  **git clone *url_proyecto*
 	Cuando se ha modificado el README como pide el ejercicio, hay que formalizar dicho cambio. Para ello hay que hacer un **commit** de la siguiente forma --> **git commit -a -m "comentario que define el cambio realizado"**.
 	Ya que se ha formalizado el cambio, solo queda subir dicho cambio al repositorio de GitHub haciendo un **git push**. 
@@ -91,7 +91,7 @@ Todos estos pasos los he seguido en mi ordenador, he instalado dockers y he segu
 
 
 ##Ejercicio 07
-	En mi instalación de Ubuntu 12.04 LTS se hizo la instalación de cgroups en el punto **/sys/fs/cgroup/ y contiene los siguientes directorios:
+En mi instalación de Ubuntu 12.04 LTS se hizo la instalación de cgroups en el punto **/sys/fs/cgroup/ y contiene los siguientes directorios:
 		- blkio
 		- cpu
 		- cpuacct
@@ -102,7 +102,7 @@ Todos estos pasos los he seguido en mi ordenador, he instalado dockers y he segu
 		- memory
 		- perf_event
 
-	Dentro de estos directorios se encuentran los ficheros que se muestran como ejemplo en el fichero de objetivos y muchos más.
+Dentro de estos directorios se encuentran los ficheros que se muestran como ejemplo en el fichero de objetivos y muchos más.
 
 
 
@@ -112,23 +112,23 @@ Todos estos pasos los he seguido en mi ordenador, he instalado dockers y he segu
 
 ##Ejercicio 08
 
-	Para este ejercicio se han creado tres grupos de control *good*, *regular* y *bad* dentro del directorio cgroup. Para ello se ha utilizado las líneas de comandos:
+Para este ejercicio se han creado tres grupos de control *good*, *regular* y *bad* dentro del directorio cgroup. Para ello se ha utilizado las líneas de comandos:
 
-		- **sudo cgcreate -g memory,cpu,cpuacct:good**
-		- **sudo cgcreate -g memory,cpu,cpuacct:regular**
-		- **sudo cgcreate -g memory,cpu,cpuacct:bad**
-	
-	Una vez creados los grupos de control, se han lanzado procesos en cada uno de ellos con los siguientes comandos:
-		- **sudo cgexec -g memory,cpu,cpuacct:good firefox &**
-		- **sudo cgexec -g memory,cpu,cpuacct:resgular lowriter &**
-		- **sudo cgexec -g memory,cpu,cpuacct:bad gimp &**
+	- **sudo cgcreate -g memory,cpu,cpuacct:good**
+	- **sudo cgcreate -g memory,cpu,cpuacct:regular**
+	- **sudo cgcreate -g memory,cpu,cpuacct:bad**
+
+Una vez creados los grupos de control, se han lanzado procesos en cada uno de ellos con los siguientes comandos:
+	- **sudo cgexec -g memory,cpu,cpuacct:good firefox &**
+	- **sudo cgexec -g memory,cpu,cpuacct:resgular lowriter &**
+	- **sudo cgexec -g memory,cpu,cpuacct:bad gimp &**
 
 
-	Los resultados obtenidos de uso de cpu, consultando en cada grupo control: **cat /sys/fs/cgroup/cpuacct/good|regular|bad/cpuacct.usage** son los siguientes:
+Los resultados obtenidos de uso de cpu, consultando en cada grupo control: **cat /sys/fs/cgroup/cpuacct/good|regular|bad/cpuacct.usage** son los siguientes:
 
-		- grupo **good** ejecutando firefox, uso de cpu 3161809980
-		- grupo **regular** ejecutando libreoffice, uso de cpu 2969369788
-		- grupo **bad** ejecutando el editor de imágenes gimp, uso de cpu 4422939045
+	- grupo **good** ejecutando firefox, uso de cpu 3161809980
+	- grupo **regular** ejecutando libreoffice, uso de cpu 2969369788
+	- grupo **bad** ejecutando el editor de imágenes gimp, uso de cpu 4422939045
 
 
 
@@ -151,28 +151,76 @@ Todos estos pasos los he seguido en mi ordenador, he instalado dockers y he segu
 
 
 
-
+ eso
 
 ##Ejercicio 11
 
-	Salida tras ejecutar el comand *kvm-ok*:
-		INFO: /dev/kvm does not exist
-		HINT:   sudo modprobe kvm_intel
-		INFO: For more detailed results, you should run this as root
-		HINT:   sudo /usr/sbin/kvm-ok
+Salida tras ejecutar el comand *kvm-ok*:
+	INFO: /dev/kvm does not exist
+	HINT:   sudo modprobe kvm_intel
+	INFO: For more detailed results, you should run this as root
+	HINT:   sudo /usr/sbin/kvm-ok
 
-	Tras ejecutar el comando que se sugiere (sudo modprobe kvm_intel) y volver a consultar (kvm-ok), la salida es:
-		INFO: /dev/kvm exists
-		KVM acceleration can be used
+Tras ejecutar el comando que se sugiere (sudo modprobe kvm_intel) y volver a consultar (kvm-ok), la salida es:
+	INFO: /dev/kvm exists
+	KVM a-cceleration can be used
 
 
 ##Ejercicio 12
-	Una aplicación SaaS es aquella en la que el soporte lógico y los datos que se manejan se alojan en el servidor que proporciona el servicio. Por esto, normalmente el usuario no tiene que instalar nada en su ordenador, bastando con un navegador web para hacer uso de dicho servicio. Algunos ejemplos de este tipo de software es la gama de servicios que ofrece Google tales como Gmail, Google Maps, Google Drive, etc. También son de este tipo los servicios de almacenamiento en la nube como Dropbox o Mega.
+
+Una aplicación SaaS es aquella en la que el soporte lógico y los datos que se manejan se alojan en el servidor que proporciona el servicio. Por esto, normalmente el usuario no tiene que instalar nada en su ordenador, bastando con un navegador web para hacer uso de dicho servicio. Algunos ejemplos de este tipo de software es la gama de servicios que ofrece Google tales como Gmail, Google Maps, Google Drive, etc. También son de este tipo los servicios de almacenamiento en la nube como Dropbox o Mega.
 	
 
 
 
+#Sesión del 3 de Noviembre
+##Ejercicio 01
+	
+He escogido instalar **virtualenv** para python. Los pasos que he seguido han sido:
+	- $ [sudo] pip install virtualenv para instalar virtualenv en mi equipo.
+	- $ virtualenv ENV para crear el directorio ENV, donde se almacenarán todas las librerías que instale.
 
 
+##Ejercicio 02
+He escogido [Openshift](https://www.openshift.com/)
 
+##Ejercicio 03
 
+Para instalar wordpress en una aplicación de OpenShift, lo primero es crear la aplicación. Para ello, desde la interfaz web de OpenShift, en la pestaña *Applications* se escoge la opción de añadir una nueva aplicación o crear tu primera aplicación (si es el caso).
+Dentro de las opciones, escoger una aplicación de tipo *Wordpress 4* y se configura, entre otras cosas, dándole una URL con la que acceder al wordpress. Por último, se crea un blog y una entrada para comprobar que funciona.
+	[Enlace a mi blog](https://php-crixo24.rhcloud.com/) creado desde la aplicación hecha en Openshift.
+
+##Ejercicio 04
+
+js:
+
+	function CrearDocumento() {
+		// Crea el documento con el nombre 'Hello, world!'
+		var doc = DocumentApp.create('Hello, world!');
+
+		// Accede al fichero y escribe en él
+		doc.getBody().appendParagraph('This document was created by Google Apps Script.');
+
+		// Obtiene la url del fichero creado
+		var url = doc.getUrl();
+
+		// Obtiene la dirección de correo del usuario que crea este script (yo)
+		var email = Session.getActiveUser().getEmail();
+
+		// Coge el nombre del fichero para usarlo como asunto en el correo que va a mandar
+		var subject = doc.getName();
+
+		// Añade texto al email
+		var body = 'Link to your doc: ' + url;
+
+		// Envía el email con el enlace al fichero creado.
+		GmailApp.sendEmail(email, subject, body);
+	}
+[highlight.js]: http://softwaremaniacs.org/soft/highlight/en/
+ 
+[Enlace al documento creado con el script](https://docs.google.com/open?id=1wuByz3d-V16syNIh-RxfgqSTx4Cl3dnrnetZLfNDzfo)
+	
+
+##Ejercicio 05
+
+El software que he encontrado para el proceso de autmatización de la construcción para Python (Build automation) es [PyBuilder](http://pybuilder.github.io/). Está escrito completamente en Python y orientado principalmente para aplicaciones Python. Está basado en el concepto de programación basado en dependencias, pero además incluye una gran cantidad de plugins, que permiten la creación de ciclos de construcción, similar al funcionamiento de las herramientas de este tipo para Java. En este repositorio de [GitHub](https://github.com/pybuilder/pybuilder) se explica cómo instalarlo y algunos de los plugins más usados. 
