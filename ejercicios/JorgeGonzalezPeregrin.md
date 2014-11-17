@@ -76,6 +76,11 @@ Para realizar este ejercicio se han seguido las siguientes órdenes.
 No he podido realizarlo porque al intentar montar el cgroup me dice que ya se encuentra montado y no me crea los subdirectorios que debería.
 
 
+#####Corrección de Daniel Díaz Salas
+
+A mí tambien me pasaba esto. En Ubuntu se montan por defecto en _/sys/fs/cgroup_. Mira a ver si tienes todos los subdirectorios ahí.
+
+
 ### Ejercicio 9
 **Parte 1**
 La limitacion de recursos o de asignación puede ser muy útil en el momento en el que tenemos que tenemos que modificar partes de un servicio que no puede pararse. Podemos poner por ejemplo un servidor que esta dando soporte a aplicaciones Android. Es clave que el servicio no se interrumpa, sin embargo podemos realizar tareas bajando el rendimiento a este servicio. De este modo, podemos modificar la parte del servidor necesaria sin tener que interrumpir el servicio.
