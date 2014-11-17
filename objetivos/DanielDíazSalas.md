@@ -46,7 +46,7 @@ Lista de objetivos de Daniel Díaz Salas
 
 - [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
-- [x][Contestar a la encuesta sobre la metodología de clase](https://docs.google.com/forms/d/1IgOx4ANDaXN5Kt5Br-n6we7Y2XdRXNlRw2SmnC9Ou2w/viewform)
+- [x] [Contestar a la encuesta sobre la metodología de clase](https://docs.google.com/forms/d/1IgOx4ANDaXN5Kt5Br-n6we7Y2XdRXNlRw2SmnC9Ou2w/viewform)
 - [x] Consolidar el uso de la línea de órdenes para administración y desarrollo de software.
 
 #Clase-seminario del 27 de octubre de 2014
@@ -72,15 +72,42 @@ Lista de objetivos de Daniel Díaz Salas
 - [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 
 #Clase del 10 de noviembre de 2014
-- [] Darse de alta en uno de ellos y comprender los mecanismos usados para despliegue de aplicaciones
-- [] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
-- [] Crear nuevas funciones en un SaaS.
+##Objetivos de esta sesión
+- [x] Darse de alta en uno de ellos y comprender los mecanismos usados para despliegue de aplicaciones
+- [ ] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
+- [ ] Crear nuevas funciones en un SaaS.
 
 ##Otros objetivos
 
-- [] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
-- [] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
-- [] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
-- [] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
-- [] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request. 
+- [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+- [ ] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
+- [ ] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request. 
+
+#Clase del 14 de noviembre de 2014
+##Objetivos de esta sesión
+
+- [x] Consolidar el uso de PaaS/SaaS
+- [x] Entender los sistemas de automatización de la construcción de aplicaciones
+
+##Otros objetivos
+
+- [x] Último día de entrega de la primera práctica. 
+- [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
+- [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+
+#Clase del 17 de noviembre de 2014
+##Objetivos de esta sesión
+
+- [x] Consolidar el uso de PaaS/SaaS
+- [x] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
+- [ ] Comenzar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md)
+
+##Otros objetivos
+
+- [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
+- [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 
