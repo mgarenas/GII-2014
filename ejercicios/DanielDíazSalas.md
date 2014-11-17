@@ -1,5 +1,8 @@
-Objetivos de Daniel Díaz Salas
+Ejercicios de Daniel Díaz Salas
 ===============================
+
+#Tema 1
+
 Ejercicio 1
 -----------
 Para este ejercicio he elegido el [Fujitsu Primergy TX300 S8 Formato Torre](http://www.pccomponentes.com/fujitsu_primergy_tx300_s8_formato_torre.html "PcComponentes").
@@ -54,7 +57,7 @@ La segunda parte se tarda demasiado tiempo.
 
 Ejercicio 4
 ------------
-![El resultado del tutorial está guardado en la imagen Daniel Díaz Salas - Ejercicio 4.jpg](/ejercicios/DanielDíazSalas-Ejercicio4.jpg)
+![El resultado del tutorial está guardado en la imagen DanielDíazSalas-Ejercicio4Tema1.jpg](/ejercicios/DanielDíazSalas-Ejercicio4Tema1.jpg)
 
 Ejercicio 5
 -----------
@@ -214,3 +217,37 @@ Ejercicio 12
 El SaaS si lo pensamos es una forma de desarrollar software bastante diferente a la "normal". Cuando tú desarrollas un software para alguien, ese software es un **producto**, sin embargo SaaS es software como un servicio.
 
 Uno de los inconvenientes de lo que no he visto que nadie haya comentado es el que no se puede cambiar el software que se te ofrece. Esto parece una perogrullada, pero muchas veces el software no hace exactamente lo necesario, y el no poder cambiar este hecho es un inconveniente bastante grande.
+
+#Tema 2
+
+Ejercicio 1
+-----------
+He elegido Virtualenv.  
+
+Primero instalo python:
+>sudo apt-get install python-pip
+
+Después instalo Virutalenv:
+>sudo pip install virtualenv
+
+Ejercicio 2
+-----------
+Aprovecho que ya estaba dado de alta en **Heroku**.
+
+Ejercicio 3
+----------
+Desaprovecho el que ya estaba dado de alta en **Heroku** y doy de alta en **Openshift**
+
+[WordPress instalado](http://potray-wordpressejer3cc.rhcloud.com/)
+
+Ejercicio 4
+-----------
+![El resultado del tutorial está guardado en la imagen DanielDíazSalas-Ejercicio4Tema2.jpg](/ejercicios/DanielDíazSalas-Ejercicio4Tema2.jpg)
+
+Ejercicio 5
+-----------
+Para Python (Django) se pueden usar Make.
+
+Ejercicio 6
+-----------
+

@@ -76,6 +76,11 @@ Para realizar este ejercicio se han seguido las siguientes órdenes.
 No he podido realizarlo porque al intentar montar el cgroup me dice que ya se encuentra montado y no me crea los subdirectorios que debería.
 
 
+#####Corrección de Daniel Díaz Salas
+
+A mí tambien me pasaba esto. En Ubuntu se montan por defecto en _/sys/fs/cgroup_. Mira a ver si tienes todos los subdirectorios ahí.
+
+
 ### Ejercicio 9
 **Parte 1**
 La limitacion de recursos o de asignación puede ser muy útil en el momento en el que tenemos que tenemos que modificar partes de un servicio que no puede pararse. Podemos poner por ejemplo un servidor que esta dando soporte a aplicaciones Android. Es clave que el servicio no se interrumpa, sin embargo podemos realizar tareas bajando el rendimiento a este servicio. De este modo, podemos modificar la parte del servidor necesaria sin tener que interrumpir el servicio.
@@ -124,3 +129,50 @@ KVM acceleration can be used
 Un ejemplo claro de de SaaS son los servicios de correo como Gmail, Yahoo o Hotmail. Además de servicios de correo electrónico tambien herramientas como Drive o incluso Dropbox, en algunos aspectos, también podemos considerarlo ejemplos de servicios SaaS de almacenamiento en la "nube".
 
 Últimamente se han añadido servicios SaaS para la generación de documentos en línea como puede ser GitHub o para la gestión de nominas como los distintos ERP
+
+#### Creando aplicaciones en la nube: Uso de PaaS y SaaS
+
+### Ejercicio 1
+Se va a instalar un entrono virtual para Python. Para ello, se han utilizado los siguientes comandos
+- sudo apt-get install python-pip
+- sudo pip install https://github.com/pypa/virtualenv/tarball/develop
+- sudo apt-get install curl
+- curl -O https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.9.tar.gz
+- tar xvfz virtualenv-1.9.tar.gz
+- cd virtualenv-1.9
+- sudo python setup.py install
+
+Ejecutamos el entorno usando
+- virtualenv ENV
+y creamos el ejecutable 
+New python executable in ENV/bin/python
+Installing setuptools............done.
+Installing pip...............done.
+
+### Ejercicio 2
+Me he registrado en **Heroku**
+
+### Ejercicio 3
+Me he registrado en **OpenShift**
+Nos logueamos en la cuenta y seleccionamos la opción de **WordPress 4** en el submenu de "Instant App"
+Introducimos en el browser la siguiente dirección e instalamos WordPress
+- php-manoletes.rhcloud.com
+
+Rellenamos la información, necesaria y accedemos a nuestro WordPress. Podemos loguearnos en el WordPress pinchando [aqui](https://php-manoletes.rhcloud.com/wp-login.php) o visitar la página en este [enlace](http://php-manoletes.rhcloud.com/). Una vez logueados ya estamos en dispositición de gestionar y personalizar nuestro WordPress
+
+### Ejercicio 4
+Nos vamos a la web https://script.google.com/
+Una vez dentro, indicamos que vamos a realizar un script para "Documents". Ahí, cambiamos el nombre del proyecto y seleccionamos, por ejemplo, la función "showAlert".
+
+### Ejercicio 5
+Un sistema de automatización de la contrucción de ficheros C/C++ sería **make**.
+Como entorno de desarrollo uso habitualmente NetBeans o AndroidStudio
+
+### Ejercicio 6
+El PaaS elegido es **Heroku** y hemos seleccionado una aplicación en PHP. Como podemos ver [aqui](https://devcenter.heroku.com/articles/getting-started-with-php#declare-app-dependencies) nos indica que se necesita un archivo llamado **composer.json** que se encarga de analizar las dependencias para poder construir el fichero.
+
+### Ejercicio 7
+
+
+
+
