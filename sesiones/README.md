@@ -11,3 +11,6 @@
 * [Clase del  3 de noviembre de 2014](7.md).
 * [Clase del  7 de noviembre de 2014](8.md).
 * [Clase del 10 de noviembre de 2014](9.md).
+* [Clase del 14 de noviembre de 2014](10.md).
+* [Clase del 17 de noviembre de 2014](11.md).
+* [Clase del 21 de noviembre de 2014](12.md).
