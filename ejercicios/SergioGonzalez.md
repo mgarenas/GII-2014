@@ -1,6 +1,8 @@
 
 Ejercicios de Sergio González
-==============================
+=============================
+
+##TEMA 1:
 
 ### Ejercicio 1:
 
@@ -132,3 +134,85 @@ Un SaaS o Software as a Service es una aplicación normalmente de escritorio que
 Un gran ejemplo de estos SaaS son las aplicaciones de ofimática en la nube que todas las grandes empresas ya han incorporado como Microsoft office 365, Google Docs, writer y iCloud Pages, Keynote y Numbers de Apple.
 
 Unas de las aplicaciones que me han parecido bastante interesantes dentro de este sector son las aplicaciones web para el desarrollo del software. Son aplicaciones que no uso muy habitualmente pero cuando necesito de ellas no me apetece instalarlas ya que son para un momento, cómo desarrollar un diagrama de flujo o un diagrama UML  para algún ejercicio. Y estas son igual de potentes que las que vayamos a instalar.
+
+
+- - - - 
+
+##TEMA 2:
+
+### Ejercicio 1: 
+
+Instalación de virtualenv en Mac os x:
+	sudo easy_install pip
+	sudo pip install virtualenv
+Para más dudas seguir los enlaces: [enlace1](http://hackercodex.com/guide/python-development-environment-on-mac-osx/) y [enlace2](http://jamie.curle.io/blog/installing-pip-virtualenv-and-virtualenvwrapper-on-os-x/)
+
+
+### Ejercicio 2:
+
+Me he dado de alta en OpenShift.
+
+
+### Ejercicio 3:
+
+Mi blog de WordPress instalado en OpenShift se puede encontrar [aquí](https://php-sergiogvzblog.rhcloud.com)
+
+
+### Ejercicio 4:
+
+Esta función de Google AS nos permite crear un documento nuevo, nombrarlo e introducir texto en el dicho documento. 
+
+```
+function crearDocumento() {
+  
+  //Crear documento
+  var doc = DocumentApp.create('Ejercicio 4');
+
+  //Modificar su contenido
+  doc.getBody().appendParagraph('Esto es la creción de el documento ejercicio 4 para CC');
+  
+
+}
+```
+
+### Ejercicio 5:
+
+Los sistemas de automitazación de construcción para lenguajes de programación que he usado anteriormente han sido:
+
+- make para C y C++, haciendo uso de ficheros makefile. Un ejemplo extraido de [cplusplus.com](http://www.cplusplus.com/forum/unices/12499/) es el siguiente:
+
+```
+SOURCE=octhecdec.cpp octhecdec.h
+MYPROGRAM=octhecdec
+MYINCLUDES=/home/scale/g++Projects/gLib/
+
+MYLIBRARIES=fltk
+CC=g++
+
+
+
+all: $(MYPROGRAM)
+
+
+
+$(MYPROGRAM): $(SOURCE)
+
+    $(CC) -I$(MYINCLUDES) $(SOURCE) -o$(MYPROGRAM) -l$(MYLIBRARIES)
+
+clean:
+
+    rm -f $(MYPROGRAM)
+```
+Como se ve, se pueden generar macros o flags para indicar la instrucción del compilador (CC), los ficheros de códigos (SOURCE),...
+
+Para definir las tareas, se mencionará la tarea, dos puntos y los ficheros o tareas que han de ser completadas antes de proceder con la que se define. A continuación, tabulado, el comando para completar dicha tarea.
+
+- Maven para Java. Se está utilizando actualmente en la asigtura DSS (desarrollo de software basado en componetes) para facilitar la compilación de JSF. Se ha instalado en eclipse y despues se ha definido el proyecto como proyecto Maven. Este se puede descargar y serguir en la web de [Maven](http://maven.apache.org/download.cgi).
+
+- Para el lenguaje Python, existen varios como [PyBuilder](http://pybuilder.github.io) o [Pynt](https://github.com/rags/pynt) que nos ayuda con las dependencias de nuestros programas.
+
+### Ejercicio 6:
+
+
+
+### Ejercicio 7:
