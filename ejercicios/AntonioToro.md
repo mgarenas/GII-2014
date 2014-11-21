@@ -145,11 +145,13 @@ Creando aplicaciones en la nube: Uso de PaaS y SaaS
 ## Ejercicio 1
 _Instalar un entorno virtual para tu lenguaje de programación favorito (uno de los mencionados arriba, obviamente)._
 
-He elegido instalar un entorno virtual para _python_. 
+He elegido instalar un entorno virtual para __python__. 
 
 Para poder hacerlo he tenido que instalar primero _pip_. Se instala en Ubuntu con `sudo apt-get install python-pip`.
 
 Después instalo el entorno: `sudo pip install virtualenv`
+
+También he instalado _nodeenv_ para __NodeJS__: `sudo pip install nodeenv`
 
 ## Ejercicio 2
 _Darse de alta en algún servicio PaaS tal como Heroku, Nodejitsu u OpenShift._
@@ -174,13 +176,18 @@ _Buscar un sistema de automatización de la construcción para el lenguaje de pr
 _Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de 
 construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma._
 
-En _OpenShift_ se puede configurar el proceso de construcción de las aplicaciones mediante _Jenkins_.
+(En _OpenShift_ se puede configurar el proceso de construcción de las aplicaciones mediante _Jenkins_.
 El proceso de construcción comienza cuando el usuario realiza un `git push` hacia el repositorio de la aplicación
 en _OpenShift_. Después, se realiza la construcción de la aplicación (que se puede personalizar con _Jenkins_).
 
 Se puede ver de manera resumida en el [workflow de OpenShift](https://www.openshift.com/walkthrough/developer-workflow), y 
-más explicada [aquí](https://www.openshift.com/products/architecture).
+más explicada [aquí](https://www.openshift.com/products/architecture).) <- Esto no es
 
 ## Ejercicio 7
 _Buscar un entorno de pruebas para el lenguaje de programación y entorno de desarrollo que usemos habitualmente._
 
+Para __NodeJS__ se pueden realizar test unitarios con [__Nodeunit__](https://github.com/caolan/nodeunit). También se pueden utilizar
+una serie de herramientas, para realizar muchos tipos de pruebas, que están muy bien descritas [aquí](http://www.clock.co.uk/blog/tools-for-unit-testing-and-quality-assurance-in-node-js)
+
+Para __python__ se puede utilizar el módulo __unittest__. [Aquí](http://www.openp2p.com/pub/a/python/2004/12/02/tdd_pyunit.html) se
+puede ver un tutorial de TDD con __unittest__.
