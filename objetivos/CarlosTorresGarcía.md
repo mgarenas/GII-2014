@@ -56,24 +56,115 @@ Lista de objetivos de Carlos Torres García
 - [X] Consolidar el uso de la línea de órdenes para administración y desarrollo de software.
 
 
-## Tema1
-======
-- [X] Conocer la historia de la Computación Virtual, sus orígenes y razones de su existencia.
-- [X] Conocer los conceptos relacionados con el proceso de virtualización tanto de software como de hardware y ponerlos en práctica.
-- [X] Comprender la diferencia entre infraestructura virtual y real.
-- [] Justificar la necesidad de procesamiento virtual frente a real en el contexto de una infraestructura TIC de una organización.
-- [X] Conocer diferentes tecnologías relacionadas con la virtualización (Computación nube, Utility Computing, Software as a Service o Google AppSpot)
-- [X] Conocer el concepto de software libre y su importancia dentro de la computación nube.
-- [X] Entender el concepto de DevOps y las técnicas y tecnologías que cubre.
-- [] Usar el sistema de control de fuentes git para desarrollo colaborativo y para despliegue de aplicaciones en la nube.
+### Seminario 27-octubre-2014
+
+### Objetivos de esta sesión
+
+- [X] Conocer los diferentes [proyectos propuestos](../proyectos_propuestos.md) para llevarlos a cabo a lo largo de la asignatura.
+
+
+### Otros objetivos
+
+- [X] Usar *exclusivamente* la línea de órdenes para trabajar con GitHub.
+- [X] Dar de alta la clave SSH para trabajar con GitHub más cómodamente. 
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+## Sesión 31-octubre-2014
+
+### Objetivos de la clase
+
+- [X] [Leer los proyectos propuestos y elegir uno](../proyectos_propuestos.md). Si ninguno encaja, se puede proponer otro (mediante edición y pull request). 
+- [X] [Comenzar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura). El plazo para entregar las prácticas son dos semanas: hasta el final de la sesión del 10 de noviembre. 
+
+### Otros objetivos
+
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+
+## Sesión 3-noviembre-2014
+
+### Objetivos de la clase
+
+- [X] Si todavía no se ha hecho, [leed los proyectos propuestos y elegir uno](../proyectos_propuestos.md). 
+- [X] [Continuar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura). El plazo para entregar las prácticas es de dos semanas: hasta el final de la sesión del 10 de noviembre. 
+
+### Otros objetivos
+
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+
+## Sesión 7-noviembre-2014
+
+### Objetivos de la clase
+
+- [X] Entender el concepto de entorno virtual de desarrollo y comenzar a usarlo.
+- [X] Darse de alta en un PaaS y comprender los mecanismos usados para despliegue de aplicaciones así como el uso de los entornos virtuales anteriores.
+- [X] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS
+- [X] Si todavía no se ha hecho, [leed los proyectos propuestos y elegir uno](../proyectos_propuestos.md). 
+- [X] [Continuar con la primera práctica: elección de proyecto y grupo](http://jj.github.io/CC/documentos/practicas/1.Infraestructura). El plazo para entregar las prácticas es de dos semanas: hasta el final de la sesión del 10 de noviembre. 
+
+### Otros objetivos
+
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
+- [X] Comprender el método de entrega de las prácticas de la asignatura.
+
+## Sesión 10-noviembre-2014
+
+### Objetivos de la clase
+
+- [X] Darse de alta en uno de ellos y comprender los mecanismos usados para despliegue de aplicaciones
+- [X] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
+- [X] Crear nuevas funciones en un SaaS.
+
+###Otros objetivos
+
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+- [X] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
+- [ ] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request. 
+
+
+## Sesión 14-noviembre-2014
+
+### Objetivos de la clase
+- [X] Consolidar el uso de PaaS/SaaS
+- [X] Entender los sistemas de automatización de la construcción de aplicaciones
+
+### Otros objetivos
+
+- [X] Último día de entrega de la primera práctica. 
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+
+
+
+## Sesión 17-noviembre-2014
+
+### Objetivos de la clase
+- [X] Consolidar el uso de PaaS/SaaS
+- [X] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
+- [X] Comenzar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md)
+
+### Otros objetivos
+
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+
 
 ## Seminario Ruby
-======
 - [X]Conocer la historia y origenes de este lenguaje
 - [X]Entender los conceptos principales detrás del mismo
 - [X]Conocer y saber usar la sintaxis
 - [X]Aprender las estructuras de datos y control principales
-- []Instalar y usar bibliotecas
+- [X]Instalar y usar bibliotecas
 - [X]Hacer un pequeño programa
 
  
