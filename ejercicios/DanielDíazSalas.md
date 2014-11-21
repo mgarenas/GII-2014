@@ -244,10 +244,18 @@ Ejercicio 4
 -----------
 ![El resultado del tutorial está guardado en la imagen DanielDíazSalas-Ejercicio4Tema2.jpg](/ejercicios/DanielDíazSalas-Ejercicio4Tema2.jpg)
 
+Está mál, cuando funcione internet lo corregiré.
+
 Ejercicio 5
 -----------
 Para Python (Django) se pueden usar Make.
 
 Ejercicio 6
 -----------
+Google App Engine no tiene una herramienta para automatizar las construcciones, pero sí tiene una SDK que permite construir en local fácilmente.
 
+Ejercicio 7
+-----------
+Habitualmente yo uso Java para programar cosas, y para realizar pruebas se usa JUnit.
+
+Los test en Django se hacen usando el módulo [unittest](https://docs.python.org/3/library/unittest.html#module-unittest) que está en la biblioteca estándar de Python.
