@@ -1,5 +1,5 @@
-﻿Ejercicios
-==========
+﻿Introducción a la infraestructura virtual: concepto y soporte físico
+====================================================================
 
 ## Ejercicio 1
 _Consultar en el catálogo de alguna tienda de informática el precio de un 
