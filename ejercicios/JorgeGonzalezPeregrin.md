@@ -172,7 +172,7 @@ Como entorno de desarrollo uso habitualmente NetBeans o AndroidStudio
 El PaaS elegido es **Heroku** y hemos seleccionado una aplicación en PHP. Como podemos ver [aqui](https://devcenter.heroku.com/articles/getting-started-with-php#declare-app-dependencies) nos indica que se necesita un archivo llamado **composer.json** que se encarga de analizar las dependencias para poder construir el fichero.
 
 ### Ejercicio 7
-Tanto en NetBeans, Eclipse o Android Studio que son los entornos de desarrollo con los que trabajo usualmente, he estado como sistema de tester JUnit 4 sobre Java.
+Tanto en NetBeans, Eclipse o Android Studio que son los entornos de desarrollo con los que trabajo usualmente, he estado como sistema de tester JUnit 4 sobre Java. Con el entorno de desarrollo Xcode para iOS también he utilizado el sistema de testeo TDD pero en menor medida
 
 
 
