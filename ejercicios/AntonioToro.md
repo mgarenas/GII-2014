@@ -145,6 +145,12 @@ Creando aplicaciones en la nube: Uso de PaaS y SaaS
 ## Ejercicio 1
 _Instalar un entorno virtual para tu lenguaje de programación favorito (uno de los mencionados arriba, obviamente)._
 
+He elegido instalar un entorno virtual para _python_. 
+
+Para poder hacerlo he tenido que instalar primero _pip_. Se instala en Ubuntu con `sudo apt-get install python-pip`.
+
+Después instalo el entorno: `sudo pip install virtualenv`
+
 ## Ejercicio 2
 _Darse de alta en algún servicio PaaS tal como Heroku, Nodejitsu u OpenShift._
 
