@@ -320,3 +320,5 @@ Si algún compañero quiere completar como lo realiza Jenkins sería perfecto.
 ###Ejercicio 7:
 **Buscar un entorno de pruebas para el lenguaje de programación y entorno de desarrollo que usemos habitualmente.**
 
+Para python se puede utilizar el módulo [unittest](https://docs.python.org/2/library/unittest.html). 
+En [este](http://pythontesting.net/framework/unittest/unittest-introduction/) enlace se puede ver un tutorial sobre su uso.
