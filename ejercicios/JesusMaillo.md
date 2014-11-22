@@ -304,8 +304,18 @@ function createAndSendDocument() {
 ###Ejercicio 5:
 **Buscar un sistema de automatización de la construcción para el lenguaje de programación y entorno de desarrollo que usemos habitualmente.**
 
+El sistema que se ha visto en el desarrollo de los estudios universitarios es make (para lenguaje C y C++) mediante los ficheros makefile. Un ejemplo lo podemos ver [aqui](http://www.cplusplus.com/forum/unices/12499/)
+
+El TFG lo he realizado en Java utilizando Ant, y actualmente estamos viendo el uso Maven.
+
+Para Python existe [Pynt](http://pynt.sourceforge.net/), el cual no he llegado a utilizar pero se encarga de las dependencias y posibilita el uso de parámetros en línea de comandos.
+
 ###Ejercicio 6:
 **Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma.**
+
+En el ejercicio tercero elegí OpenShift, el cual provee la automaticación mediante [Jenkins](http://jenkins-ci.org/). No lo hace de forma directa.
+
+Si algún compañero quiere completar como lo realiza Jenkins sería perfecto.
 
 ###Ejercicio 7:
 **Buscar un entorno de pruebas para el lenguaje de programación y entorno de desarrollo que usemos habitualmente.**
