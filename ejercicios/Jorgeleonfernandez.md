@@ -20,6 +20,8 @@ Por tanto el precio con un uso del 10% es: 470€
 
 El precio por mes de 1&1 es de 79,99€/mes por lo que serían unos 960€ al año.
 
+Por tanto si se va a hacer un uso continuo durante todo el año interesa el de 1&1 y si solo se va a hacer un uso esporadico interesaría el de Azure.
+
 
 ##Ejercicio 3
 
