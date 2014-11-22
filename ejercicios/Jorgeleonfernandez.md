@@ -11,16 +11,15 @@ La amortización a siete años es: 205,90€ por año
 
 ##Ejercicio 2
 
-Los servicios escogidos son AWS y Azure. El procesador de amazon es un ce.2xlarge y el de Azure es el A4.
+Los servicios escogidos son el A4 de Azure y el Permonce L de 1&1.
 
-El precio por hora de Amazon es 0,209.
 El precio por hora de azure es 0,5362.
-
-El precio con un uso del 1% del servicio de Amazon es: 18,3€
-Por tanto el precio con un uso del 10% es: 183€
 
 El precio con un uso del 1% del servicio de Azure es: 47€
 Por tanto el precio con un uso del 10% es: 470€
+
+El precio por mes de 1&1 es de 79,99€/mes por lo que serían unos 960€ al año.
+
 
 ##Ejercicio 3
 
@@ -135,7 +134,7 @@ php-jorgeles.rhcloud.com
 
 ##Ejercicio 5
 
-MakeFile para la compilación de programas en C/C++. Este nos permite contruir de una manera muy automática nuestro programa en C/C++ y disponer los archivos del programa donde queramos.
+Make para la compilación de programas en C/C++. Este nos permite contruir de una manera muy automática nuestro programa en C/C++ y disponer los archivos del programa donde queramos.
  
 ##Ejercicio 6
 
