@@ -224,3 +224,19 @@ js:
 ##Ejercicio 05
 
 El software que he encontrado para el proceso de autmatización de la construcción para Python (Build automation) es [PyBuilder](http://pybuilder.github.io/). Está escrito completamente en Python y orientado principalmente para aplicaciones Python. Está basado en el concepto de programación basado en dependencias, pero además incluye una gran cantidad de plugins, que permiten la creación de ciclos de construcción, similar al funcionamiento de las herramientas de este tipo para Java. En este repositorio de [GitHub](https://github.com/pybuilder/pybuilder) se explica cómo instalarlo y algunos de los plugins más usados. 
+
+
+## Ejercicio 06
+En OpenShift, la herramienta que se utiliza para la automatización de la construcción de las aplicacioens es [Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Meet+Jenkins). Es una aplicación con dos funciones principales: 
+	1- Construir/testear proyectos software constantemente
+	2- Monitorizar ejecuciones de tareas externas.
+
+Para inicializar la aplicación, OpenShift busca por defecto un fichero llamado **server.js**.
+
+
+## Ejercicio 07
+Python incluye una gran cantidad de [módulos](https://wiki.python.org/moin/PythonTestingToolsTaxonomy) para realizar tests, entre los que destacan:
+
+- [unittest](https://docs.python.org/2/library/unittest.html): Fue el primer marco de trabajo para realizar tests incluido en la librería estandard de Python.
+- [doctest](https://docs.python.org/2/library/doctest.html): Busca trozos de texto interactivo en sesiones de Python y los ejecuta para comprobar su correcto funcionamiento.
+- [pytest](http://pytest.org/latest/): Módulo para buscar y ejecutar tests. Se caracteriza por parar en el primer fallo que encuentre y lanzar **pdb** (python debbuger), etc.
