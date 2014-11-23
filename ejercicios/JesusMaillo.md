@@ -269,7 +269,7 @@ Ya he creado el WordPress. En el siguiente enlace se puede ver. Lo he realizado 
 
 https://jmailloh-wpejercicio3.rhcloud.com/
 
-###Ejercicio4:
+###Ejercicio 4:
 **Crear un script para un documento Google y cambiarle el nombre con el que aparece en el menú, así como la función a la que llama.**
 
 El código que va a ser ejecutado es el del tutorial de google.
@@ -289,7 +289,7 @@ function createAndSendDocument() {
  var email = Session.getActiveUser().getEmail();
 
  // Get the name of the document to use as an email subject line.
- var subject = doc.getName();
+ var subject= doc.getName();
 
  // Append a new string to the "url" variable to use as an email body.
  var body = 'Link to your doc: ' + url;
@@ -300,3 +300,25 @@ function createAndSendDocument() {
 ```
 
  En esta función se crea un documento llamado hello, world!, se escribe una frase en el y se envia por correo al usuario activo, que somos nosotros mismos.
+
+###Ejercicio 5:
+**Buscar un sistema de automatización de la construcción para el lenguaje de programación y entorno de desarrollo que usemos habitualmente.**
+
+El sistema que se ha visto en el desarrollo de los estudios universitarios es make (para lenguaje C y C++) mediante los ficheros makefile. Un ejemplo lo podemos ver [aqui](http://www.cplusplus.com/forum/unices/12499/)
+
+El TFG lo he realizado en Java utilizando Ant, y actualmente estamos viendo el uso Maven.
+
+Para Python existe [Pynt](http://pynt.sourceforge.net/), el cual no he llegado a utilizar pero se encarga de las dependencias y posibilita el uso de parámetros en línea de comandos.
+
+###Ejercicio 6:
+**Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma.**
+
+En el ejercicio tercero elegí OpenShift, el cual provee la automaticación mediante [Jenkins](http://jenkins-ci.org/). No lo hace de forma directa.
+
+Si algún compañero quiere completar como lo realiza Jenkins sería perfecto.
+
+###Ejercicio 7:
+**Buscar un entorno de pruebas para el lenguaje de programación y entorno de desarrollo que usemos habitualmente.**
+
+Para python se puede utilizar el módulo [unittest](https://docs.python.org/2/library/unittest.html). 
+En [este](http://pythontesting.net/framework/unittest/unittest-introduction/) enlace se puede ver un tutorial sobre su uso.
