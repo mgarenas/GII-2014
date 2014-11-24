@@ -240,3 +240,21 @@ Python incluye una gran cantidad de [módulos](https://wiki.python.org/moin/Pyth
 - [unittest](https://docs.python.org/2/library/unittest.html): Fue el primer marco de trabajo para realizar tests incluido en la librería estandard de Python.
 - [doctest](https://docs.python.org/2/library/doctest.html): Busca trozos de texto interactivo en sesiones de Python y los ejecuta para comprobar su correcto funcionamiento.
 - [pytest](http://pytest.org/latest/): Módulo para buscar y ejecutar tests. Se caracteriza por parar en el primer fallo que encuentre y lanzar **pdb** (python debbuger), etc.
+
+
+
+***
+
+#Sesión del 24 de Noviembre
+
+##Ejercicio 01
+
+Para crear el espacio de nombres hay que poner lo siguiente:
+**sudo unshare -m /bin/bash**
+
+La opción **-m** indica que se va a crear un *namespace* de tipo montaje (mount).
+
+Para montar la imagen.iso:
+**mount -o loop imagen.iso /mnt**
+
+Haciendo esto, se puede comprobar que desde fuera del *namespace* que hemos creado, no se pueden ver los archivos que haya dentro de la imagen que hemos montado.
