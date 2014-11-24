@@ -59,5 +59,42 @@ Imponemos el 25% del precio de adquisición sin IVA en cada año. [430 € / añ
 cgroup.clone_children  cgroup.procs          notify_on_release  tasks
 cgroup.event_control   cgroup.sane_behavior  release_agent      user
 
+##Ejercicios Práctica 2
 
+###Ejercicio 1
+
+* Instalo rbenv usando este [enlace] (https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-debian-7-wheezy)
+* git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+* echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+* echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+* git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+* git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+
+###Ejercicio 2
+
+* Me doy de alta en OpenShift (versión Online)
+
+###Ejercicio 3
+
+* Entro en la [consola web] (https://openshift.redhat.com/app/console/applications)
+* Selecciono "Install App -> Wordpress 4"
+* Configuro un namespace (frandai)
+* La URL Pública es: https://blog–frandai.rhcloud.com
+
+###Ejercicio 4
+
+* Se crea la función en un archivo de Googe:
+
+```
+function onOpen() {
+  // Add a menu with some items, some separators, and a sub-menu.
+  DocumentApp.getUi().createMenu('Menu')
+      .addItem('Alerta', 'showAlert')
+      .addToUi();
+}
+
+function showAlert() {
+    DocumentApp.getUi().alert('Una Alerta!');
+}
+```
 
