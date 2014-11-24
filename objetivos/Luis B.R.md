@@ -108,7 +108,7 @@ Sesión 10 - Clase del 14 de noviembre de 2014
 - [X] Consolidar el uso de PaaS/SaaS.
 - [X] Entender los sistemas de automatización de la construcción de aplicaciones.
 - [X] Último día de entrega de la primera práctica. 
-- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
 - [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
 
@@ -122,4 +122,22 @@ Sesión 11 - Clase del 17 de noviembre de 2014
 - [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 
+Sesión 12 - Clase del 21 de noviembre de 2014
+---------------------------------------------
 
+- [X] Consolidar el uso de PaaS/SaaS
+- [X] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
+- [ ] Continuar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md)
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
+- [X] Revisar también el primer hito de un proyecto que no sea el propio. 
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+Sesión 13 - Clase del 24 de noviembre de 2014
+---------------------------------------------
+- [ ] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
+- [ ] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
+- [ ] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
+- [ ] Entender y saber llevar a cabo la virtualización de dispositivos de red.
+- [ ] Usar herramientas de administración y monitorización de red en línea de órdenes.
+- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccgii.
+- [ ] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54).
