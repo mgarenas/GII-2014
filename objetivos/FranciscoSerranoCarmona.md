@@ -78,3 +78,16 @@ Lista de objetivos de Francisco Serrano Carmona
 
 - [x] Consolidar el uso de PaaS/SaaS
 - [x] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
+
+#Clase del 24 de noviembre de 2014
+##Objetivos de esta sesión
+
+
+- [x] Consolidar el uso de PaaS/SaaS
+- [ ] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
+- [x] Continuar con la segunda práctica
+
+##Otros Objetivos
+
+- [x] Revisar también el primer hito de un proyecto que no sea el propio. 
+
