@@ -182,12 +182,44 @@ Tema 2
 
 ###Ejercicio 4 Crear un script para un documento Google y cambiarle el nombre con el que aparece en el menú, así como la función a la que llama
 
+
+- Se abre un documento cualquiera en Drive -> Herramientas -> Editor de secuencia de comandos
+-Sobre el script de Google-Doc:
+
+```
+function onOpen() {
+  DocumentApp.getUi().createMenu('Pipas')
+      .addItem('¿Quieres pipas?', 'quieresPipas')
+      .addToUi();
+}
+
+function quieresPipas() {
+  var result = DocumentApp.getUi().alert(
+      'Dialog title',
+      '¿Quieres pipas?',
+      DocumentApp.getUi().ButtonSet.YES_NO);
+
+  if (result == DocumentApp.getUi().Button.YES) {
+    DocumentApp.getUi().alert('¡Pues no tengo!');
+  } else {
+    DocumentApp.getUi().alert('¡Tampoco te iba a dar!');
+  }
+}
+
+```
+- Una vez terminado -> Guardar -> Publicar
+- Se abre un fichero cualquiera que utilice la hoja de cálculo.
+- Aparece un menú llamado "Mis programas" en el cual está el ítem "alerta" que muestra un diálogo con un texto.
+
 ###Ejercicio 5 Buscar un sistema de automatización de la construcción para el lenguaje de programación y entorno de desarrollo que usemos habitualmente
 
+	Para app engine y Phyton: appcfg
+
 ###Ejercicio 6 Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma
+	Para Openshift se puede utilizar [Jenkins] (https://developers.openshift.com/en/managing-continuous-integration.html)
 
 ###Ejercicio 7 Buscar un entorno de pruebas para el lenguaje de programación y entorno de desarrollo que usemos habitualmente
-
+	Shippable
 
 Seminario Ruby
 -----
