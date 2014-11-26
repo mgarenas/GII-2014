@@ -281,7 +281,9 @@ function fucncionDePrueba() {
 
 ## Ejercicio 6.
 
-Con **Heroku** las dependencias vienen gestionadas vía [pip](https://devcenter.heroku.com/articles/python-pip).
+Con **Heroku** las dependencias vienen gestionadas vía [pip](https://devcenter.heroku.com/articles/python-pip) para Python para especificar las dependencias de un módulo de Python se añade un fichero de *requerimientos* llamado **requirements.txt** a la raiz del respositorio.
+
+En cuanto a el lenguaje **PHP** las dependencias vienen en el fichero [composer.json](https://devcenter.heroku.com/articles/getting-started-with-php#declare-app-dependencies).
 
 ## Ejercicio 7.
 
