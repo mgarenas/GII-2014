@@ -12,7 +12,7 @@ Según la [tabla de amortizaciones simplificada](http://www.infoautonomos.com/in
 El servidor elegido ha sido un [HP ProLiant ML310e G8 XE E3-1220/8GB/2TB](http://www.pccomponentes.com/hp_proliant_ml310e_g8_xe_e3_1220_8gb_2tb.html), cuyo precio sin IVA es de **532.23€**
 
 * Coste amortización a 4 años:
-	* Cuatro años al 25%: 532.23€ x 0.25 = 133.06€/año 
+	* Cuatro años al 25%: 532.23€ x 0.25 = 133.06€/año
 
 * Coste amortización a 7 años
 	* Cuatro años al 10% (2 primeros y 2 últimos): 532.23 x 0.1 = 53.23€/año
@@ -163,31 +163,31 @@ Similar al ejercicio 9.2 pero cambiando el nombre del recurso al que le damos pr
 
 	mount { blkio = /cgroup/blkio }
 
-	group httpd { 
-		blkio { 
-			blkio.weight="700"; 
-		} 
+	group httpd {
+		blkio {
+			blkio.weight="700";
+		}
 	}
 
-	group users { 
-		blkio { 
-			blkio.weight="300"; 
-		} 
+	group users {
+		blkio {
+			blkio.weight="300";
+		}
 	}
 
 ***
 ### Ejercicio 10
 
-El procesador sí tiene activados los flags de virtualización a nivel de hardware (flag *vmx*). 
+El procesador sí tiene activados los flags de virtualización a nivel de hardware (flag *vmx*).
 El modelo de procesador es *Intel(R) Core(TM) i7-3930K CPU @ 3.20GHz* (información extraída del archivo */proc/cpuinfo*).
 La salida del comando (por cada núcleo) es:
 
 	flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov
-	pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb 
-	rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology 
-	nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est 
-	tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt 
-	tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm 
+	pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb
+	rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology
+	nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est
+	tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt
+	tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm
 	tpr_shadow vnmi flexpriority ept vpid
 
 
@@ -215,7 +215,7 @@ Algunos inconvenientes podrían ser:
 - Necesidad de confianza en la empresa, ya que tienen la posibilidad de usar los datos del usuario.
 
 
-TEMA 2 
+TEMA 2
 ======
 
 * * *
@@ -235,7 +235,7 @@ La URL de Wordpress es http://morciblog-morcicloud.rhcloud.com
 
 * * *
 ### Ejercicio 4
-Siguiendo los pasos indicados he creado un menú para un archivo de Google. El menú contiene una única opción, la cual abre un cuadro de diálogo y pone una frase tan original como *"Hola Mundo!"*. 
+Siguiendo los pasos indicados he creado un menú para un archivo de Google. El menú contiene una única opción, la cual abre un cuadro de diálogo y pone una frase tan original como *"Hola Mundo!"*.
 
 El código usado ha sido:
 
@@ -257,7 +257,7 @@ function saluda() {
 
 * * *
 ### Ejercicio 5
-El lenguaje que utilizo habitualmente es **Python**. Un sistema de automatización para el mismo es **Pynt** (https://github.com/rags/pynt), el cual gestiona las dependencias entre tareas de construcción y permite el paso de parámetros mediante línea de comandos. 
+El lenguaje que utilizo habitualmente es **Python**. Un sistema de automatización para el mismo es **Pynt** (https://github.com/rags/pynt), el cual gestiona las dependencias entre tareas de construcción y permite el paso de parámetros mediante línea de comandos.
 
 
 * * *
@@ -268,12 +268,15 @@ OpenShift trabaja sobre Jenkins, y éste sí proporciona herramientas para gesti
 
 *Si algún compañero tiene información al respecto, ruego me corrija y haga un pull-request.*
 
+Puedes encontar con **Heroku** que las dependencias vienen gestionadas vía [pip](https://devcenter.heroku.com/articles/python-pip) para Python para especificar las dependencias de un módulo de Python se añade un fichero de *requerimientos* llamado **requirements.txt** a la raiz del respositorio.
+
+
 
 * * *
 ### Ejercicio 7
 Python incorpora *unittest* en sus librerías estándares. Con ella se pueden realizar baterías de pruebas de forma sencilla. Un ejemplo de prueba sería la siguiente:
 
-`
+```python
 import unittest
 
 def fun(x):
@@ -282,7 +285,6 @@ def fun(x):
 class MyTest(unittest.TestCase):
     def test(self):
         self.assertEqual(fun(3), 4)
-`
+```
 
-Más info en: http://docs.python-guide.org/en/latest/writing/tests/ 
-
+Más info en: http://docs.python-guide.org/en/latest/writing/tests/

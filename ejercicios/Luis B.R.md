@@ -1,11 +1,11 @@
 # Introducción a la infraestructura virtual: concepto y soporte físico
 
-__Ejercicio 1__ 
+__Ejercicio 1__
 
 La máxima amortización sería del 25%. Luego si tenemos un servidor de 7500 € sin IVA, a 4 años sería por año unos 1875 €.
 
 Si queremos que sea a 7 años tendriamos, variando el porcentaje de amortización (opcional), entonces por ejemplo:
-1. el primer año el 20%: 1500.0 €. 
+1. el primer año el 20%: 1500.0 €.
 
 2. el segundo año el 15%: 1125.0 €.
 
@@ -38,7 +38,7 @@ Por otro lado al *10%* sería:
 
 
 **Referencias:**
-  
+
   * https://www.citynetwork.es/
   * http://aws.amazon.com/es/ec2/pricing/
 
@@ -46,12 +46,12 @@ Por otro lado al *10%* sería:
 ---------
 __Ejercicio 3__
 
-- **Alojamiento de varios clientes en un servidor:** 
+- **Alojamiento de varios clientes en un servidor:**
 Optaría por la *virtualización a nivel de sistema operativo* ya que con esta opción la capa de virtualización se ejecuta como una aplicación en el sistema operativo. De este modo el núcleo del sistema operativo se ejecuta sobre el nodo de hardware con varias máquinas virtuales invitadas aisladas puesto que están instaladas sobre el mismo. De esta manera no hay sobrecarga alguna asociada con tener a cada huésped ejecutando un sistema operativo totalmente instalado. Mejorando así el rendimiento.
 - **Sistema *web + middleware + BD*:**
-Escogería la *virtualización completa*, esta opción no necesita de modificaciones en el sistema operativo host. Se vale de traducción binaria combinando con la ejecución directa. El sistema opertavido se desacopla en su totalidad del hardware que hay por debajo. 
+Escogería la *virtualización completa*, esta opción no necesita de modificaciones en el sistema operativo host. Se vale de traducción binaria combinando con la ejecución directa. El sistema opertavido se desacopla en su totalidad del hardware que hay por debajo.
 - **Prueba de software e integración continua:**
-Elegiría la *virtualización por entornos de desarrollo* ya que nos permite reproducir entornos lo más similar que puede. Se pueden realizar distintas ejecuciones de multiples aplicaciones en distintos lenguajes. 
+Elegiría la *virtualización por entornos de desarrollo* ya que nos permite reproducir entornos lo más similar que puede. Se pueden realizar distintas ejecuciones de multiples aplicaciones en distintos lenguajes.
 
 .........
 ---------
@@ -68,9 +68,9 @@ Lista de comandos realizados:
 - docker push learn/ping
 
 Resultado final:
-                                         
- 
- 
+
+
+
                         ##        .
                   ## ## ##       ==
                ## ## ## ##      ===
@@ -79,12 +79,12 @@ Resultado final:
            \______ o          __/
              \    \        __/
               \____\______/
- 
+
               |          |
            __ |  __   __ | _  __   _
           /  \| /  \ /   |/  / _\ |
           \__/| \__/ \__ |\_ \__  |
-          
+
 .........
 ---------
 __Ejercicio 5__
@@ -124,12 +124,12 @@ Una vez instalado el `cgroup-lite`, enn la carpeta `/sys/fs/cgroup` podemos enco
 ---------
 __Ejercicio 8__
 
-Al crear el directorio no se genera automáticamente los subdirectorios que deberían, luego esta parte no se ha podido realizar. 
+Al crear el directorio no se genera automáticamente los subdirectorios que deberían, luego esta parte no se ha podido realizar.
 
 He estado mirando distintas páginas pero no ha habido manera posible de encontrar el fallo, por ejemplo se ha intentado seguir también esta página:
 
   * http://www.janoszen.com/2013/02/06/limiting-linux-processes-cgroups-explained/
-  * http://linuxaria.com/article/introduction-to-cgroups-the-linux-conrol-group 
+  * http://linuxaria.com/article/introduction-to-cgroups-the-linux-conrol-group
 
 Corrección: Me sucedía el mismo problema. En ubuntu 14.04 parece ser que se tiene que instalar cgroup-bin y crear los frupos usando el comando cgcreate.
 Por ejemplo, el ejercicio se haría:
@@ -165,7 +165,7 @@ echo 3376 > ./buenos/tasks
 #Comprobar el uso de recursos
 cat ./malos/cpuacct.usage
 10751854
-	
+
 cat ./regulares/cpuacct.usage
 7580394
 
@@ -177,9 +177,9 @@ cat ./buenos/cpuacct.usage
 ---------
 __Ejercicio 9__
 
-**Corrección del ejercicio.** 
+**Corrección del ejercicio.**
 
-1. Es interesante limitar los recursos para evitar modificaciones de un servicio establecido para no realizar ningún *halt* en la misma. Se podría establecer un servidor para dar servicio a aplicaciones IOS. Para ello es imporante no interrumpir la ejecución de la aplicación. 
+1. Es interesante limitar los recursos para evitar modificaciones de un servicio establecido para no realizar ningún *halt* en la misma. Se podría establecer un servidor para dar servicio a aplicaciones IOS. Para ello es imporante no interrumpir la ejecución de la aplicación.
 
 2. También en la interacción de varios usuario que hacen uso de una serie de recursos compartidos. De esta forma el trabajo de ambos usuarios se realiza interrumpidamente.
 
@@ -212,7 +212,7 @@ Comprobamos si está instalado `kvm-ok` y nos dice en este caso que no: `El prog
 ---------
 __Ejercicio 12__
 
-El _software como servicio (SaaS)_ es un modelo de soporte lógico. El cliente accede a un servidor por medio de Internet y este servidor se encarga del mantenimiento y soporte del software que el cliente utiliza. Con el modelo _SaaS_ el cliente se despreocupa de instalaciones, configuraciones, etc. 
+El _software como servicio (SaaS)_ es un modelo de soporte lógico. El cliente accede a un servidor por medio de Internet y este servidor se encarga del mantenimiento y soporte del software que el cliente utiliza. Con el modelo _SaaS_ el cliente se despreocupa de instalaciones, configuraciones, etc.
 
 Ejemplos podrían ser _Google Apps, Microsoft Office 365, Gmail, Yahoo mail..._ Puesto que todos estos servicios se encuentran hospedados en un servidor que no es el nuestro y nosostros accedemos sin necesidad de instalar nada a estas aplicaciones mediante Internet.
 
@@ -232,18 +232,18 @@ Para generar un proyecto se usa la siguiente instrucción:
 
 > virtualenv <NOMBRE>
 
-## Ejercicio 2. 
+## Ejercicio 2.
 
 Me he dado de alta en **Heroku**. Y lo he instalado en Ubuntu para poder ejecutar comandos desde la línea de ordenes con el siguientes comando:
 
 > wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
-## Ejercicio 3. 
+## Ejercicio 3.
 
 Como he elegido **Heroku** voy a realizar la [instalación de Wordpress](https://github.com/mhoofman/wordpress-heroku) allí.
 
 
-## Ejercicio 4. 
+## Ejercicio 4.
 
 Se ha creado una función con un código de prueba que aparece en el tutorial de [GoogleDrive](https://developers.google.com/apps-script/overview).
 
@@ -252,22 +252,22 @@ Se ha creado una función con un código de prueba que aparece en el tutorial de
 function fucncionDePrueba() {
   // Creamos un nuevo documento de Google llamado 'hola mundo'
   var doc = DocumentApp.create("Hola mundo");
-  
+
   // Accedemos al cuerpo del documento.
   doc.getBody().appendParagraph('Este documento ha sido creado por un Script.');
-  
+
   // Obtenemos la URL del documento.
   var url = doc.getUrl();
-  
+
   // Obtenemos el correo del usuario activo (el mío).
   var email = Session.getActiveUser().getEmail();
-  
+
   // Obtenemos el nombre del documento.
   var subject = doc.getName();
-  
+
   // Juntamos el nombre del documento con la url.
   var body = 'Enlace del documento: ' +  url;
-  
+
   // Nos enviamos a nosostros mismos el documento.
   GmailApp.sendEmail(email, subject, body);
 }
@@ -275,7 +275,7 @@ function fucncionDePrueba() {
 
 ## Ejercicio 5.
 
-* En el lenguaje de **Python** que es el que utilizo normalmente. [Pynt](https://github.com/rags/pynt) nos ofrece un sistema de automatización para construir tareas y funcionalidades de *python*. Sirve para manejar dependencias entre tareas, genera automáticamente una interfaz de línea de comandos. Este sistema soporta *python 2.7 y python 3.x*. 
+* En el lenguaje de **Python** que es el que utilizo normalmente. [Pynt](https://github.com/rags/pynt) nos ofrece un sistema de automatización para construir tareas y funcionalidades de *python*. Sirve para manejar dependencias entre tareas, genera automáticamente una interfaz de línea de comandos. Este sistema soporta *python 2.7 y python 3.x*.
 * También es muy utilizado y he usado en muchas ocasiones **make** para C/C++. [Makefile](http://mrbook.org/tutorials/make/)
 
 
