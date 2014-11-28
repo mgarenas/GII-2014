@@ -1,5 +1,5 @@
 #Ejercicios de Jesús Maillo Hidalgo
-##Sesión 2
+##Tema 1
 ###Ejercicio1
 **Consultar en el catálogo de alguna tienda de informática el precio de un ordenador tipo servidor y calcular su coste de amortización a cuatro y siete años.**
 
@@ -247,3 +247,78 @@ Todas ellas son consideradas como SaaS (Software as a Service – Software como 
 * El cliente solo se debe de preocupar de la configuración personal sobre las características del servicio que va a utilizar, pero no debe hacerlo de instalaciones, mantenimiento, etc.
 
 *Corrección de sergiogvz: Los servicios de almacenamiento suele no considerarse SaaS, ya que proveen eso, solo almacenamiento. Los SaaS son más aquellos servicios encontrados normalmente en aplicaciones de escritorio, por ejemplo, como bien has indicado: gestores de correo o aplicaciones de ofimática.*
+
+- - -
+
+##Tema 2
+
+###Ejercicio 1:
+**Instalar un entorno virtual para tu lenguaje de programación favorito (uno de los mencionados arriba, obviamente).**
+
+He decidido instalar virtualenv para Python, por tener algo más de conocimiento sobre Python que sobre los demás lenguajes.
+
+###Ejercicio 2:
+**Darse de alta en algún servicio PaaS tal como Heroku, Nodejitsu u OpenShift.**
+
+He decidido hacerme la cuenta en Heroku. También me la he hecho en OpenShift puesto que lo pide el siguiente ejercicio.
+
+###Ejercicio 3:
+**Crear una aplicación en OpenShift y dentro de ella instalar WordPress.**
+
+Ya he creado el WordPress. En el siguiente enlace se puede ver. Lo he realizado con OpenShift
+
+https://jmailloh-wpejercicio3.rhcloud.com/
+
+###Ejercicio 4:
+**Crear un script para un documento Google y cambiarle el nombre con el que aparece en el menú, así como la función a la que llama.**
+
+El código que va a ser ejecutado es el del tutorial de google.
+
+```
+function createAndSendDocument() {
+ // Create a new Google Doc named 'Hello, world!'
+ var doc = DocumentApp.create('Hello, world!');
+
+ // Access the body of the document, then add a paragraph.
+ doc.getBody().appendParagraph('This document was created by Google Apps Script.');
+
+ // Get the URL of the document.
+ var url = doc.getUrl();
+
+ // Get the email address of the active user - that's you.
+ var email = Session.getActiveUser().getEmail();
+
+ // Get the name of the document to use as an email subject line.
+ var subject= doc.getName();
+
+ // Append a new string to the "url" variable to use as an email body.
+ var body = 'Link to your doc: ' + url;
+
+ // Send yourself an email with a link to the document.
+ GmailApp.sendEmail(email, subject, body);
+}
+```
+
+ En esta función se crea un documento llamado hello, world!, se escribe una frase en el y se envia por correo al usuario activo, que somos nosotros mismos.
+
+###Ejercicio 5:
+**Buscar un sistema de automatización de la construcción para el lenguaje de programación y entorno de desarrollo que usemos habitualmente.**
+
+El sistema que se ha visto en el desarrollo de los estudios universitarios es make (para lenguaje C y C++) mediante los ficheros makefile. Un ejemplo lo podemos ver [aqui](http://www.cplusplus.com/forum/unices/12499/)
+
+El TFG lo he realizado en Java utilizando Ant, y actualmente estamos viendo el uso Maven.
+
+Para Python existe [Pynt](http://pynt.sourceforge.net/), el cual no he llegado a utilizar pero se encarga de las dependencias y posibilita el uso de parámetros en línea de comandos.
+
+###Ejercicio 6:
+**Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma.**
+
+En el ejercicio tercero elegí OpenShift, el cual provee la automaticación mediante [Jenkins](http://jenkins-ci.org/). No lo hace de forma directa.
+
+Si algún compañero quiere completar como lo realiza Jenkins sería perfecto.
+
+###Ejercicio 7:
+**Buscar un entorno de pruebas para el lenguaje de programación y entorno de desarrollo que usemos habitualmente.**
+
+Para python se puede utilizar el módulo [unittest](https://docs.python.org/2/library/unittest.html). 
+En [este](http://pythontesting.net/framework/unittest/unittest-introduction/) enlace se puede ver un tutorial sobre su uso.
