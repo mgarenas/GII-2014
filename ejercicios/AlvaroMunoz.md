@@ -286,3 +286,27 @@ class MyTest(unittest.TestCase):
 
 Más info en: http://docs.python-guide.org/en/latest/writing/tests/ 
 
+
+* * *
+TEMA 3
+======
+
+### Ejercicio 1
+
+### Ejercicio 2.1
+
+### Ejercicio 2.2
+
+### Ejercicio 3.1
+
+### Ejercicio 3.2
+
+### Ejercicio 4
+
+### Ejercicio 5
+
+### Ejercicio 6
+
+
+* * *
+
