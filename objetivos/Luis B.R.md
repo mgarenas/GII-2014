@@ -136,7 +136,7 @@ Sesión 13 - Clase del 24 de noviembre de 2014
 ---------------------------------------------
 - [x] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
 - [ ] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
-- [ ] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
+- [x] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
 - [ ] Entender y saber llevar a cabo la virtualización de dispositivos de red.
 - [ ] Usar herramientas de administración y monitorización de red en línea de órdenes.
 - [x] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccgii.

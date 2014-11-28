@@ -294,3 +294,29 @@ En cuanto a el lenguaje **PHP** las dependencias vienen en el fichero [composer.
     * [nose](http://nose.readthedocs.org/en/latest/).
     * [testify](https://github.com/Yelp/Testify/).
     * [Trial](http://twistedmatrix.com/trac/wiki/TwistedTrial).
+
+
+-------------
+
+# Técnicas de virtualización
+
+## Ejercicio 1.
+
+Lo primero que vamos a realizar es *crear el espacio de nombres*:
+```bash
+# Esta llamada da una copia de su espacio de nombres montado.
+#  Deja de compratir su directorio raíz el directorio actual.
+su
+sudo unshare -m /bin/bash
+```
+
+Después procedemos a crear dónde queremos realizar el punto de montaje:
+```bash
+# Creamos el directorio.
+mkdir -p /mnt/<mi_disco>
+# Procedemos a montar la imagen ISO.
+mount -o loop <mi_imagen.iso>
+
+# Para comprobar que se ha montado (aparecerá al final).
+mount
+```
