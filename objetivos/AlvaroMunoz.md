@@ -159,8 +159,11 @@ Lista de objetivos de Álvaro Muñoz
 - [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 
+
+
 * * * 
 ##Clase del 21-noviembre-2014
+
 ###Objetivos de esta sesión
 
 - [X] Consolidar el uso de PaaS/SaaS
@@ -173,8 +176,10 @@ Lista de objetivos de Álvaro Muñoz
 - [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 
 
+
 * * *
 ##Clase del 24-noviembre-2014
+
 ### Objetivos de esta sesión
 
 - [ ] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
@@ -185,9 +190,25 @@ Lista de objetivos de Álvaro Muñoz
 ## Otros objetivos
 
 - [ ] Usar herramientas de administración y monitorización de red en línea de órdenes.
-- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccgii.
+- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
+
 
 
 * * *
+##Clase del 28-noviembre-2014
 
+### Objetivos de esta sesión
 
+- [ ] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
+- [ ] Aprender a ''enjaular'' usuarios.
+
+### Otros objetivos
+
+- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
+- [ ] Aplicar conocimientos de administración de un sistema Linux: usuarios, permisos.
+- [ ] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
+- [ ] Comprender que existe vida en los servidores web fuera del Apache.
+- [ ] [Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla](https://es.wikipedia.org/wiki/Chroot) como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
+- [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
+
+* * * 
