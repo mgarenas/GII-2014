@@ -102,7 +102,7 @@ Sesión 8 - Clase del 7 de noviembre de 2014
 
 ### Otros objetivos
 - [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
-- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
 - [X] Comprender el método de entrega de las prácticas de la asignatura.
 
@@ -113,14 +113,14 @@ Sesión 9 - Clase del 10 de noviembre de 2014
 ### Objetivos de esta sesión
 - [X] Darse de alta en uno de ellos y comprender los mecanismos usados para despliegue de aplicaciones
 - [ ] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
-- [ ] Crear nuevas funciones en un SaaS.
+- [X] Crear nuevas funciones en un SaaS.
 
 ### Otros objetivos
 - [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 - [ ] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
-- [ ] Usar el apartado de Material adicional abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request.
+- [X] Usar el apartado de Material adicional abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request.
 
 
 Sesión 10 - Clase del 14 de noviembre de 2014
