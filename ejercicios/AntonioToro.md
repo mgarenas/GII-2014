@@ -139,6 +139,10 @@ Son aplicaciones a las que accedemos por internet, y en la actualizad utilizamos
 Existen muchas otras, como los editores de texto y de hojas de cálculo de Google Drive, Google calendar, Outlook.com, Yahoo! Mail, Hangouts, PDFscape (editor online de pdf), Autocad360...
 
 
+
+
+
+
 Creando aplicaciones en la nube: Uso de PaaS y SaaS
 ===================================================
 
@@ -171,6 +175,7 @@ Script creado: https://script.google.com/d/1CDot9JH09oTQa2WqSPx0kZmVN3wZ3TT8-ZZf
 ## Ejercicio 5
 _Buscar un sistema de automatización de la construcción para el lenguaje de programación y entorno de desarrollo que usemos habitualmente._
 
+Aunque ya no lo empleo habitualmente, he utilizado **make** para C/C++. [Makefile](http://mrbook.org/tutorials/make/)
 
 ## Ejercicio 6
 _Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de 
@@ -191,3 +196,5 @@ una serie de herramientas, para realizar muchos tipos de pruebas, que están muy
 
 Para __python__ se puede utilizar el módulo __unittest__. [Aquí](http://www.openp2p.com/pub/a/python/2004/12/02/tdd_pyunit.html) se
 puede ver un tutorial de TDD con __unittest__.
+
+Para __Java__ existe __JUnit__, que nos permite la realización de test unitarios.
