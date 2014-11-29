@@ -1,6 +1,8 @@
 Ejercicios
 ============================
 ###==================================================================================================
+#Tema 1
+###==================================================================================================
 ### 1)
 Consultar en el catálogo de alguna tienda de informática el precio de un ordenador tipo servidor y calcular su coste de amortización a cuatro y siete años. Consultar [este artículo en Infoautónomos sobre el tema](http://www.infoautonomos.com/consultas-a-la-comunidad/988/).
 
@@ -356,3 +358,179 @@ KVM acceleration can be used
 [Comentar diferentes soluciones de Software as a Service de uso habitual](https://github.com/JJ/GII-2014/issues/72).
 
 Ya lo he comentado.
+
+
+###==================================================================================================
+#Tema 2
+###==================================================================================================
+### 1)Instalar un entorno virtual para tu lenguaje de programación favorito (uno de los mencionados arriba, obviamente).
+virtualenv:
+
+Instalación:
+```
+pip install virtualenv
+```
+
+Uso:
+```
+virtualenv ENV
+
+New python executable in ENV/bin/python
+Installing setuptools, pip...done.
+```
+
+###==================================================================================================
+### 2)Darse de alta en algún servicio PaaS tal como Heroku, [Nodejitsu](https://www.nodejitsu.com/) u OpenShift.
+Dado de alta en Heroku y OpenShift.
+
+
+###==================================================================================================
+### 3)Crear una aplicación en OpenShift y dentro de ella instalar WordPress.
+
+
+No usar(
+He seguido este [tutorial](http://robertovg.com/hosting/getting-started-with-wordpress-in-openshift/)
+
+Crear la aplicación:
+```
+rhc app create testWordPress php-5.4 mysql-5.5 --from-code=https://github.com/robertovg/wordpress-example
+
+Application Options
+-------------------
+Domain:      silttest
+Cartridges:  php-5.4, mysql-5.5
+Source Code: https://github.com/robertovg/wordpress-example
+Gear Size:   default
+Scaling:     no
+
+Creating application 'testWordPress' ... done
+
+  MySQL 5.5 database added.  Please make note of these credentials:
+
+       Root User: adminnwf2CFB
+   Root Password: JiyK_6Mq_YfF
+   Database Name: testwordpress
+
+Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+
+You can manage your new MySQL database by also embedding phpmyadmin.
+The phpmyadmin username and password will be the same as the MySQL credentials above.
+
+Waiting for your DNS name to be available ... done
+
+Clonar en «testwordpress»...
+The authenticity of host 'testwordpress-silttest.rhcloud.com (54.234.243.133)' can't be established.
+RSA key fingerprint is cf:ee:77:cb:0e:fc:02:d7:72:7e:ae:80:c0:90:88:a7.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'testwordpress-silttest.rhcloud.com,54.234.243.133' (RSA) to the list of known hosts.
+
+
+Your application 'testwordpress' is now available.
+
+  URL:        http://testwordpress-silttest.rhcloud.com/
+  SSH to:     5466393b5973ca00a9000034@testwordpress-silttest.rhcloud.com
+  Git remote: ssh://5466393b5973ca00a9000034@testwordpress-silttest.rhcloud.com/~/git/testwordpress.git/
+  Cloned to:  /home/silt/Documentos/OpensiftTest/testwordpress
+
+git add --all .
+git commit
+git push
+```
+
+No añado las instrucciones de consiguración para lanzarlo.)
+
+He seguido este [tutorial](http://www.hongkiat.com/blog/setup-wordpress-openshift/)
+La aplicación se llama testWordPress4.
+
+Crear copia local:
+```
+git clone ssh://54663cee4382eca86400012c@testwordpress4-silttest.rhcloud.com/~/git/testwordpress4.git/
+cd testwordpress4/
+```
+
+
+###==================================================================================================
+### 4) Crear un script para un documento Google y cambiarle el nombre con el que aparece en el menú, así como la función a la que llama.
+(Añadir una función al menú).
+
+```javascript
+/**
+ * The onOpen function runs automatically when the Google Docs document is
+ * opened. Use it to add custom menus to Google Docs that allow the user to run
+ * custom scripts. For more information, please consult the following two
+ * resources.
+ *
+ * Extending Google Docs developer guide:
+ *     https://developers.google.com/apps-script/guides/docs
+ *
+ * Document service reference documentation:
+ *     https://developers.google.com/apps-script/reference/document/
+ */
+function onOpen() {
+  // Añadir un menú de prueba.
+  DocumentApp.getUi().createMenu("Test").addItem('Test', 'test').addToUi();
+}
+
+/**
+ * Test
+ */
+function test(){
+  // Muestra un diálogo con botones Yes/No.
+  var alerta = DocumentApp.getUi().alert(
+      'Test',
+      '¿Quieres intentarlo?',
+      DocumentApp.getUi().ButtonSet.YES_NO);
+
+  // Procesa la respuesta del usuario.
+  if(alerta == DocumentApp.getUi().Button.YES){
+    // Si el usuario clickea Yes.
+    DocumentApp.getUi().alert('Haciendo algo chulo...');
+  } 
+  else{
+    // Si el usuario clickea No.
+    DocumentApp.getUi().alert('Cancelado.');
+  }
+}
+```
+
+###==================================================================================================	
+### 5)Buscar un sistema de automatización de la construcción para el lenguaje de programación y entorno de desarrollo que usemos habitualmente.
+* Para c/c++: Make y CMake.
+
+	* Make: Make es una utilidad de Unix que construye automáticamente el ejecutable del programa y librerías a partir del código fuente leyendo ficheros llamados makefiles que especifican como derivar el programa objetivo.
+
+	* CMake: Es una herramienta multiplataforma de generación o automatización de código. El nombre es una abreviatura para "cross platform make" (make multiplataforma); más allá del uso de "make" en el nombre, CMake es una suite separada y de más alto nivel que el sistema make común de Unix, siendo similar a las autotools.
+
+
+* Para Ruby: Rake.
+
+	* Rake es un software para la administración de tareas. Te permite especificar tareeas y describir dependencias, así como agrupar las tareas en un namespace. Las tareas se escriben en rakefiles en sintasis de Ruby. Rake usa las funciones anónimas de Ruby para definir varias tareas.
+
+* Para Python: 
+	* PyBuilder es una herramienta de construcción de software escrita en puro Python cuyo objetivo es ser usada para aplicaciones en Python principalmente.
+
+* A-A-P: Programa capaz de descargar, construir e instalar software. Ejecuta una serie de recetas y permite scripting en python.
+
+###==================================================================================================
+### 6)Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma.
+Heroku usa distintos ficheros y herramientas de automatización según el lenguaje:
+* Ruby: Emplea Bundler como herramienta y Gemfile como fichero.
+* Python: Para instalar las dependencias, estas se declaran en un fichero requirements.txt de la siguiente forma:
+	```
+		Django==1.6.5
+		dj-database-url==0.3.0
+		dj-static==0.0.6
+		django-toolbelt==0.0.1
+		gunicorn==19.0.0
+		psycopg2==2.5.3
+		static3==0.5.1
+		wsgiref==0.1.2
+	```
+	Heroku usa pip para instalarlas luego.
+* PHP: Las dependencias se declaran en el archivo composer.json.
+* En el fichero de texto Procfile se pueden introducir los comandos necesarios para ejecutar la aplicación. Esto se puede usar sea cual sea el lenguaje.
+
+###==================================================================================================
+### 7) Buscar un entorno de pruebas para el lenguaje de programación y entorno de desarrollo que usemos habitualmente.
+
+
