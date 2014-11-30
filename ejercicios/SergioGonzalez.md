@@ -216,3 +216,5 @@ Para definir las tareas, se mencionará la tarea, dos puntos y los ficheros o ta
 
 
 ### Ejercicio 7:
+
+Actualmente estoy trabajando con python, principalmente para la asignatura con GAE. Para el entorno de pruebas, estamos pensando usar, lanzándolo con integración continua con Shipabble, pruebas de unitarias con el módulo [unittest](https://docs.python.org/2/library/unittest.html). Así también es posible usar [nose](https://nose.readthedocs.org/en/latest/), que nos permite reconocer los diferentes test que hemos implementado, lanzarlos y comprobar sus resultados automáticamente.
