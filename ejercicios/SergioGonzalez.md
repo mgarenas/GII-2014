@@ -213,7 +213,7 @@ Para definir las tareas, se mencionará la tarea, dos puntos y los ficheros o ta
 
 ### Ejercicio 6:
 
-
+Openshift provee la integración continua con [Jenkins](https://developers.openshift.com/en/managing-continuous-integration.html), que es un server en el que se permite construir el proyecto, testearlo y desplegarlo. Este es totalmente compatible con GitHub.
 
 ### Ejercicio 7:
 
