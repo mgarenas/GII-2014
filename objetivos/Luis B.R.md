@@ -135,10 +135,10 @@ Sesión 12 - Clase del 21 de noviembre de 2014
 Sesión 13 - Clase del 24 de noviembre de 2014
 ---------------------------------------------
 - [x] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
-- [ ] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
+- [x] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
 - [x] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
-- [ ] Entender y saber llevar a cabo la virtualización de dispositivos de red.
-- [ ] Usar herramientas de administración y monitorización de red en línea de órdenes.
+- [x] Entender y saber llevar a cabo la virtualización de dispositivos de red.
+- [x] Usar herramientas de administración y monitorización de red en línea de órdenes.
 - [x] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccgii.
 - [x] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54). *No lo uso*
 
@@ -154,3 +154,13 @@ Sesión 14 - Clase del 28 de noviembre de 2014
 - [ ] [Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla](https://es.wikipedia.org/wiki/Chroot) como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
 - [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
 - [ ] Probar [la nube de fi-ware](https://cloud.lab.fi-ware.org/) para alojar proyectos y hacer pruebas.
+
+
+Sesión 15 - Clase del 1 de diciembre de 2014
+--------------------------------------------
+- [ ] Entender el concepto de contenedores
+- [ ] Configurar el sistema para poder crear y usar contenedores
+- [ ] Crear y usar contenedores
+- [ ] Entregar el segundo hito de la práctica.
+- [ ] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
+- [ ] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.

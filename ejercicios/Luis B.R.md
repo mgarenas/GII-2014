@@ -321,3 +321,79 @@ mount -o loop <mi_imagen.iso>
 # Para comprobar que se ha montado (aparecerá al final).
 mount
 ```
+
+## Ejercicio 2.
+
+Para crear la interfaz virtual procedemos a introducir los siguientes comandos:
+```bash
+# Lo creamos.
+sudo brctl addbr <Nombre>
+
+# Podemos mostrar la configuración.
+ip addr show
+# Mostramos alguna información sobre los puentes y sus puertos.
+sudo brctl show
+```
+
+La salida de estos comandos ha sido la siguiente:
+
+```bash
+lewis@Inspiron:~/CloudComputing$ sudo brctl addbr BigKing
+lewis@Inspiron:~/CloudComputing$ ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state DOWN qlen 1000
+    link/ether 74:86:7a:62:d3:5c brd ff:ff:ff:ff:ff:ff
+3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP qlen 1000
+    link/ether 48:5a:b6:11:98:bd brd ff:ff:ff:ff:ff:ff
+    inet 172.20.50.46/23 brd 172.20.51.255 scope global wlan0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::4a5a:b6ff:fe11:98bd/64 scope link
+       valid_lft forever preferred_lft forever
+4: BigKing: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN
+    link/ether 66:e2:78:eb:4a:8b brd ff:ff:ff:ff:ff:ff
+lewis@Inspiron:~/CloudComputing$ sudo brctl show
+bridge name	bridge id		STP enabled	interfaces
+BigKing		8000.000000000000	no
+```
+
+## Ejercicio 3.
+
+Puesto que no tenemos instalado, procedemos a instalarlo:
+```bash
+# Instalamos el paquete.
+sudo apt-get install debootstrap
+```
+A continuación procedemos a crear el sistema que queremos.
+
+```bash
+# Indicamos la arquitectura, el sistema, el directorio y de dónde se va a descargar.
+sudo debootstrap --arch=amd64 saucy /home/lewis/Escritorio/CC/saucy/ http://archive.ubuntu.com/ubuntu
+# Tardará un rato... pero la salida final será el algo así
+(...)
+I: Configuring dmsetup...
+I: Configuring eject...
+I: Configuring ureadahead...
+I: Configuring kbd...
+I: Configuring ubuntu-minimal...
+I: Configuring libc-bin...
+I: Configuring initramfs-tools...
+I: Base system installed successfully.
+```
+
+Continuamos con la creación de un sistema **Fedora** dentro de Debian usando **Rinse**.
+
+```bash
+# Instalamos el paquete.
+sudo apt-get install rinse
+
+# Ejecutamos la orden para crearnos el sistema.
+# Similar a la que introducimos antes.
+sudo rinse --arch=i386 --distribution fedora-core-7 --directory ~/Escritorio/CC/fedora/
+
+# Al igual que antes tarda un rato
+```
