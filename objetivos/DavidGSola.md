@@ -163,9 +163,9 @@ Lista de objetivos de David González Sola
 
 ### Objetivos de esta sesión
 
-- [ ] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
-- [ ] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
-- [ ] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
+- [X] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
+- [X] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
+- [x] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
 - [ ] Entender y saber llevar a cabo la virtualización de dispositivos de red.
 
 ## Otros objetivos
@@ -189,5 +189,19 @@ Lista de objetivos de David González Sola
 - [ ] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
 - [ ] Comprender que existe vida en los servidores web fuera del Apache.
 - [ ] [Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla](https://es.wikipedia.org/wiki/Chroot) como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
-* Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
-* Probar [la nube de fi-ware](https://cloud.lab.fi-ware.org/) para alojar proyectos y hacer pruebas. 
+- [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
+- [ ] Probar [la nube de fi-ware](https://cloud.lab.fi-ware.org/) para alojar proyectos y hacer pruebas. 
+
+## Sesión 1 Diciembre-2014
+
+## Objetivos de esta sesión
+
+- [ ] Entender el concepto de contenedores
+- [ ] Configurar el sistema para poder crear y usar contenedores
+- [ ] Crear y usar contenedores
+
+## Otros objetivos
+
+- [ ] Entregar el segundo hito de la práctica. 
+- [ ] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
+- [ ] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.

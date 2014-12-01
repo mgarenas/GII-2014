@@ -222,4 +222,6 @@ Y la salida es:
 ## Tema 4 Virtualización ligera usando contenedores
 
 ### Ejercicio 1
-s
+> sudo apt-get install lxc
+### Ejercicio 2
+
