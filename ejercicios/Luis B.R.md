@@ -366,12 +366,34 @@ BigKing		8000.000000000000	no
 Puesto que no tenemos instalado, procedemos a instalarlo:
 ```bash
 # Instalamos el paquete.
-sudo apt-get install debootstrap 
+sudo apt-get install debootstrap
 ```
 A continuación procedemos a crear el sistema que queremos.
 
 ```bash
 # Indicamos la arquitectura, el sistema, el directorio y de dónde se va a descargar.
 sudo debootstrap --arch=amd64 saucy /home/lewis/Escritorio/CC/saucy/ http://archive.ubuntu.com/ubuntu
+# Tardará un rato... pero la salida final será el algo así
+(...)
+I: Configuring dmsetup...
+I: Configuring eject...
+I: Configuring ureadahead...
+I: Configuring kbd...
+I: Configuring ubuntu-minimal...
+I: Configuring libc-bin...
+I: Configuring initramfs-tools...
+I: Base system installed successfully.
+```
 
+Continuamos con la creación de un sistema **Fedora** dentro de Debian usando **Rinse**.
+
+```bash
+# Instalamos el paquete.
+sudo apt-get install rinse
+
+# Ejecutamos la orden para crearnos el sistema.
+# Similar a la que introducimos antes.
+sudo rinse --arch=i386 --distribution fedora-core-7 --directory ~/Escritorio/CC/fedora/
+
+# Al igual que antes tarda un rato
 ```
