@@ -12,11 +12,11 @@ Según la [tabla de amortizaciones simplificada](http://www.infoautonomos.com/in
 El servidor elegido ha sido un [HP ProLiant ML310e G8 XE E3-1220/8GB/2TB](http://www.pccomponentes.com/hp_proliant_ml310e_g8_xe_e3_1220_8gb_2tb.html), cuyo precio sin IVA es de **532.23€**
 
 * Coste amortización a 4 años:
-	* Cuatro años al 25%: 532.23€ x 0.25 = 133.06€/año 
+* Cuatro años al 25%: 532.23€ x 0.25 = 133.06€/año
 
 * Coste amortización a 7 años
-	* Cuatro años al 10% (2 primeros y 2 últimos): 532.23 x 0.1 = 53.23€/año
-	* Cuatro años al 20% (los restantes): 532.23 x 0.2 = 106.46€/año
+* Cuatro años al 10% (2 primeros y 2 últimos): 532.23 x 0.1 = 53.23€/año
+* Cuatro años al 20% (los restantes): 532.23 x 0.2 = 106.46€/año
 
 ***
 ### Ejercicio 2
@@ -27,12 +27,12 @@ El servidor elegido ha sido un [HP ProLiant ML310e G8 XE E3-1220/8GB/2TB](http:/
 |[Amazon c3.xlarge](http://aws.amazon.com/es/ec2/pricing/)| 4 	  | 80	     | 7.5      |  	1454.5104   	| 0.166040   |
 
 - Uso del 1% (entre 3 y 4 días al año):
-	- OVH VPS Cloud 2: 18.40 €
-	- Amazon c3.xlarge: 14.54 €
+- OVH VPS Cloud 2: 18.40 €
+- Amazon c3.xlarge: 14.54 €
 
 - Uso del 10% (entre 36 y 37 días al año):
-	- OVH VPS Cloud 2: 184 €
-	- Amazon c3.xlarge: 145 €
+- OVH VPS Cloud 2: 184 €
+- Amazon c3.xlarge: 145 €
 
 *Nota: la conversión entre $ y € se hizo el día 23/10/2014 con 0.21USD = 0.166040EUR*
 *Aclaración: el servidor escogido de OVH es de tipo VPS, dedicado, que se paga con mensualidades, que es la comparación que el ejercicio pedía.*
@@ -53,8 +53,8 @@ Lo comentado en el foro ha sido:
 
 El script (en *bash*) ha sido el siguiente:
 
-	#!usr/bin/bash
-	echo "Adios mundo!"
+#!usr/bin/bash
+echo "Adios mundo!"
 
 Los pasos seguidos para *enjaularlo* han sido:
 
@@ -70,15 +70,15 @@ Se creará una estructura de directorios denominada **cde-package**. Para ejecut
 
 Los comandos introducidos durante el tutorial han sido:
 
-	docker version
-	docker search tutorial
-	docker pull learn/tutorial
-	docker run learn/tutorial echo "hello world"
-	docker run learn/tutorial apt-get install -y ping
-	docker commit 698 learn/ping
-	docker run learn/ping ping www.google.com
-	docker inspect efe
-	docker push learn/ping
+docker version
+docker search tutorial
+docker pull learn/tutorial
+docker run learn/tutorial echo "hello world"
+docker run learn/tutorial apt-get install -y ping
+docker commit 698 learn/ping
+docker run learn/ping ping www.google.com
+docker inspect efe
+docker push learn/ping
 
 ***
 ### Ejercicio 5
@@ -100,18 +100,18 @@ Bastaría con ejecutar `apt-get install git`.
 
 En *Fedora release 19* viene instalado por defecto en */sys/fs/cgroup/*. El contenido del directorio contiene:
 
-	drwxr-xr-x. 2 root root  0 oct 23 21:42 blkio
-	lrwxrwxrwx. 1 root root 11 oct 23 21:42 cpu -> cpu,cpuacct
-	lrwxrwxrwx. 1 root root 11 oct 23 21:42 cpuacct -> cpu,cpuacct
-	drwxr-xr-x. 3 root root  0 oct 23 21:42 cpu,cpuacct
-	drwxr-xr-x. 2 root root  0 oct 23 21:42 cpuset
-	drwxr-xr-x. 2 root root  0 oct 23 21:42 devices
-	drwxr-xr-x. 2 root root  0 oct 23 21:42 freezer
-	drwxr-xr-x. 2 root root  0 oct 23 21:42 hugetlb
-	drwxr-xr-x. 2 root root  0 oct 23 21:42 memory
-	drwxr-xr-x. 2 root root  0 oct 23 21:42 net_cls
-	drwxr-xr-x. 2 root root  0 oct 23 21:42 perf_event
-	drwxr-xr-x. 5 root root  0 oct 23 21:42 systemd
+drwxr-xr-x. 2 root root  0 oct 23 21:42 blkio
+lrwxrwxrwx. 1 root root 11 oct 23 21:42 cpu -> cpu,cpuacct
+lrwxrwxrwx. 1 root root 11 oct 23 21:42 cpuacct -> cpu,cpuacct
+drwxr-xr-x. 3 root root  0 oct 23 21:42 cpu,cpuacct
+drwxr-xr-x. 2 root root  0 oct 23 21:42 cpuset
+drwxr-xr-x. 2 root root  0 oct 23 21:42 devices
+drwxr-xr-x. 2 root root  0 oct 23 21:42 freezer
+drwxr-xr-x. 2 root root  0 oct 23 21:42 hugetlb
+drwxr-xr-x. 2 root root  0 oct 23 21:42 memory
+drwxr-xr-x. 2 root root  0 oct 23 21:42 net_cls
+drwxr-xr-x. 2 root root  0 oct 23 21:42 perf_event
+drwxr-xr-x. 5 root root  0 oct 23 21:42 systemd
 
 
 ***
@@ -137,19 +137,19 @@ El enlace no funciona.
 
 Una vez creados los dos grupos, debemos modificar el fichero `etc/cgconfig.conf`, añadiendo:
 
-	mount { cpu = /cgroup/cpu }
+mount { cpu = /cgroup/cpu }
 
-	group system {
-	        cpu {
-	                cpu.shares="600";
-	        }
-	}
+group system {
+  cpu {
+    cpu.shares="600";
+  }
+}
 
-	group users {
-	        cpu {
-	                cpu.shares="400";
-	        }
-	}
+group users {
+  cpu {
+    cpu.shares="400";
+  }
+}
 
 
 ### Ejercicio 9.3
@@ -161,34 +161,34 @@ Durante la migración de procesos livianos no se nota gran variabilidad en cuant
 
 Similar al ejercicio 9.2 pero cambiando el nombre del recurso al que le damos prioridad:
 
-	mount { blkio = /cgroup/blkio }
+mount { blkio = /cgroup/blkio }
 
-	group httpd { 
-		blkio { 
-			blkio.weight="700"; 
-		} 
-	}
+group httpd {
+  blkio {
+    blkio.weight="700";
+  }
+}
 
-	group users { 
-		blkio { 
-			blkio.weight="300"; 
-		} 
-	}
+group users {
+  blkio {
+    blkio.weight="300";
+  }
+}
 
 ***
 ### Ejercicio 10
 
-El procesador sí tiene activados los flags de virtualización a nivel de hardware (flag *vmx*). 
+El procesador sí tiene activados los flags de virtualización a nivel de hardware (flag *vmx*).
 El modelo de procesador es *Intel(R) Core(TM) i7-3930K CPU @ 3.20GHz* (información extraída del archivo */proc/cpuinfo*).
 La salida del comando (por cada núcleo) es:
 
-	flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov
-	pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb 
-	rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology 
-	nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est 
-	tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt 
-	tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm 
-	tpr_shadow vnmi flexpriority ept vpid
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov
+pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb
+rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology
+nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est
+tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt
+tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm
+tpr_shadow vnmi flexpriority ept vpid
 
 
 ***
@@ -215,7 +215,7 @@ Algunos inconvenientes podrían ser:
 - Necesidad de confianza en la empresa, ya que tienen la posibilidad de usar los datos del usuario.
 
 
-TEMA 2 
+TEMA 2
 ======
 
 * * *
@@ -235,7 +235,7 @@ La URL de Wordpress es http://morciblog-morcicloud.rhcloud.com
 
 * * *
 ### Ejercicio 4
-Siguiendo los pasos indicados he creado un menú para un archivo de Google. El menú contiene una única opción, la cual abre un cuadro de diálogo y pone una frase tan original como *"Hola Mundo!"*. 
+Siguiendo los pasos indicados he creado un menú para un archivo de Google. El menú contiene una única opción, la cual abre un cuadro de diálogo y pone una frase tan original como *"Hola Mundo!"*.
 
 El código usado ha sido:
 
@@ -243,70 +243,71 @@ El código usado ha sido:
 function onOpen() {
   // Añade un menú con un botón que salude
   DocumentApp.getUi().createMenu('Mi menú')
-      .addItem('Saluda', 'saluda')
-      .addToUi();
+  .addItem('Saluda', 'saluda')
+  .addToUi();
 }
 
 function saluda() {
   DocumentApp.getUi().showDialog(
-      HtmlService
-          .createHtmlOutput('<p>Hola Mundo!</p>')
-          .setTitle('Ventana Saludona'))
-}
-`
+    HtmlService
+    .createHtmlOutput('<p>Hola Mundo!</p>')
+    .setTitle('Ventana Saludona'))
+  }
+  `
 
-* * *
-### Ejercicio 5
-El lenguaje que utilizo habitualmente es **Python**. Un sistema de automatización para el mismo es **Pynt** (https://github.com/rags/pynt), el cual gestiona las dependencias entre tareas de construcción y permite el paso de parámetros mediante línea de comandos. 
-
-
-* * *
-### Ejercicio 6
-La plataforma OpenShift no provee al usuario de ningún sistema de automatización de construcción, al menos de forma directa. Simplemente propociona ciertos contenedores ya integrados cuya creación es transparente al usuario, permitiendo una configuración básica.
-
-OpenShift trabaja sobre Jenkins, y éste sí proporciona herramientas para gestionar la integración contínua y la compilación de nuevos ficheros fuente desplegados. Más info: https://developers.openshift.com/en/managing-continuous-integration.html
-
-*Si algún compañero tiene información al respecto, ruego me corrija y haga un pull-request.*
+  * * *
+  ### Ejercicio 5
+  El lenguaje que utilizo habitualmente es **Python**. Un sistema de automatización para el mismo es **Pynt** (https://github.com/rags/pynt), el cual gestiona las dependencias entre tareas de construcción y permite el paso de parámetros mediante línea de comandos.
 
 
-* * *
-### Ejercicio 7
-Python incorpora *unittest* en sus librerías estándares. Con ella se pueden realizar baterías de pruebas de forma sencilla. Un ejemplo de prueba sería la siguiente:
+  * * *
+  ### Ejercicio 6
+  La plataforma OpenShift no provee al usuario de ningún sistema de automatización de construcción, al menos de forma directa. Simplemente propociona ciertos contenedores ya integrados cuya creación es transparente al usuario, permitiendo una configuración básica.
 
-`
-import unittest
+  OpenShift trabaja sobre Jenkins, y éste sí proporciona herramientas para gestionar la integración contínua y la compilación de nuevos ficheros fuente desplegados. Más info: https://developers.openshift.com/en/managing-continuous-integration.html
 
-def fun(x):
-    return x + 1
+  *Si algún compañero tiene información al respecto, ruego me corrija y haga un pull-request.*
 
-class MyTest(unittest.TestCase):
-    def test(self):
-        self.assertEqual(fun(3), 4)
-`
-
-Más info en: http://docs.python-guide.org/en/latest/writing/tests/ 
+  Con **Heroku** las dependencias vienen gestionadas vía [pip](https://devcenter.heroku.com/articles/python-pip) para Python para especificar las dependencias de un módulo de Python se añade un fichero de *requerimientos* llamado **requirements.txt** a la raiz del respositorio.
 
 
-* * *
-TEMA 3
-======
+  * * *
+  ### Ejercicio 7
+  Python incorpora *unittest* en sus librerías estándares. Con ella se pueden realizar baterías de pruebas de forma sencilla. Un ejemplo de prueba sería la siguiente:
 
-### Ejercicio 1
+  `
+  import unittest
 
-### Ejercicio 2.1
+  def fun(x):
+  return x + 1
 
-### Ejercicio 2.2
+  class MyTest(unittest.TestCase):
+  def test(self):
+  self.assertEqual(fun(3), 4)
+  `
 
-### Ejercicio 3.1
-
-### Ejercicio 3.2
-
-### Ejercicio 4
-
-### Ejercicio 5
-
-### Ejercicio 6
+  Más info en: http://docs.python-guide.org/en/latest/writing/tests/
 
 
-* * *
+  * * *
+  TEMA 3
+  ======
 
+  ### Ejercicio 1
+
+  ### Ejercicio 2.1
+
+  ### Ejercicio 2.2
+
+  ### Ejercicio 3.1
+
+  ### Ejercicio 3.2
+
+  ### Ejercicio 4
+
+  ### Ejercicio 5
+
+  ### Ejercicio 6
+
+
+  * * *
