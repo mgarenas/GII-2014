@@ -168,14 +168,6 @@ Juan		8000.000000000000	no
 alcantara		8000.0026b0daf2ba	no		eth0
 jorgeles		8000.000000000000	no
 
-##Ejercicio 2.2
-
-Se ha creado la interfaz Jorgeles y se ha unido a eth0 porque no me permitia unirlo a wlan0. Me indicaba operación no soportada.
-
-bridge name	bridge id		STP enabled	interfaces
-Juan		8000.000000000000	no	
-alcantara		8000.000000000000	no	
-jorgeles		8000.0026b0daf2ba	no		eth0
 
 
 
