@@ -307,3 +307,25 @@ Para python se puede utilizar el módulo [unittest](https://docs.python.org/2/li
 En [este](http://pythontesting.net/framework/unittest/unittest-introduction/) enlace se puede ver un tutorial sobre su uso.
 
 Sí es cierto que para programar los tests en python, se puede usar [unittest](https://docs.python.org/2/library/unittest.html), pero para ejecutarlos no se suele hacer a mano. Habitualmente, en el entorno python, se utiliza nose que ejecutalos de forma automática y los resultados se dan en OK o No Ok, si se han pasado o no.
+
+- - -
+
+##Tema 3
+
+###Ejercicio 1:
+**Crear un espacio de nombres y montar en él una imagen ISO de un CD de forma que no se pueda leer más que desde él. Pista: en ServerFault nos explican como hacerlo, usando el dispositivo loopback**
+
+Comenzamos creando el espacio de nombre UTS, con la instrucción:
+
+```
+sudo unshare -u /bin/bash
+```
+
+El siguiente paso sería montar la iso:
+
+```
+mount -o loop -t iso9660 mi_archivo.iso /mnt/test
+```
+
+Donde loop indica que el comando mount use el primer /dev/loopX disponible
+
