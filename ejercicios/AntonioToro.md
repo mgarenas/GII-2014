@@ -222,14 +222,24 @@ Por último, para montar la imagen en su lugar utilizo la orden `sudo mount -o l
 1. _Mostrar los puentes configurados en el sistema operativo._
 2. _Crear un interfaz virtual y asignarlo al interfaz de la tarjeta wifi, si se tiene, o del fijo, si no se tiene._
 
- - Uso `brctl show` para mostrar los puentes.
+- Uso `brctl show` para mostrar los puentes.
 
     ```
     bridge name     bridge id           STP enabled   interfaces
     ```
- - Ahora creo un interfaz virtual con `sudo brctl addbr mipuente` y lo uno con `eth0` mediante `sudo brctl addif mipuente eth0`.
+- Ahora creo un interfaz virtual con `sudo brctl addbr mipuente` y lo uno con `eth0` mediante `sudo brctl addif mipuente eth0`.
 
     ```
     bridge name     bridge id           STP enabled   interfaces
     mipuente        8000.000c2993c762   no            eth0
     ```
+
+
+
+
+
+
+Virtualización ligera usando contenedores
+=========================================
+
+## Ejercicio 3
