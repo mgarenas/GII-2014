@@ -28,6 +28,7 @@ El último paso ha sido introducir la **Integración contínua**. Para este fin 
 Para que esto funcione, es necesario tener un fichero de configuración **shippable.yml** dentro de la raíz del repositorio.
 
 [Ejemplo de integración contínua CON **Shippable** y Google App Engine (Python)](https://github.com/shippableSamples/sample-python-datastore-appengine/blob/master/shippable.yml)
+
 =======
 
 HarmacenCloud
@@ -74,6 +75,6 @@ la llamada a `drive-pull.py` es manual, no obstante, es posible que se automatic
 
 #Segundo hito
 
-Haced modificaciones sobre este fichero, como en el [hito anterior](hito-1.md). Incluid también los nombres de los componentes de cada proyecto, me aya a corregir más fácilmente.
+Haced modificaciones sobre este fichero, como en el [hito anterior](hito-1.md). Incluid también los nombres de los componentes de cada proyecto.
 
->>>>>>> 8f17213b7587c1f03fe3e84842c9fc99bdf88799
+
