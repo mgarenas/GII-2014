@@ -136,7 +136,7 @@ Lista de objetivos de Daniel Díaz Salas
 
 - [ ] Usar herramientas de administración y monitorización de red en línea de órdenes.
 - [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccgii.
-- [ ] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54).
+- [x] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54). NO ME DA LA REAL GANA
 
 #Clase del 28 de noviembre de 2014
 ## Objetivos de esta sesión
