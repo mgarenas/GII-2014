@@ -314,7 +314,7 @@ Lo primero será crear un nuevo puente:
 
 Y lo asignamos a la interfaz *eth0*:
 
-	brctl addif hamburguesadered eth0
+	brctl addif hamburguesa eth0
 
 
 
@@ -325,15 +325,21 @@ Creamos un sistema:
 
 Para usar debootstrap deberemos indicar el tipo de arquitectura, el nombre de la distribución que vamos a instalar, la ruta de instalación y la dirección:
 
-	debootstrap --arch=amd64 trusty /home/jaulas/trustytahr/ http://archive.ubuntu.com/ubuntu
+	sudo debootstrap --arch=amd64 quantal /home/jaulas/quantal/	http://archive.ubuntu.com/ubuntu
 
 
 * * *
 ### Ejercicio 3.2
 
+Lo primero es instalar *rinse*. Después ejecutamos el comando:
+
+	rinse --arch amd64 --distribution fedora-core-10 --directory /home/jaulas/fedora10
 
 
+* * *
 ### Ejercicio 4
+
+
 
 ### Ejercicio 5
 

@@ -172,7 +172,7 @@ Lista de objetivos de Álvaro Muñoz
 
 ###Otros objetivos
 - [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
-- [ ] Revisar también el primer hito de un proyecto que no sea el propio.
+- [x] Revisar también el primer hito de un proyecto que no sea el propio.
 - [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 
 
@@ -183,14 +183,14 @@ Lista de objetivos de Álvaro Muñoz
 ### Objetivos de esta sesión
 
 - [x] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
-- [ ] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
+- [x] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
 - [x] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
-- [ ] Entender y saber llevar a cabo la virtualización de dispositivos de red.
+- [x] Entender y saber llevar a cabo la virtualización de dispositivos de red.
 
 ## Otros objetivos
 
-- [ ] Usar herramientas de administración y monitorización de red en línea de órdenes.
-- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
+- [x] Usar herramientas de administración y monitorización de red en línea de órdenes.
+- [x] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
 
 
 
