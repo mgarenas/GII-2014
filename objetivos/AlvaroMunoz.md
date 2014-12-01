@@ -145,7 +145,7 @@ Lista de objetivos de Álvaro Muñoz
 
 
 * * *
-##Clase del 17-noviembre-2014
+##Clase 17-noviembre-2014
 
 ###Objetivos de esta sesión
 
@@ -162,7 +162,7 @@ Lista de objetivos de Álvaro Muñoz
 
 
 * * *
-##Clase del 21-noviembre-2014
+##Clase 21-noviembre-2014
 
 ###Objetivos de esta sesión
 
@@ -178,7 +178,7 @@ Lista de objetivos de Álvaro Muñoz
 
 
 * * *
-##Clase del 24-noviembre-2014
+##Clase 24-noviembre-2014
 
 ### Objetivos de esta sesión
 
@@ -195,7 +195,7 @@ Lista de objetivos de Álvaro Muñoz
 
 
 * * *
-##Clase del 28-noviembre-2014
+##Clase 28-noviembre-2014
 
 ### Objetivos de esta sesión
 
@@ -213,7 +213,7 @@ Lista de objetivos de Álvaro Muñoz
 
 
 * * *
-##Clase del 1-diciembre-2014
+##Clase 1-diciembre-2014
 ###Objetivos de esta sesión
 
 - [x] Entender el concepto de contenedores

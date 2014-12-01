@@ -325,7 +325,7 @@ Creamos un sistema:
 
 Para usar debootstrap deberemos indicar el tipo de arquitectura, el nombre de la distribución que vamos a instalar, la ruta de instalación y la dirección:
 
-	debootstrap --arch=i386 trusty /home/jaulas/trustytahr/ http://archive.ubuntu.com/ubuntu
+	debootstrap --arch=amd64 trusty /home/jaulas/trustytahr/ http://archive.ubuntu.com/ubuntu
 
 
 * * *
