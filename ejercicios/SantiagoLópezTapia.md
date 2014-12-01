@@ -516,6 +516,7 @@ function test(){
 Heroku usa distintos ficheros y herramientas de automatización según el lenguaje:
 * Ruby: Emplea Bundler como herramienta y Gemfile como fichero.
 * Python: Para instalar las dependencias, estas se declaran en un fichero requirements.txt de la siguiente forma:
+	
 	```
 		Django==1.6.5
 		dj-database-url==0.3.0
@@ -526,11 +527,23 @@ Heroku usa distintos ficheros y herramientas de automatización según el lengua
 		static3==0.5.1
 		wsgiref==0.1.2
 	```
+	
 	Heroku usa pip para instalarlas luego.
 * PHP: Las dependencias se declaran en el archivo composer.json.
 * En el fichero de texto Procfile se pueden introducir los comandos necesarios para ejecutar la aplicación. Esto se puede usar sea cual sea el lenguaje.
 
 ###==================================================================================================
 ### 7) Buscar un entorno de pruebas para el lenguaje de programación y entorno de desarrollo que usemos habitualmente.
+He buscado para varios lenguajes:
 
+* Python: Existen varios módulos para realizar test, como [unittest](https://docs.python.org/2/library/unittest.html) (pese al nombre, sus utilidades también se pueden usar en test de integración) o [doctest](https://docs.python.org/2/library/doctest.html) (este funciona de una forma curiosa, ya que busca en el código cadenas encerradas entre """ """, que se puedan interpretar como comandos en la shell interactiva de python y los ejecuta). [Pytest](http://pytest.org/latest/) tiene una sintaxis más simple que la de unittest y puede ejecutar los test directamente usando el comando py.test.
+Por otro lado, tenemos a [nose](https://nose.readthedocs.org/en/latest/), una extensión de unittest que nos simplifica a creación de test. Para empezar,incluye la capacidad de descubrir automáticamente los test disponible, ahorrándonos el trabajo de tener que programar test suites nosotros mismos.
+Por ultimo, señalar que [Django](https://www.djangoproject.com/) incluye ya una suite para programar pruebas basada eb unittest. Con el comando python manage.py test se prueban todos los test disponibles para las aplicaciones del proyecto. Es necesario que los test estén en un archivo en la raíz de la aplicación llamado tests.py.
+
+* Java: No hay mucho que escribir, como ya se comentó en la práctica lo más usado es [JUnit](http://junit.org/).
+
+* C++: He comprobado varios:
+	* [Microsoft Unit Testing Framework for C++](http://msdn.microsoft.com/en-us/library/hh598953.aspx): Framework de Microsoft para realizar pruebas unitarias de c++. No lo he usado, pero parece estar bien integrado con Visual Studio, así que lo pongo aquí por si alguien trabaja en Windows (aunque no es lo apropiado para desarrollar software libre).
+	* [Googletest](https://code.google.com/p/googletest/): Framework de Google para construir test. Está basado en los xUnit. Entre otras cosas, soporta el descubrimiento automático de test y que el usario defina sus propios asserts.
+	* [CppUnit](http://cppunit.sourceforge.net/doc/cvs/cppunit_cookbook.html) Es una implementación para c++ de JUnit (según los propios autores). Sus características son practicamente idénticas.
 
