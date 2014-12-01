@@ -175,6 +175,17 @@ function crearDocumento() {
 }
 ```
 
+
+Modificado por Jesús Maillo:
+El script que se pedía debería modificar el nombre del archivo activo. Tendría que ser algo como
+
+```
+function ejer4(){
+  var doc = DocumentApp.getActiveDocument();
+  doc.setName("Ejercicio4")
+}
+```
+
 ### Ejercicio 5:
 
 Los sistemas de automitazación de construcción para lenguajes de programación que he usado anteriormente han sido:
