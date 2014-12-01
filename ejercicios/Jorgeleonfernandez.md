@@ -180,8 +180,33 @@ alcantara		8000.000000000000	no
 jorgeles		8000.0026b0daf2ba	no		eth0
 
 #Tema 4
+##Ejercicio 1
+Instalada LXC correctamente.
+--- Namespaces ---
+Namespaces: enabled
+Utsname namespace: enabled
+Ipc namespace: enabled
+Pid namespace: enabled
+User namespace: enabled
+Network namespace: enabled
+Multiple /dev/pts instances: enabled
 
+--- Control groups ---
+Cgroup: enabled
+Cgroup clone_children flag: enabled
+Cgroup device: enabled
+Cgroup sched: enabled
+Cgroup cpu account: enabled
+Cgroup memory controller: enabled
+Cgroup cpuset: enabled
 
+--- Misc ---
+Veth pair device: enabled
+Macvlan: enabled
+Vlan: enabled
+File capabilities: enabled
+
+##Ejercicio 2
 
 
 
