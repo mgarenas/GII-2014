@@ -145,6 +145,31 @@ Make para la compilación de programas en C/C++. Este nos permite contruir de un
 Este plugin permite realizar pruebas funcionalidades a aplicaciones web.
 [Automatizacion Selenium IDE + Python](http://www.taringa.net/posts/info/14190878/Automatizacion-Selenium-IDE-Python.html)
 
+#Clase del 24 de Noviembre
+
+##Ejercicio 1
+
+jorge@jorge-MacBookPro:~/Desktop/CloudComputing/ejercicios$ sudo unshare -u /bin/bash 
+[sudo] password for jorge: 
+root@jorge-MacBookPro:~/Desktop/CloudComputing/ejercicios# hostname jorgeles
+root@jorge-MacBookPro:~/Desktop/CloudComputing/ejercicios# hostnamejorgeles
+root@jorge-MacBookPro:~/Desktop/CloudComputing/ejercicios# 
+
+root@jorge-MacBookPro:~/Desktop/CloudComputing# mount -o loop -t iso9660 jorge.iso /mnt/
+
+##Ejercicio 2
+
+##Ejercicio 2.1
+
+Los puentes que se han creado son los siguientes:
+
+bridge name	bridge id		STP enabled	interfaces
+Juan		8000.000000000000	no
+alcantara		8000.0026b0daf2ba	no		eth0
+jorgeles		8000.000000000000	no
+
+
+
 
 
 
