@@ -298,6 +298,7 @@ En cuanto a el lenguaje **PHP** las dependencias vienen en el fichero [composer.
 
 -------------
 
+
 # Técnicas de virtualización
 
 ## Ejercicio 1.
