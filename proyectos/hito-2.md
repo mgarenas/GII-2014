@@ -71,6 +71,34 @@ de Google Drive. Con el script `drive-pull.py` (que es una versión modificada d
 con ayuda del script de GAS llamado `list-drive.gs` que, estando desplegado como aplicación web, devuelve un listado de los archivos. Actualmente
 la llamada a `drive-pull.py` es manual, no obstante, es posible que se automatice para mejorar la integración continua.
 
+======
+#Appsamblea
+
+Componentes del equipo  
+----------------------
+- [Carlos **Torres García**](https://github.com/carltorres) (jesusmh@correo.ugr.es)
+- [Francisco **Serrano Carmona**](https://github.com/sergiogvz) (sergiogvz@correo.ugr.es)
+- [Daniel **Díaz Salas**](https://github.com/eleion) (eleion@correo.ugr.es)
+- [Santiago **Álvarez González**](https://github.com/Crixo24) (dany24@correo.ugr.es)
+
+## Hito 2
+
+Lo primero que hicimos fue elegir un Paas en el que desplegar nuestra aplicación. Al final nos decantamos por
+**Google App Engine**.
+Lo segundo fue crear un proyecto en Google App Engine **appsamblea-project** y un pequeño programa de prueba. Actualmente la aplicación cuenta con un formulario simple donde escribir cualquier cosa y autentificarse. [Appsamblea](appsamblea-project.appspot.com).
+
+Después de esto, investigamos sobre el uso de las distintas herramientas para realizar el despliegue.
+Nos decantamos por **Shippable**, aunque también probamos **Travis-CI** y **Snap-CI**. Documentación sobre estas herramientas puede encontrarse [aquí](https://github.com/Appsamblea/Appsamblea_docu/blob/master/Sistema%20de%20Despliegue%20Continuo.md).
+
+POr último, programamos varios test, lo cual se nos volvió más complicado ya que tuvimos varios problemas con
+**Google App Engine** pero al final conseguimos solucionarlos.
+
+
+
+
+=======
+
+
 ==================
 
 #Segundo hito
