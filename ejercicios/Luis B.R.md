@@ -360,3 +360,18 @@ lewis@Inspiron:~/CloudComputing$ sudo brctl show
 bridge name	bridge id		STP enabled	interfaces
 BigKing		8000.000000000000	no
 ```
+
+## Ejercicio 3.
+
+Puesto que no tenemos instalado, procedemos a instalarlo:
+```bash
+# Instalamos el paquete.
+sudo apt-get install debootstrap 
+```
+A continuación procedemos a crear el sistema que queremos.
+
+```bash
+# Indicamos la arquitectura, el sistema, el directorio y de dónde se va a descargar.
+sudo debootstrap --arch=amd64 saucy /home/lewis/Escritorio/CC/saucy/ http://archive.ubuntu.com/ubuntu
+
+```
