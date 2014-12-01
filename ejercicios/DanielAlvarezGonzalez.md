@@ -241,7 +241,7 @@ Python incluye una gran cantidad de [módulos](https://wiki.python.org/moin/Pyth
 - [doctest](https://docs.python.org/2/library/doctest.html): Busca trozos de texto interactivo en sesiones de Python y los ejecuta para comprobar su correcto funcionamiento.
 - [pytest](http://pytest.org/latest/): Módulo para buscar y ejecutar tests. Se caracteriza por parar en el primer fallo que encuentre y lanzar **pdb** (python debbuger), etc.
 
-
+**Habitualmente, en el entorno python, se utiliza [nose](https://nose.readthedocs.org/en/latest/) que ejecuta los test de forma automática y los resultados se dan en OK o No Ok, si se han pasado o no.**
 
 ***
 
@@ -283,3 +283,4 @@ eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 
 
 
 ##Ejercicio 03
+>>>>>>> 89023e1846194e2e6cce2b98b8e89ab5c47b4314

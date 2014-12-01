@@ -268,6 +268,9 @@ function saluda() {
 
   *Si algún compañero tiene información al respecto, ruego me corrija y haga un pull-request.*
 
+*Editado por Daniel Díaz Salas*
+[Parece ser que algo sí que hay](https://developers.openshift.com/en/getting-started-modifying-applications.html#when-you-push)
+
   Con **Heroku** las dependencias vienen gestionadas vía [pip](https://devcenter.heroku.com/articles/python-pip) para Python para especificar las dependencias de un módulo de Python se añade un fichero de *requerimientos* llamado **requirements.txt** a la raiz del respositorio.
 
 

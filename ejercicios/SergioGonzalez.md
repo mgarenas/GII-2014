@@ -218,7 +218,7 @@ Como se ve, se pueden generar macros o flags para indicar la instrucción del co
 
 Para definir las tareas, se mencionará la tarea, dos puntos y los ficheros o tareas que han de ser completadas antes de proceder con la que se define. A continuación, tabulado, el comando para completar dicha tarea.
 
-- Maven para Java. Se está utilizando actualmente en la asigtura DSS (desarrollo de software basado en componetes) para facilitar la compilación de JSF. Se ha instalado en eclipse y despues se ha definido el proyecto como proyecto Maven. Este se puede descargar y serguir en la web de [Maven](http://maven.apache.org/download.cgi).
+- Maven para Java. Se está utilizando actualmente en la asignatura DSS (desarrollo de software basado en componetes) para facilitar la compilación de JSF. Se ha instalado en eclipse y después se ha definido el proyecto como proyecto Maven. Este se puede descargar y seguir en la web de [Maven](http://maven.apache.org/download.cgi).
 
 - Para el lenguaje Python, existen varios como [PyBuilder](http://pybuilder.github.io) o [Pynt](https://github.com/rags/pynt) que nos ayuda con las dependencias de nuestros programas.
 
@@ -234,3 +234,9 @@ Actualmente estoy trabajando con python, principalmente para la asignatura con G
 - - -
 
 ##TEMA 3:
+
+### Ejercicio 1:
+
+### Ejercicio 2:
+
+### Ejercicio 3:
