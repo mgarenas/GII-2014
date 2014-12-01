@@ -306,4 +306,4 @@ Si algún compañero quiere completar como lo realiza Jenkins sería perfecto.
 Para python se puede utilizar el módulo [unittest](https://docs.python.org/2/library/unittest.html).
 En [este](http://pythontesting.net/framework/unittest/unittest-introduction/) enlace se puede ver un tutorial sobre su uso.
 
-Sí es cierto que para programar los tests en python, se puede usar [unittest](https://docs.python.org/2/library/unittest.html), pero para ejecutarlos no se suele hacer a mano. Habitualmente, en el entorno python, se utiliza nose que ejecutalos de forma automática y los resultados se dan en OK o No Ok, si se han pasado o no.
+Sí es cierto que para programar los tests en python, se puede usar [unittest](https://docs.python.org/2/library/unittest.html), pero para ejecutarlos no se suele hacer a mano. Habitualmente, en el entorno python, se utiliza [nose](https://nose.readthedocs.org/en/latest/) que ejecuta los test de forma automática y los resultados se dan en OK o No Ok, si se han pasado o no.
