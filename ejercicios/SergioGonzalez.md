@@ -213,6 +213,8 @@ Para definir las tareas, se mencionará la tarea, dos puntos y los ficheros o ta
 
 ### Ejercicio 6:
 
-
+Openshift provee la integración continua con [Jenkins](https://developers.openshift.com/en/managing-continuous-integration.html), que es un server en el que se permite construir el proyecto, testearlo y desplegarlo. Este es totalmente compatible con GitHub.
 
 ### Ejercicio 7:
+
+Actualmente estoy trabajando con python, principalmente para la asignatura con GAE. Para el entorno de pruebas, estamos pensando usar, lanzándolo con integración continua con Shipabble, pruebas de unitarias con el módulo [unittest](https://docs.python.org/2/library/unittest.html). Así también es posible usar [nose](https://nose.readthedocs.org/en/latest/), que nos permite reconocer los diferentes test que hemos implementado, lanzarlos y comprobar sus resultados automáticamente.

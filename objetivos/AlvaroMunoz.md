@@ -116,17 +116,17 @@ Lista de objetivos de Álvaro Muñoz
 
 ###Objetivos de esta sesión
 
-[X] Darse de alta en uno de ellos y comprender los mecanismos usados para despliegue de aplicaciones
-[X] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
-[X] Crear nuevas funciones en un SaaS.
+- [X] Darse de alta en uno de ellos y comprender los mecanismos usados para despliegue de aplicaciones
+- [X] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
+- [X] Crear nuevas funciones en un SaaS.
 
 ###Otros objetivos
 
-[ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
-[ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
-[X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
-[ ] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
-[X] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request. 
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+- [ ] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
+- [X] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request. 
 
 
 * * *
@@ -134,12 +134,81 @@ Lista de objetivos de Álvaro Muñoz
 
 ###Objetivos de esta sesión
 
-[X] Consolidar el uso de PaaS/SaaS
-[X] Entender los sistemas de automatización de la construcción de aplicaciones
+- [X] Consolidar el uso de PaaS/SaaS
+- [X] Entender los sistemas de automatización de la construcción de aplicaciones
 
 ###Otros objetivos
 
-[ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
-[ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
-[X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 
+
+* * *
+##Clase del 17-noviembre-2014
+
+###Objetivos de esta sesión
+
+- [X] Consolidar el uso de PaaS/SaaS
+- [X] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
+- [X] Comenzar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md)
+
+##Otros objetivos
+
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+
+
+
+* * * 
+##Clase del 21-noviembre-2014
+
+###Objetivos de esta sesión
+
+- [X] Consolidar el uso de PaaS/SaaS
+- [X] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
+- [X] Continuar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md)
+
+###Otros objetivos
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
+- [ ] Revisar también el primer hito de un proyecto que no sea el propio. 
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+
+
+* * *
+##Clase del 24-noviembre-2014
+
+### Objetivos de esta sesión
+
+- [ ] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
+- [ ] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
+- [ ] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
+- [ ] Entender y saber llevar a cabo la virtualización de dispositivos de red.
+
+## Otros objetivos
+
+- [ ] Usar herramientas de administración y monitorización de red en línea de órdenes.
+- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
+
+
+
+* * *
+##Clase del 28-noviembre-2014
+
+### Objetivos de esta sesión
+
+- [ ] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
+- [ ] Aprender a ''enjaular'' usuarios.
+
+### Otros objetivos
+
+- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
+- [ ] Aplicar conocimientos de administración de un sistema Linux: usuarios, permisos.
+- [ ] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
+- [ ] Comprender que existe vida en los servidores web fuera del Apache.
+- [ ] [Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla](https://es.wikipedia.org/wiki/Chroot) como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
+- [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
+
+* * * 
