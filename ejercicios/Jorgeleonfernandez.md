@@ -145,6 +145,8 @@ Make para la compilación de programas en C/C++. Este nos permite contruir de un
 Este plugin permite realizar pruebas funcionalidades a aplicaciones web.
 [Automatizacion Selenium IDE + Python](http://www.taringa.net/posts/info/14190878/Automatizacion-Selenium-IDE-Python.html)
 
+#Tema 3
+
 #Clase del 24 de Noviembre
 
 ##Ejercicio 1
@@ -176,6 +178,8 @@ bridge name	bridge id		STP enabled	interfaces
 Juan		8000.000000000000	no	
 alcantara		8000.000000000000	no	
 jorgeles		8000.0026b0daf2ba	no		eth0
+
+#Tema 4
 
 
 
