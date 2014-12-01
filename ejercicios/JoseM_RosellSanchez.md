@@ -3,6 +3,9 @@ Ejercicios de Jose Manuel Rosell Sánchez
 
 ## Sesión 17-octubre-2014
 
+Tema 1
+======
+
 ###Ejercicio 1
 
 El servidor ha sido sacado de la página web de *PcComponentes*, y se puede consultar [aquí.](http://www.pccomponentes.com/fujitsu_primergy_rx300_s8_formato_rack.html)
@@ -163,6 +166,9 @@ Un ejemplo de Saas sería la web de [phixr](http://es.phixr.com/photo/userindex)
 
 ## Sesión 7-Noviembre-2014
 
+Tema 2
+======
+
 ###Ejercicio 1
 
 Se instala **virtualenv** para Python con la orden `sudo apt-get install libc6-dev python-dev python-virtualenv`.
@@ -215,10 +221,27 @@ El lenguaje de programación que utilizo habitualmente es **JAVA** y el sistema 
 
 El entorno de pruebas para el lenguaje de programación *Python* es *UnitTest*, aunque comúnmente se denomina *PyUnit*. [En este enlace](http://magmax.org/blog/2011/09/27/python-pruebas-2/) podemos encontrar un pequeño ejemplo de como hacer pruebas a una función en Python, codificado desde cualquier editor de texto y ejecutado desde la línea de comandos.
 
+## Sesión 24-Noviembre-2014
 
+Tema 3
+======
 
+###Ejercicio 1
 
+Se crea un archivo .iso a partir de cualquier archivo con la orden `genisoimage -o prueba_iso.iso prueba_iso.md`, donde *prueba_iso.iso* es el archivo que queremos obtener y *prueba_iso.md* el fichero a partir del cual generar el archivo .iso. Creamos un directorio y creamos un espacio de nombres en ese directorio con la orden `sudo unshare miDirectorio`. Ahora montamos el archivo .iso en este nombre de espacios con la orden `mount -o loop prueba_iso.md /mnt/miDirectorio`.
 
+###Ejercicio 2
+1. Con el comando `brctl show` muestra todos los puentes configurados en el sistema operativo. En mi caso particular, existe uno, con el nombre *docker0*
+2. Creamos una interfaz virtual con el comando `sudo brctl addbr prueba`. Para asignarla a la interfaz ethernet se utiliza el siguiente comando `sudo brctl addif prueba eth0`
 
+## Sesión 1-Diciembre-2014
 
+Tema 4
+======
+
+###Ejercicio 1
+
+En Ubuntu 14.04 se instala con el comando `sudo apt-get install lxc`.
+
+###Ejercicio 2
 
