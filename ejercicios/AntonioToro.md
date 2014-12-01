@@ -1,4 +1,4 @@
-﻿Introducción a la infraestructura virtual: concepto y soporte físico
+Introducción a la infraestructura virtual: concepto y soporte físico
 ====================================================================
 
 ## Ejercicio 1
@@ -198,3 +198,24 @@ Para __python__ se puede utilizar el módulo __unittest__. [Aquí](http://www.op
 puede ver un tutorial de TDD con __unittest__.
 
 Para __Java__ existe __JUnit__, que nos permite la realización de test unitarios.
+
+
+
+
+
+
+Técnicas de virtualización
+==========================
+
+## Ejercicio 1
+_Crear un espacio de nombres y montar en él una imagen ISO de un CD de forma que no se pueda leer más que desde él._ 
+Pista: _en [ServerFault](http://serverfault.com/questions/198135/how-to-mount-an-iso-file-in-linux) nos explican como 
+hacerlo, usando el dispositivo loopback._
+
+He cogido una ISO que tenía y que he renombrado a _miiso.iso_.
+
+Ahora creo un punto de montaje: `sudo mkdir /mnt/pto-montaje`.
+
+Por último, para montar la imagen en su lugar utilizo la orden `sudo mount -o loop ~/Desktop/miiso.iso /mnt/pto-montaje`.
+
+
