@@ -38,7 +38,7 @@ SERVIDOR HP PROLIANT ML350P G8 XEON E5-2609 2.4 GHz 4GB DISCO DURO HDD 2.5" SFF 
 
 * Sistema eficiente de web+middleware+base de datos: Lo más adecuado de usar sería una virtualización plena, ya que dicho sistema requiere todos los recursos de la máquina, y es la manera más propia de crear un sistema eficiente.
 
-* Sistema de prueba de software e integración continua: Usaría una virtualización de entornos de desarrollo que está centrado principalemente en objetivos relacionados con el desarrollo de software como el de pruebas, permitiendo la ejecución de diferentes versiones del mismo software. 
+* Sistema de prueba de software e integración continua: Usaría una virtualización de entornos de desarrollo que está centrado principalemente en objetivos relacionados con el desarrollo de software como el de pruebas, permitiendo la ejecución de diferentes versiones del mismo software.
 
 ### Ejercicio 3.2:
 He seguido un tutorial en español que ha dejado uno de mis compañeros: [Cómo crear aplicaciones portables de Linux](http://blog.desdelinux.net/como-crear-aplicaciones-portables-de-linux/)
@@ -81,7 +81,7 @@ cgroup.event_control   cgroup.sane_behavior  release_agent      user
   	sudo su
 	cd /sys/fs/cgroup/
     mkdir group1 group2 group3
- 
+
  Cuando realizo esto, no genera los archivos que debería, por lo que añadir los ficheros con el echo no tiene mucho sentido, aun así intentandolo obtengo un error de disco lleno. Probando intenté hacerlo en systemd, ya que pensé que quizás solo podría realizarlo ahí. Al generar los nuevos subdirectorios es cierto que sí generaba lo ficheros correctos. Pero no me permite configurarlo indicandome que no tengo permisos para ello, cuando estoy trabajando desde el root.
 
  Aunque estés trabajando como super usuario, prueba a invocar las órdenes con el comando `sudo` delante. Por ejemplo: `sudo mkdir grupo1`
@@ -136,11 +136,11 @@ Un gran ejemplo de estos SaaS son las aplicaciones de ofimática en la nube que 
 Unas de las aplicaciones que me han parecido bastante interesantes dentro de este sector son las aplicaciones web para el desarrollo del software. Son aplicaciones que no uso muy habitualmente pero cuando necesito de ellas no me apetece instalarlas ya que son para un momento, cómo desarrollar un diagrama de flujo o un diagrama UML  para algún ejercicio. Y estas son igual de potentes que las que vayamos a instalar.
 
 
-- - - - 
+- - - -
 
 ##TEMA 2:
 
-### Ejercicio 1: 
+### Ejercicio 1:
 
 Instalación de virtualenv en Mac os x:
 	sudo easy_install pip
@@ -160,17 +160,17 @@ Mi blog de WordPress instalado en OpenShift se puede encontrar [aquí](https://p
 
 ### Ejercicio 4:
 
-Esta función de Google AS nos permite crear un documento nuevo, nombrarlo e introducir texto en el dicho documento. 
+Esta función de Google AS nos permite crear un documento nuevo, nombrarlo e introducir texto en el dicho documento.
 
 ```
 function crearDocumento() {
-  
+
   //Crear documento
   var doc = DocumentApp.create('Ejercicio 4');
 
   //Modificar su contenido
   doc.getBody().appendParagraph('Esto es la creción de el documento ejercicio 4 para CC');
-  
+
 
 }
 ```
@@ -213,8 +213,13 @@ Para definir las tareas, se mencionará la tarea, dos puntos y los ficheros o ta
 
 ### Ejercicio 6:
 
-Openshift provee la integración continua con [Jenkins](https://developers.openshift.com/en/managing-continuous-integration.html), que es un server en el que se permite construir el proyecto, testearlo y desplegarlo. Este es totalmente compatible con GitHub.
+Dentro de OpenShift, no existe una forma de construcción propia. La forma de construir se realiza dependiendo del lenguaje usado. Se puede realizar mediante la instalación de cartuchos propios para cada proyecto. Openshift provee la integración continua con [Jenkins](https://developers.openshift.com/en/managing-continuous-integration.html), que es un server en el que se permite construir el proyecto, testearlo y desplegarlo. Este es totalmente compatible con GitHub.
 
 ### Ejercicio 7:
 
 Actualmente estoy trabajando con python, principalmente para la asignatura con GAE. Para el entorno de pruebas, estamos pensando usar, lanzándolo con integración continua con Shipabble, pruebas de unitarias con el módulo [unittest](https://docs.python.org/2/library/unittest.html). Así también es posible usar [nose](https://nose.readthedocs.org/en/latest/), que nos permite reconocer los diferentes test que hemos implementado, lanzarlos y comprobar sus resultados automáticamente.
+
+
+- - -
+
+##TEMA 3:
