@@ -285,6 +285,10 @@ Con **Heroku** las dependencias vienen gestionadas vía [pip](https://devcenter.
 
 En cuanto a el lenguaje **PHP** las dependencias vienen en el fichero [composer.json](https://devcenter.heroku.com/articles/getting-started-with-php#declare-app-dependencies).
 
+En el caso de Ruby, usa Bundler como herramienta, siendo Gemfile el fichero que utiliza.
+
+Por otro lado, se puede incluir un fichero de texto llamado Procfile, en el que se pueden introducir comandos, necesarios por ejemplo para ejecutar la aplicación.
+
 ## Ejercicio 7.
 
 * En **python** podemos encontar [unittest](https://docs.python.org/3.2/library/unittest.html) es un módulo estándar que quien dispone de python 2.1 o superior puede tener acceso a él. Apoya la automatización de pruebas, el intercambio de configuración y código para pruebas. Permite la agregación de pruebas de la estructura de informaicón. El módulo *unittest* ofrece clases que hacen que sea más simple el soporte de estas cualidades para un conjunto de pruebas.
