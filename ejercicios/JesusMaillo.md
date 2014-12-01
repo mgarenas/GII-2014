@@ -33,7 +33,7 @@ El primero podemos encontrarlo [aqui](http://aws.amazon.com/es/ec2/pricing/) con
 El tiempo por horas utilizado al 1% es de 26.31552€. Hacen un total de 465,315€
 
 El tiempo por horas utilizado al 10% es de 269,808€. Haven un total de 708,808€
- 
+
 El segundo lo podemos encontrar [aqui](http://azure.microsoft.com/es-es/pricing/calculator/?scenario=cloud) con unas características:
 
 >4 CPU, 14 G Ram, 250 SSD.
@@ -49,7 +49,7 @@ El segundo lo podemos encontrar [aqui](http://azure.microsoft.com/es-es/pricing/
 
 *Corrección de Luis Baca Ruiz*
 
-Si cogemos el primer caso que expones 
+Si cogemos el primer caso que expones
 
 * 4 CPU, 15 GB Ram, 80 SSD
 
@@ -192,7 +192,7 @@ Modificaremos el fichero etc/cgconfig.conf para que se cumplan los requisitos es
 **3 - Usar un programa que muestre en tiempo real la carga del sistema tal como htopy comprobar los efectos de la migración en tiempo real de una tarea pesada de un procesador a otro (si se tiene dos núcleos en el sistema).**
 
 Para el estudio de la migración se ha utilizado el editor de textos libre office.
-El grupo ejer9 tiene dentro los subgrupos prueba y migracion. Prueba será ejecutado en el núcleo 0 y migración en el núcleo 3. 
+El grupo ejer9 tiene dentro los subgrupos prueba y migracion. Prueba será ejecutado en el núcleo 0 y migración en el núcleo 3.
 
 Asignamos el proceso como se ha realizado en el ejercicio anterior y observamos que su uso es aproximadamente del 1%.
 
@@ -200,7 +200,7 @@ Asignamos el proceso como se ha realizado en el ejercicio anterior y observamos 
 
 **4 - Configurar un servidor para que el servidor web que se ejecute reciba mayor prioridad de entrada/salida que el resto de los usuarios.**
 
-Igual que el apartado dos, pero sobre la prioridad de salida. 
+Igual que el apartado dos, pero sobre la prioridad de salida.
 
     mount { blkio = /cgroup/blkio }
 
@@ -238,7 +238,7 @@ Puesto que no soporta virtualización hardware, lo otra opción es instalar la v
 Existen numerosas aplicaciones que pueden ser incluidas dentro del concepto SaaS. Veamos con algunos ejemplos de los más conocidos a que se refiere:
 
 Gestores de correo electrónico como Gmail, Outlook y Yahoo también son ejemplos de aplicaciones SaaS.
-Google Docs permite trabajar con un editor de textos desde la web. 
+Google Docs permite trabajar con un editor de textos desde la web.
 
 Todas ellas son consideradas como SaaS (Software as a Service – Software como servicio) por cumplir unas características básicas:
 
@@ -320,5 +320,7 @@ Si algún compañero quiere completar como lo realiza Jenkins sería perfecto.
 ###Ejercicio 7:
 **Buscar un entorno de pruebas para el lenguaje de programación y entorno de desarrollo que usemos habitualmente.**
 
-Para python se puede utilizar el módulo [unittest](https://docs.python.org/2/library/unittest.html). 
+Para python se puede utilizar el módulo [unittest](https://docs.python.org/2/library/unittest.html).
 En [este](http://pythontesting.net/framework/unittest/unittest-introduction/) enlace se puede ver un tutorial sobre su uso.
+
+Sí es cierto que para programar los tests en python, se puede usar [unittest](https://docs.python.org/2/library/unittest.html), pero para ejecutarlos no se suele hacer a mano. Habitualmente, en el entorno python, se utiliza nose que ejecutalos de forma automática y los resultados se dan en OK o No Ok, si se han pasado o no.
