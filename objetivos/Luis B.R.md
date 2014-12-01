@@ -154,3 +154,13 @@ Sesión 14 - Clase del 28 de noviembre de 2014
 - [ ] [Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla](https://es.wikipedia.org/wiki/Chroot) como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
 - [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
 - [ ] Probar [la nube de fi-ware](https://cloud.lab.fi-ware.org/) para alojar proyectos y hacer pruebas.
+
+
+Sesión 15 - Clase del 1 de diciembre de 2014
+--------------------------------------------
+- [ ] Entender el concepto de contenedores
+- [ ] Configurar el sistema para poder crear y usar contenedores
+- [ ] Crear y usar contenedores
+- [ ] Entregar el segundo hito de la práctica.
+- [ ] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
+- [ ] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
