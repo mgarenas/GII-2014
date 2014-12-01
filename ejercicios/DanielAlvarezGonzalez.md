@@ -1,6 +1,6 @@
 #Sesión del 17 de Octubre
 ##Ejercicio 01
- 
+
 Servidor en la dirección [Servidor](http://www.dell.com/es/empresas/p/poweredge-t630/pd?~ck=anav)
 Precio 5007€, precio sin IVA 4138.016
 Amortización a 4 años --> 1034.50
@@ -9,7 +9,7 @@ Amortización a 7 años --> 591.145
 ##Ejercicio 02
 AMAZON (AWS)
 c3.2xlarge	8 núcleos	15 GiB de RAM	2x80GB de almacenamiento SSD -->  0.468$ por hora en la tarifa por un año
-En este caso, el precio por el uso del servicio durante un 1% de un año sería de 40.99$, que al cambio son 32.127€ 
+En este caso, el precio por el uso del servicio durante un 1% de un año sería de 40.99$, que al cambio son 32.127€
 Por otro lado, el precio del uso correspondiente a un 10% del año, sería 409.96$ que al cambio son 321.319€.
 
 
@@ -59,7 +59,7 @@ Una vez que hemos instalado docker, podemos instalar una aplicación siguiendo l
 	4- docker run learn/tutorial apt-get install -y ping
 	5- docker commit *ContainerID* learn/ping (docker ps -l para encontrar el ID de nuestro contenedor)
 	6- docker run learn/ping www.google.es
-	7- Para obtener información acerca de nuestros contenedores en funcionamiento 
+	7- Para obtener información acerca de nuestros contenedores en funcionamiento
 		- docker ps (para obtener los IDs)
 		- docker inspect
 	8- docker push learn/ping
@@ -79,13 +79,13 @@ Una vez que lo tenemos instalado, hay que configurarlo, asignándote un usuario 
 
 Puedes comprobar los datos de configuración de tu git de la siguiente forma:
 	- git config --list
-	
+
 
 ##Ejercicio 06
 Para crear un nuevo proyecto o repositorio en gitHub, pinchamos en la pestaña **Create New --> New Repository** al lado de nuestro nombre de usuario en la web de GitHub. Nos pide un nombre para el proyecto y nos da la opción de inicializarlo con un fichero README.
 	Una vez creado el nuevo repositorio, lo clonamos a nuestro directorio de trabajo git con el comando  **git clone *url_proyecto*
 	Cuando se ha modificado el README como pide el ejercicio, hay que formalizar dicho cambio. Para ello hay que hacer un **commit** de la siguiente forma --> **git commit -a -m "comentario que define el cambio realizado"**.
-	Ya que se ha formalizado el cambio, solo queda subir dicho cambio al repositorio de GitHub haciendo un **git push**. 
+	Ya que se ha formalizado el cambio, solo queda subir dicho cambio al repositorio de GitHub haciendo un **git push**.
 
 
 
@@ -169,13 +169,13 @@ Tras ejecutar el comando que se sugiere (sudo modprobe kvm_intel) y volver a con
 ##Ejercicio 12
 
 Una aplicación SaaS es aquella en la que el soporte lógico y los datos que se manejan se alojan en el servidor que proporciona el servicio. Por esto, normalmente el usuario no tiene que instalar nada en su ordenador, bastando con un navegador web para hacer uso de dicho servicio. Algunos ejemplos de este tipo de software es la gama de servicios que ofrece Google tales como Gmail, Google Maps, Google Drive, etc. También son de este tipo los servicios de almacenamiento en la nube como Dropbox o Mega.
-	
+
 
 
 
 #Sesión del 3 de Noviembre
 ##Ejercicio 01
-	
+
 He escogido instalar **virtualenv** para python. Los pasos que he seguido han sido:
 	- $ [sudo] pip install virtualenv para instalar virtualenv en mi equipo.
 	- $ virtualenv ENV para crear el directorio ENV, donde se almacenarán todas las librerías que instale.
@@ -217,17 +217,17 @@ js:
 		GmailApp.sendEmail(email, subject, body);
 	}
 [highlight.js]: http://softwaremaniacs.org/soft/highlight/en/
- 
+
 [Enlace al documento creado con el script](https://docs.google.com/open?id=1wuByz3d-V16syNIh-RxfgqSTx4Cl3dnrnetZLfNDzfo)
-	
+
 
 ##Ejercicio 05
 
-El software que he encontrado para el proceso de autmatización de la construcción para Python (Build automation) es [PyBuilder](http://pybuilder.github.io/). Está escrito completamente en Python y orientado principalmente para aplicaciones Python. Está basado en el concepto de programación basado en dependencias, pero además incluye una gran cantidad de plugins, que permiten la creación de ciclos de construcción, similar al funcionamiento de las herramientas de este tipo para Java. En este repositorio de [GitHub](https://github.com/pybuilder/pybuilder) se explica cómo instalarlo y algunos de los plugins más usados. 
+El software que he encontrado para el proceso de autmatización de la construcción para Python (Build automation) es [PyBuilder](http://pybuilder.github.io/). Está escrito completamente en Python y orientado principalmente para aplicaciones Python. Está basado en el concepto de programación basado en dependencias, pero además incluye una gran cantidad de plugins, que permiten la creación de ciclos de construcción, similar al funcionamiento de las herramientas de este tipo para Java. En este repositorio de [GitHub](https://github.com/pybuilder/pybuilder) se explica cómo instalarlo y algunos de los plugins más usados.
 
 
 ## Ejercicio 06
-En OpenShift, la herramienta que se utiliza para la automatización de la construcción de las aplicacioens es [Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Meet+Jenkins). Es una aplicación con dos funciones principales: 
+En OpenShift, la herramienta que se utiliza para la automatización de la construcción de las aplicacioens es [Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Meet+Jenkins). Es una aplicación con dos funciones principales:
 	1- Construir/testear proyectos software constantemente
 	2- Monitorizar ejecuciones de tareas externas.
 
@@ -258,3 +258,28 @@ Para montar la imagen.iso:
 **mount -o loop imagen.iso /mnt**
 
 Haciendo esto, se puede comprobar que desde fuera del *namespace* que hemos creado, no se pueden ver los archivos que haya dentro de la imagen que hemos montado.
+
+
+##Ejercicio 02
+
+**Primer apartado**
+
+Aquí se muestran los puentes configurados en mi máquina:
+
+daniel@daniel-Aspire-5750G:~/Dropbox/GitHub/CloudComputing$ brctl show
+
+bridge name	bridge id		STP enabled	interfaces
+alcantara		8000.dc0ea1221919	no		eth0
+
+**Segundo apartado**
+
+Para crear el nuevo puente: **sudo brctl addbr CloudComputing**
+
+Para añadir el puente creado a un interfaz: **sudo brctl addif CloudComputing eth0**
+
+Consulta de puentes configurados en mi máquina: **ip addr show**
+
+eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+
+
+##Ejercicio 03
