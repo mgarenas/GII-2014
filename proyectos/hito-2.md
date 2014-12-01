@@ -90,10 +90,10 @@ Lo segundo fue crear un proyecto en Google App Engine **appsamblea-project** y u
 Después de esto, investigamos sobre el uso de las distintas herramientas para realizar el despliegue.
 Nos decantamos por **Shippable**, aunque también probamos **Travis-CI** y **Snap-CI**. Documentación sobre estas herramientas puede encontrarse [aquí](https://github.com/Appsamblea/Appsamblea_docu/blob/master/Sistema%20de%20Despliegue%20Continuo.md).
 
-POr último, programamos varios test, lo cual se nos volvió más complicado ya que tuvimos varios problemas con
+Por último, programamos varios test, lo cual se nos volvió más complicado ya que tuvimos varios problemas con
 **Google App Engine** pero al final conseguimos solucionarlos.
 
-
+El blog de nuestro proyecto es [Appsamblea](http://appsamblea.tumblr.com/) aunque aún se encuentra vacío.
 
 
 =======
