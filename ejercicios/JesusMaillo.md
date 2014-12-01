@@ -294,7 +294,9 @@ Para Python existe [Pynt](http://pynt.sourceforge.net/), el cual no he llegado a
 ###Ejercicio 6:
 **Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma.**
 
-En el ejercicio tercero elegí OpenShift, el cual provee la automatización mediante [Jenkins](http://jenkins-ci.org/). No lo hace de forma directa.
+En el ejercicio tercero elegí OpenShift, el cual provee la integración continua mediante [Jenkins](http://jenkins-ci.org/).
+
+No lo hace de forma directa, para ello hay que instalar cartuchos propios para cada uno de los proyectos, dependiendo del lenguaje utilizado.
 
 Si algún compañero quiere completar como lo realiza Jenkins sería perfecto.
 
