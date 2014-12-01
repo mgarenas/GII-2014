@@ -218,4 +218,18 @@ Ahora creo un punto de montaje: `sudo mkdir /mnt/pto-montaje`.
 
 Por último, para montar la imagen en su lugar utilizo la orden `sudo mount -o loop ~/Desktop/miiso.iso /mnt/pto-montaje`.
 
+## Ejercicio 2
+1. _Mostrar los puentes configurados en el sistema operativo._
+2. _Crear un interfaz virtual y asignarlo al interfaz de la tarjeta wifi, si se tiene, o del fijo, si no se tiene._
 
+ - Uso `brctl show` para mostrar los puentes.
+
+    ```
+    bridge name     bridge id           STP enabled   interfaces
+    ```
+ - Ahora creo un interfaz virtual con `sudo brctl addbr mipuente`.
+
+    ```
+    bridge name     bridge id           STP enabled   interfaces
+    mipuente        8000.000c2993c762   no            eth0
+    ```
