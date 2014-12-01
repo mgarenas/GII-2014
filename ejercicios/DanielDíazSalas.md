@@ -244,7 +244,7 @@ Ejercicio 4
 -----------
 ![El resultado del tutorial está guardado en la imagen DanielDíazSalas-Ejercicio4Tema2.jpg](/ejercicios/DanielDíazSalas-Ejercicio4Tema2.jpg)
 
-Está mál, cuando funcione internet lo corregiré.
+Google Docs no deja añadir cosas al menú: la API nueva no es compatible y la vieja no funciona.
 
 Ejercicio 5
 -----------

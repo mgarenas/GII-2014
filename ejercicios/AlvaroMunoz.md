@@ -268,6 +268,9 @@ OpenShift trabaja sobre Jenkins, y éste sí proporciona herramientas para gesti
 
 *Si algún compañero tiene información al respecto, ruego me corrija y haga un pull-request.*
 
+*Editado por Daniel Díaz Salas*
+[Parece ser que algo sí que hay](https://developers.openshift.com/en/getting-started-modifying-applications.html#when-you-push)
+
 
 * * *
 ### Ejercicio 7

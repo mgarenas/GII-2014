@@ -74,8 +74,8 @@ Lista de objetivos de Daniel Díaz Salas
 #Clase del 10 de noviembre de 2014
 ##Objetivos de esta sesión
 - [x] Darse de alta en uno de ellos y comprender los mecanismos usados para despliegue de aplicaciones
-- [ ] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
-- [ ] Crear nuevas funciones en un SaaS.
+- [x] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
+- [x] Crear nuevas funciones en un SaaS.
 
 ##Otros objetivos
 
@@ -103,7 +103,7 @@ Lista de objetivos de Daniel Díaz Salas
 
 - [x] Consolidar el uso de PaaS/SaaS
 - [x] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
-- [ ] Comenzar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md)
+- [x] Comenzar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md)
 
 ##Otros objetivos
 
@@ -111,3 +111,59 @@ Lista de objetivos de Daniel Díaz Salas
 - [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 
+#Clase del 21 de noviembre de 2014
+##Objetivos de esta sesión
+
+- [x] Consolidar el uso de PaaS/SaaS
+- [x] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
+- [x] Continuar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md)
+
+##Otros objetivos
+
+- [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
+- [x] Revisar también el primer hito de un proyecto que no sea el propio. 
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+#Clase del 24 de noviembre de 2014
+## Objetivos de esta sesión
+
+- [ ] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
+- [ ] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
+- [ ] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
+- [ ] Entender y saber llevar a cabo la virtualización de dispositivos de red.
+
+## Otros objetivos
+
+- [ ] Usar herramientas de administración y monitorización de red en línea de órdenes.
+- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccgii.
+- [ ] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54).
+
+#Clase del 28 de noviembre de 2014
+## Objetivos de esta sesión
+
+- [ ] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
+- [ ] Aprender a ''enjaular'' usuarios.
+
+## Otros objetivos
+
+- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmuii.
+- [x] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54). NO ME DA LA REAL GANA
+- [ ] Aplicar conocimientos de administración de un sistema Linux: usuarios, permisos.
+- [ ] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
+- [ ] Comprender que existe vida en los servidores web fuera del Apache.
+* [Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla](https://es.wikipedia.org/wiki/Chroot) como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
+- [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
+- [ ] Probar [la nube de fi-ware](https://cloud.lab.fi-ware.org/) para alojar proyectos y hacer pruebas. 
+
+#Clase del 1 de diciembre de 2014
+##Objetivos de esta sesión
+
+- [ ] Entender el concepto de contenedores
+- [ ] Configurar el sistema para poder crear y usar contenedores
+- [ ] Crear y usar contenedores
+
+## Otros objetivos
+
+- [ ] Entregar el segundo hito de la práctica. 
+- [ ] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
+- [ ] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
