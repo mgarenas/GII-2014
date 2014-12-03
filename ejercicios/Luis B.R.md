@@ -377,7 +377,7 @@ A continuación procedemos a crear el sistema que queremos.
 ```bash
 # Indicamos la arquitectura, el sistema, el directorio y de dónde se va a descargar.
 sudo debootstrap --arch=amd64 saucy /home/lewis/Escritorio/CC/saucy/ http://archive.ubuntu.com/ubuntu
-# Tardará un rato... pero la salida final será el algo así
+# Tardará un rato... pero la salida final será el algo así.
 (...)
 I: Configuring dmsetup...
 I: Configuring eject...
@@ -399,5 +399,5 @@ sudo apt-get install rinse
 # Similar a la que introducimos antes.
 sudo rinse --arch=i386 --distribution fedora-core-7 --directory ~/Escritorio/CC/fedora/
 
-# Al igual que antes tarda un rato
+# Al igual que antes tarda un rato.
 ```
