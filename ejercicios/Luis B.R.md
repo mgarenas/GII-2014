@@ -373,7 +373,7 @@ A continuación procedemos a crear el sistema que queremos.
 ```bash
 # Indicamos la arquitectura, el sistema, el directorio y de dónde se va a descargar.
 sudo debootstrap --arch=amd64 saucy /home/lewis/Escritorio/CC/saucy/ http://archive.ubuntu.com/ubuntu
-# Tardará un rato... pero la salida final será el algo así
+# Tardará un rato... pero la salida final será el algo así.
 (...)
 I: Configuring dmsetup...
 I: Configuring eject...
@@ -395,5 +395,25 @@ sudo apt-get install rinse
 # Similar a la que introducimos antes.
 sudo rinse --arch=i386 --distribution fedora-core-7 --directory ~/Escritorio/CC/fedora/
 
-# Al igual que antes tarda un rato
+# Al igual que antes tarda un rato.
+(...)
+Running post-install script post-install.sh:
+  Setting up YUM cache
+  Creating yum.conf
+  Bootstrapping yum
+  Cleaning up
+Failed to set locale, defaulting to C
+  Final tidy...
+Installation complete.
+```
+
+Si comprobamos el contenido de las carpetas en ellas obtendríamos el siguiente listado de directorios:
+```bash
+[ lewis: ~/Escritorio/CC ]$ ls saucy/
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+[ lewis: ~/Escritorio/CC ]$ ls fedora/
+bin   dev  home  media  opt   root  selinux  sys  usr
+boot  etc  lib   mnt    proc  sbin  srv      tmp  var
+
 ```
