@@ -216,7 +216,7 @@ function quieresPipas() {
 	Para app engine y Phyton: appcfg
 
 ###Ejercicio 6 Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma
-	Para Openshift se puede utilizar [Jenkins] (https://developers.openshift.com/en/managing-continuous-integration.html)
+	Para Openshift se puede utilizar [Jenkins](https://developers.openshift.com/en/managing-continuous-integration.html)
 
 ###Ejercicio 7 Buscar un entorno de pruebas para el lenguaje de programación y entorno de desarrollo que usemos habitualmente
 	Shippable

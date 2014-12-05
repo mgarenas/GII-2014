@@ -102,7 +102,7 @@ Sesión 8 - Clase del 7 de noviembre de 2014
 
 ### Otros objetivos
 - [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
-- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
 - [X] Comprender el método de entrega de las prácticas de la asignatura.
 
@@ -113,11 +113,68 @@ Sesión 9 - Clase del 10 de noviembre de 2014
 ### Objetivos de esta sesión
 - [X] Darse de alta en uno de ellos y comprender los mecanismos usados para despliegue de aplicaciones
 - [ ] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS.
-- [ ] Crear nuevas funciones en un SaaS.
+- [X] Crear nuevas funciones en un SaaS.
 
 ### Otros objetivos
 - [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 - [ ] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
-- [ ] Usar el apartado de Material adicional abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request.
+- [X] Usar el apartado de Material adicional abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request.
+
+
+Sesión 10 - Clase del 14 de noviembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Consolidar el uso de PaaS/SaaS.
+- [X] Entender los sistemas de automatización de la construcción de aplicaciones.
+
+### Otros objetivos
+- [X] Último día de entrega de la primera práctica. 
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
+
+
+Sesión 11 - Clase del 17 de noviembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Consolidar el uso de PaaS/SaaS
+- [ ] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
+- [X] Comenzar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md).
+
+### Otros objetivos
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+
+
+Sesión 12 - Clase del 21 de noviembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Consolidar el uso de PaaS/SaaS
+- [ ] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
+- [X] Continuar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md)
+
+### Otros objetivos
+- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
+- [ ] Revisar también el primer hito de un proyecto que no sea el propio. 
+- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+
+Sesión 13 - Clase del 24 de noviembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [ ] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
+- [ ] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
+- [ ] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
+- [ ] Entender y saber llevar a cabo la virtualización de dispositivos de red.
+
+### Otros objetivos
+- [ ] Usar herramientas de administración y monitorización de red en línea de órdenes.
+- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccgii.
+- [X] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54). *No lo uso*

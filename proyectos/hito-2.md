@@ -28,9 +28,81 @@ El último paso ha sido introducir la **Integración contínua**. Para este fin 
 Para que esto funcione, es necesario tener un fichero de configuración **shippable.yml** dentro de la raíz del repositorio.
 
 [Ejemplo de integración contínua CON **Shippable** y Google App Engine (Python)](https://github.com/shippableSamples/sample-python-datastore-appengine/blob/master/shippable.yml)
+
 =======
+
+HarmacenCloud
+=============
+
+## Componentes del equipo
+
+- [David González Sola](https://github.com/DavidGSola)
+- [Jorge González Peregrín](https://github.com/Georgevik)
+- [Jorge León Fernández](https://github.com/jorgeles)
+- [Jose Manuel Rosell Sánchez](https://github.com/jmrosell)
+- [Antonio Toro Fernández](https://github.com/antorof)
+
+## Pasos realizados en el Hito 2
+
+El *primer paso* para este hito, fue decidir como realizar la implementación de la aplicación. Teniamos dos opciones principales, por un lado Google AppEngine, y por el otro Google App Script (GAS). Tras investigar las dos posibilidades a fondo, comparando las ventajas e incovenientes de ambas en nuestros problema, decidimos elegir **Google App Script**. Debido a que en la gestión del almacen se utilizan hojas de cálculo de Google Drive, vimos que GAS se adapta perfectamente a nuestro problema, ya que nos proporciona una gran cantidad de herramientas para el tratamiento de estos ficheros de una forma sencilla y cómoda.
+
+En el *segundo paso* de este segundo hito, creamos unos cuantos script para comprobar el funcionamiento de GAS y habituarnos a su uso. Todos los script creados son script de prueba que se mejoran en los hitos sucesivos. En concreto, hemos desarrollado cuatro scripts, que pasamos a enumerar a continuación:
+
+* [**Crear Evento**](https://github.com/HarmaDev/HarmacenCloud/blob/master/scripts/createEventoGoogleCalendar.gs): Es un pequeño formulario que simula la creación de un evento. Para crear el evento, primero se introduce la fecha del mismo, el titulo y una pequeña descripción del evento.
+
+* [**Formulario1**](https://github.com/HarmaDev/HarmacenCloud/blob/master/scripts/Formulario1.gs): Es un formulario en el que se introducen los datos para solicitar una recogida. Además, le hemos añadido una parte dinámica en la que ir añadiendo tantas lineas de material como sean necesarias, con solo pulsar un botón más que aparece a la derecha de la caja de texto.
+
+* [**Elementos de un formulario**](https://github.com/HarmaDev/HarmacenCloud/blob/master/scripts/elementosForm.gs): Es un script con algunos de los elementos más utilizados a la hora de crear formularios. Este script es un ejemplo para probar como insertar los elementos más comunes dentro de los formularios, no tiene ninguna funcionalidad adicional.
+
+* [**Enviar email**](https://github.com/HarmaDev/HarmacenCloud/blob/master/scripts/sendEmail.gs): Es un formulario de prueba mediante el cual se puede mandar un correo con un asunto y un mensaje personalizado a cualquier persona. Es similar a enviar un correo desde cualquier gestor de correo.
+
+* [**Prueba estilo**](https://github.com/HarmaDev/HarmacenCloud/tree/master/scripts/pruebaEstilo): Es un formulario de prueba en el que se muestra cómo aplicar estilo `css` a una aplicación `UIApp` (las aplicaciones que se crean normalmente con GAS).
+
+Todos los scripts los podemos encontrar en la carpeta [scripts](https://github.com/HarmaDev/HarmacenCloud/tree/master/scripts) del [repositorio del proyecto](https://github.com/HarmaDev/HarmacenCloud) en GitHub.
+
+Para el *tercer paso*, hemos realizado unos test de prueba a dos de los cuatro script desarrollados anteriormente. En concreto, hemos creado estos test para los scripts de *Crear Evento* y *Formulario1*. Estos test de prueba se han realizado mediante *QUnit*. Estos nuevos scripts para los test los hemos llamado [*TestCalendar*](https://github.com/HarmaDev/HarmacenCloud/blob/master/Test/TestCalendar.gs) y [*TestFormulario1*](https://github.com/HarmaDev/HarmacenCloud/blob/master/Test/TestFormulario1.gs).
+
+El *cuarto paso* ha sido el despliegue de la aplicación, el cual hemos realizado de dos formas diferentes. En primer lugar, hemos creado un tutorial para explicar como se despliegan los scripts, ya que no es necesario un script de despligues puesto que es un proceso automático que se realiza desde la propia interfaz del script. El [tutorial de despliegue](https://github.com/HarmaDev/HarmacenCloud/blob/master/Tutoriales/DeploymentTutorial.md) se puede encontrar en el repositorio del proyecto. Y por otro lado, hemos creado un [sitio de Google](https://sites.google.com/site/harmacen/), donde se mostrará todo lo relacionado con la gestión del almacen. Actualmente, este sitio solo es una prueba que se irá refinando en los siguientes hitos. El sitio muestra el formulario de solicitud de recogida, así como todos los scripts de Google que hemos desarrollado a lo largo de este hito.
+
+El *quinto y último paso* ha sido el de integración continua de la aplicación. Para la integración continua se ha partido de un 
+[proyecto](https://bitbucket.org/alexandr_baran/google-apps-script-sync/src/475f809f3bc7?at=default) que contenía una serie de 
+scripts en _python_ que permite descargar de forma sencilla los archivos (en concreto los scripts) que tengamos en una carpeta
+de Google Drive. Con el script `drive-pull.py` (que es una versión modificada del original) se accede y se descargan los ficheros de Drive
+con ayuda del script de GAS llamado `list-drive.gs` que, estando desplegado como aplicación web, devuelve un listado de los archivos. Actualmente
+la llamada a `drive-pull.py` es manual, no obstante, es posible que se automatice para mejorar la integración continua.
+
+======
+#Appsamblea
+
+Componentes del equipo  
+----------------------
+- [Carlos **Torres García**](https://github.com/carltorres) (jesusmh@correo.ugr.es)
+- [Francisco **Serrano Carmona**](https://github.com/sergiogvz) (sergiogvz@correo.ugr.es)
+- [Daniel **Díaz Salas**](https://github.com/eleion) (eleion@correo.ugr.es)
+- [Santiago **Álvarez González**](https://github.com/Crixo24) (dany24@correo.ugr.es)
+
+## Hito 2
+
+Lo primero que hicimos fue elegir un Paas en el que desplegar nuestra aplicación. Al final nos decantamos por
+**Google App Engine**.
+Lo segundo fue crear un proyecto en Google App Engine **appsamblea-project** y un pequeño programa de prueba. Actualmente la aplicación cuenta con un formulario simple donde escribir cualquier cosa y autentificarse. [Appsamblea](appsamblea-project.appspot.com).
+
+Después de esto, investigamos sobre el uso de las distintas herramientas para realizar el despliegue.
+Nos decantamos por **Shippable**, aunque también probamos **Travis-CI** y **Snap-CI**. Documentación sobre estas herramientas puede encontrarse [aquí](https://github.com/Appsamblea/Appsamblea_docu/blob/master/Sistema%20de%20Despliegue%20Continuo.md).
+
+Por último, programamos varios test, lo cual se nos volvió más complicado ya que tuvimos varios problemas con
+**Google App Engine** pero al final conseguimos solucionarlos.
+
+El blog de nuestro proyecto es [Appsamblea](http://appsamblea.tumblr.com/) aunque aún se encuentra vacío.
+
+
+=======
+
+
+==================
+
 #Segundo hito
 
-Haced modificaciones sobre este fichero, como en el [hito anterior](hito-1.md). Incluid también los nombres de los componentes de cada proyecto, me aya a corregir más fácilmente.
+Haced modificaciones sobre este fichero, como en el [hito anterior](hito-1.md). Incluid también los nombres de los componentes de cada proyecto.
 
->>>>>>> 8f17213b7587c1f03fe3e84842c9fc99bdf88799
+

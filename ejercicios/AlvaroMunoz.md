@@ -12,7 +12,7 @@ Según la [tabla de amortizaciones simplificada](http://www.infoautonomos.com/in
 El servidor elegido ha sido un [HP ProLiant ML310e G8 XE E3-1220/8GB/2TB](http://www.pccomponentes.com/hp_proliant_ml310e_g8_xe_e3_1220_8gb_2tb.html), cuyo precio sin IVA es de **532.23€**
 
 * Coste amortización a 4 años:
-	* Cuatro años al 25%: 532.23€ x 0.25 = 133.06€/año 
+	* Cuatro años al 25%: 532.23€ x 0.25 = 133.06€/año
 
 * Coste amortización a 7 años
 	* Cuatro años al 10% (2 primeros y 2 últimos): 532.23 x 0.1 = 53.23€/año
@@ -26,13 +26,10 @@ El servidor elegido ha sido un [HP ProLiant ML310e G8 XE E3-1220/8GB/2TB](http:/
 |[OVH VPS Cloud 2](https://www.ovh.es/vps/vps-cloud.xml) | 4      |      50  | 6        | 		232.2	    |  0.21 	 |
 |[Amazon c3.xlarge](http://aws.amazon.com/es/ec2/pricing/)| 4 	  | 80	     | 7.5      |  	1454.5104   	| 0.166040   |
 
-- Uso del 1% (entre 3 y 4 días al año):
-	- OVH VPS Cloud 2: 18.40 €
-	- Amazon c3.xlarge: 14.54 €
+- Uso del 1% (entre 3 y 4 días al año) del Amazon c3.xlarge: 14.54 €
+- Uso del 10% (entre 36 y 37 días al año): Amazon c3.xlarge: 145 €
 
-- Uso del 10% (entre 36 y 37 días al año):
-	- OVH VPS Cloud 2: 184 €
-	- Amazon c3.xlarge: 145 €
+Sin embargo, con el OVH VPS Cloud siempre pagaríamos 19.35 €/mes o 232.2 €/año.
 
 *Nota: la conversión entre $ y € se hizo el día 23/10/2014 con 0.21USD = 0.166040EUR*
 *Aclaración: el servidor escogido de OVH es de tipo VPS, dedicado, que se paga con mensualidades, que es la comparación que el ejercicio pedía.*
@@ -163,31 +160,31 @@ Similar al ejercicio 9.2 pero cambiando el nombre del recurso al que le damos pr
 
 	mount { blkio = /cgroup/blkio }
 
-	group httpd { 
-		blkio { 
-			blkio.weight="700"; 
-		} 
+	group httpd {
+		blkio {
+			blkio.weight="700";
+		}
 	}
 
-	group users { 
-		blkio { 
-			blkio.weight="300"; 
-		} 
+	group users {
+		blkio {
+			blkio.weight="300";
+		}
 	}
 
 ***
 ### Ejercicio 10
 
-El procesador sí tiene activados los flags de virtualización a nivel de hardware (flag *vmx*). 
+El procesador sí tiene activados los flags de virtualización a nivel de hardware (flag *vmx*).
 El modelo de procesador es *Intel(R) Core(TM) i7-3930K CPU @ 3.20GHz* (información extraída del archivo */proc/cpuinfo*).
 La salida del comando (por cada núcleo) es:
 
 	flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov
-	pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb 
-	rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology 
-	nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est 
-	tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt 
-	tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm 
+	pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb
+	rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology
+	nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est
+	tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt
+	tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm
 	tpr_shadow vnmi flexpriority ept vpid
 
 
@@ -215,7 +212,7 @@ Algunos inconvenientes podrían ser:
 - Necesidad de confianza en la empresa, ya que tienen la posibilidad de usar los datos del usuario.
 
 
-TEMA 2 
+TEMA 2
 ======
 
 * * *
@@ -235,29 +232,28 @@ La URL de Wordpress es http://morciblog-morcicloud.rhcloud.com
 
 * * *
 ### Ejercicio 4
-Siguiendo los pasos indicados he creado un menú para un archivo de Google. El menú contiene una única opción, la cual abre un cuadro de diálogo y pone una frase tan original como *"Hola Mundo!"*. 
+Siguiendo los pasos indicados he creado un menú para un archivo de Google. El menú contiene una única opción, la cual abre un cuadro de diálogo y pone una frase tan original como *"Hola Mundo!"*.
 
 El código usado ha sido:
 
-`
-function onOpen() {
-  // Añade un menú con un botón que salude
-  DocumentApp.getUi().createMenu('Mi menú')
-      .addItem('Saluda', 'saluda')
-      .addToUi();
-}
+	function onOpen() {
+	  // Añade un menú con un botón que salude
+	  DocumentApp.getUi().createMenu('Mi menú')
+	      .addItem('Saluda', 'saluda')
+	      .addToUi();
+	}
 
-function saluda() {
-  DocumentApp.getUi().showDialog(
-      HtmlService
-          .createHtmlOutput('<p>Hola Mundo!</p>')
-          .setTitle('Ventana Saludona'))
-}
-`
+	function saluda() {
+	  DocumentApp.getUi().showDialog(
+	      HtmlService
+	          .createHtmlOutput('<p>Hola Mundo!</p>')
+	          .setTitle('Ventana Saludona'))
+	}
+
 
 * * *
 ### Ejercicio 5
-El lenguaje que utilizo habitualmente es **Python**. Un sistema de automatización para el mismo es **Pynt** (https://github.com/rags/pynt), el cual gestiona las dependencias entre tareas de construcción y permite el paso de parámetros mediante línea de comandos. 
+El lenguaje que utilizo habitualmente es **Python**. Un sistema de automatización para el mismo es **Pynt** (https://github.com/rags/pynt), el cual gestiona las dependencias entre tareas de construcción y permite el paso de parámetros mediante línea de comandos.
 
 
 * * *
@@ -273,16 +269,117 @@ OpenShift trabaja sobre Jenkins, y éste sí proporciona herramientas para gesti
 ### Ejercicio 7
 Python incorpora *unittest* en sus librerías estándares. Con ella se pueden realizar baterías de pruebas de forma sencilla. Un ejemplo de prueba sería la siguiente:
 
-`
-import unittest
+	import unittest
 
-def fun(x):
-    return x + 1
+	def fun(x):
+	    return x + 1
 
-class MyTest(unittest.TestCase):
-    def test(self):
-        self.assertEqual(fun(3), 4)
-`
+	class MyTest(unittest.TestCase):
+	    def test(self):
+	        self.assertEqual(fun(3), 4)
 
-Más info en: http://docs.python-guide.org/en/latest/writing/tests/ 
 
+Más info en: http://docs.python-guide.org/en/latest/writing/tests/
+
+
+* * *
+TEMA 3
+======
+
+### Ejercicio 1
+
+Lo primero que debemos hacer es crear un nuevo *namespaceUTS*. Para ello usamos la siguiente órden con permisos de *root*:
+
+	unshare -u /bin/bash
+
+Y ahora montamos la iso:
+
+	mount -o loop -t iso9660 file.iso /mnt/test
+
+Donde *loop* indica que el comando *mount* use el primer */dev/loopX* disponible.
+
+
+* * *
+### Ejercicio 2.1
+
+Al usar el comando `brctl show` no muestra ningún resultado (salvo los nombres de las columnas de la tabla), lo que indica que no existe ningún puente de red configurado.
+
+
+* * *
+### Ejercicio 2.2
+
+Lo primero será crear un nuevo puente:
+
+	brctl addbr hamburguesa
+
+Y lo asignamos a la interfaz *eth0*:
+
+	brctl addif hamburguesa eth0
+
+
+
+* * *
+### Ejercicio 3.1
+
+Creamos un sistema:
+
+Para usar debootstrap deberemos indicar el tipo de arquitectura, el nombre de la distribución que vamos a instalar, la ruta de instalación y la dirección:
+
+	sudo debootstrap --arch=amd64 quantal /home/jaulas/quantal/	http://archive.ubuntu.com/ubuntu
+
+
+* * *
+### Ejercicio 3.2
+
+Lo primero es instalar *rinse*. Después ejecutamos el comando:
+
+	rinse --arch amd64 --distribution fedora-core-10 --directory /home/jaulas/fedora10
+
+
+* * *
+### Ejercicio 4
+
+
+
+### Ejercicio 5
+
+### Ejercicio 6
+
+
+
+* * *
+TEMA 4
+======
+
+### Ejercicio 1
+
+
+
+### Ejercicio 2
+
+### Ejercicio 3
+
+### Ejercicio 4
+
+### Ejercicio 5
+
+### Ejercicio 6
+
+### Ejercicio 7
+
+### Ejercicio 8
+
+### Ejercicio 9
+
+### Ejercicio 10
+
+### Ejercicio 11
+
+### Ejercicio 12
+
+### Ejercicio 13
+
+### Ejercicio 14
+
+
+* * *

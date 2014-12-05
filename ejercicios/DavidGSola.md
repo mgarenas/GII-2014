@@ -10,11 +10,7 @@ Ejercicios de David González Sola
 - **Precio (sin IVA):** 688.43€
 - **Amortización en 4 años:** 172.11€ por año
 - **Amortización en 7 años:** 98.35€ por año
-<<<<<<< HEAD
 - [**Referencia**](http://www.pccomponentes.com/hp_proliant_ml310e_g8_xe_e3_1220_8gb_2tb___foundation_2012.html)
-=======
-- [**Referencia:**](http://www.pccomponentes.com/hp_proliant_ml310e_g8_xe_e3_1220_8gb_2tb___foundation_2012.html)
->>>>>>> 064efa308eee7411052778d8f16e77bb9f887c31
 
 ### Ejercicio 2
 
@@ -200,3 +196,32 @@ Funciona de la siguiente manera:
 4. Modificar el constructor y el método setUp de la clase Test creada.
 5. Añadir el método de test.
 6. Ejecutar test.
+
+## Tema 3 Técnicas de Virtualización
+
+### Ejercicio 1 
+
+Lo primero que se ha hecho es generar un archivo *ISO* en Linux con el programa **genisoimage**:
+> genisoimage -o isoPrueba.iso proyectos.md
+Creamos el hostname:
+> hostname probandoIso
+Ahora creamos un lugar donde montarlo:
+> mkdir /mnt/isoimage
+Una vez creado el archivo *ISO* es hora de montarlo:
+> mount -o loop -t iso9660 example.iso /mnt/isoimage
+Y la salida es:
+> mount: block device /home/david/Documentos/FacultadLinux/Master/CloudComputing/isoPrueba.iso is write-protected, mounting read-only
+
+### Ejercicio 2
+
+1. Utilizando el comando:
+> ip addr show
+![Puentes configurados](http://i.imgur.com/cXTNDzF.jpg)
+2. Con el *wlan0* no me permite realizar el puente ni a mi ni a algunos de mis compañeros. Otros han podido realizarlo con el *eth0* pero no cuento con interaz *eth0* en mi portatil.
+
+## Tema 4 Virtualización ligera usando contenedores
+
+### Ejercicio 1
+> sudo apt-get install lxc
+### Ejercicio 2
+
