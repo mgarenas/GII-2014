@@ -498,3 +498,68 @@ KiB Swap:  1999868 total,        0 used,  1999868 free,   981772 cached
 
 - - -
 ## Ejercicio 5.
+
+En el mismo *saucy* que hemos ejecutado las ordenes anteriores, insertamos los repositoros de **nginx** dentro del fichero `/etc/apt/sources.list`:
+
+```bash
+deb "http://archive.ubuntu.com/ubuntu" saucy main
+deb "http://nginx.org/packages/ubuntu" saucy nginx
+deb-src "http://nginx.org/packages/ubuntu" saucy nginx
+```
+
+Una vez hecho esto obtenemos la *clave* del repositorio **nginx**:
+```bash
+# Instalamos el paquete para descargarnos la llave con la url.
+apt-get install wget
+
+# Nos descargamos la clave.
+wget http://nginx.org/keys/nginx_signing.key
+
+# Añadimos la clave.
+apt-key add nginx_signing.key
+
+# Si todo ha ido bien aparecerá un:
+"OK"
+```
+
+Ahora procedemos a instalar el programa propiamente dicho:
+```bash
+# Actualizamos.
+apt-get update
+
+# Instalamos el programa.
+apt-get install nginx
+```
+
+Para arrancar el servidor procedemos como sigue:
+```bash
+# Arrancamos el servicio.
+service nginx start
+
+# Para comprobar que está todo correctamente
+service --status-all
+
+# Como resultaod obtenemos la siguiente salida:
+
+ [ + ]  console-font
+ [ + ]  console-setup
+ [ + ]  cron
+ [ ? ]  killprocs
+ [ + ]  kmod
+ [ ? ]  networking
+ '[ + ]  nginx   <------'
+ [ ? ]  ondemand
+ [ - ]  procps
+ [ ? ]  rc.local
+ [ + ]  resolvconf
+ [ - ]  rsyslog
+ [ ? ]  sendsigs
+ [ + ]  setvtrgb
+ [ - ]  sudo
+ [ - ]  udev
+ [ ? ]  umountfs
+ [ ? ]  umountnfs.sh
+ [ ? ]  umountroot
+ [ - ]  urandom
+
+```
