@@ -100,8 +100,8 @@
 - [X]  Crear nuevas funciones en un SaaS.
 
 ###Otros objetivos
-- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
-- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
 - [X] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
 - [ ] Usar el apartado de Material adicional abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request.
@@ -114,8 +114,8 @@
 
 ###Otros objetivos
 - [X] Último día de entrega de la primera práctica.
-- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
-- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
 
 ## Clase del 17 de noviembre de 2014
@@ -126,8 +126,8 @@
 - [X] Comenzar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md).
 
 ###Otros objetivos
-- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
-- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting.
 
 ## Clase del 21 de noviembre de 2014
@@ -138,17 +138,17 @@
 - [X] Continuar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md).
 
 ###Otros objetivos
-- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request directamente a su copia del repositorio, no al repositorio principal de la asignatura.
-- [ ] Revisar también el primer hito de un proyecto que no sea el propio.
-- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request directamente a su copia del repositorio, no al repositorio principal de la asignatura.
+- [X] Revisar también el primer hito de un proyecto que no sea el propio.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 
 ## Clase del 24 de noviembre de 2014
 
 ###Objetivos de esta sesión
 - [X] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
 - [X] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
-- [ ] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
-- [ ] Entender y saber llevar a cabo la virtualización de dispositivos de red.
+- [X] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
+- [X] Entender y saber llevar a cabo la virtualización de dispositivos de red.
 
 ###Otros objetivos
 - [X] Usar herramientas de administración y monitorización de red en línea de órdenes.

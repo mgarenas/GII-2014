@@ -547,3 +547,84 @@ Por ultimo, señalar que [Django](https://www.djangoproject.com/) incluye ya una
 	* [Googletest](https://code.google.com/p/googletest/): Framework de Google para construir test. Está basado en los xUnit. Entre otras cosas, soporta el descubrimiento automático de test y que el usuario defina sus propios asserts.
 	* [CppUnit](http://cppunit.sourceforge.net/doc/cvs/cppunit_cookbook.html) Es una implementación para c++ de JUnit (según los propios autores). Sus características son prácticamente idénticas.
 
+
+###==================================================================================================
+#Tema 3
+###==================================================================================================
+### 1)Crear un espacio de nombres y montar en él una imagen ISO de un CD de forma que no se pueda leer más que desde él. Pista: en [ServerFault](http://serverfault.com/questions/198135/how-to-mount-an-iso-file-in-linux) nos explican como hacerlo, usando el dispositivo loopback.
+Para empezar, nos hacemos root y creamos un mounts namespace (para aislar recursos declarados con mount):
+	```
+		su
+		unshare --mount /bin/bash
+	```
+
+Luego podemos proceder a montar la imagen iso:
+	```
+		mkdir /mnt/temp
+		mount -o loop -t iso9660 ubuntu14.04.iso /mnt/temp
+	```
+
+### 2)
+1. Mostrar los puentes configurados en el sistema operativo.
+	Normalmente, habría que crear algún puente con sudo brctl addbr <nombre>, pero en mi caso ya había uno creado por docker.
+	
+	```
+		silt@silt-Lenovo-Z50-70:~$ brctl show
+		bridge name	bridge id		STP enabled	interfaces
+		docker0		8000.56847afe9799	no			
+	```
+
+2. Crear un interfaz virtual y asignarlo al interfaz de la tarjeta wifi, si se tiene, o del fijo, si no se tiene.
+	Aunque tengo una tarjeta wifi, para evitar probemas suelo trabajar en una máquina virtual y esta cree que está conectada por cable.
+
+	Creamos la interfaz virtual y le asignamos una interfaz (en este caso eth0):
+	```
+		sudo brctl addbr test-bridge
+		ip addr show
+		1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default 
+			link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+			inet 127.0.0.1/8 scope host lo
+			   valid_lft forever preferred_lft forever
+			inet6 ::1/128 scope host 
+			   valid_lft forever preferred_lft forever
+		2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+			link/ether 00:0c:29:f1:4c:81 brd ff:ff:ff:ff:ff:ff
+			inet 172.16.122.128/24 brd 172.16.122.255 scope global eth0
+			   valid_lft forever preferred_lft forever
+			inet6 fe80::20c:29ff:fef1:4c81/64 scope link 
+			   valid_lft forever preferred_lft forever
+		3: test-bridge: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default 
+    			link/ether 0e:b4:6a:c7:d4:0a brd ff:ff:ff:ff:ff:ff
+
+		sudo brctl addif test-bridge eth0
+		ip addr show
+
+		1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default 
+			link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+			inet 127.0.0.1/8 scope host lo
+			   valid_lft forever preferred_lft forever
+			inet6 ::1/128 scope host 
+			   valid_lft forever preferred_lft forever
+		2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master test-bridge state UP group default qlen 1000
+			link/ether 00:0c:29:f1:4c:81 brd ff:ff:ff:ff:ff:ff
+			inet 172.16.122.128/24 brd 172.16.122.255 scope global eth0
+			   valid_lft forever preferred_lft forever
+			inet6 fe80::20c:29ff:fef1:4c81/64 scope link 
+			   valid_lft forever preferred_lft forever
+		3: test-bridge: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default 
+    			link/ether 0e:b4:6a:c7:d4:0a brd ff:ff:ff:ff:ff:ff
+	```
+
+### 3)
+1. Usar debootstrap (o herramienta similar en otra distro) para crear un sistema mínimo que se pueda ejecutar más adelante.
+	He decidido instalar Lucid.
+
+	```
+		sudo debootstrap --arch=amd64 lucid /home/silt/ubuntu http://archive.ubuntu.com/ubuntu
+	```
+
+	Omito la salida ya que es muy larga.
+2. Experimentar con la creación de un sistema Fedora dentro de Debian usando Rinse.
+	```
+		sudo rinse --arch=amd64 --directory /home/silt/fedora8 --distribution fedora-core-8
+	```
