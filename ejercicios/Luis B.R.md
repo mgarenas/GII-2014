@@ -540,14 +540,14 @@ service nginx start
 service --status-all
 
 # Como resultaod obtenemos la siguiente salida:
-
+'
  [ + ]  console-font
  [ + ]  console-setup
  [ + ]  cron
  [ ? ]  killprocs
  [ + ]  kmod
  [ ? ]  networking
- '[ + ]  nginx   <------'
+ [ + ]  nginx          <------
  [ ? ]  ondemand
  [ - ]  procps
  [ ? ]  rc.local
@@ -561,5 +561,5 @@ service --status-all
  [ ? ]  umountnfs.sh
  [ ? ]  umountroot
  [ - ]  urandom
-
+'
 ```
