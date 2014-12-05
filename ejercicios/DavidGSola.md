@@ -215,8 +215,11 @@ Y la salida es:
 ### Ejercicio 2
 
 1. Utilizando el comando:
+
 > ip addr show
+
 ![Puentes configurados](http://i.imgur.com/cXTNDzF.jpg)
+
 2. Con el *wlan0* no me permite realizar el puente ni a mi ni a algunos de mis compañeros. Otros han podido realizarlo con el *eth0* pero no cuento con interaz *eth0* en mi portatil.
 
 ## Tema 4 Virtualización ligera usando contenedores
@@ -227,7 +230,7 @@ Y la salida es:
 
 ### Ejercicio 2
 
-Al instalar lxc se han creado y configurado un *bridge* y un *virtual ethernet device* para que los contenedores tengan acceso 
+Al instalar lxc se han creado y configurado un *bridge* y un *virtual ethernet device* para que los contenedores tengan acceso.
 ![Listado bridges](http://i.imgur.com/DZVBu1G.jpg)
 
 ### Ejercicio 3
@@ -235,11 +238,16 @@ Al instalar lxc se han creado y configurado un *bridge* y un *virtual ethernet d
 Lo primero que he hecho ha sido crear dos contenedores, uno de cada manera, utilizando *ubuntu* y *ubuntu-cloud*. Una vez creados ambos procedo a listar los contenedores mediante la orden:
 
 > sudo lxc-list 
+
 Aparecen ambos contenedores en el estado **STOPPED**.
 Ahora podemos ejecutar uno de los contenedores y los volvemos a listar.
+
 > sudo lxc-start -n nubecilla
+
 ![Listado contenedores](http://i.imgur.com/9i0SGii.jpg)
+
 Por último podemos utilizar el contenedor *nubecilla* de manera autónoma.
+
 ![Contenedor nubecilla](http://i.imgur.com/uUkGYUV.jpg)
 
 ### Ejercicio 4
