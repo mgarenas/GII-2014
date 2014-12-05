@@ -152,7 +152,7 @@ Sesión 14 - Clase del 28 de noviembre de 2014
 - [ ] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
 - [ ] Comprender que existe vida en los servidores web fuera del Apache.
 - [ ] [Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla](https://es.wikipedia.org/wiki/Chroot) como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
-- [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
+- [x] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
 - [ ] Probar [la nube de fi-ware](https://cloud.lab.fi-ware.org/) para alojar proyectos y hacer pruebas.
 
 
