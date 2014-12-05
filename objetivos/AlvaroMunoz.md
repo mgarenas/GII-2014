@@ -225,3 +225,19 @@ Lista de objetivos de Álvaro Muñoz
 - [x] Entregar el segundo hito de la práctica.
 - [ ] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
 - [x] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
+
+
+* * *
+##Clase 5-diciembre-2014
+### Objetivos de esta sesión
+
+- [ ] Entender los sistemas de orquestación de máquinas virtuales.
+- [ ] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
+
+### Otros objetivos
+
+- [ ] Ver el papel de los *tápers* o *containers* como base de experimentación y prácticas de muchos de los conceptos de virtualización.
+- [ ] Poner Granada, Spain en el perfil de GitHub.
+- [ ] Hablar del material y la mecánica de la asignatura hasta este momento.
+
+* * *
