@@ -164,3 +164,11 @@ Sesión 15 - Clase del 1 de diciembre de 2014
 - [ ] Entregar el segundo hito de la práctica.
 - [ ] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
 - [ ] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
+
+Sesión 16 - Clase del 5 de diciembre de 2014
+--------------------------------------------
+- [ ] Entender los sistemas de orquestación de máquinas virtuales.
+- [ ] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
+- [ ] Ver el papel de los *tápers* o *containers* como base de experimentación y prácticas de muchos de los conceptos de virtualización.
+- [ ] Poner Granada, Spain en el perfil de GitHub.
+- [ ] Hablar del material y la mecánica de la asignatura hasta este momento.
