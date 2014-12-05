@@ -417,3 +417,42 @@ bin   dev  home  media  opt   root  selinux  sys  usr
 boot  etc  lib   mnt    proc  sbin  srv      tmp  var
 
 ```
+## Ejercicio 4.
+
+Lo primero que vamos a hacer es entrar en la jaula:
+
+```bash
+# Entramos en la jaula.
+sudo chroot /home/lewis/Escritorio/CC/<sistema>
+
+# Tendríamos el siguiente resultado.
+[ lewis: ~/Escritorio/CC ]$ sudo chroot saucy/
+root@Inspiron:/#
+```
+
+Procedemos a montar el sistema de archivos (*file system*) y realizamos algunas tareas:
+
+```bash
+# Montamos el file system.
+mount -t proc proc /proc
+
+# Instalamos alguna aplicación, por ejemplo vim y nano.
+apt-get install vim
+apt-get install nano
+```
+
+Como tenemos **python** instalado en el sistema, ejecutamos nano y creamos el siguiente código con editor *nano* (Que por cierto si creas un fichero de *python* .py y lo editas, te lo colorea el editor):
+```py
+print("Hola!")
+```
+
+El resultado sería el siguiente:
+```bash
+# Editamos el fichero para meter el código de antes.
+root@Inspiron:/# nano programa.py
+
+# Ejecutamos el código del programa para ejecutarlo.
+root@Inspiron:/# python3 programa.py
+Hola
+# También se puede ejecutar 
+```
