@@ -227,6 +227,11 @@ Y la salida es:
 
 ### Ejercicio 2
 
+Al instalar lxc se han creado y configurado un *bridge* y un *virtual ethernet device* para que los contenedores tengan acceso 
+![Listado bridges](http://i.imgur.com/DZVBu1G.jpg)
+
+### Ejercicio 3
+
 Lo primero que he hecho ha sido crear dos contenedores, uno de cada manera, utilizando *ubuntu* y *ubuntu-cloud*. Una vez creados ambos procedo a listar los contenedores mediante la orden:
 
 > sudo lxc-list 
@@ -236,4 +241,7 @@ Ahora podemos ejecutar uno de los contenedores y los volvemos a listar.
 ![Listado contenedores](http://i.imgur.com/9i0SGii.jpg)
 Por último podemos utilizar el contenedor *nubecilla* de manera autónoma.
 ![Contenedor nubecilla](http://i.imgur.com/uUkGYUV.jpg)
+
+### Ejercicio 4
+
 
