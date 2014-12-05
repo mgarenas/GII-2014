@@ -449,10 +449,38 @@ print("Hola!")
 El resultado sería el siguiente:
 ```bash
 # Editamos el fichero para meter el código de antes.
-root@Inspiron:/# nano "programa.py"
+nano "programa.py"
 
 # Ejecutamos el código del programa para ejecutarlo.
 root@Inspiron:/# python3 "programa.py"
 Hola!
-# También se puede ejecutar
+# También se puede ejecutar la orden top para ver los procesos.
+top
+
+# Obtendríamos la siguiente salida en mi caso.
+'
+top - 19:08:06 up 19 min,  0 users,  load average: 0.47, 0.34, 0.26
+Tasks: 219 total,   1 running, 218 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.7 us,  0.7 sy,  0.1 ni, 93.5 id,  3.1 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem:   8055272 total,  2213864 used,  5841408 free,    76612 buffers
+KiB Swap:  1999868 total,        0 used,  1999868 free,   981772 cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S  %CPU %MEM    TIME+  COMMAND
+ 1143 root      20   0  438m 126m  90m S   6.3  1.6   0:24.06 Xorg
+    1 root      20   0 27216 2964 1416 S   0.0  0.0   0:01.26 init
+    2 root      20   0     0    0    0 S   0.0  0.0   0:00.00 kthreadd
+    3 root      20   0     0    0    0 S   0.0  0.0   0:00.00 ksoftirqd/0
+    5 root       0 -20     0    0    0 S   0.0  0.0   0:00.00 kworker/0:0H
+    6 root      20   0     0    0    0 S   0.0  0.0   0:00.87 kworker/u16:0
+    7 root      rt   0     0    0    0 S   0.0  0.0   0:00.00 migration/0
+    8 root      20   0     0    0    0 S   0.0  0.0   0:00.00 rcu_bh
+    9 root      20   0     0    0    0 S   0.0  0.0   0:00.00 rcuob/0
+   10 root      20   0     0    0    0 S   0.0  0.0   0:00.00 rcuob/1
+   11 root      20   0     0    0    0 S   0.0  0.0   0:00.00 rcuob/2
+   12 root      20   0     0    0    0 S   0.0  0.0   0:00.00 rcuob/3
+   13 root      20   0     0    0    0 S   0.0  0.0   0:00.00 rcuob/4
+   14 root      20   0     0    0    0 S   0.0  0.0   0:00.00 rcuob/5
+   15 root      20   0     0    0    0 S   0.0  0.0   0:00.00 rcuob/6
+   16 root      20   0     0    0    0 S   0.0  0.0   0:00.00 rcuob/7
+'  
 ```
