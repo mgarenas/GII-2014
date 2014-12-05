@@ -449,10 +449,10 @@ print("Hola!")
 El resultado sería el siguiente:
 ```bash
 # Editamos el fichero para meter el código de antes.
-root@Inspiron:/# nano programa.py
+root@Inspiron:/# nano "programa.py"
 
 # Ejecutamos el código del programa para ejecutarlo.
-root@Inspiron:/# python3 programa.py
-Hola
-# También se puede ejecutar 
+root@Inspiron:/# python3 "programa.py"
+Hola!
+# También se puede ejecutar
 ```
