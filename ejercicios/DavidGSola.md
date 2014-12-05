@@ -222,6 +222,18 @@ Y la salida es:
 ## Tema 4 Virtualización ligera usando contenedores
 
 ### Ejercicio 1
+
 > sudo apt-get install lxc
+
 ### Ejercicio 2
+
+Lo primero que he hecho ha sido crear dos contenedores, uno de cada manera, utilizando *ubuntu* y *ubuntu-cloud*. Una vez creados ambos procedo a listar los contenedores mediante la orden:
+
+> sudo lxc-list 
+Aparecen ambos contenedores en el estado **STOPPED**.
+Ahora podemos ejecutar uno de los contenedores y los volvemos a listar.
+> sudo lxc-start -n nubecilla
+![Listado contenedores](http://i.imgur.com/9i0SGii.jpg)
+Por último podemos utilizar el contenedor *nubecilla* de manera autónoma.
+![Contenedor nubecilla](http://i.imgur.com/uUkGYUV.jpg)
 
