@@ -230,7 +230,8 @@ Y la salida es:
 
 ### Ejercicio 2
 
-Al instalar lxc se han creado y configurado un *bridge* y un *virtual ethernet device* para que los contenedores tengan acceso.
+Al instalar lxc se han creado y configurado un *bridge* y un *virtual ethernet device* para que los contenedores tengan acceso al *host* y a internet.
+
 ![Listado bridges](http://i.imgur.com/DZVBu1G.jpg)
 
 ### Ejercicio 3
@@ -252,4 +253,11 @@ Por último podemos utilizar el contenedor *nubecilla* de manera autónoma.
 
 ### Ejercicio 4
 
+Se ha descargado de github el script de instalación y se manda al bash para que lo ejecute mediante la opción -O  y el pipeline:
+
+> wget http://lxc-webpanel.github.com/tools/install.sh -O - | bash
+
+Accediendo desde un navegador a la dirección *http://localhost:5000* se accede al webpanel de lxc. Dentro de uno de los contenedores se cambia de manera muy sencilla el número de cpus, cpushares, etc.
+
+![Webpanel](http://i.imgur.com/bIdxRej.jpg)
 
