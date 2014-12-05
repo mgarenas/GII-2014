@@ -144,15 +144,15 @@ Sesión 13 - Clase del 24 de noviembre de 2014
 
 Sesión 14 - Clase del 28 de noviembre de 2014
 ---------------------------------------------
-- [ ] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
+- [x] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
 - [ ] Aprender a ''enjaular'' usuarios.
 - [x] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ivgii.
 - [x] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54).
 - [ ] Aplicar conocimientos de administración de un sistema Linux: usuarios, permisos.
 - [ ] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
-- [ ] Comprender que existe vida en los servidores web fuera del Apache.
+- [x] Comprender que existe vida en los servidores web fuera del Apache.
 - [ ] [Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla](https://es.wikipedia.org/wiki/Chroot) como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
-- [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
+- [x] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
 - [ ] Probar [la nube de fi-ware](https://cloud.lab.fi-ware.org/) para alojar proyectos y hacer pruebas.
 
 
