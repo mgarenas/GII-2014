@@ -223,7 +223,7 @@ Ejemplos podrían ser _Google Apps, Microsoft Office 365, Gmail, Yahoo mail..._ 
 # Creando aplicaciones en la nube: Uso de PaaS y SaaS
 
 - - -
- ## Ejercicio 1.
+## Ejercicio 1.
 
 Se ha instalado el entorno virtual **virtualenv para Python**. Mediante el comando:
 
@@ -234,20 +234,20 @@ Para generar un proyecto se usa la siguiente instrucción:
 > virtualenv <NOMBRE>
 
 - - -
- ## Ejercicio 2.
+## Ejercicio 2.
 
 Me he dado de alta en **Heroku**. Y lo he instalado en Ubuntu para poder ejecutar comandos desde la línea de ordenes con el siguientes comando:
 
 > wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
 - - -
- ## Ejercicio 3.
+## Ejercicio 3.
 
 Como he elegido **Heroku** voy a realizar la [instalación de Wordpress](https://github.com/mhoofman/wordpress-heroku) allí.
 
 
 - - -
- ## Ejercicio 4.
+## Ejercicio 4.
 
 Se ha creado una función con un código de prueba que aparece en el tutorial de [GoogleDrive](https://developers.google.com/apps-script/overview).
 
@@ -278,21 +278,21 @@ function fucncionDePrueba() {
 ```
 
 - - -
- ## Ejercicio 5.
+## Ejercicio 5.
 
 * En el lenguaje de **Python** que es el que utilizo normalmente. [Pynt](https://github.com/rags/pynt) nos ofrece un sistema de automatización para construir tareas y funcionalidades de *python*. Sirve para manejar dependencias entre tareas, genera automáticamente una interfaz de línea de comandos. Este sistema soporta *python 2.7 y python 3.x*.
 * También es muy utilizado y he usado en muchas ocasiones **make** para C/C++. [Makefile](http://mrbook.org/tutorials/make/)
 
 
 - - -
- ## Ejercicio 6.
+## Ejercicio 6.
 
 Con **Heroku** las dependencias vienen gestionadas vía [pip](https://devcenter.heroku.com/articles/python-pip) para Python para especificar las dependencias de un módulo de Python se añade un fichero de *requerimientos* llamado **requirements.txt** a la raiz del respositorio.
 
 En cuanto a el lenguaje **PHP** las dependencias vienen en el fichero [composer.json](https://devcenter.heroku.com/articles/getting-started-with-php#declare-app-dependencies).
 
 - - -
- ## Ejercicio 7.
+## Ejercicio 7.
 
 * En **python** podemos encontar [unittest](https://docs.python.org/3.2/library/unittest.html) es un módulo estándar que quien dispone de python 2.1 o superior puede tener acceso a él. Apoya la automatización de pruebas, el intercambio de configuración y código para pruebas. Permite la agregación de pruebas de la estructura de informaicón. El módulo *unittest* ofrece clases que hacen que sea más simple el soporte de estas cualidades para un conjunto de pruebas.
 * También podemos encontrar [doctest](https://docs.python.org/3.2/library/doctest.html). El módulo de *doctest* realiza búsquedas por fragmentos de texto que se asimilan mucho a las sesiones de *python* para verificar que funcionan correctamente. Existen varias formas de utilizar *doctest*.
@@ -309,7 +309,7 @@ En cuanto a el lenguaje **PHP** las dependencias vienen en el fichero [composer.
 # Técnicas de virtualización
 
 - - -
- ## Ejercicio 1.
+## Ejercicio 1.
 
 Lo primero que vamos a realizar es *crear el espacio de nombres*:
 ```bash
@@ -331,7 +331,7 @@ mount
 ```
 
 - - -
- ## Ejercicio 2.
+## Ejercicio 2.
 
 Para crear la interfaz virtual procedemos a introducir los siguientes comandos:
 ```bash
@@ -371,7 +371,7 @@ BigKing		8000.000000000000	no
 ```
 
 - - -
- ## Ejercicio 3.
+## Ejercicio 3.
 
 Puesto que no tenemos instalado, procedemos a instalarlo:
 ```bash
@@ -428,7 +428,7 @@ boot  etc  lib   mnt    proc  sbin  srv      tmp  var
 
 ```
 - - -
- ## Ejercicio 4.
+## Ejercicio 4.
 
 Lo primero que vamos a hacer es entrar en la jaula:
 
@@ -497,4 +497,4 @@ KiB Swap:  1999868 total,        0 used,  1999868 free,   981772 cached
 ```
 
 - - -
- ## Ejercicio 5.
+## Ejercicio 5.
