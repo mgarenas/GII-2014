@@ -401,29 +401,29 @@ Si nos diese un error del tipo `lxc-start: No cgroup mounted on the system`, deb
 
 Procedemos como en el apartado anterior:
 
-	```bash
-		lxc-create -t fedora -n caja-fedora
-	```
+```bash
+	lxc-create -t fedora -n caja-fedora
+```
 
 Primero me indica que no encuentra `yum`, así que lo instalo:
 
-	```bash
-		apt-get install yum
-	```
+```bash
+	apt-get install yum
+```
 
 Tampoco encuentra `curl`, y lo instalo:
 
-	```bash
-		apt-get install curl
-	```
+```bash
+	apt-get install curl
+```
 
 Y ahora vuelvo a ejecutar el `lxc-create`, instalando la caja basada en Fedora.
 
 Nos metemos en la caja:
 
-	```bash
-		lxc-start -n caja-fedora
-	```
+```bash
+	lxc-start -n caja-fedora
+```
 
 Y obtengo errores muy feos que provienen, probablemente, de no haber usado un archivo de configuración específico.
 Si alguien lo ha conseguido ruego me lo corrija y me haga un *pull-request*.
@@ -454,9 +454,9 @@ Se puede configurar fácilmente arrastrando las barras en las opciones de memori
 * * *
 ### Ejercicio 6.1
 
-	```bash
-		apt-get install juju
-	```
+```bash
+	apt-get install juju
+```
 
 * * *
 ### Ejercicio 6.2
@@ -482,27 +482,27 @@ No tengo 10GB para instalar *MongoDB* y trabajar en local, pero no debe ser un p
 * * *
 ### Ejercicio 10
 
-	```bash
-		apt-get install docker
-	```
+```bash
+	apt-get install docker
+```
 
 * * *
 ### Ejercicio 11.1
 
 Como *root* hacemos:
 
-	```bash
-		docker pull centos
-	```
+```bash
+	docker pull centos
+```
 
 * * *
 ### Ejercicio 11.2
 
 Para ello podemos usar:
 
-	```bash
-		docker pull dockerfile/mongodb
-	```
+```bash
+	docker pull dockerfile/mongodb
+```
 
 * * *
 ### Ejercicio 12
