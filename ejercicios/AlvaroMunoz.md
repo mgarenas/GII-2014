@@ -324,26 +324,23 @@ Y lo asignamos a la interfaz *eth0*:
 Vamos a instalar un sistema Lenny en una carpeta concreta.
 Primero creamos la carpeta:
 
-	```bash
 		cd /
 		mkdir /lenny-chroot
-	```
+
 
 Y luego usamos `debootstrap` como administrador:
 
-	```bash
 		debootstrap lenny ./lenny-chroot	http://ftp.us.debian.org/debian
-	```
+
 
 * * *
 ### Ejercicio 3.2
 
 Lo primero es instalar *rinse*. Después usamos:
 
-	```bash
 		mkdir /srv/chroot/centos5-amd64
 		rinse --arch amd64 --distribution centos-5 --directory /srv/chroot/centos5-amd64
-	```
+
 
 * * *
 ### Ejercicio 4
@@ -401,29 +398,21 @@ Si nos diese un error del tipo `lxc-start: No cgroup mounted on the system`, deb
 
 Procedemos como en el apartado anterior:
 
-```bash
 	lxc-create -t fedora -n caja-fedora
-```
 
 Primero me indica que no encuentra `yum`, así que lo instalo:
 
-```bash
 	apt-get install yum
-```
 
 Tampoco encuentra `curl`, y lo instalo:
 
-```bash
 	apt-get install curl
-```
 
 Y ahora vuelvo a ejecutar el `lxc-create`, instalando la caja basada en Fedora.
 
 Nos metemos en la caja:
 
-```bash
 	lxc-start -n caja-fedora
-```
 
 Y obtengo errores muy feos que provienen, probablemente, de no haber usado un archivo de configuración específico.
 Si alguien lo ha conseguido ruego me lo corrija y me haga un *pull-request*.
@@ -434,9 +423,7 @@ Si alguien lo ha conseguido ruego me lo corrija y me haga un *pull-request*.
 
 Para instalarla:
 
-```bash
 	wget http://lxc-webpanel.github.io/tools/install.sh -O - | bash
-```
 
 Y accedemos a `http://localhost:5000` con user y password *admin*.
 
@@ -454,9 +441,8 @@ Se puede configurar fácilmente arrastrando las barras en las opciones de memori
 * * *
 ### Ejercicio 6.1
 
-```bash
 	apt-get install juju
-```
+
 
 * * *
 ### Ejercicio 6.2
@@ -482,27 +468,23 @@ No tengo 10GB para instalar *MongoDB* y trabajar en local, pero no debe ser un p
 * * *
 ### Ejercicio 10
 
-```bash
 	apt-get install docker
-```
+
 
 * * *
 ### Ejercicio 11.1
 
 Como *root* hacemos:
 
-```bash
 	docker pull centos
-```
 
 * * *
 ### Ejercicio 11.2
 
 Para ello podemos usar:
 
-```bash
 	docker pull dockerfile/mongodb
-```
+
 
 * * *
 ### Ejercicio 12
