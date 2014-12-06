@@ -245,3 +245,40 @@ En Ubuntu 14.04 se instala con el comando `sudo apt-get install lxc`.
 
 ###Ejercicio 2
 
+Al instalar el contenedor, se crea la interfaz puente *lxcbr0*, con las siguientes características:
+
+```
+4: lxcbr0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default 
+    link/ether e2:33:7a:19:67:f9 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.3.1/24 brd 10.0.3.255 scope global lxcbr0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::e033:7aff:fe19:67f9/64 scope link 
+       valid_lft forever preferred_lft forever
+
+```
+ donde tiene una ip *10.0.3.1/24* que no es local, ya que las locales son del tipo *192.168.x.x*, simula como si fuese otra máquina diferente, aunque está alojada en la misma máquina.
+
+###Ejercicio 3
+1. Creado en el *ejercicio 2*, se puede arrancar el contenedor con el siguiente comando: `sudo lxc-start -n una-caja`, donde *una-caja* es el contenedor que tiene instalado el sistema operativop Debian.
+
+2. 
+
+###Ejercicio 4
+1. Para instalar *lxc-webpanel* se necesitan permisos root, para ello primero de todo ejecutamos `sudo su` y seguidamente ejecutamos `wget http://lxc-webpanel.github.com/tools/install.sh -O - | bash`, y con esto tenemos instalado *lxc-webpanel*. Para gestionar los contenedores, accedemos a la url **localhost:5000** y como usuario ponemos *admin* y como contraseña *admin*.
+
+2. Una vez dentro del panel para restringir los recursos al contenedor *una-caja*, pulsamos sobre el nombre del contendor. Nos aparece la configuración del contenedor, en *CPU Shares* ponemos 1024, en la opción *CPU* ponemos 1 (que indica que solo puede ejecutar un procesador), y, por último, en *Memory Limit* ponemos 1024 MB ( que indica que solo puede utilizar 1GB de memoria RAM). Cuando tenemos todo configurado, pulsamos sobre el botón *Apply* para aplicar los cambios.
+
+###Ejercicio 5
+
+###Ejercicio 6
+1. Para instalar *juju* se utilizan las siguientes órdenes:
+```
+sudo add-apt-repository ppa:juju/stable
+sudo apt-get update && sudo apt-get install juju-core
+```
+Ejecutando `juju version` muestra la versión instalada. En mi caso muestra:
+```
+1.20.13-trusty-amd64
+```
+
+2. Primero debemos instalar un taper, para ello ejecutamos la orden `juju bootstra`. Una vez creado el taper ejecutamos la orden `juju deploy mysql` para instalar mysql en el taper. 
