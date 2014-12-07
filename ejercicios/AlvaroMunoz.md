@@ -321,29 +321,39 @@ Y lo asignamos a la interfaz *eth0*:
 * * *
 ### Ejercicio 3.1
 
-Creamos un sistema:
+Vamos a instalar un sistema Lenny en una carpeta concreta.
+Primero creamos la carpeta:
 
-Para usar debootstrap deberemos indicar el tipo de arquitectura, el nombre de la distribución que vamos a instalar, la ruta de instalación y la dirección:
+		cd /
+		mkdir /lenny-chroot
 
-	sudo debootstrap --arch=amd64 quantal /home/jaulas/quantal/	http://archive.ubuntu.com/ubuntu
+
+Y luego usamos `debootstrap` como administrador:
+
+		debootstrap lenny ./lenny-chroot	http://ftp.us.debian.org/debian
 
 
 * * *
 ### Ejercicio 3.2
 
-Lo primero es instalar *rinse*. Después ejecutamos el comando:
+Lo primero es instalar *rinse*. Después usamos:
 
-	rinse --arch amd64 --distribution fedora-core-10 --directory /home/jaulas/fedora10
+		mkdir /srv/chroot/centos5-amd64
+		rinse --arch amd64 --distribution centos-5 --directory /srv/chroot/centos5-amd64
 
 
 * * *
 ### Ejercicio 4
 
 
-
+* * *
 ### Ejercicio 5
 
+
+
+* * *
 ### Ejercicio 6
+
 
 
 
@@ -351,34 +361,138 @@ Lo primero es instalar *rinse*. Después ejecutamos el comando:
 TEMA 4
 ======
 
+* * *
 ### Ejercicio 1
 
+	apt-get install lxc
 
 
+* * *
 ### Ejercicio 2
 
-### Ejercicio 3
+Podemos ver qué interfaces puente se han creado con:
 
-### Ejercicio 4
+	brctl show
 
+Para ello debe estar instalado el paquete `bridge-utils`, aunque en mi caso no muestra ninguna.
+
+
+* * *
+### Ejercicio 3.1
+
+Se ha creado el contenedor con:
+
+	lxc-create -t debian -n caja
+
+Nos conectamos:
+
+	lxc-start -n caja
+
+Si nos diese un error del tipo `lxc-start: No cgroup mounted on the system`, debemos montar el `cgroup` haciendo:
+
+	mount -t cgroup cgroup /sys/fs/cgroup
+
+
+* * *
+### Ejercicio 3.2
+
+Procedemos como en el apartado anterior:
+
+	lxc-create -t fedora -n caja-fedora
+
+Primero me indica que no encuentra `yum`, así que lo instalo:
+
+	apt-get install yum
+
+Tampoco encuentra `curl`, y lo instalo:
+
+	apt-get install curl
+
+Y ahora vuelvo a ejecutar el `lxc-create`, instalando la caja basada en Fedora.
+
+Nos metemos en la caja:
+
+	lxc-start -n caja-fedora
+
+Y obtengo errores muy feos que provienen, probablemente, de no haber usado un archivo de configuración específico.
+Si alguien lo ha conseguido ruego me lo corrija y me haga un *pull-request*.
+
+
+* * *
+### Ejercicio 4.1
+
+Para instalarla:
+
+	wget http://lxc-webpanel.github.io/tools/install.sh -O - | bash
+
+Y accedemos a `http://localhost:5000` con user y password *admin*.
+
+
+* * *
+### Ejercicio 4.2
+
+Se puede configurar fácilmente arrastrando las barras en las opciones de memoria y CPU de cada jaula.
+
+
+* * *
 ### Ejercicio 5
 
-### Ejercicio 6
 
-### Ejercicio 7
+* * *
+### Ejercicio 6.1
 
+	apt-get install juju
+
+
+* * *
+### Ejercicio 6.2
+
+No tengo 10GB para instalar *MongoDB* y trabajar en local, pero no debe ser un proceso muy complicado. ¿Algún compañero que me indique cómo?
+
+* * *
+### Ejercicio 7.1
+
+* * *
+### Ejercicio 7.2
+
+* * *
+### Ejercicio 7.3
+
+
+* * *
 ### Ejercicio 8
 
+* * *
 ### Ejercicio 9
 
+* * *
 ### Ejercicio 10
 
-### Ejercicio 11
+	apt-get install docker
 
+
+* * *
+### Ejercicio 11.1
+
+Como *root* hacemos:
+
+	docker pull centos
+
+* * *
+### Ejercicio 11.2
+
+Para ello podemos usar:
+
+	docker pull dockerfile/mongodb
+
+
+* * *
 ### Ejercicio 12
 
+* * *
 ### Ejercicio 13
 
+* * *
 ### Ejercicio 14
 
 
