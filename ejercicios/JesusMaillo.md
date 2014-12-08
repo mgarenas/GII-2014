@@ -307,3 +307,135 @@ Para python se puede utilizar el módulo [unittest](https://docs.python.org/2/li
 En [este](http://pythontesting.net/framework/unittest/unittest-introduction/) enlace se puede ver un tutorial sobre su uso.
 
 Sí es cierto que para programar los tests en python, se puede usar [unittest](https://docs.python.org/2/library/unittest.html), pero para ejecutarlos no se suele hacer a mano. Habitualmente, en el entorno python, se utiliza [nose](https://nose.readthedocs.org/en/latest/) que ejecuta los test de forma automática y los resultados se dan en OK o No Ok, si se han pasado o no.
+
+- - -
+
+##Tema 3
+
+###Ejercicio 1:
+**Crear un espacio de nombres y montar en él una imagen ISO de un CD de forma que no se pueda leer más que desde él. Pista: en ServerFault nos explican como hacerlo, usando el dispositivo loopback**
+
+Comenzamos creando el espacio de nombre UTS, con la instrucción:
+
+```
+sudo unshare -u /bin/bash
+```
+
+El siguiente paso sería montar la iso:
+
+```
+mount -o loop -t iso9660 mi_archivo.iso /mnt/test
+```
+
+Donde loop indica que el comando mount use el primer /dev/loopX disponible
+
+###Ejercicio 2:
+**1.- Mostrar los puentes configurados en el sistema operativo.**
+
+Para mostrar los puentes de red configurados en el sistema lo hacemos con el comando:
+```
+brctl show
+```
+```
+bridge name	bridge id		STP enabled	interfaces
+virbr0		8000.000000000000	yes	
+```
+
+**2.- Crear un interfaz virtual y asignarlo al interfaz de la tarjeta wifi, si se tiene, o del fijo, si no se tiene.**
+
+El primer paso sería crear una nueva interfaz, la cual denominaré ejer2
+```
+brctl addbr ejer2
+```
+
+Y lo asociamos a eth0:
+```
+brctl addif ejer2 eno16777736
+```
+
+###Ejercicio 3:
+**1.- Usar debootstrap (o herramienta similar en otra distro) para crear un sistema mínimo que se pueda ejecutar más adelante.**
+
+Los ejercicios que requieren de deboostrap los he realizado en otra máquina que tiene Ubuntu 12.04
+
+La versión que voy a instalar es Quantal como se muestra en el guión del tema:
+```
+sudo debootstrap --arch=amd64 quantal /home/jaulas/quantal/ http://archive.ubuntu.com/ubuntu
+```
+
+**2.- Experimentar con la creación de un sistema Fedora dentro de Debian usando Rinse.**
+
+La versión que voy a instalar es Fedora-core-10 suministrada por Rinse. Lo hacemos con la siguiente orden autenticados como root.
+```
+rinse --arch i386 --distribution fedora-core-10 --directory /home/jaulas/fedora
+```
+
+Podemos comprobar el correcto funcionamiento de ambas accediendo con la orden chroot.
+
+###Ejercicio 4:
+**Instalar alguna sistema debianita y configurarlo para su uso. Trabajando desde terminal, probar a ejecutar alguna aplicación o instalar las herramientas necesarias para compilar una y ejecutarla.**
+
+###Ejercicio 5:
+**Instalar una jaula chroot para ejecutar el servidor web de altas prestaciones nginx.**
+
+###Ejercicio 6:
+**Crear una jaula y enjaular un usuario usando `jailkit`, que previamente se habrá tenido que instalar.**
+
+- - -
+
+##Tema 4
+
+###Ejercicio 1:
+**Instala LXC en tu versión de Linux favorita. Normalmente la versión en desarrollo, disponible tanto en GitHub como en el sitio web está bastante más avanzada; para evitar problemas sobre todo con las herramientas que vamos a ver más adelante, conviene que te instales la última versión y si es posible una igual o mayor a la 1.0.**
+
+###Ejercicio 2:
+**Comprobar qué interfaces puente se han creado y explicarlos.**
+
+###Ejercicio 3:
+**1.- Crear y ejecutar un contenedor basado en Debian.**
+
+**2.- Crear y ejecutar un contenedor basado en otra distribución, tal como Fedora. Nota En general, crear un contenedor basado en tu distribución y otro basado en otra que no sea la tuya. Fedora, al parecer, tiene problemas si estás en Ubuntu 13.04 o superior, así que en tal caso usa cualquier otra distro. Por ejemplo, Óscar Zafra ha logrado instalar Gentoo usando un script descargado desde su sitio, como indica en este comentario en el issue.**
+
+###Ejercicio 4:
+**1.- Instalar lxc-webpanel y usarlo para arrancar, parar y visualizar las máquinas virtuales que se tengan instaladas.**
+
+**2.- Desde el panel restringir los recursos que pueden usar: CPU shares, CPUs que se pueden usar (en sistemas multinúcleo) o cantidad de memoria.**
+
+###Ejercicio 5:
+**Comparar las prestaciones de un servidor web en una jaula y el mismo servidor en un contenedor. Usar nginx.**
+
+###Ejercicio 6:
+**1.- Instalar juju.**
+
+**2.- Usándolo, instalar MySQL en un táper.**
+
+###Ejercicio 7:
+**1.- Destruir toda la configuración creada anteriormente.**
+
+**2.- Volver a crear la máquina anterior y añadirle mediawiki y una relación entre ellos.**
+
+**3.- Crear un script en shell para reproducir la configuración usada en las máquinas que hagan falta.**
+
+###Ejercicio 8:
+**Instalar libvirt. Te puede ayudar esta guía para Ubuntu.**
+
+###Ejercicio 9:
+**Instalar un contenedor usando virt-install.**
+
+###Ejercicio 10:
+**Instalar docker.**
+
+###Ejercicio 11:
+**1.- Instalar a partir de docker una imagen alternativa de Ubuntu y alguna adicional, por ejemplo de CentOS.**
+
+**2.- Buscar e instalar una imagen que incluya MongoDB.**
+
+###Ejercicio 12:
+**Crear un usuario propio e instalar nginx en el contenedor creado de esta forma.**
+
+###Ejercicio 13:
+**Crear a partir del contenedor anterior una imagen persistente con commit.**
+
+###Ejercicio 14:
+**Crear una imagen con las herramientas necesarias para el proyecto de la asignatura sobre un sistema operativo de tu elección.**
+
