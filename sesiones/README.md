@@ -14,3 +14,13 @@
 * [Clase del 14 de noviembre de 2014](10.md).
 * [Clase del 17 de noviembre de 2014](11.md).
 * [Clase del 21 de noviembre de 2014](12.md).
+* [Clase del 24 de noviembre de 2014](13.md).
+* [Clase del 24 de noviembre de 2014](13.md).
+* [Clase del 28 de noviembre de 2014](14.md).
+* [Clase del  1 de diciembre de 2014](15.md).
+* [Clase del  5 de diciembre de 2014](16.md).
+* [Clase del 12 de diciembre de 2014](17.md).
+* [Clase del 15 de diciembre de 2014](18.md).
+* [Clase del 19 de diciembre de 2014](19.md).
+
+
