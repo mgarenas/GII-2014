@@ -130,7 +130,7 @@ Un ejemplo claro de de SaaS son los servicios de correo como Gmail, Yahoo o Hotm
 
 Últimamente se han añadido servicios SaaS para la generación de documentos en línea como puede ser GitHub o para la gestión de nominas como los distintos ERP
 
-#### Creando aplicaciones en la nube: Uso de PaaS y SaaS
+## Creando aplicaciones en la nube: Uso de PaaS y SaaS
 
 ### Ejercicio 1
 Se va a instalar un entrono virtual para Python. Para ello, se han utilizado los siguientes comandos
@@ -173,6 +173,43 @@ El PaaS elegido es **Heroku** y hemos seleccionado una aplicación en PHP. Como 
 
 ### Ejercicio 7
 Tanto en NetBeans, Eclipse o Android Studio que son los entornos de desarrollo con los que trabajo usualmente, he estado como sistema de tester JUnit 4 sobre Java. Con el entorno de desarrollo Xcode para iOS también he utilizado el sistema de testeo TDD pero en menor medida
+
+
+## Técnicas de virtualización
+
+### Ejercicio 1
+Entramos en un espacio de nombres con las siguientes sentencias
+> sudo unshare -u /bin/bash
+> hostname manolete
+
+Creamos la ISO con el siguiente comando
+> genisoimage -o myISO.iso text_iso.md 
+
+Montamos la ISO con loopback 
+> mkdir /mnt/myfolder/
+> mount -o loop myISO.iso /mnt/myfolder/
+
+### Ejercicio 2
+#### 2.1
+Vemos los puentes del sistema operativo con:
+> ip addr show
+
+#### 2.2
+Creamos una interfaz virtual
+> sudo brctl addbr manolete
+
+Lo asignamos
+> sudo brctl addif manolete wlan0
+
+Al ejecutar la sentencia me indica que la operación no se puede realizar. Puede deberse a que se a que actualmente estoy utilizando dicha red. No puedo hacerle el bridge a otra red puesto que no tengo, ni siquiera la eth0
+
+## Virtualización ligera usando contenedores
+
+### Ejercicio 1
+Se ha descargado e instalado la version 1.0.6 de [aqui](https://linuxcontainers.org/downloads/)
+Seguimos las instrucciones del archivo INSTALL para instal LXC
+
+
 
 
 
