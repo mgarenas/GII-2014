@@ -189,4 +189,16 @@ Lista de objetivos de Jose Manuel Rosell Sánchez
 
 - [X] Entregar el segundo hito de la práctica. 
 - [X] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
-- [] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
+- [X] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
+
+##Sesión 5-Diciembre-2014
+###Objetivos de esta sesión
+
+- [X] Entender los sistemas de orquestación de máquinas virtuales.
+- [X] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
+
+###Otros objetivos
+
+- [X] Ver el papel de los *tápers* o *containers* como base de experimentación y prácticas de muchos de los conceptos de virtualización.
+- [X] Poner Granada, Spain en el perfil de GitHub.
+- [X] Hablar del material y la mecánica de la asignatura hasta este momento.
