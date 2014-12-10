@@ -209,6 +209,73 @@ File capabilities: enabled
 ##Ejercicio 2
  Instalado correctament ubuntu en una-caja
 
+lxcbr0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default 
+    link/ether 8a:7b:9a:71:8b:30 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.3.1/24 brd 10.0.3.255 scope global lxcbr0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::887b:9aff:fe71:8b30/64 scope link 
+       valid_lft forever preferred_lft forever
+
+Este puente creado es el de comunicación para el contenedor que se ha creado.
+
+##Ejercicio 3
+
+Se ha creado un contenedor con Ubuntu y otro con gentoo.
+
+##Ejercicio 4
+
+##Ejercicio 5
+
+##Ejercicio 6
+Instaldos juju y mysql dentro de un taper
+Added charm "cs:trusty/mysql-12" to the environment.
+
+machines:
+  "0":
+    agent-state: started
+    agent-version: 1.18.4.1
+    dns-name: localhost
+    instance-id: localhost
+    series: trusty
+  "1":
+    instance-id: pending
+    series: trusty
+services:
+  mysql:
+    charm: cs:trusty/mysql-12
+    exposed: false
+    relations:
+      cluster:
+      - mysql
+    units:
+      mysql/0:
+        agent-state: pending
+        machine: "1"
+
+## Ejercicio 7
+
+Creada la maquina 3 y asociada a mediawiki
+
+mediawiki:
+    charm: cs:trusty/mediawiki-3
+    exposed: false
+    units:
+      mediawiki/0:
+        agent-state: pending
+        machine: "3"
+
+## Ejercicio 8
+
+Instalado libvirt
+
+sudo apt-get install kvm libvirt-bin
+sudo adduser $USER libvirtd
+
+## Ejercicio 9
+
+## Ejercicio 10
+
+sudo apt-get install docker
 
 
 
