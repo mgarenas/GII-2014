@@ -335,3 +335,25 @@ Por último, se ha ejecutado *nginx*. Para comprobar que efectivamente se ha eje
 20484 ?        S      0:00 nginx: worker process
 20485 ?        S      0:00 nginx: worker process
 20640 ?        S+     0:00 grep nginx
+
+
+##Ejercicio 06
+
+Para realizar este ejercicio, lo primero ha sido instalar **jailkit**. Para ver los pasos que he seguido pinchar [aquí](http://www.binarytides.com/install-jailkit-ubuntu-debian/).
+
+Siguiendo los pasos que se explican, he creado un sistema de ficheros poesído por *root*:
+
+**mkdir -p /seguro/jaulas/dorada
+chown -R root:root /seguro**
+
+Una vez creado, se instalan una serie de editores y sus dependencias:
+
+**jk_init -v -j /seguro/jaulas/dorada jk_lsh basicshell netutils editors**
+
+Por último, se añade el usuario que se desee a la jaula: 
+**sudo jk_jailuser -m -j /seguro/jaulas/dorada alguien**
+
+Y se configura el fichero /etc/passwd para que pueda acceder desde su shell, quedando el fichero de la siguiente forma:
+
+root:x:0:0:root:/root:/bin/bash
+daniel:x:1000:1000:Daniel,,,:/home/daniel:/bin/bash
