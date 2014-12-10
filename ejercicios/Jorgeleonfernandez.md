@@ -207,7 +207,7 @@ Vlan: enabled
 File capabilities: enabled
 
 ##Ejercicio 2
-
+ Instalado correctament ubuntu en una-caja
 
 
 
