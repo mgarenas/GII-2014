@@ -281,10 +281,57 @@ Consulta de puentes configurados en mi máquina: **ip addr show**
 
 eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
 
+***
+
+#Sesión del 28 de Noviembre
 
 ##Ejercicio 03
-<<<<<<< HEAD
-No se ha podido realizar.
-=======
->>>>>>> 89023e1846194e2e6cce2b98b8e89ab5c47b4314
->>>>>>> 2af7e0341584fd0d9fb39a949c4656b29614e274
+
+El primer apartado no se ha podido realizar, porque el enlace a la distro no está disponible, por lo que no se puede descargar.
+
+En el segugundo apartado, para crear un sistema Fedora con Rinse, primero se instala Rinse con:
+
+**sudo apt-get install rinse**
+
+Una vez instalado, se comprueban las verisones que se pueden instalar:
+
+**rinse --list-distribution**
+
+Para terminar, se crea el el sistema Fedora con el comando:
+
+**sudo rinse --arch=i386 --distribution fedora-core-10 --directory /home/jaulas/fedora/**
+
+
+##Ejercicio 04
+
+Para no instalar otra jaula ḿas en mi equipo, he utilizado la máquina de Fedora instalada en el ejercicio anterior.
+Para entrar en la jaula, se introduce el siguiente comando:
+
+**sudo chroot /home/jaulas/fedora**
+
+Una vez en la jaula de fedora, he hecho **mount** para montar el sistema de ficheros y así poder trabajar desde ahí. Después, para comprobar que la jaula es funcional, he hecho dos pruebas:
+
+- La primera ha sido ejecutar la orden **top**.
+- La segunda, ha sido crear un fichero con un texto de prueba y leerlo.
+
+Ambas pruebas han funcionado sin problema ninguno dentro de la jaula de Fedora instalada.
+
+
+##Ejercicio 05
+
+Para este ejercicio, he instalado una jaula de debian con el comando:
+
+**sudo debootstrap --arch=i386 wheezy /home/jaulas/debian http://ftp.us.debian.org/debian**
+
+El primer pado ha sido montar el sistema de archivos: **mount -t proc proc /proc**
+
+A continuación, se instala el servidor web de altas prestaciones *nginx* con la orden ** apt-get install nginx**
+
+Por último, se ha ejecutado *nginx*. Para comprobar que efectivamente se ha ejecutado, se escribe el comando **ps -ax | grep nginx**, lo cuál nos muestra los procesos de nginx en ejecución. El resultado obtenido ha sido el siguiente:
+
+20481 ?        Ss     0:00 nginx: master process nginx
+20482 ?        S      0:00 nginx: worker process
+20483 ?        S      0:00 nginx: worker process
+20484 ?        S      0:00 nginx: worker process
+20485 ?        S      0:00 nginx: worker process
+20640 ?        S+     0:00 grep nginx
