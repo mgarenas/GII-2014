@@ -283,3 +283,4 @@ eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 
 
 
 ##Ejercicio 03
+No se ha podido realizar.
