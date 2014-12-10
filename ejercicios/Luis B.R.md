@@ -563,3 +563,64 @@ service --status-all
  [ - ]  urandom
 '
 ```
+
+- - -
+## Ejercicio 6.
+
+A continuación vamos a proceder a crear una jaula y enjaular un usuario usando `jailkit`.
+
+```bash
+# Lo primero que haces es descargarnos jailkit.
+wget "http://olivier.sessink.nl/jailkit/jailkit-2.17.tar.gz"
+
+# Lo descomprimimos.
+tar -xzvf "jailkit-2.17.tar.gz"
+
+# Nos vamos a la carpeta que lo contiene.
+cd jailkit-2.17/
+
+# Procedemos a crear la configuración para instalarlo.
+./configure
+
+# Se preparan los archivos.
+make
+
+# Se instala finalmente.
+sudo make install
+```
+
+Después procedemos a crear la jaula y a enjaular al usuario:
+
+```bash
+# Creamos el directorio que contendra la jaula.
+mkdir Cataplasma
+
+# Configuramos el directorio como root.
+sudo chown root:root "Cataplasma/"
+
+# Creamos el entorno .
+sudo jk_init -v "Cataplasma/" basicshell
+sudo jk_init -v "Cataplasma/" editors
+sudo jk_init -v "Cataplasma/" extendedshell
+sudo jk_init -v "Cataplasma/" netutils
+sudo jk_init -v "Cataplasma/" ssh
+sudo jk_init -v "Cataplasma/" sftp
+
+# Creamos un usuario.
+sudo adduser Luis
+
+# Lo enjaulamos.
+sudo jk_jailuser -m -j "Cataplasma/" Luis
+```
+
+Podemos comprobar que está correctamente realizado porque en el fichero `/etc/passwd` encontramos la siguiente línea:
+```bash
+Luis:x:1001:500::/home/lewis/Escritorio/CC/Cataplasma/./home/Luis:/usr/sbin/jk_chrootsh
+
+# Se puede asignar una contraseña al usuario.
+sudo passwd Luis
+
+# Se puede configurar el directorio home del usuario.
+sudo mkdir -p /home/lewis/Escritorio/CC/Cataplasma/home/Luis
+
+```
