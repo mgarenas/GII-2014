@@ -145,8 +145,137 @@ Make para la compilación de programas en C/C++. Este nos permite contruir de un
 Este plugin permite realizar pruebas funcionalidades a aplicaciones web.
 [Automatizacion Selenium IDE + Python](http://www.taringa.net/posts/info/14190878/Automatizacion-Selenium-IDE-Python.html)
 
+#Tema 3
 
+#Clase del 24 de Noviembre
 
+##Ejercicio 1
+
+jorge@jorge-MacBookPro:~/Desktop/CloudComputing/ejercicios$ sudo unshare -u /bin/bash 
+[sudo] password for jorge: 
+root@jorge-MacBookPro:~/Desktop/CloudComputing/ejercicios# hostname jorgeles
+root@jorge-MacBookPro:~/Desktop/CloudComputing/ejercicios# hostnamejorgeles
+root@jorge-MacBookPro:~/Desktop/CloudComputing/ejercicios# 
+
+root@jorge-MacBookPro:~/Desktop/CloudComputing# mount -o loop -t iso9660 jorge.iso /mnt/
+
+##Ejercicio 2
+
+##Ejercicio 2.1
+
+Los puentes que se han creado son los siguientes:
+
+bridge name	bridge id		STP enabled	interfaces
+Juan		8000.000000000000	no
+alcantara		8000.0026b0daf2ba	no		eth0
+jorgeles		8000.000000000000	no
+
+##Ejercicio 2.2
+
+Se ha creado la interfaz Jorgeles y se ha unido a eth0 porque no me permitia unirlo a wlan0. Me indicaba operación no soportada.
+
+bridge name	bridge id		STP enabled	interfaces
+Juan		8000.000000000000	no	
+alcantara		8000.000000000000	no	
+jorgeles		8000.0026b0daf2ba	no		eth0
+
+#Tema 4
+##Ejercicio 1
+Instalada LXC correctamente.
+--- Namespaces ---
+Namespaces: enabled
+Utsname namespace: enabled
+Ipc namespace: enabled
+Pid namespace: enabled
+User namespace: enabled
+Network namespace: enabled
+Multiple /dev/pts instances: enabled
+
+--- Control groups ---
+Cgroup: enabled
+Cgroup clone_children flag: enabled
+Cgroup device: enabled
+Cgroup sched: enabled
+Cgroup cpu account: enabled
+Cgroup memory controller: enabled
+Cgroup cpuset: enabled
+
+--- Misc ---
+Veth pair device: enabled
+Macvlan: enabled
+Vlan: enabled
+File capabilities: enabled
+
+##Ejercicio 2
+ Instalado correctament ubuntu en una-caja
+
+lxcbr0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default 
+    link/ether 8a:7b:9a:71:8b:30 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.3.1/24 brd 10.0.3.255 scope global lxcbr0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::887b:9aff:fe71:8b30/64 scope link 
+       valid_lft forever preferred_lft forever
+
+Este puente creado es el de comunicación para el contenedor que se ha creado.
+
+##Ejercicio 3
+
+Se ha creado un contenedor con Ubuntu y otro con gentoo.
+
+##Ejercicio 4
+
+##Ejercicio 5
+
+##Ejercicio 6
+Instaldos juju y mysql dentro de un taper
+Added charm "cs:trusty/mysql-12" to the environment.
+
+machines:
+  "0":
+    agent-state: started
+    agent-version: 1.18.4.1
+    dns-name: localhost
+    instance-id: localhost
+    series: trusty
+  "1":
+    instance-id: pending
+    series: trusty
+services:
+  mysql:
+    charm: cs:trusty/mysql-12
+    exposed: false
+    relations:
+      cluster:
+      - mysql
+    units:
+      mysql/0:
+        agent-state: pending
+        machine: "1"
+
+## Ejercicio 7
+
+Creada la maquina 3 y asociada a mediawiki
+
+mediawiki:
+    charm: cs:trusty/mediawiki-3
+    exposed: false
+    units:
+      mediawiki/0:
+        agent-state: pending
+        machine: "3"
+
+## Ejercicio 8
+
+Instalado libvirt
+
+sudo apt-get install kvm libvirt-bin
+sudo adduser $USER libvirtd
+
+## Ejercicio 9
+
+## Ejercicio 10
+
+sudo apt-get install docker
 
 
 
