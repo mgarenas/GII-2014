@@ -350,10 +350,17 @@ Una vez creado, se instalan una serie de editores y sus dependencias:
 
 **jk_init -v -j /seguro/jaulas/dorada jk_lsh basicshell netutils editors**
 
-Por último, se añade el usuario que se desee a la jaula: 
+Por último, se añade el usuario que se desee a la jaula:
 **sudo jk_jailuser -m -j /seguro/jaulas/dorada alguien**
 
 Y se configura el fichero /etc/passwd para que pueda acceder desde su shell, quedando el fichero de la siguiente forma:
 
 root:x:0:0:root:/root:/bin/bash
 daniel:x:1000:1000:Daniel,,,:/home/daniel:/bin/bash
+
+
+***
+
+#Sesión del 1 de Diciembre
+
+##Ejercicio 01
