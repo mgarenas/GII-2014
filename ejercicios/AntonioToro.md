@@ -2,8 +2,8 @@ Introducción a la infraestructura virtual: concepto y soporte físico
 ====================================================================
 
 ## Ejercicio 1
-_Consultar en el catálogo de alguna tienda de informática el precio de un 
-ordenador tipo servidor y calcular su coste de amortización a cuatro y siete años. 
+_Consultar en el catálogo de alguna tienda de informática el precio de un
+ordenador tipo servidor y calcular su coste de amortización a cuatro y siete años.
 Consultar [este artículo en Infoautónomos sobre el tema](http://www.infoautonomos.com/consultas-a-la-comunidad/988/)._
 
 - [Servidor torre PowerEdge T620](http://www.dell.com/es/empresas/p/poweredge-t620/pd)
@@ -12,9 +12,9 @@ Consultar [este artículo en Infoautónomos sobre el tema](http://www.infoautono
 - Amortización a siete años: 82.72€ por año.
 
 ## Ejercicio 2
-_Usando las tablas de precios de servicios de alojamiento en Internet y de proveedores de servicios en la nube, 
-comparar el coste durante un año de un ordenador con un procesador estándar (escogerlo de forma que sea el mismo 
-tipo de procesador en los dos vendedores) y con el resto de las características similares (tamaño de disco duro 
+_Usando las tablas de precios de servicios de alojamiento en Internet y de proveedores de servicios en la nube,
+comparar el coste durante un año de un ordenador con un procesador estándar (escogerlo de forma que sea el mismo
+tipo de procesador en los dos vendedores) y con el resto de las características similares (tamaño de disco duro
 equivalente a transferencia de disco duro) si la infraestructura comprada se usa sólo el 1% o el 10% del tiempo._
 
 Un año son _24 * 365 = 8760 horas_.
@@ -45,7 +45,7 @@ _Hacer el [tutorial de línea de órdenes de docker](https://www.docker.com/tryi
 3. `~$ docker pull learn/tutorial`
 4. `~$ docker run learn/tutorial echo "hello world"`
 5. `~$ docker run learn/tutorial apt-get install -y ping`
-6. 
+6.
   + `~$ docker ps -l`
   + `~$ docker commit 698 learn/ping`
 7. `~$ docker run learn/ping ping www.google.com`
@@ -63,7 +63,7 @@ En Ubuntu se instala con la orden `sudo apt-get install git`.
 
 -  Creamos el proyecto desde la web de GitHub y pinchamos en la casilla de que nos dice si queremos incluir un README.
    A continuación, en nuestro ordenador, ejecutamos `git clone https://github.com/antorof/nombre-del-proyecto.git`.
--  Ya en nuestra máquina podemos modificar el README con un editor de texto. Despues confirmamos los cambios con 
+-  Ya en nuestra máquina podemos modificar el README con un editor de texto. Despues confirmamos los cambios con
 `git commit -a .m "mensaje del commit"` y los subimos con `git push origin master`.
 
 ## Ejercicio 7
@@ -72,7 +72,7 @@ _Comprobar si en la instalación hecha se ha instalado cgroups y en qué punto e
 En mi instalación de linux (Ubuntu 14.04) se encuentra en `/sys/fs/cgroup` y contiene una sola carpeta llamada `systemd`.
 
 ## Ejercicio 8
-1. _Crear diferentes grupos de control sobre un sistema operativo Linux._ 
+1. _Crear diferentes grupos de control sobre un sistema operativo Linux._
    _Ejecutar en uno de ellos el navegador, en otro un procesador de textos y en uno último cualquier otro proceso._      _Comparar el uso de recursos de unos y otros durante un tiempo determinado._
 2. _Calcular el coste real de uso de recursos de un ordenador teniendo en cuenta sus costes de amortización._
    _Añadir los costes eléctricos correspondientes._
@@ -84,30 +84,30 @@ En mi instalación de linux (Ubuntu 14.04) se encuentra en `/sys/fs/cgroup` y co
 
 ## Ejercicio 9
 1. ~~Discutir diferentes escenarios de limitación de uso de recursos o de asignación de los mismos a una u otra CPU.~~
-2. Implementar usando el fichero de configuración de `cgcreate` una política que dé menos prioridad a los procesos de usuario que 
+2. Implementar usando el fichero de configuración de `cgcreate` una política que dé menos prioridad a los procesos de usuario que
 a los procesos del sistema (o viceversa).
-3. Usar un programa que muestre en tiempo real la carga del sistema tal como `htop` y comprobar los efectos de la migración en tiempo 
+3. Usar un programa que muestre en tiempo real la carga del sistema tal como `htop` y comprobar los efectos de la migración en tiempo
 real de una tarea pesada de un procesador a otro (si se tiene dos núcleos en el sistema).
 4. Configurar un servidor para que el servidor web que se ejecute reciba mayor prioridad de entrada/salida que el resto de los usuarios.
 
 - ### Apartado 2
-  > [DavidGSola](https://github.com/DavidGSola) dijo: 
-  
+  > [DavidGSola](https://github.com/DavidGSola) dijo:
+
   > Te pongo un enlace por si te ayuda para hacer este ejercicio. [Link](http://docs.oracle.com/cd/E37670_01/E37355/html/ol_use_cases_cgroups.html)
-  
+
   Con la ayuda del [enlace](http://docs.oracle.com/cd/E37670_01/E37355/html/ol_use_cases_cgroups.html), que son unos **casos de uso** de *Oracle*, asignamos baja prioridad al grupo "usuarios".
-  
+
   ```
   mount {
   	cpu = /sys/fs/cgroup/cpu
   }
-  
+
   group usuarios {
   	cpu {
   		cpu.shares="250";
   	}
   }
-  
+
   group sistema {
   	cpu {
   		cpu.shares="750";
@@ -124,7 +124,7 @@ _Comprobar si el procesador o procesadores instalados tienen estos_ flags. _¿Qu
 ## Ejercicio 11
 _Comprobar si el núcleo instalado en tu ordenador contiene este módulo del kernel usando la orden `kvm-ok`._
 
-El comando `kvm-ok` devuelve: 
+El comando `kvm-ok` devuelve:
 
 ```
 INFO: Your CPU does not support KVM extensions
@@ -135,7 +135,7 @@ HINT:   sudo /usr/sbin/kvm-ok
 ## Ejercicio 12
 _Comentar diferentes soluciones de Software as a Service de uso habitual_
 
-Son aplicaciones a las que accedemos por internet, y en la actualizad utilizamos Saas a diario, muchas veces sin tener constancia, ya que lo vemos cada vez más normal, pudiendo empezar por Gmail. 
+Son aplicaciones a las que accedemos por internet, y en la actualizad utilizamos Saas a diario, muchas veces sin tener constancia, ya que lo vemos cada vez más normal, pudiendo empezar por Gmail.
 Existen muchas otras, como los editores de texto y de hojas de cálculo de Google Drive, Google calendar, Outlook.com, Yahoo! Mail, Hangouts, PDFscape (editor online de pdf), Autocad360...
 
 
@@ -149,7 +149,7 @@ Creando aplicaciones en la nube: Uso de PaaS y SaaS
 ## Ejercicio 1
 _Instalar un entorno virtual para tu lenguaje de programación favorito (uno de los mencionados arriba, obviamente)._
 
-He elegido instalar un entorno virtual para __python__. 
+He elegido instalar un entorno virtual para __python__.
 
 Para poder hacerlo he tenido que instalar primero _pip_. Se instala en Ubuntu con `sudo apt-get install python-pip`.
 
@@ -178,14 +178,14 @@ _Buscar un sistema de automatización de la construcción para el lenguaje de pr
 Aunque ya no lo empleo habitualmente, he utilizado **make** para C/C++. [Makefile](http://mrbook.org/tutorials/make/)
 
 ## Ejercicio 6
-_Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de 
+_Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de
 construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma._
 
 (En _OpenShift_ se puede configurar el proceso de construcción de las aplicaciones mediante _Jenkins_.
 El proceso de construcción comienza cuando el usuario realiza un `git push` hacia el repositorio de la aplicación
 en _OpenShift_. Después, se realiza la construcción de la aplicación (que se puede personalizar con _Jenkins_).
 
-Se puede ver de manera resumida en el [workflow de OpenShift](https://www.openshift.com/walkthrough/developer-workflow), y 
+Se puede ver de manera resumida en el [workflow de OpenShift](https://www.openshift.com/walkthrough/developer-workflow), y
 más explicada [aquí](https://www.openshift.com/products/architecture).) <- Esto no es
 
 ## Ejercicio 7
@@ -208,8 +208,8 @@ Técnicas de virtualización
 ==========================
 
 ## Ejercicio 1
-_Crear un espacio de nombres y montar en él una imagen ISO de un CD de forma que no se pueda leer más que desde él._ 
-Pista: _en [ServerFault](http://serverfault.com/questions/198135/how-to-mount-an-iso-file-in-linux) nos explican como 
+_Crear un espacio de nombres y montar en él una imagen ISO de un CD de forma que no se pueda leer más que desde él._
+Pista: _en [ServerFault](http://serverfault.com/questions/198135/how-to-mount-an-iso-file-in-linux) nos explican como
 hacerlo, usando el dispositivo loopback._
 
 He cogido una ISO que tenía y que he renombrado a _miiso.iso_.
@@ -243,7 +243,20 @@ Virtualización ligera usando contenedores
 =========================================
 
 ## Ejercicio 1
-_Instala LXC en tu versión de Linux favorita. Normalmente la versión en desarrollo, disponible tanto en [GitHub](http://github.com/lxc/lxc) 
-como en el [sitio web](http://linxcontainers.com/) está bastante más avanzada; para evitar problemas sobre todo con las herramientas que 
+_Instala LXC en tu versión de Linux favorita. Normalmente la versión en desarrollo, disponible tanto en [GitHub](http://github.com/lxc/lxc)
+como en el [sitio web](http://linxcontainers.com/) está bastante más avanzada; para evitar problemas sobre todo con las herramientas que
 vamos a ver más adelante, conviene que te instales la última versión y si es posible una igual o mayor a la 1.0._
 
+Instalo LXC con `sudo apt-get install lxc` ya que se instala la versión 1.0.6 (>1.0).
+
+## Ejercicio 2
+_Comprobar qué interfaces puente se han creado y explicarlos._
+
+Creamos un contenedor con `sudo lxc-create -t ubuntu -n una-caja`.
+
+Una vez instalado vemos las interfaces puente creadas con `brctl show`, que nos muestra:
+```
+bridge name     bridge id           STP enabled   interfaces
+lxcbr0          8000.000c2993c762   no            eth0
+
+```
