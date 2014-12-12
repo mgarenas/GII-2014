@@ -240,4 +240,16 @@ Lista de objetivos de Álvaro Muñoz
 - [x] Poner Granada, Spain en el perfil de GitHub.
 - [x] Hablar del material y la mecánica de la asignatura hasta este momento.
 
+
 * * *
+## Clase del 12 de diciembre de 2014
+
+### Objetivos de esta sesión
+
+- [ ] Resolver problemas con `juju`.
+- [ ] Configuración compleja de sistemas con él.
+- [ ] Entender el concepto de hipervisor y trabajar con ellos.
+
+### Otros objetivos
+
+- [x] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
