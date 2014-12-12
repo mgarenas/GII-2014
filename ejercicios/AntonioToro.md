@@ -267,3 +267,11 @@ lxcbr0          8000.000c2993c762   no            eth0
 
  - Ya he instalado anteriormente un contenedor con ubuntu y otro con ubuntu-cloud.
  - He instalado gentoo amd64 mediante el script provisto.
+
+## Ejercicio 4
+ - _Instalar lxc-webpanel y usarlo para arrancar, parar y visualizar las máquinas virtuales que se tengan instaladas._
+ - _Desde el panel restringir los recursos que pueden usar: CPU shares, CPUs que se pueden usar (en sistemas multinúcleo) o cantidad de memoria._
+
+ - Em mi máquina, para ver por consola la lista de las máquinas virtualies emplear la orden `sudo lxc-ls -f` en vez de `sudo lxc-list`.
+
+   Para utilizar _lxc-webpanel_ podemos descargar un script de la página de _lxc-webpanel_ en _github_ y ejecutarlo. Podemos hacerlo todo a la vez ejecutando en la consola, __siendo root__, lo siguiente: `wget http://lxc-webpanel.github.com/tools/install.sh -O - | bash`.
