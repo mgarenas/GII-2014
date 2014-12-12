@@ -169,6 +169,13 @@ Sesión 16 - Clase del 5 de diciembre de 2014
 --------------------------------------------
 - [ ] Entender los sistemas de orquestación de máquinas virtuales.
 - [ ] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
-- [ ] Ver el papel de los *tápers* o *containers* como base de experimentación y prácticas de muchos de los conceptos de virtualización.
+- [ ] Ver el papel de los _tápers_ o _containers_ como base de experimentación y prácticas de muchos de los conceptos de virtualización.
 - [ ] Poner Granada, Spain en el perfil de GitHub.
 - [ ] Hablar del material y la mecánica de la asignatura hasta este momento.
+
+Sesión 17 - Clase del 12 de diciembre de 2014
+---------------------------------------------
+- [ ] Resolver problemas con `juju`.
+- [ ] Configuración compleja de sistemas con él.
+- [ ] Entender el concepto de hipervisor y trabajar con ellos.
+- [ ] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
