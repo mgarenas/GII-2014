@@ -265,13 +265,13 @@ lxcbr0          8000.000c2993c762   no            eth0
  - _Crear y ejecutar un contenedor basado en Debian._
  - _Crear y ejecutar un contenedor basado en otra distribución, tal como Fedora. Nota En general, crear un contenedor basado en tu distribución y otro basado en otra que no sea la tuya. Fedora, al parecer, tiene problemas si estás en Ubuntu 13.04 o superior, así que en tal caso usa cualquier otra distro. Por ejemplo, Óscar Zafra ha logrado instalar Gentoo usando un script descargado desde su sitio, como indica en este comentario en el issue._
 
- - Ya he instalado anteriormente un contenedor con ubuntu y otro con ubuntu-cloud.
- - He instalado gentoo amd64 mediante el script provisto.
+1. Ya he instalado anteriormente un contenedor con ubuntu y otro con ubuntu-cloud.
+2. He instalado gentoo amd64 mediante el script provisto.
 
 ## Ejercicio 4
  - _Instalar lxc-webpanel y usarlo para arrancar, parar y visualizar las máquinas virtuales que se tengan instaladas._
  - _Desde el panel restringir los recursos que pueden usar: CPU shares, CPUs que se pueden usar (en sistemas multinúcleo) o cantidad de memoria._
 
- - Em mi máquina, para ver por consola la lista de las máquinas virtualies emplear la orden `sudo lxc-ls -f` en vez de `sudo lxc-list`.
+1. Em mi máquina, para ver por consola la lista de las máquinas virtualies emplear la orden `sudo lxc-ls -f` en vez de `sudo lxc-list`.
 
    Para utilizar _lxc-webpanel_ podemos descargar un script de la página de _lxc-webpanel_ en _github_ y ejecutarlo. Podemos hacerlo todo a la vez ejecutando en la consola, __siendo root__, lo siguiente: `wget http://lxc-webpanel.github.com/tools/install.sh -O - | bash`.
