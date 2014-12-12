@@ -179,6 +179,9 @@ Juan		8000.000000000000	no
 alcantara		8000.000000000000	no	
 jorgeles		8000.0026b0daf2ba	no		eth0
 
+##Ejercicio 3
+Debootstrap instalado.
+
 #Tema 4
 ##Ejercicio 1
 Instalada LXC correctamente.
@@ -272,7 +275,7 @@ sudo apt-get install kvm libvirt-bin
 sudo adduser $USER libvirtd
 
 ## Ejercicio 9
-
+Me ha sido imposible instalar por problemas con mi ordenador
 ## Ejercicio 10
 
 sudo apt-get install docker
