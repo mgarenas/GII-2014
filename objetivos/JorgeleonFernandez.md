@@ -121,7 +121,7 @@
 
 - [x] Resolver problemas con `juju`.
 - [x] Configuración compleja de sistemas con él.
-- [x] Entender el concepto de hipervisor y trabajar con ellos.
+- [ ] Entender el concepto de hipervisor y trabajar con ellos.
 
 ##Otros objetivos
 
