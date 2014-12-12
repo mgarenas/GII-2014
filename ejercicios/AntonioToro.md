@@ -272,6 +272,10 @@ lxcbr0          8000.000c2993c762   no            eth0
  - _Instalar lxc-webpanel y usarlo para arrancar, parar y visualizar las máquinas virtuales que se tengan instaladas._
  - _Desde el panel restringir los recursos que pueden usar: CPU shares, CPUs que se pueden usar (en sistemas multinúcleo) o cantidad de memoria._
 
-1. Em mi máquina, para ver por consola la lista de las máquinas virtualies emplear la orden `sudo lxc-ls -f` en vez de `sudo lxc-list`.
+1. En mi máquina, para ver por consola la lista de las máquinas virtualies emplear la orden `sudo lxc-ls -f` en vez de `sudo lxc-list`.
 
    Para utilizar _lxc-webpanel_ podemos descargar un script de la página de _lxc-webpanel_ en _github_ y ejecutarlo. Podemos hacerlo todo a la vez ejecutando en la consola, __siendo root__, lo siguiente: `wget http://lxc-webpanel.github.com/tools/install.sh -O - | bash`.
+
+   El usuario y la clave por defecto son `admin` - `admin` y se despliega en http://localhost:5000.
+
+2. En el panel _lxc-webpanel_, a la izquierda donde están los contenedores, si pinchamos en uno de ellos se pueden modificar algunos parámetros de configuración y los recursos de los mismos.
