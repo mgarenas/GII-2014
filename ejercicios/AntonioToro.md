@@ -260,3 +260,10 @@ bridge name     bridge id           STP enabled   interfaces
 lxcbr0          8000.000c2993c762   no            eth0
 
 ```
+
+## Ejercicio 3
+ - _Crear y ejecutar un contenedor basado en Debian._
+ - _Crear y ejecutar un contenedor basado en otra distribución, tal como Fedora. Nota En general, crear un contenedor basado en tu distribución y otro basado en otra que no sea la tuya. Fedora, al parecer, tiene problemas si estás en Ubuntu 13.04 o superior, así que en tal caso usa cualquier otra distro. Por ejemplo, Óscar Zafra ha logrado instalar Gentoo usando un script descargado desde su sitio, como indica en este comentario en el issue._
+
+ - Ya he instalado anteriormente un contenedor con ubuntu y otro con ubuntu-cloud.
+ - He instalado gentoo amd64 mediante el script provisto.
