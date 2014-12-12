@@ -202,3 +202,14 @@ Lista de objetivos de Jose Manuel Rosell Sánchez
 - [X] Ver el papel de los *tápers* o *containers* como base de experimentación y prácticas de muchos de los conceptos de virtualización.
 - [X] Poner Granada, Spain en el perfil de GitHub.
 - [X] Hablar del material y la mecánica de la asignatura hasta este momento.
+
+##Sesión 12-Diciembre-2014
+###Objetivos de esta sesión
+
+- [X] Resolver problemas con `juju`.
+- [X] Configuración compleja de sistemas con él.
+- [X] Entender el concepto de hipervisor y trabajar con ellos.
+
+###Otros objetivos
+
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
