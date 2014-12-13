@@ -726,3 +726,39 @@ File capabilities: "enabled"
 Note : Before booting a new kernel, you can check its configuration
 usage : CONFIG=/path/to/config /usr/bin/lxc-checkconfig
 ```
+
+- - -
+## Ejercicio 2.
+
+Para comprobar qué interfaces se han creado podemos hacer lo siguiente:
+
+:pushpin:
+
+```bash
+# Mostramos todos los parámetros de las interfaces de redes.
+ifconfig
+
+# El resultado sería el siguiente.
+(...)
+lxcbr0    Link encap:Ethernet  direcciónHW f2:cc:dc:f8:1d:bf  
+          Direc. inet:10.0.3.1  Difus.:10.0.3.255  Másc:255.255.255.0
+          Dirección inet6: fe80::f0cc:dcff:fef8:1dbf/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:58 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:0
+          Bytes RX:0 (0.0 B)  TX bytes:9697 (9.6 KB)
+
+(...)
+
+# O bien podríamos utilizar la orden.
+brctl show
+```
+
+Se podría asociar una interfaz como que tenemos creada al puente.
+
+:pushpin:
+```bash
+# Asociar una interfaz al puente.
+sudo brctl addif <interfaz> <puente>
+```
