@@ -668,3 +668,61 @@ sudo mkdir -p /home/lewis/Escritorio/CC/Cataplasma/home/Luis
 
 - - -
 ## Ejercicio 1.
+
+Instalamos el *Linux Containers* (LXC):
+
+:floppy_disk:
+
+```bash
+#Instalamos LXC.
+sudo apt-get install "lxc"
+
+# El resultado sería el siguiente.
+(...)
+Configurando python-distro-info (0.11) ...
+Configurando qemu-utils (1.5.0+dfsg-3ubuntu5.4) ...
+Configurando sharutils (1:4.11.1-1ubuntu2) ...
+Configurando cloud-image-utils (0.27-0ubuntu4.1) ...
+Procesando disparadores para ureadahead ...
+Configurando lxc-templates (1.0.0~alpha1-0ubuntu14.1) ...
+Procesando disparadores para libc-bin ...
+```
+
+Podemos comprobar que todo está correcto:
+
+:white_check_mark:
+
+```bash
+# Insertamos la siguiente orden.
+lxc-checkconfig
+
+# Obtenemos el siguiente resultado.
+Kernel configuration not found at /proc/config.gz; searching...
+Kernel configuration found at /boot/config-3.11.0-26-generic
+--- Namespaces ---
+Namespaces: "enabled"
+Utsname namespace: "enabled"
+Ipc namespace: "enabled"
+Pid namespace: "enabled"
+User namespace: missing
+Network namespace: "enabled"
+Multiple /dev/pts instances: "enabled"
+
+--- Control groups ---
+Cgroup: "enabled"
+Cgroup clone_children flag: "enabled"
+Cgroup device: "enabled"
+Cgroup sched: "enabled"
+Cgroup cpu account: "enabled"
+Cgroup memory controller: "enabled"
+Cgroup cpuset: "enabled"
+
+--- Misc ---
+Veth pair device: "enabled"
+Macvlan: "enabled"
+Vlan: "enabled"
+File capabilities: "enabled"
+
+Note : Before booting a new kernel, you can check its configuration
+usage : CONFIG=/path/to/config /usr/bin/lxc-checkconfig
+```
