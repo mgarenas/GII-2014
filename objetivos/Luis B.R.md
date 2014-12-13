@@ -158,12 +158,12 @@ Sesión 14 - Clase del 28 de noviembre de 2014
 
 Sesión 15 - Clase del 1 de diciembre de 2014
 --------------------------------------------
-- [ ] Entender el concepto de contenedores
+- [x] Entender el concepto de contenedores
 - [ ] Configurar el sistema para poder crear y usar contenedores
 - [ ] Crear y usar contenedores
-- [ ] Entregar el segundo hito de la práctica.
+- [x] Entregar el segundo hito de la práctica.
 - [ ] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
-- [ ] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
+- [x] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
 
 Sesión 16 - Clase del 5 de diciembre de 2014
 --------------------------------------------
