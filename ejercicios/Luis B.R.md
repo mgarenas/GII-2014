@@ -762,3 +762,17 @@ Se podría asociar una interfaz como que tenemos creada al puente.
 # Asociar una interfaz al puente.
 sudo brctl addif <interfaz> <puente>
 ```
+
+- - -
+## Ejercicio 3.
+
+Vamos a instalar *debootstrap*.
+
+:dvd:
+
+```bash
+# Creamos el contenedor.
+sudo lxc-create -t deina -n DebanContenedor
+```
+
+Tardará un rato :sleeping:...
