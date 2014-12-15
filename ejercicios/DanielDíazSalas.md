@@ -259,3 +259,8 @@ Ejercicio 7
 Habitualmente yo uso Java para programar cosas, y para realizar pruebas se usa JUnit.
 
 Los test en Django se hacen usando el módulo [unittest](https://docs.python.org/3/library/unittest.html#module-unittest) que está en la biblioteca estándar de Python.
+
+#Tema 3
+
+Ejercicio 1
+-----------
