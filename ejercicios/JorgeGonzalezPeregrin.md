@@ -209,7 +209,34 @@ Al ejecutar la sentencia me indica que la operación no se puede realizar. Puede
 Se ha descargado e instalado la version 1.0.6 de [aqui](https://linuxcontainers.org/downloads/)
 Seguimos las instrucciones del archivo INSTALL para instal LXC
 
+### Ejercicio 2
+Comprobamos las interfaces con
+> ifconfig
+Y vemos la nueva interfaz "lxcbr0". 
 
+### Ejercicio 3
+#### Ejercicio 3.1
+Se ha instalado un ubuntu con la siguiente orden
+> sudo lxc-create -t ubuntu -n micaja
+> sudo lxc-start -n micaja
+
+#### Ejercicio 3.2
+Se ha instalado un fedora con la siguiente orden
+> sudo lxc-create -t fedora -n mifedora
+> sudo lxc-start -n mifedora
+
+###Ejercicio 4
+#### Ejercicio 4.1
+Entramos como root con "sudo su" e instalamos con la sentencia "wget http://lxc-webpanel.github.io/tools/install.sh -O - | bash"
+
+Entramos en el panel abriendo un browser con la direccion "http://localhost:5000/"
+
+#### Ejercicio 4.2
+![Imgur](http://i.imgur.com/h4KznGe.png)
+
+###Ejercicio 5
+
+###Ejercicio 6
 
 
 
