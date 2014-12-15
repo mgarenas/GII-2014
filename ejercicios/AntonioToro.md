@@ -364,3 +364,12 @@ INFO: Your CPU does not support KVM extensions
 KVM acceleration can NOT be used
 
 ```
+
+## Ejercicio 9
+_Instalar un contenedor usando virt-install._
+
+
+## Ejercicio 10
+_Instalar docker._
+
+Instalamos _docker_ con `sudo apt-get install docker.io`.
