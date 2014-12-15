@@ -356,13 +356,10 @@ sudo apt-get update`. Después lo instalamos con `sudo apt-get install juju-core
 ## Ejercicio 8
 _Instalar libvirt. Te puede ayudar [esta guía para Ubuntu](https://help.ubuntu.com/12.04/serverguide/libvirt.html)._
 
-Mi ordenador no soporta la virtualización.
-
-Si lanzo `kvm-ok` el resultado es
+Mi ordenador no soporta la virtualización. Si lanzo `kvm-ok` el resultado es:
 ```
 INFO: Your CPU does not support KVM extensions
 KVM acceleration can NOT be used
-
 ```
 
 ## Ejercicio 9
