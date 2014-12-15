@@ -279,3 +279,45 @@ lxcbr0          8000.000c2993c762   no            eth0
    El usuario y la clave por defecto son `admin` - `admin` y se despliega en http://localhost:5000.
 
 2. En el panel _lxc-webpanel_, a la izquierda donde están los contenedores, si pinchamos en uno de ellos se pueden modificar algunos parámetros de configuración y los recursos de los mismos.
+
+## Ejercicio 5
+_Comparar las prestaciones de un servidor web en una jaula y el mismo servidor en un contenedor. Usar nginx._
+
+
+## Ejercicio 6
+ - _Instalar juju._
+ - _Usándolo, instalar MySQL en un táper._
+
+1. Para instalarlo, primero tenemos que añadir el repositorio de _juju_ con la orden `sudo add-apt-repository ppa:juju/stable
+sudo apt-get update`. Después lo instalamos con `sudo apt-get install juju-core`.
+
+2. Creo un táper con `juju bootstrap`.
+
+    Instalamos _mysql_ medianet la ored `juju deploy mysql`.
+
+    Si ejecuto `juju status` se puede ver lo siguiente:
+    ```
+    environment: local
+    machines:
+      "0":
+        agent-state: started
+        agent-version: 1.20.14.1
+        dns-name: localhost
+        instance-id: localhost
+        series: trusty
+        state-server-member-status: has-vote
+      "1":
+        instance-id: pending
+        series: trusty
+    services:
+      mysql:
+        charm: cs:trusty/mysql-13
+        exposed: false
+        relations:
+          cluster:
+          - mysql
+        units:
+          mysql/0:
+            agent-state: pending
+            machine: "1"
+    ```
