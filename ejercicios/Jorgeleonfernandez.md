@@ -227,10 +227,17 @@ Se ha creado un contenedor con Ubuntu y otro con gentoo.
 
 ##Ejercicio 4
 
+Se ha descargado el web panel e instalado de acorde a lo que se indica en la pagina de github. Escribiendo la siguiente orden siendo root:
+
+> wget http://lxc-webpanel.github.com/tools/install.sh -O - | bash
+
+![image](http://i.imgur.com/cYH3SGc.png)
+
+
 ##Ejercicio 5
 
 ##Ejercicio 6
-Instaldos juju y mysql dentro de un taper
+Instalados juju y mysql dentro de un tuper
 Added charm "cs:trusty/mysql-12" to the environment.
 
 machines:
