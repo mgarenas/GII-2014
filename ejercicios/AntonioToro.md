@@ -343,3 +343,12 @@ sudo apt-get update`. Después lo instalamos con `sudo apt-get install juju-core
     `juju deploy mediawiki`
 
     `juju add-relation mediawiki:db mysql`
+
+3. El script contendría las ordenes anteriores:
+    ```
+    #!/bin/bash
+
+    juju deploy mediawiki
+    juju deploy mysql
+    juju add-relation mediawiki:db mysql
+    ```
