@@ -264,3 +264,14 @@ Los test en Django se hacen usando el módulo [unittest](https://docs.python.org
 
 Ejercicio 1
 -----------
+
+>sudo unshare -u /bin/bash
+>mount -o loop -t iso9660 ubuntu-14.04.1-desktop-amd64.iso /mnt/test
+
+Ejercicio 2
+-----------
+
+###Primera parte###
+
+>ip addr show
+
