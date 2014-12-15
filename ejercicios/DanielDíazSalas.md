@@ -259,3 +259,49 @@ Ejercicio 7
 Habitualmente yo uso Java para programar cosas, y para realizar pruebas se usa JUnit.
 
 Los test en Django se hacen usando el módulo [unittest](https://docs.python.org/3/library/unittest.html#module-unittest) que está en la biblioteca estándar de Python.
+
+#Tema 3
+
+Ejercicio 1
+-----------
+
+>sudo unshare -u /bin/bash
+>mount -o loop -t iso9660 ubuntu-14.04.1-desktop-amd64.iso /mnt/test
+
+Ejercicio 2
+-----------
+
+###Primera parte###
+
+>ip addr show
+bridge name bridge id       STP enabled interfaces
+alcantara       8000.c80aa9a0f0b7   no      eth0
+
+###Segunda parte###
+Crear una interfaz nueva
+>sudo btctl addif ejercicio2
+
+Asignarlo al interfaz de la tarjeta wifi
+>sudo brctl addif ejercicio2 wlan0
+
+Por desgracia no deja hacerlo:
+>can't add wlan0 to bridge ejercicio2: Operation not supported
+
+Ejercicio 3
+-----------
+
+Crear una carpeta donde va a ir la distro
+>mkdir ~/CC
+mkdir ~/CC/Tema3Ejer3
+
+Crear el sistema con deboostrap
+>sudo debootstrap --arch=amd64 saucy ~/CC/Tema3Ejer3/ http://archive.ubuntu.com/ubuntu
+
+Ejercicio 4
+-----------
+
+
+
+
+
+
