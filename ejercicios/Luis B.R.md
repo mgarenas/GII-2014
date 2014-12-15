@@ -312,6 +312,8 @@ En cuanto a el lenguaje **PHP** las dependencias vienen en el fichero [composer.
 ## Ejercicio 1.
 
 Lo primero que vamos a realizar es *crear el espacio de nombres*:
+
+:pushpin:
 ```bash
 # Esta llamada da una copia de su espacio de nombres montado.
 #  Deja de compratir su directorio raíz el directorio actual.
@@ -320,6 +322,8 @@ sudo unshare -m /bin/bash
 ```
 
 Después procedemos a crear dónde queremos realizar el punto de montaje:
+
+:pushpin:
 ```bash
 # Creamos el directorio.
 mkdir -p /mnt/<mi_disco>
@@ -334,6 +338,8 @@ mount
 ## Ejercicio 2.
 
 Para crear la interfaz virtual procedemos a introducir los siguientes comandos:
+
+:pushpin:
 ```bash
 # Lo creamos.
 sudo brctl addbr <Nombre>
@@ -346,6 +352,8 @@ sudo brctl show
 
 La salida de estos comandos ha sido la siguiente:
 
+
+:pushpin:
 ```bash
 lewis@Inspiron:~/CloudComputing$ sudo brctl addbr BigKing
 lewis@Inspiron:~/CloudComputing$ ip addr show
@@ -374,12 +382,16 @@ BigKing		8000.000000000000	no
 ## Ejercicio 3.
 
 Puesto que no tenemos instalado, procedemos a instalarlo:
+
+:pushpin:
 ```bash
 # Instalamos el paquete.
 sudo apt-get install debootstrap
 ```
 A continuación procedemos a crear el sistema que queremos.
 
+
+:pushpin:
 ```bash
 # Indicamos la arquitectura, el sistema, el directorio y de dónde se va a descargar.
 sudo debootstrap --arch=amd64 saucy /home/lewis/Escritorio/CC/saucy/ http://archive.ubuntu.com/ubuntu
@@ -397,6 +409,8 @@ I: Base system installed successfully.
 
 Continuamos con la creación de un sistema **Fedora** dentro de Debian usando **Rinse**.
 
+
+:pushpin:
 ```bash
 # Instalamos el paquete.
 sudo apt-get install rinse
@@ -418,6 +432,8 @@ Installation complete.
 ```
 
 Si comprobamos el contenido de las carpetas en ellas obtendríamos el siguiente listado de directorios:
+
+:pushpin:
 ```bash
 [ lewis: ~/Escritorio/CC ]$ ls saucy/
 bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
@@ -432,6 +448,8 @@ boot  etc  lib   mnt    proc  sbin  srv      tmp  var
 
 Lo primero que vamos a hacer es entrar en la jaula:
 
+
+:pushpin:
 ```bash
 # Entramos en la jaula.
 sudo chroot /home/lewis/Escritorio/CC/<sistema>
@@ -443,6 +461,8 @@ root@Inspiron:/#
 
 Procedemos a montar el sistema de archivos (*file system*) y realizamos algunas tareas:
 
+
+:pushpin:
 ```bash
 # Montamos el file system.
 mount -t proc proc /proc
@@ -458,6 +478,8 @@ print("Hola!")
 ```
 
 El resultado sería el siguiente:
+
+:pushpin:
 ```bash
 # Editamos el fichero para meter el código de antes.
 nano "programa.py"
@@ -501,6 +523,8 @@ KiB Swap:  1999868 total,        0 used,  1999868 free,   981772 cached
 
 En el mismo *saucy* que hemos ejecutado las ordenes anteriores, insertamos los repositoros de **nginx** dentro del fichero `/etc/apt/sources.list`:
 
+
+:pushpin:
 ```bash
 deb "http://archive.ubuntu.com/ubuntu" saucy main
 deb "http://nginx.org/packages/ubuntu" saucy nginx
@@ -508,6 +532,8 @@ deb-src "http://nginx.org/packages/ubuntu" saucy nginx
 ```
 
 Una vez hecho esto obtenemos la *clave* del repositorio **nginx**:
+
+:pushpin:
 ```bash
 # Instalamos el paquete para descargarnos la llave con la url.
 apt-get install wget
@@ -523,6 +549,8 @@ apt-key add nginx_signing.key
 ```
 
 Ahora procedemos a instalar el programa propiamente dicho:
+
+:pushpin:
 ```bash
 # Actualizamos.
 apt-get update
@@ -532,6 +560,8 @@ apt-get install nginx
 ```
 
 Para arrancar el servidor procedemos como sigue:
+
+:pushpin:
 ```bash
 # Arrancamos el servicio.
 service nginx start
@@ -569,6 +599,8 @@ service --status-all
 
 A continuación vamos a proceder a crear una jaula y enjaular un usuario usando `jailkit`.
 
+
+:pushpin:
 ```bash
 # Lo primero que haces es descargarnos jailkit.
 wget "http://olivier.sessink.nl/jailkit/jailkit-2.17.tar.gz"
@@ -591,6 +623,8 @@ sudo make install
 
 Después procedemos a crear la jaula y a enjaular al usuario:
 
+
+:pushpin:
 ```bash
 # Creamos el directorio que contendra la jaula.
 mkdir Cataplasma
@@ -614,6 +648,8 @@ sudo jk_jailuser -m -j "Cataplasma/" Luis
 ```
 
 Podemos comprobar que está correctamente realizado porque en el fichero `/etc/passwd` encontramos la siguiente línea:
+
+:pushpin:
 ```bash
 Luis:x:1001:500::/home/lewis/Escritorio/CC/Cataplasma/./home/Luis:/usr/sbin/jk_chrootsh
 
@@ -624,3 +660,119 @@ sudo passwd Luis
 sudo mkdir -p /home/lewis/Escritorio/CC/Cataplasma/home/Luis
 
 ```
+
+-------------
+
+
+# Virtualización ligera usando contenedores
+
+- - -
+## Ejercicio 1.
+
+Instalamos el *Linux Containers* (LXC):
+
+:floppy_disk:
+
+```bash
+#Instalamos LXC.
+sudo apt-get install "lxc"
+
+# El resultado sería el siguiente.
+(...)
+Configurando python-distro-info (0.11) ...
+Configurando qemu-utils (1.5.0+dfsg-3ubuntu5.4) ...
+Configurando sharutils (1:4.11.1-1ubuntu2) ...
+Configurando cloud-image-utils (0.27-0ubuntu4.1) ...
+Procesando disparadores para ureadahead ...
+Configurando lxc-templates (1.0.0~alpha1-0ubuntu14.1) ...
+Procesando disparadores para libc-bin ...
+```
+
+Podemos comprobar que todo está correcto:
+
+:white_check_mark:
+
+```bash
+# Insertamos la siguiente orden.
+lxc-checkconfig
+
+# Obtenemos el siguiente resultado.
+Kernel configuration not found at /proc/config.gz; searching...
+Kernel configuration found at /boot/config-3.11.0-26-generic
+--- Namespaces ---
+Namespaces: "enabled"
+Utsname namespace: "enabled"
+Ipc namespace: "enabled"
+Pid namespace: "enabled"
+User namespace: missing
+Network namespace: "enabled"
+Multiple /dev/pts instances: "enabled"
+
+--- Control groups ---
+Cgroup: "enabled"
+Cgroup clone_children flag: "enabled"
+Cgroup device: "enabled"
+Cgroup sched: "enabled"
+Cgroup cpu account: "enabled"
+Cgroup memory controller: "enabled"
+Cgroup cpuset: "enabled"
+
+--- Misc ---
+Veth pair device: "enabled"
+Macvlan: "enabled"
+Vlan: "enabled"
+File capabilities: "enabled"
+
+Note : Before booting a new kernel, you can check its configuration
+usage : CONFIG=/path/to/config /usr/bin/lxc-checkconfig
+```
+
+- - -
+## Ejercicio 2.
+
+Para comprobar qué interfaces se han creado podemos hacer lo siguiente:
+
+:pushpin:
+
+```bash
+# Mostramos todos los parámetros de las interfaces de redes.
+ifconfig
+
+# El resultado sería el siguiente.
+(...)
+lxcbr0    Link encap:Ethernet  direcciónHW f2:cc:dc:f8:1d:bf  
+          Direc. inet:10.0.3.1  Difus.:10.0.3.255  Másc:255.255.255.0
+          Dirección inet6: fe80::f0cc:dcff:fef8:1dbf/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:58 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:0
+          Bytes RX:0 (0.0 B)  TX bytes:9697 (9.6 KB)
+
+(...)
+
+# O bien podríamos utilizar la orden.
+brctl show
+```
+
+Se podría asociar una interfaz como que tenemos creada al puente.
+
+:pushpin:
+```bash
+# Asociar una interfaz al puente.
+sudo brctl addif <interfaz> <puente>
+```
+
+- - -
+## Ejercicio 3.
+
+Vamos a instalar *debootstrap*.
+
+:dvd:
+
+```bash
+# Creamos el contenedor.
+sudo lxc-create -t deina -n DebanContenedor
+```
+
+Tardará un rato :sleeping:...
