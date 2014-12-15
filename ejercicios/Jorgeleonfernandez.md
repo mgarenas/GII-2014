@@ -231,6 +231,8 @@ Se ha descargado el web panel e instalado de acorde a lo que se indica en la pag
 
 > wget http://lxc-webpanel.github.com/tools/install.sh -O - | bash
 
+Esta es la imagen que se muestra cuando se inicia el web panel.
+
 ![image](http://i.imgur.com/cYH3SGc.png)
 
 
@@ -287,7 +289,10 @@ Me ha sido imposible instalar por problemas con mi ordenador
 
 sudo apt-get install docker
 
+## Ejercicio 11
+Instalado docker usando el [tutorial siguiente](http://www.liquidweb.com/kb/how-to-install-docker-on-ubuntu-14-04-lts/)
 
+Una vez instalado se ha instalado una version de Ubuntu utilizadno docker pull ubuntu
 
 
 
