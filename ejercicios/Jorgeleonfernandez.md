@@ -287,12 +287,13 @@ sudo adduser $USER libvirtd
 Me ha sido imposible instalar por problemas con mi ordenador
 ## Ejercicio 10
 
-sudo apt-get install docker
-
-## Ejercicio 11
 Instalado docker usando el [tutorial siguiente](http://www.liquidweb.com/kb/how-to-install-docker-on-ubuntu-14-04-lts/)
 
-Una vez instalado se ha instalado una version de Ubuntu utilizadno docker pull ubuntu
+## Ejercicio 11
+
+
+Una vez instalado se ha instalado una version de Ubuntu utilizadno docker pull ubuntu.
+
 
 
 
