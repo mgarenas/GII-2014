@@ -293,7 +293,7 @@ sudo apt-get update`. Después lo instalamos con `sudo apt-get install juju-core
 
 2. Creo un táper con `juju bootstrap`.
 
-    Instalamos _mysql_ medianet la ored `juju deploy mysql`.
+    Instalamos _mysql_ medianet la orden `juju deploy mysql`.
 
     Si ejecuto `juju status` se puede ver lo siguiente:
     ```
@@ -307,8 +307,13 @@ sudo apt-get update`. Después lo instalamos con `sudo apt-get install juju-core
         series: trusty
         state-server-member-status: has-vote
       "1":
-        instance-id: pending
+        agent-state: stopped
+        agent-version: 1.20.14.1
+        dns-name: 10.0.3.124
+        instance-id: antonio-local-machine-1
+        life: dead
         series: trusty
+        hardware: arch=amd64
     services:
       mysql:
         charm: cs:trusty/mysql-13
@@ -321,3 +326,20 @@ sudo apt-get update`. Después lo instalamos con `sudo apt-get install juju-core
             agent-state: pending
             machine: "1"
     ```
+
+## Ejercicio 7
+ - _Destruir toda la configuración creada anteriormente._
+ - _Volver a crear la máquina anterior y añadirle mediawiki y una relación entre ellos._
+ - _Crear un script en shell para reproducir la configuración usada en las máquinas que hagan falta._
+
+1. Destruimos la configuración (_mysql_ y la máquina):
+    - `sudo juju destroy-unit mysql/0`
+    - `sudo juju destroy-machine 1`
+
+2. Creamos la máquina con `sudo juju add-machine`.
+
+    Ahora añadimos _mediawiki_ y la relación entre ellos (_mysql_ ya está de antes).
+
+    `juju deploy mediawiki`
+
+    `juju add-relation mediawiki:db mysql`
