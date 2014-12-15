@@ -127,7 +127,7 @@ Lista de objetivos de Jose Manuel Rosell Sánchez
 
 ###Otros objetivos
 
-- []Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
+- [] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
 - [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 
@@ -142,8 +142,8 @@ Lista de objetivos de Jose Manuel Rosell Sánchez
 ###Otros objetivos
 
 - [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
-- [] Revisar también el primer hito de un proyecto que no sea el propio. 
-- [X]Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [ ] Revisar también el primer hito de un proyecto que no sea el propio. 
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 
 ## Sesión 24-Noviembre-2014
 
@@ -151,32 +151,32 @@ Lista de objetivos de Jose Manuel Rosell Sánchez
 
 - [X] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
 - [X] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
-- [] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
+- [ ] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
 - [X] Entender y saber llevar a cabo la virtualización de dispositivos de red.
 
 ### Otros objetivos
 
 - [X] Usar herramientas de administración y monitorización de red en línea de órdenes.
-- []Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
+- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
 - [X] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54).
 
 ##Sesión 28-Noviembre-2014
 
 ###Objetivos de esta sesión
 
-- [] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
-- [] Aprender a ''enjaular'' usuarios.
+- [ ] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
+- [ ] Aprender a ''enjaular'' usuarios.
 
 ###Otros objetivos
 
-- [] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
+- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
 - [X] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54).
 - [X] Aplicar conocimientos de administración de un sistema Linux: usuarios, permisos.
 - [X] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
 - [X] Comprender que existe vida en los servidores web fuera del Apache.
-- [] [Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla](https://es.wikipedia.org/wiki/Chroot) como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
-- [] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
-- [] Probar [la nube de fi-ware](https://cloud.lab.fi-ware.org/) para alojar proyectos y hacer pruebas. 
+- [ ] [Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla](https://es.wikipedia.org/wiki/Chroot) como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
+- [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
+- [ ] Probar [la nube de fi-ware](https://cloud.lab.fi-ware.org/) para alojar proyectos y hacer pruebas. 
 
 ##Sesión 1-Diciembre-2014
 ###Objetivos de esta sesión
@@ -209,6 +209,16 @@ Lista de objetivos de Jose Manuel Rosell Sánchez
 - [X] Resolver problemas con `juju`.
 - [X] Configuración compleja de sistemas con él.
 - [X] Entender el concepto de hipervisor y trabajar con ellos.
+
+###Otros objetivos
+
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+##Sesión 15-Diciembre-2014
+###Objetivos de esta sesión
+
+- [X] Resolver problemas con `juju`.
+- [X] Entender cómo funciona `docker` y qué implica.
 
 ###Otros objetivos
 

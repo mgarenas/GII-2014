@@ -281,7 +281,7 @@ Ejecutando `juju version` muestra la versión instalada. En mi caso muestra:
 > 1.20.13-trusty-amd64
 
 
-2. Primero debemos instalar un taper, para ello ejecutamos la orden `juju bootstra`. Una vez creado el taper ejecutamos la orden `juju deploy mysql` para instalar mysql en el taper. 
+2. Primero debemos instalar un taper, para ello ejecutamos la orden `juju bootstrap`. Una vez creado el taper ejecutamos la orden `juju deploy mysql` para instalar mysql en el taper. 
 
 ###Ejercicio 7
 1. Para desmontar ejecutamos en orden secuencial:
@@ -356,3 +356,28 @@ Instalamos un contenedor con la orden:
 > sudo virt-install --name ubuntu --ram 512 --disk path=/home/ubuntu,size=4 -c /home/JMRosell/Descargas/lubuntu-14.10-desktop-i386.iso
 
 Donde el nombre del contenedor es *ubuntu*, con 512 MB de memoria RAM, el sitio donde se va a alojar (/home/ubuntu), cuanto tamaño tiene el contenedor 4 GB y por último el path donde se encuentra el archivo ISO que vamos a montar en el contenedor.
+
+###Ejercicio 10
+
+Para instalar *docker* en Ubuntu hay que ejecutar:
+
+> $ sudo apt-get -y install docker.io
+
+> $ ln -sf /usr/bin/docker.io /usr/local/bin/docker
+
+> $ sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
+
+Opcionalmente se puede configurar *Docker* para empezar cuando se arranca el servidor, para ello ejecutar:
+
+> update-rc.d docker.io defaults
+
+###Ejercicio 11
+
+1. Vamos a instalar la imagen alternativa a Ubuntu llamada *tutumcloud*, para ello nos descagamos el [repositorio de GitHub](https://github.com/tutumcloud/tutum-ubuntu) de *tutum* con la orden `git clone`. Nos posicionamos en el directorio y ejecutamos `sudo docker -t tutum/ubuntu:latest .
+
+
+###Ejercicio 12
+
+###Ejercicio 13
+
+###Ejercicio 14
