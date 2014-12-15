@@ -190,3 +190,12 @@ Lista de objetivos de Daniel Díaz Salas
 ##Otros objetivos
 
 - [ ] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+#Clase del 15 de diciembre de 2014
+##Objetivos de esta sesión
+- [ ] Resolver problemas con `juju`.
+- [ ] Entender cómo funciona `docker` y qué implica.
+
+##Otros objetivos
+
+- [ ] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
