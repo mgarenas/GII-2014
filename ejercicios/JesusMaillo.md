@@ -375,11 +375,68 @@ Podemos comprobar el correcto funcionamiento de ambas accediendo con la orden ch
 ###Ejercicio 4:
 **Instalar alguna sistema debianita y configurarlo para su uso. Trabajando desde terminal, probar a ejecutar alguna aplicación o instalar las herramientas necesarias para compilar una y ejecutarla.**
 
+Utilizamos la versión instalada Quantal. Instalaremos python y crearemos un hola mundo para finalmente ejecutarlo.
+
+```
+sudo su
+chroot /home/quantal
+apt-get install python
+apt-get install nano
+nano holamundo.py
+python holamundo.py
+```
+
+El programa contenía print("Hola Mundo") y funcionó correctamente.
+
 ###Ejercicio 5:
 **Instalar una jaula chroot para ejecutar el servidor web de altas prestaciones nginx.**
 
+Actualizamos el repositorio para que encuentre nginx.
+
+Para obtener la llave nos hace falta instalar wget. La descargamos una vez instalado y la apadimos cn el comando apt-key.
+
+Actualizamos el repositorio y ya podemos instalarlo. Para arrancar el servidor:
+
+```
+service nginx start
+```
+
 ###Ejercicio 6:
 **Crear una jaula y enjaular un usuario usando `jailkit`, que previamente se habrá tenido que instalar.**
+
+Para la instalación de jailkit haríamos:
+
+```
+wget "http://olivier.sessink.nl/jailkit/jailkit-2.17.tar.gz"
+tar -xzvf "jailkit-2.17.tar.gz"
+cd jailkit-2.17/
+./configure
+make
+sudo make install
+
+```
+
+Creamos un directorio para la jaula y le damos permisos de superusuario.
+
+```
+mkdir Prueba
+sudo chown root:root "Prueba/"
+```
+
+Creamos el entorno añadimos el usuario y lo enjaulamos.
+
+```
+sudo jk_init -v "Prueba/" basicshell
+sudo jk_init -v "Prueba/" editors
+sudo jk_init -v "Prueba/" extendedshell
+sudo jk_init -v "Prueba/" netutils
+sudo jk_init -v "Prueba/" ssh
+sudo jk_init -v "Prueba/" sftp
+
+sudo adduser Calculin
+
+sudo jk_jailuser -m -j "Prueba/" Calculin
+```
 
 - - -
 
@@ -388,11 +445,35 @@ Podemos comprobar el correcto funcionamiento de ambas accediendo con la orden ch
 ###Ejercicio 1:
 **Instala LXC en tu versión de Linux favorita. Normalmente la versión en desarrollo, disponible tanto en GitHub como en el sitio web está bastante más avanzada; para evitar problemas sobre todo con las herramientas que vamos a ver más adelante, conviene que te instales la última versión y si es posible una igual o mayor a la 1.0.**
 
+Para instalar LXC en Fedora tenemos que descargarnos de la web [https://thm.fedorapeople.org/lxc/fedora-19/x86_64/](https://thm.fedorapeople.org/lxc/fedora-19/x86_64/) los siguientes paquetes:
+
+
+E instalarlos con:
+
+```
+sudo rpm -Uvh *.rpm
+```
+
+
+
+
 ###Ejercicio 2:
 **Comprobar qué interfaces puente se han creado y explicarlos.**
 
+Lo comprobamos mediante el comando:
+
+```
+brctl show
+```
+
+bridge name	bridge id		STP enabled	interfaces
+virbr0		8000.000000000000	yes	
+
+El puente que ha creado es para permitir a los contenedores tener acceso a internet.
+
 ###Ejercicio 3:
 **1.- Crear y ejecutar un contenedor basado en Debian.**
+
 
 **2.- Crear y ejecutar un contenedor basado en otra distribución, tal como Fedora. Nota En general, crear un contenedor basado en tu distribución y otro basado en otra que no sea la tuya. Fedora, al parecer, tiene problemas si estás en Ubuntu 13.04 o superior, así que en tal caso usa cualquier otra distro. Por ejemplo, Óscar Zafra ha logrado instalar Gentoo usando un script descargado desde su sitio, como indica en este comentario en el issue.**
 
