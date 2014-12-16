@@ -474,13 +474,42 @@ El puente que ha creado es para permitir a los contenedores tener acceso a inter
 ###Ejercicio 3:
 **1.- Crear y ejecutar un contenedor basado en Debian.**
 
+Primero tenemos que crear el contenedor:
+
+```
+lxc-create -t debian -n caja
+```
+
+Tenemos que montar el cgroup con:
+
+```
+mount -t cgroup cgroup /sys/fs/cgroup
+```
+
+Iniciamos:
+
+```
+lxc-start -n caja
+```
 
 **2.- Crear y ejecutar un contenedor basado en otra distribución, tal como Fedora. Nota En general, crear un contenedor basado en tu distribución y otro basado en otra que no sea la tuya. Fedora, al parecer, tiene problemas si estás en Ubuntu 13.04 o superior, así que en tal caso usa cualquier otra distro. Por ejemplo, Óscar Zafra ha logrado instalar Gentoo usando un script descargado desde su sitio, como indica en este comentario en el issue.**
+
+Como se indica en el propio enunciado, he utilizado el script para la instalación de Gentoo.
 
 ###Ejercicio 4:
 **1.- Instalar lxc-webpanel y usarlo para arrancar, parar y visualizar las máquinas virtuales que se tengan instaladas.**
 
+La instalación la podemos hacer descargando desde GitHub directamente instalandolo:
+
+```
+wget http://lxc-webpanel.github.io/tools/install.sh -O - | bash
+```
+
+Accedemos con el navegador en la dirección http://localhost:5000. Donde el usuario es admin y la contraseña es admin también.
+
 **2.- Desde el panel restringir los recursos que pueden usar: CPU shares, CPUs que se pueden usar (en sistemas multinúcleo) o cantidad de memoria.**
+
+En nuestra izquierda quedan los contenedores. Seleccionamos uno y acedemos a las características y parámetros que se pueden modificar.
 
 ###Ejercicio 5:
 **Comparar las prestaciones de un servidor web en una jaula y el mismo servidor en un contenedor. Usar nginx.**
@@ -488,23 +517,81 @@ El puente que ha creado es para permitir a los contenedores tener acceso a inter
 ###Ejercicio 6:
 **1.- Instalar juju.**
 
+Actualizamos el repo para obtener la ultima versión de juju y posteriormente lo instalamos:
+
+```
+sudo apt-get install juju
+```
+
 **2.- Usándolo, instalar MySQL en un táper.**
+
+Para instalar la MySQL tenemos que crear primero un táper. Lo creamos e instalamos:
+
+```
+juju bootstrap
+juju deploy mysql
+```
 
 ###Ejercicio 7:
 **1.- Destruir toda la configuración creada anteriormente.**
 
+Para destruir la configuración anterior tenemos que eliminar MySQL y después el táper.
+
+```
+sudo su
+juju remove-service mysql
+juju destroy-machine 1
+```
+
 **2.- Volver a crear la máquina anterior y añadirle mediawiki y una relación entre ellos.**
 
+Como super usuario creamos la máquina añadimos mediawiki y los relacionamos:
+```
+juju add-machine
+juju deploy mediawiki
+juju deploy mysql
+juju add-relation mediawiki:slave mysql:db
+juju expose mediawiki
+```
+
 **3.- Crear un script en shell para reproducir la configuración usada en las máquinas que hagan falta.**
+
+El script sería la ejecución de estas ordenes:
+
+```
+#!/bin/bash
+
+juju deploy mediawiki
+juju deploy mysql
+juju add-relation mediawiki:slave mysql:db
+```
 
 ###Ejercicio 8:
 **Instalar libvirt. Te puede ayudar esta guía para Ubuntu.**
 
+Se instala como se anuncia en el tutorial:
+
+```
+sudo apt-get install kvm libvirt-bin
+```
+
 ###Ejercicio 9:
 **Instalar un contenedor usando virt-install.**
 
+Se va a instalar de Ubuntu con 512 MB de RAM, 2G de disco y un solo nucleo virtual. Se instala desde la ISO que indicada:
+
+```
+sudo virt-install --name ubuntu --ram 512 --vcpu 1 --disk path=/home/ubuntu,size=2 -c /home/jesus/lubuntu-14.10-desktop-i386.iso
+```
+
 ###Ejercicio 10:
 **Instalar docker.**
+
+Instalamos docker con el comando:
+
+```
+sudo apt-get install docker.io
+```
 
 ###Ejercicio 11:
 **1.- Instalar a partir de docker una imagen alternativa de Ubuntu y alguna adicional, por ejemplo de CentOS.**
