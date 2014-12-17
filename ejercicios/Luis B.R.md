@@ -832,3 +832,43 @@ Failed to set locale, defaulting to C
 Final tidy...
 Installation complete.
 ```
+
+- - -
+## Ejercicio 4.
+
+En [LXC Web Panel](http://lxc-webpanel.github.io/install.html) podemos encontrar cómo instalarlo. De modo que procedemos:
+
+:floppy_disk:
+```bash
+# Nos descargamos lo necesario y lo instalamos.
+wget "http://lxc-webpanel.github.io/tools/install.sh" -O - | bash
+
+# Y nos indicará al final dónde podemos conectarnos.
+(...)
+Checking connectivity... done
+
+Installation complete!
+
+
+Adding /etc/init.d/lwp...
+Done
+Starting server...done.
+Connect you on "http://your-ip-address:5000/"
+```
+
+En el navegador escribimos la dirección `http://localhost:5000` para acceder a la página de acceso y nos pedirá:
+  * **Usuario**: admin
+  * **Contraseña**: admin
+
+En mi caso aparece que tenemos 1 solo contenedor que está parado y que se llama **DebianContenedor**. Tal y como lo indicamos anteriormente.
+Podemos hacer uso de los botones **start** y cuando lo hemos iniciado podemos pararlo **stop** o pausarlo **freeze**.
+
+:arrow_right: Podemos pulsar en el contenedor y ver la información que tiene y también modificarlo.
+
+Para restringir los recursos nos vamos a la **parte inferior** de la pantalla que acabamos de describir y nos aparecerá:
+  - **Memory limit**. Límite de memoria total.
+  - **Memory + Swap limit**. Límite de memoria total junto con la de intercambio.
+  - **CPUs**. Número de procesadores que podrá usar.
+  - **CPU Shares**. Cantidad de procesamiento que puede utilizar de la/s CPU/s.
+  
+Ahí lo podemos modificar todo.
