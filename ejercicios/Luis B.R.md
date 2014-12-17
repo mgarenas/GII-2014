@@ -766,13 +766,109 @@ sudo brctl addif <interfaz> <puente>
 - - -
 ## Ejercicio 3.
 
-Vamos a instalar *debootstrap*.
+Ya teníamos instalado *debootstrap*. Y además en ejercicios anteriores instalamos tambien otras distribuciones tales como **saucy** y **fedora** en el **ejercicio 3** del tema anterior.
 
 :dvd:
 
 ```bash
 # Creamos el contenedor.
-sudo lxc-create -t deina -n DebanContenedor
+sudo lxc-create -t debian -n DebianContenedor
+
+# El resultado sería algo así.
+(...)
+	LC_IDENTIFICATION = "en_GB.UTF-8",
+	LC_MEASUREMENT = "en_GB.UTF-8",
+	LC_TIME = "en_GB.UTF-8",
+	LC_NAME = "en_GB.UTF-8",
+	LANG = "es_ES.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+update-rc.d: using dependency based boot sequencing
+Root password is 'root', please change !
+
+# El contenedor se creará en `/var/lib/lxc/
+sudo ls /var/lib/lxc/
+DebianContenedor
+
 ```
 
-Tardará un rato :sleeping:...
+Tardará un rato :sleeping:... Pero como decíamos se pude instalar con *debootstrap*. Que ya lo teníamos hecho.
+
+:exclamation: :repeat:
+```bash
+# Indicamos la arquitectura, el sistema, el directorio y de dónde se va a descargar.
+sudo debootstrap --arch=amd64 saucy /home/lewis/Escritorio/CC/saucy/ http://archive.ubuntu.com/ubuntu
+# Tardará un rato... pero la salida final será el algo así.
+(...)
+I: Configuring dmsetup...
+I: Configuring eject...
+I: Configuring ureadahead...
+I: Configuring kbd...
+I: Configuring ubuntu-minimal...
+I: Configuring libc-bin...
+I: Configuring initramfs-tools...
+I: Base system installed successfully.
+```
+
+La creación de un sistema **Fedora** dentro de Debian usando **Rinse**.
+
+:exclamation: :repeat:
+```bash
+# Instalamos el paquete.
+sudo apt-get install rinse
+
+# Ejecutamos la orden para crearnos el sistema.
+# Similar a la que introducimos antes.
+sudo rinse --arch=i386 --distribution fedora-core-7 --directory ~/Escritorio/CC/fedora/
+
+# Al igual que antes tarda un rato.
+(...)
+Running post-install script post-install.sh:
+Setting up YUM cache
+Creating yum.conf
+Bootstrapping yum
+Cleaning up
+Failed to set locale, defaulting to C
+Final tidy...
+Installation complete.
+```
+
+- - -
+## Ejercicio 4.
+
+En [LXC Web Panel](http://lxc-webpanel.github.io/install.html) podemos encontrar cómo instalarlo. De modo que procedemos:
+
+:floppy_disk:
+```bash
+# Nos descargamos lo necesario y lo instalamos.
+wget "http://lxc-webpanel.github.io/tools/install.sh" -O - | bash
+
+# Y nos indicará al final dónde podemos conectarnos.
+(...)
+Checking connectivity... done
+
+Installation complete!
+
+
+Adding /etc/init.d/lwp...
+Done
+Starting server...done.
+Connect you on "http://your-ip-address:5000/"
+```
+
+En el navegador escribimos la dirección `http://localhost:5000` para acceder a la página de acceso y nos pedirá:
+  * **Usuario**: admin
+  * **Contraseña**: admin
+
+En mi caso aparece que tenemos 1 solo contenedor que está parado y que se llama **DebianContenedor**. Tal y como lo indicamos anteriormente.
+Podemos hacer uso de los botones **start** y cuando lo hemos iniciado podemos pararlo **stop** o pausarlo **freeze**.
+
+:arrow_right: Podemos pulsar en el contenedor y ver la información que tiene y también modificarlo.
+
+Para restringir los recursos nos vamos a la **parte inferior** de la pantalla que acabamos de describir y nos aparecerá:
+  - **Memory limit**. Límite de memoria total.
+  - **Memory + Swap limit**. Límite de memoria total junto con la de intercambio.
+  - **CPUs**. Número de procesadores que podrá usar.
+  - **CPU Shares**. Cantidad de procesamiento que puede utilizar de la/s CPU/s.
+  
+Ahí lo podemos modificar todo.
