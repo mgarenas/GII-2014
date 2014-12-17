@@ -772,7 +772,7 @@ Vamos a instalar *debootstrap*.
 
 ```bash
 # Creamos el contenedor.
-sudo lxc-create -t deina -n DebanContenedor
+sudo lxc-create -t debian -n DebianContenedor
 ```
 
 Tardará un rato :sleeping:...
