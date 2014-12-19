@@ -872,3 +872,128 @@ Para restringir los recursos nos vamos a la **parte inferior** de la pantalla qu
   - **CPU Shares**. Cantidad de procesamiento que puede utilizar de la/s CPU/s.
   
 Ahí lo podemos modificar todo.
+
+- - - 
+## Ejercicio 5. 
+
+Lo primero que hemos de hacer es acceder a la jaula:
+
+:pushpin:
+
+```bash
+# Accedemos a la jaula.
+sudo chroot "saucy/"
+
+# Comprobamos si está el servicio ejecutandose.
+service nginx status
+# Salida.
+ * nginx is not running
+```
+
+Como no está funcionando, lo que tenemos que hacer es arrancarlo.
+
+:pushpin:
+
+```bash
+# Arrancamos el servicio.
+service nginx start
+
+# Y ya podemos comprobar que está arrancado.
+service nginx status
+# Salida.
+ * nginx is running
+```
+
+Consultamos con `ifconfig -a` qué página es en la que está asociada *nginx* y podemos ver en nuestro caso que está en `10.0.3.1` en el caso del contenedor. Y `127.0.0.1` en el caso de la jaula. Nos aparece un mensaje en el navegador así como:
+
+:arrow_lower_right:
+```
+Welcome to nginx!
+
+If you see this page, the nginx web server is successfully installed and working. Further configuration is required.
+
+For online documentation and support please refer to nginx.org.
+Commercial support is available at nginx.com.
+
+Thank you for using nginx.
+```
+
+Para comparar las prestaciones vamos a utilizar un **Apache Benchmark** con la siguiente orden (desde fuera):
+
+:pushpin:
+
+```bash
+# Benchmark para la jaula.
+ab -n 1000000 -c 10 http://127.0.0.1/index.html
+
+# Benchmark para el contenedor.
+ab -n 1000000 -c 10 http://10.0.3.1/index.html
+```
+
+El resultado del primero sería el que sigue:
+
+:arrow_lower_right:
+
+```
+Server Software:        nginx/1.6.0
+Server Hostname:        127.0.0.1
+Server Port:            80
+
+Document Path:          /index.html
+Document Length:        612 bytes
+
+Concurrency Level:      10
+Time taken for tests:   35.691 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      844000000 bytes
+HTML transferred:       612000000 bytes
+Requests per second:    28018.04 [#/sec] (mean)
+Time per request:       0.357 [ms] (mean)
+Time per request:       0.036 [ms] (mean, across all concurrent requests)
+Transfer rate:          23092.99 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:     0    0   1.0      0     242
+Waiting:        0    0   1.0      0     242
+Total:          0    0   1.0      0     242
+```
+
+Y el del segundo sería:
+
+:arrow_lower_right:
+
+```
+Server Software:        nginx/1.6.0
+Server Hostname:        10.0.3.1
+Server Port:            80
+
+Document Path:          /index.html
+Document Length:        612 bytes
+
+Concurrency Level:      10
+Time taken for tests:   35.632 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      844000000 bytes
+HTML transferred:       612000000 bytes
+Requests per second:    28064.29 [#/sec] (mean)
+Time per request:       0.356 [ms] (mean)
+Time per request:       0.036 [ms] (mean, across all concurrent requests)
+Transfer rate:          23131.11 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:     0    0   3.3      0    1045
+Waiting:        0    0   3.3      0    1045
+Total:          0    0   3.3      0    1045
+```
+
+No existe mucha diferencia, en tiempos más o menos es el mismo qel que se ha tomado tanto un **benchmark** como el otro. En cuanto a las *peticiones por segundo* puede notarse también que son muy similares, pero la jaula obtiene unos peores resultados. También si nos fijamos en la *tasa de transferencia* puede verse que es un poco más alta en el contenedor que en la jaula. 
+
+>Estos resultados no deben ser muy concluyentes (puesto que se han realizado solo 1 vez), se debería contrastar un poco más con alguna medida tal como la media, desviación típica de varias pruebas realizadas, etcétera. 
