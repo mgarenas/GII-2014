@@ -312,6 +312,8 @@ En cuanto a el lenguaje **PHP** las dependencias vienen en el fichero [composer.
 ## Ejercicio 1.
 
 Lo primero que vamos a realizar es *crear el espacio de nombres*:
+
+:pushpin:
 ```bash
 # Esta llamada da una copia de su espacio de nombres montado.
 #  Deja de compratir su directorio raíz el directorio actual.
@@ -320,6 +322,8 @@ sudo unshare -m /bin/bash
 ```
 
 Después procedemos a crear dónde queremos realizar el punto de montaje:
+
+:pushpin:
 ```bash
 # Creamos el directorio.
 mkdir -p /mnt/<mi_disco>
@@ -334,6 +338,8 @@ mount
 ## Ejercicio 2.
 
 Para crear la interfaz virtual procedemos a introducir los siguientes comandos:
+
+:pushpin:
 ```bash
 # Lo creamos.
 sudo brctl addbr <Nombre>
@@ -346,6 +352,8 @@ sudo brctl show
 
 La salida de estos comandos ha sido la siguiente:
 
+
+:pushpin:
 ```bash
 lewis@Inspiron:~/CloudComputing$ sudo brctl addbr BigKing
 lewis@Inspiron:~/CloudComputing$ ip addr show
@@ -374,12 +382,16 @@ BigKing		8000.000000000000	no
 ## Ejercicio 3.
 
 Puesto que no tenemos instalado, procedemos a instalarlo:
+
+:pushpin:
 ```bash
 # Instalamos el paquete.
 sudo apt-get install debootstrap
 ```
 A continuación procedemos a crear el sistema que queremos.
 
+
+:pushpin:
 ```bash
 # Indicamos la arquitectura, el sistema, el directorio y de dónde se va a descargar.
 sudo debootstrap --arch=amd64 saucy /home/lewis/Escritorio/CC/saucy/ http://archive.ubuntu.com/ubuntu
@@ -397,6 +409,8 @@ I: Base system installed successfully.
 
 Continuamos con la creación de un sistema **Fedora** dentro de Debian usando **Rinse**.
 
+
+:pushpin:
 ```bash
 # Instalamos el paquete.
 sudo apt-get install rinse
@@ -418,6 +432,8 @@ Installation complete.
 ```
 
 Si comprobamos el contenido de las carpetas en ellas obtendríamos el siguiente listado de directorios:
+
+:pushpin:
 ```bash
 [ lewis: ~/Escritorio/CC ]$ ls saucy/
 bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
@@ -432,6 +448,8 @@ boot  etc  lib   mnt    proc  sbin  srv      tmp  var
 
 Lo primero que vamos a hacer es entrar en la jaula:
 
+
+:pushpin:
 ```bash
 # Entramos en la jaula.
 sudo chroot /home/lewis/Escritorio/CC/<sistema>
@@ -443,6 +461,8 @@ root@Inspiron:/#
 
 Procedemos a montar el sistema de archivos (*file system*) y realizamos algunas tareas:
 
+
+:pushpin:
 ```bash
 # Montamos el file system.
 mount -t proc proc /proc
@@ -458,6 +478,8 @@ print("Hola!")
 ```
 
 El resultado sería el siguiente:
+
+:pushpin:
 ```bash
 # Editamos el fichero para meter el código de antes.
 nano "programa.py"
@@ -501,6 +523,8 @@ KiB Swap:  1999868 total,        0 used,  1999868 free,   981772 cached
 
 En el mismo *saucy* que hemos ejecutado las ordenes anteriores, insertamos los repositoros de **nginx** dentro del fichero `/etc/apt/sources.list`:
 
+
+:pushpin:
 ```bash
 deb "http://archive.ubuntu.com/ubuntu" saucy main
 deb "http://nginx.org/packages/ubuntu" saucy nginx
@@ -508,6 +532,8 @@ deb-src "http://nginx.org/packages/ubuntu" saucy nginx
 ```
 
 Una vez hecho esto obtenemos la *clave* del repositorio **nginx**:
+
+:pushpin:
 ```bash
 # Instalamos el paquete para descargarnos la llave con la url.
 apt-get install wget
@@ -523,6 +549,8 @@ apt-key add nginx_signing.key
 ```
 
 Ahora procedemos a instalar el programa propiamente dicho:
+
+:pushpin:
 ```bash
 # Actualizamos.
 apt-get update
@@ -532,6 +560,8 @@ apt-get install nginx
 ```
 
 Para arrancar el servidor procedemos como sigue:
+
+:pushpin:
 ```bash
 # Arrancamos el servicio.
 service nginx start
@@ -569,6 +599,8 @@ service --status-all
 
 A continuación vamos a proceder a crear una jaula y enjaular un usuario usando `jailkit`.
 
+
+:pushpin:
 ```bash
 # Lo primero que haces es descargarnos jailkit.
 wget "http://olivier.sessink.nl/jailkit/jailkit-2.17.tar.gz"
@@ -591,6 +623,8 @@ sudo make install
 
 Después procedemos a crear la jaula y a enjaular al usuario:
 
+
+:pushpin:
 ```bash
 # Creamos el directorio que contendra la jaula.
 mkdir Cataplasma
@@ -614,6 +648,8 @@ sudo jk_jailuser -m -j "Cataplasma/" Luis
 ```
 
 Podemos comprobar que está correctamente realizado porque en el fichero `/etc/passwd` encontramos la siguiente línea:
+
+:pushpin:
 ```bash
 Luis:x:1001:500::/home/lewis/Escritorio/CC/Cataplasma/./home/Luis:/usr/sbin/jk_chrootsh
 
@@ -624,3 +660,340 @@ sudo passwd Luis
 sudo mkdir -p /home/lewis/Escritorio/CC/Cataplasma/home/Luis
 
 ```
+
+-------------
+
+
+# Virtualización ligera usando contenedores
+
+- - -
+## Ejercicio 1.
+
+Instalamos el *Linux Containers* (LXC):
+
+:floppy_disk:
+
+```bash
+#Instalamos LXC.
+sudo apt-get install "lxc"
+
+# El resultado sería el siguiente.
+(...)
+Configurando python-distro-info (0.11) ...
+Configurando qemu-utils (1.5.0+dfsg-3ubuntu5.4) ...
+Configurando sharutils (1:4.11.1-1ubuntu2) ...
+Configurando cloud-image-utils (0.27-0ubuntu4.1) ...
+Procesando disparadores para ureadahead ...
+Configurando lxc-templates (1.0.0~alpha1-0ubuntu14.1) ...
+Procesando disparadores para libc-bin ...
+```
+
+Podemos comprobar que todo está correcto:
+
+:white_check_mark:
+
+```bash
+# Insertamos la siguiente orden.
+lxc-checkconfig
+
+# Obtenemos el siguiente resultado.
+Kernel configuration not found at /proc/config.gz; searching...
+Kernel configuration found at /boot/config-3.11.0-26-generic
+--- Namespaces ---
+Namespaces: "enabled"
+Utsname namespace: "enabled"
+Ipc namespace: "enabled"
+Pid namespace: "enabled"
+User namespace: missing
+Network namespace: "enabled"
+Multiple /dev/pts instances: "enabled"
+
+--- Control groups ---
+Cgroup: "enabled"
+Cgroup clone_children flag: "enabled"
+Cgroup device: "enabled"
+Cgroup sched: "enabled"
+Cgroup cpu account: "enabled"
+Cgroup memory controller: "enabled"
+Cgroup cpuset: "enabled"
+
+--- Misc ---
+Veth pair device: "enabled"
+Macvlan: "enabled"
+Vlan: "enabled"
+File capabilities: "enabled"
+
+Note : Before booting a new kernel, you can check its configuration
+usage : CONFIG=/path/to/config /usr/bin/lxc-checkconfig
+```
+
+- - -
+## Ejercicio 2.
+
+Para comprobar qué interfaces se han creado podemos hacer lo siguiente:
+
+:pushpin:
+
+```bash
+# Mostramos todos los parámetros de las interfaces de redes.
+ifconfig
+
+# El resultado sería el siguiente.
+(...)
+lxcbr0    Link encap:Ethernet  direcciónHW f2:cc:dc:f8:1d:bf  
+          Direc. inet:10.0.3.1  Difus.:10.0.3.255  Másc:255.255.255.0
+          Dirección inet6: fe80::f0cc:dcff:fef8:1dbf/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:58 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:0
+          Bytes RX:0 (0.0 B)  TX bytes:9697 (9.6 KB)
+
+(...)
+
+# O bien podríamos utilizar la orden.
+brctl show
+```
+
+Se podría asociar una interfaz como que tenemos creada al puente.
+
+:pushpin:
+```bash
+# Asociar una interfaz al puente.
+sudo brctl addif <interfaz> <puente>
+```
+
+- - -
+## Ejercicio 3.
+
+Ya teníamos instalado *debootstrap*. Y además en ejercicios anteriores instalamos tambien otras distribuciones tales como **saucy** y **fedora** en el **ejercicio 3** del tema anterior.
+
+:dvd:
+
+```bash
+# Creamos el contenedor.
+sudo lxc-create -t debian -n DebianContenedor
+
+# El resultado sería algo así.
+(...)
+	LC_IDENTIFICATION = "en_GB.UTF-8",
+	LC_MEASUREMENT = "en_GB.UTF-8",
+	LC_TIME = "en_GB.UTF-8",
+	LC_NAME = "en_GB.UTF-8",
+	LANG = "es_ES.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+update-rc.d: using dependency based boot sequencing
+Root password is 'root', please change !
+
+# El contenedor se creará en `/var/lib/lxc/
+sudo ls /var/lib/lxc/
+DebianContenedor
+
+```
+
+Tardará un rato :sleeping:... Pero como decíamos se pude instalar con *debootstrap*. Que ya lo teníamos hecho.
+
+:exclamation: :repeat:
+```bash
+# Indicamos la arquitectura, el sistema, el directorio y de dónde se va a descargar.
+sudo debootstrap --arch=amd64 saucy /home/lewis/Escritorio/CC/saucy/ http://archive.ubuntu.com/ubuntu
+# Tardará un rato... pero la salida final será el algo así.
+(...)
+I: Configuring dmsetup...
+I: Configuring eject...
+I: Configuring ureadahead...
+I: Configuring kbd...
+I: Configuring ubuntu-minimal...
+I: Configuring libc-bin...
+I: Configuring initramfs-tools...
+I: Base system installed successfully.
+```
+
+La creación de un sistema **Fedora** dentro de Debian usando **Rinse**.
+
+:exclamation: :repeat:
+```bash
+# Instalamos el paquete.
+sudo apt-get install rinse
+
+# Ejecutamos la orden para crearnos el sistema.
+# Similar a la que introducimos antes.
+sudo rinse --arch=i386 --distribution fedora-core-7 --directory ~/Escritorio/CC/fedora/
+
+# Al igual que antes tarda un rato.
+(...)
+Running post-install script post-install.sh:
+Setting up YUM cache
+Creating yum.conf
+Bootstrapping yum
+Cleaning up
+Failed to set locale, defaulting to C
+Final tidy...
+Installation complete.
+```
+
+- - -
+## Ejercicio 4.
+
+En [LXC Web Panel](http://lxc-webpanel.github.io/install.html) podemos encontrar cómo instalarlo. De modo que procedemos:
+
+:floppy_disk:
+```bash
+# Nos descargamos lo necesario y lo instalamos.
+wget "http://lxc-webpanel.github.io/tools/install.sh" -O - | bash
+
+# Y nos indicará al final dónde podemos conectarnos.
+(...)
+Checking connectivity... done
+
+Installation complete!
+
+
+Adding /etc/init.d/lwp...
+Done
+Starting server...done.
+Connect you on "http://your-ip-address:5000/"
+```
+
+En el navegador escribimos la dirección `http://localhost:5000` para acceder a la página de acceso y nos pedirá:
+  * **Usuario**: admin
+  * **Contraseña**: admin
+
+En mi caso aparece que tenemos 1 solo contenedor que está parado y que se llama **DebianContenedor**. Tal y como lo indicamos anteriormente.
+Podemos hacer uso de los botones **start** y cuando lo hemos iniciado podemos pararlo **stop** o pausarlo **freeze**.
+
+:arrow_right: Podemos pulsar en el contenedor y ver la información que tiene y también modificarlo.
+
+Para restringir los recursos nos vamos a la **parte inferior** de la pantalla que acabamos de describir y nos aparecerá:
+  - **Memory limit**. Límite de memoria total.
+  - **Memory + Swap limit**. Límite de memoria total junto con la de intercambio.
+  - **CPUs**. Número de procesadores que podrá usar.
+  - **CPU Shares**. Cantidad de procesamiento que puede utilizar de la/s CPU/s.
+  
+Ahí lo podemos modificar todo.
+
+- - - 
+## Ejercicio 5. 
+
+Lo primero que hemos de hacer es acceder a la jaula:
+
+:pushpin:
+
+```bash
+# Accedemos a la jaula.
+sudo chroot "saucy/"
+
+# Comprobamos si está el servicio ejecutandose.
+service nginx status
+# Salida.
+ * nginx is not running
+```
+
+Como no está funcionando, lo que tenemos que hacer es arrancarlo.
+
+:pushpin:
+
+```bash
+# Arrancamos el servicio.
+service nginx start
+
+# Y ya podemos comprobar que está arrancado.
+service nginx status
+# Salida.
+ * nginx is running
+```
+
+Consultamos con `ifconfig -a` qué página es en la que está asociada *nginx* y podemos ver en nuestro caso que está en `10.0.3.1` en el caso del contenedor. Y `127.0.0.1` en el caso de la jaula. Nos aparece un mensaje en el navegador así como:
+
+:arrow_lower_right:
+```
+Welcome to nginx!
+
+If you see this page, the nginx web server is successfully installed and working. Further configuration is required.
+
+For online documentation and support please refer to nginx.org.
+Commercial support is available at nginx.com.
+
+Thank you for using nginx.
+```
+
+Para comparar las prestaciones vamos a utilizar un **Apache Benchmark** con la siguiente orden (desde fuera):
+
+:pushpin:
+
+```bash
+# Benchmark para la jaula.
+ab -n 1000000 -c 10 http://127.0.0.1/index.html
+
+# Benchmark para el contenedor.
+ab -n 1000000 -c 10 http://10.0.3.1/index.html
+```
+
+El resultado del primero sería el que sigue:
+
+:arrow_lower_right:
+
+```
+Server Software:        nginx/1.6.0
+Server Hostname:        127.0.0.1
+Server Port:            80
+
+Document Path:          /index.html
+Document Length:        612 bytes
+
+Concurrency Level:      10
+Time taken for tests:   35.691 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      844000000 bytes
+HTML transferred:       612000000 bytes
+Requests per second:    28018.04 [#/sec] (mean)
+Time per request:       0.357 [ms] (mean)
+Time per request:       0.036 [ms] (mean, across all concurrent requests)
+Transfer rate:          23092.99 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:     0    0   1.0      0     242
+Waiting:        0    0   1.0      0     242
+Total:          0    0   1.0      0     242
+```
+
+Y el del segundo sería:
+
+:arrow_lower_right:
+
+```
+Server Software:        nginx/1.6.0
+Server Hostname:        10.0.3.1
+Server Port:            80
+
+Document Path:          /index.html
+Document Length:        612 bytes
+
+Concurrency Level:      10
+Time taken for tests:   35.632 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      844000000 bytes
+HTML transferred:       612000000 bytes
+Requests per second:    28064.29 [#/sec] (mean)
+Time per request:       0.356 [ms] (mean)
+Time per request:       0.036 [ms] (mean, across all concurrent requests)
+Transfer rate:          23131.11 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:     0    0   3.3      0    1045
+Waiting:        0    0   3.3      0    1045
+Total:          0    0   3.3      0    1045
+```
+
+No existe mucha diferencia, en tiempos más o menos es el mismo qel que se ha tomado tanto un **benchmark** como el otro. En cuanto a las *peticiones por segundo* puede notarse también que son muy similares, pero la jaula obtiene unos peores resultados. También si nos fijamos en la *tasa de transferencia* puede verse que es un poco más alta en el contenedor que en la jaula. 
+
+>Estos resultados no deben ser muy concluyentes (puesto que se han realizado solo 1 vez), se debería contrastar un poco más con alguna medida tal como la media, desviación típica de varias pruebas realizadas, etcétera. 
