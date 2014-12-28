@@ -997,3 +997,99 @@ Total:          0    0   3.3      0    1045
 No existe mucha diferencia, en tiempos más o menos es el mismo qel que se ha tomado tanto un **benchmark** como el otro. En cuanto a las *peticiones por segundo* puede notarse también que son muy similares, pero la jaula obtiene unos peores resultados. También si nos fijamos en la *tasa de transferencia* puede verse que es un poco más alta en el contenedor que en la jaula. 
 
 >Estos resultados no deben ser muy concluyentes (puesto que se han realizado solo 1 vez), se debería contrastar un poco más con alguna medida tal como la media, desviación típica de varias pruebas realizadas, etcétera. 
+
+- - - 
+## Ejercicio 6.
+
+Seguimos el guión del tema para instalarlo, para ello:
+
+:floppy_disk:
+
+```bash
+# Añadimos el repositorio.
+sudo add-apt-repository ppa:juju/stable
+
+# Salida.
+ Stable release of Juju fo Ubuntu 12.04 and above.
+ Más información: https://launchpad.net/~juju/+archive/ubuntu/stable
+Pulse [Intro] para continuar o ctrl-c para cancelar
+
+gpg: anillo «/tmp/tmpq5o0z3/secring.gpg» creado
+gpg: anillo «/tmp/tmpq5o0z3/pubring.gpg» creado
+gpg: solicitando clave C8068B11 de hkp servidor keyserver.ubuntu.com
+gpg: /tmp/tmpq5o0z3/trustdb.gpg: se ha creado base de datos de confianza
+gpg: clave C8068B11: clave pública "Launchpad Ensemble PPA" importada
+gpg: Cantidad total procesada: 1
+gpg:               importadas: 1  (RSA: 1)
+OK
+
+```
+
+Actualizamos e instalamos.
+
+:floppy_disk:
+
+```bash
+# Actualizamos el respositorio.
+sudo apt-get update
+
+# Instalamos.
+sudo apt-get install juju-core
+
+# Salida.
+(...)
+(Leyendo la base de datos ... 295389 ficheros o directorios instalados actualmente.)
+Desempaquetando juju-core (de .../juju-core_1.20.1-0ubuntu1~13.10.1~juju1_amd64.deb) ...
+Configurando juju-core (1.20.1-0ubuntu1~13.10.1~juju1) ...
+update-alternatives: utilizando /usr/lib/juju-1.20.1/bin/juju para proveer /usr/bin/juju (juju) en modo automático
+```
+
+A continuación vamos a proceder a usarlo e instalar MySQL en un táper. Lo primero que vamos a hacer es ejecutarlo:
+
+:pushpin:
+
+```bash
+# Lo inicializamos.
+sudo juju init
+
+# Salida.
+A boilerplate environment configuration file has been written to "/home/lewis/.juju/environments.yaml".
+Edit the file to configure your juju environment and run bootstrap.
+```
+
+Aquí nos indica que se ha creado el archivo con la información de entornos en `/home/lewis/.juju/environments.yaml`. Antes de poder instalar nada, y trabajar en local, nos exige que tengamos instalado el `juju-local`. Pues procedemos a instalarlo *(tarda bastante y es bastante pesado)*:
+
+:floppy_disk:
+
+```bash
+# Instalamos el juju local.
+sudo apt-get install juju-local
+
+# Salida.
+(...)
+Añadiendo un nuevo usuario mongodb' (UID 117) con grupo nogroup' ...
+No se crea el directorio personal /home/mongodb'.
+Añadiendo el grupo mongodb' (GID 126) ...
+Hecho.
+Añadiendo al usuario mongodb' al grupo mongodb' ...
+Añadiendo al usuario mongodb al grupo mongodb
+Hecho.
+mongodb start/running, process 4853
+Configurando rsyslog-gnutls (5.8.11-2ubuntu4) ...
+Procesando disparadores para ureadahead ...
+Configurando juju-local (1.20.1-0ubuntu1~13.10.1~juju1) ...
+Procesando disparadores para libc-bin ...
+```
+
+:pushpin:
+
+```bash
+# Podemos ver los contenedores que tenemos en el sistema.
+sudo lxc-ls
+
+# Creamos el táper.
+juju bootstrap
+
+# Instalamos MySQL.
+juju deploy mysql
+```
