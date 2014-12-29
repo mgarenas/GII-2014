@@ -1093,3 +1093,76 @@ juju bootstrap
 # Instalamos MySQL.
 juju deploy mysql
 ```
+
+- - -
+## Ejercicio 7
+
+:one: Lo primero de todo que vamos a realizar es borrar toda la configuración que hasta ahora se ha creado:
+
+:pushpin:
+
+```bash
+# Destruimos el servicio de mysql
+sudo juju destroy-service mysql
+# También el servicio de mediawiki
+sudo juju destroy-service mediakiki
+# Podemos también destruir el entorno local.
+sudo juju destroy-environment local
+
+#Salida
+WARNING! this command will destroy the "local" environment (type: local)
+This includes all machines, services, data and other resources.
+
+Continue [y/N]? y
+```
+
+:two: Ahora volvemos a crear la máquina anterior y añadirle *mediawiki* y una relación entre ellos. Para esto, lo que tenemos que hacer primero es seguir los mismos pasos que antes:
+
+:pushpin:
+
+```bash
+# Hacemos bootstrap.
+sudo juju bootstrap
+
+# Desplegamos mediawiki y mysql.
+sudo juju deploy mediawiki
+sudo juju deploy mysql
+
+# Establecemos la relación.
+sudo juju add-relation mediawiki:db mysql
+
+# Exponemos el servicio y listo
+sudo juju expose mediawiki
+```
+
+:three: Lo último que vamos a hacer es crear un script en *shell* para reproducir la configuración usada en las máquina que haga falta. Básicamente lo que tenemos que hacer es agrupar en un *script* el código anteriormente expuesto.
+
+:pushpin:
+
+```bash
+#!/bin/bash
+# Ejercicio 7
+# -----------
+# Configura juju con MySQL y mediawiki.
+
+# Inicializamos juju.
+juju init
+
+# Escogemos el entorno.
+juju switch local
+# Creamos el contenedor.
+juju bootstrap
+
+# Desplegamos los servicios que queremos.
+juju deploy mediawiki
+juju deploy mysql
+
+# Establecemos la relación entre los dos servicios.
+juju add-relation mediawiki:db mysql
+
+# Exponemos el servicio.
+juju expose mediawiki
+```
+
+- - - 
+## Ejercicio 8

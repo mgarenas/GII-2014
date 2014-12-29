@@ -167,28 +167,28 @@ Sesión 15 - Clase del 1 de diciembre de 2014
 
 Sesión 16 - Clase del 5 de diciembre de 2014
 --------------------------------------------
-- [ ] Entender los sistemas de orquestación de máquinas virtuales.
-- [ ] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
+- [x] Entender los sistemas de orquestación de máquinas virtuales.
+- [x] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
 - [x] Ver el papel de los _tápers_ o _containers_ como base de experimentación y prácticas de muchos de los conceptos de virtualización.
-- [ ] Poner Granada, Spain en el perfil de GitHub.
+- [x] Poner Granada, Spain en el perfil de GitHub.
 - [x] Hablar del material y la mecánica de la asignatura hasta este momento.
 
 Sesión 17 - Clase del 12 de diciembre de 2014
 ---------------------------------------------
-- [ ] Resolver problemas con `juju`.
-- [ ] Configuración compleja de sistemas con él.
+- [x] Resolver problemas con `juju`.
+- [x] Configuración compleja de sistemas con él.
 - [ ] Entender el concepto de hipervisor y trabajar con ellos.
 - [ ] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
 
 Sesión 18 - Clase del 15 de diciembre de 2014
 ---------------------------------------------
-- [ ] Resolver problemas con `juju`.
+- [x] Resolver problemas con `juju`.
 - [ ] Entender cómo funciona `docker` y qué implica.
 - [ ] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
 
 Sesión 19 - Clase del 19 de diciembre de 2014
 ---------------------------------------------
-- [ ] Resolver problemas con `juju`.
+- [x] Resolver problemas con `juju`.
 - [ ] Entender cómo funciona `docker` y qué implica.
 - [ ] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
 - [ ] Desarrollar funcionalidad en los proyectos
