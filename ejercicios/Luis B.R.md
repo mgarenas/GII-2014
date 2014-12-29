@@ -1163,3 +1163,6 @@ juju add-relation mediawiki:db mysql
 # Exponemos el servicio.
 juju expose mediawiki
 ```
+
+- - - 
+## Ejercicio 8
