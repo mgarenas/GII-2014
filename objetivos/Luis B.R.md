@@ -167,10 +167,10 @@ Sesión 15 - Clase del 1 de diciembre de 2014
 
 Sesión 16 - Clase del 5 de diciembre de 2014
 --------------------------------------------
-- [ ] Entender los sistemas de orquestación de máquinas virtuales.
-- [ ] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
+- [x] Entender los sistemas de orquestación de máquinas virtuales.
+- [x] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
 - [x] Ver el papel de los _tápers_ o _containers_ como base de experimentación y prácticas de muchos de los conceptos de virtualización.
-- [ ] Poner Granada, Spain en el perfil de GitHub.
+- [x] Poner Granada, Spain en el perfil de GitHub.
 - [x] Hablar del material y la mecánica de la asignatura hasta este momento.
 
 Sesión 17 - Clase del 12 de diciembre de 2014
