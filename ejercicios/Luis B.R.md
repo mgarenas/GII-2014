@@ -1165,4 +1165,32 @@ juju expose mediawiki
 ```
 
 - - - 
-## Ejercicio 8
+## Ejercicio 8.
+
+Vamos a proceder a instalar según el tutorial que se nos proprociona.
+
+:pushpin:
+
+```bash
+# Comprobamos que nuestro sistema soporta las extensiones de virtualización para KVM.
+kvm-ok
+
+# Salida.
+INFO: /dev/kvm exists
+KVM acceleration can be used
+```
+
+Puesto que es compatible procedemos a realizar la instalación.
+
+:floppy_disk:
+
+```bash
+# Instalamos el software.
+sudo apt-get install kvm libvirt-bin
+
+# Añadimos el usuario que va a manejar las máquinas virtuales.
+sudo adduser $USER libvirtd
+
+# Accedemos una vez instalado el paquete.
+virsh
+```
