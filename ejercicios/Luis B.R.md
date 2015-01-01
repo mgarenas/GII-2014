@@ -1194,3 +1194,8 @@ sudo adduser $USER libvirtd
 # Accedemos una vez instalado el paquete.
 virsh
 ```
+
+- - - 
+## Ejercicio 9.
+
+Procedmos a instalar **virt-install**
