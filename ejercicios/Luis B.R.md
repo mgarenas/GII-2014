@@ -1093,3 +1093,172 @@ juju bootstrap
 # Instalamos MySQL.
 juju deploy mysql
 ```
+
+- - -
+## Ejercicio 7
+
+:one: Lo primero de todo que vamos a realizar es borrar toda la configuración que hasta ahora se ha creado:
+
+:pushpin:
+
+```bash
+# Destruimos el servicio de mysql
+sudo juju destroy-service mysql
+# También el servicio de mediawiki
+sudo juju destroy-service mediakiki
+# Podemos también destruir el entorno local.
+sudo juju destroy-environment local
+
+#Salida
+WARNING! this command will destroy the "local" environment (type: local)
+This includes all machines, services, data and other resources.
+
+Continue [y/N]? y
+```
+
+:two: Ahora volvemos a crear la máquina anterior y añadirle *mediawiki* y una relación entre ellos. Para esto, lo que tenemos que hacer primero es seguir los mismos pasos que antes:
+
+:pushpin:
+
+```bash
+# Hacemos bootstrap.
+sudo juju bootstrap
+
+# Desplegamos mediawiki y mysql.
+sudo juju deploy mediawiki
+sudo juju deploy mysql
+
+# Establecemos la relación.
+sudo juju add-relation mediawiki:db mysql
+
+# Exponemos el servicio y listo
+sudo juju expose mediawiki
+```
+
+:three: Lo último que vamos a hacer es crear un script en *shell* para reproducir la configuración usada en las máquina que haga falta. Básicamente lo que tenemos que hacer es agrupar en un *script* el código anteriormente expuesto.
+
+:pushpin:
+
+```bash
+#!/bin/bash
+# Ejercicio 7
+# -----------
+# Configura juju con MySQL y mediawiki.
+
+# Inicializamos juju.
+juju init
+
+# Escogemos el entorno.
+juju switch local
+# Creamos el contenedor.
+juju bootstrap
+
+# Desplegamos los servicios que queremos.
+juju deploy mediawiki
+juju deploy mysql
+
+# Establecemos la relación entre los dos servicios.
+juju add-relation mediawiki:db mysql
+
+# Exponemos el servicio.
+juju expose mediawiki
+```
+
+- - - 
+## Ejercicio 8.
+
+Vamos a proceder a instalar según el tutorial que se nos proprociona.
+
+:pushpin:
+
+```bash
+# Comprobamos que nuestro sistema soporta las extensiones de virtualización para KVM.
+kvm-ok
+
+# Salida.
+INFO: /dev/kvm exists
+KVM acceleration can be used
+```
+
+Puesto que es compatible procedemos a realizar la instalación.
+
+:floppy_disk:
+
+```bash
+# Instalamos el software.
+sudo apt-get install kvm libvirt-bin
+
+# Añadimos el usuario que va a manejar las máquinas virtuales.
+sudo adduser $USER libvirtd
+
+# Accedemos una vez instalado el paquete.
+virsh
+```
+
+- - - 
+## Ejercicio 9.
+
+Procedmos a instalar **virt-install** de la siguiente manera:
+
+:floppy_disk:
+
+```bash
+# Instalamos el paquete de 'virt-install'.
+sudo apt-get install virtinst
+
+# Salida.
+(...)
+Seleccionando el paquete virtinst previamente no seleccionado.
+Desempaquetando virtinst (de .../virtinst_0.600.4-2ubuntu2.1_all.deb) ...
+Procesando disparadores para man-db ...
+Configurando python-libvirt (1.1.1-0ubuntu8.11) ...
+Configurando python-urlgrabber (3.9.1-4ubuntu2) ...
+Configurando virtinst (0.600.4-2ubuntu2.1) ...
+```
+
+:floppy_disk:
+
+```bash
+# Instalamos el paquete 'vrt-viewer' para acceder a 
+#   la consola de la máquina usando la interfaz gráfica.
+sudo apt-get install virt-viewer
+
+# Salida.
+(...)
+Configurando libspice-client-gtk-3.0-4:amd64 (0.20-0nocelt3) ...
+Configurando libgvnc-1.0-0 (0.5.2-1ubuntu2) ...
+Configurando libgtk-vnc-2.0-0 (0.5.2-1ubuntu2) ...
+Configurando virt-viewer (0.5.6-2) ...
+update-alternatives: utilizando /usr/bin/spice-xpi-client-remote-viewer para proveer /usr/bin/spice-xpi-client (spice-xpi-client) en modo automático
+Procesando disparadores para libc-bin ...
+```
+
+Una vez hecho esto necesitamos una imagen **iso** del sistema operativo que vamos a descargar y con la imagen descargada se realiza la instalación:
+
+:dvd:
+
+```bash
+# Instalamos la máquina virtual con las siguientes opciones:
+#   1) -n virt-ubuntuserver : Nombre de la máquina virtual.
+#   2) -r 512 : Cantidad de memoria RAM (MB).
+#   3) --disk path=/var/lib/libvirt/images/virt-ubuntuserver.img,bus=virtio,size=5 : La ruta donde se almacenarán recursos que usará el sistema.
+#   4) -c miISO.iso : Imagen ISO que vamos a instalar.
+#   5) --accelerate : Indica que se utilizará aceleración del kernel.
+#   6) --network network=default,model=virtio : Interfaz y modelo de red.
+#   7) --connect=qemu:///system : Indica el hipervisor.
+#   8) --vnc : Para exportar la consola usando VNC.
+#   9) --noautoconsole : Para que no se conecte automáticamente a la consola de la máquina virtual.
+#  10) -v : Que la máquina esté totalmente virtualizada.
+#
+#   Para ver todas estas opciones consultar el manual: 'man virt-install'
+sudo virt-install -n virt-ubuntuserver -r 512 --disk path=/var/lib/libvirt/images/virt-ubuntuserver.img,bus=virtio,size=5 -c miISO.iso --accelerate --network network=default,model=virtio --connect=qemu:///system --vnc --noautoconsole -v
+
+# Podemos ver las máquinas virtuales instaladas.
+sudo virsh -c qemu:///system list
+
+# Salida.
+ Id    Nombre                         Estado
+----------------------------------------------------
+ 1     virt-ubuntuserver              ejecutando
+```
+
