@@ -1262,3 +1262,64 @@ sudo virsh -c qemu:///system list
  1     virt-ubuntuserver              ejecutando
 ```
 
+- - -
+## Ejercicio 10.
+
+Vamos ahora a instalar **Docker**, existen varias formas de realizar la instalación una de ellas es mediante el *script* que nos proporcionan en la siguiente url: 
+
+[https://get.docker.com/ubuntu/](https://get.docker.com/ubuntu/)
+
+:floppy_disk:
+
+```bash
+#Descargamos el script y lo ejecutamos.
+curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+
+# Salida.
+(...)
+Desempaquetando lxc-docker (de .../lxc-docker_1.4.1_amd64.deb) ...
+Procesando disparadores para man-db ...
+Procesando disparadores para ureadahead ...
+ureadahead will be reprofiled on next reboot
+Configurando aufs-tools (1:3.2+20130722-1ubuntu1) ...
+Configurando lxc-docker-1.4.1 (1.4.1) ...
+docker start/running, process 4745
+Procesando disparadores para ureadahead ...
+Configurando lxc-docker (1.4.1) ...
+Procesando disparadores para libc-bin ...
+```
+
+Tardará un rato para realizar la instalación :sleeping:... También podemos ver el contenido del script que acabamos de ejecutar que sería el siguiente:
+
+:pushpin:
+
+```bash
+# Check that HTTPS transport is available to APT
+if [ ! -e /usr/lib/apt/methods/https ]; then
+  apt-get update
+  apt-get install -y apt-transport-https
+fi
+
+# Add the repository to your APT sources
+echo deb https://get.docker.com/ubuntu docker main > /etc/apt/sources.list.d/docker.list
+
+# Then import the repository key
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+
+# Install docker
+apt-get update
+apt-get install -y lxc-docker
+
+#
+# Alternatively, just use the curl-able install.sh script provided at https://get.docker.com
+#
+```
+
+Y listo, ahora simplemente para ejecutar el servicio **docker** tenemos que ejecutar el siguiente comando:
+
+:pushpin:
+
+```bash
+# Ejecutamos el servicio docker.
+sudo docker -d
+```
