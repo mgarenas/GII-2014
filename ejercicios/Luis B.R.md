@@ -1322,4 +1322,17 @@ Y listo, ahora simplemente para ejecutar el servicio **docker** tenemos que ejec
 ```bash
 # Ejecutamos el servicio docker.
 sudo docker -d
+
+# Salida.
+INFO[0000] +job serveapi(unix:///var/run/docker.sock)   
+INFO[0000] +job init_networkdriver()                    
+INFO[0000] Listening for HTTP on unix (/var/run/docker.sock) 
+INFO[0000] -job init_networkdriver() = OK (0)           
+INFO[0000] WARNING: Your kernel does not support cgroup swap limit. 
+INFO[0000] Loading containers: start.                   
+
+INFO[0000] Loading containers: done.                    
+INFO[0000] docker daemon: 1.4.1 5bc2ff8; execdriver: native-0.2; graphdriver: aufs 
+INFO[0000] +job acceptconnections()                     
+INFO[0000] -job acceptconnections() = OK (0)    
 ```
