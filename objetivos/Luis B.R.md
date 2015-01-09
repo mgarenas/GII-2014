@@ -183,12 +183,12 @@ Sesión 17 - Clase del 12 de diciembre de 2014
 Sesión 18 - Clase del 15 de diciembre de 2014
 ---------------------------------------------
 - [x] Resolver problemas con `juju`.
-- [ ] Entender cómo funciona `docker` y qué implica.
+- [x] Entender cómo funciona `docker` y qué implica.
 - [x] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
 
 Sesión 19 - Clase del 19 de diciembre de 2014
 ---------------------------------------------
 - [x] Resolver problemas con `juju`.
-- [ ] Entender cómo funciona `docker` y qué implica.
-- [ ] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
-- [ ] Desarrollar funcionalidad en los proyectos
+- [x] Entender cómo funciona `docker` y qué implica.
+- [x] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+- [x] Desarrollar funcionalidad en los proyectos
