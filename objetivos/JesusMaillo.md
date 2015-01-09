@@ -110,8 +110,8 @@ Sesión 9 - Clase del 10-noviembre-2014
 
 ###Otros objetivos
 
-- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
-- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 - [X] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo. (No me ha llegado ese correo, intuyo que no existe)
 - [X] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request.
@@ -126,7 +126,202 @@ Sesión 10 - Clase del 14-noviembre-2014
 
 ###Otros objetivos
 
-- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
-- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+
+
+Sesión 11 - Clase del 17 de noviembre de 2014
+------------------------------------------
+###Objetivos de esta sesión
+
+- [X] Consolidar el uso de PaaS/SaaS
+- [X] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
+- [X] Comenzar con la segunda práctica
+
+###Otros objetivos
+
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request directamente a su copia del repositorio, no al repositorio principal de la asignatura.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+
+
+Sesión 12 - Clase del 21 de noviembre de 2014
+------------------------------------------
+###Objetivos de esta sesión
+
+- [X] Consolidar el uso de PaaS/SaaS
+- [X] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones
+- [X] Continuar con la segunda práctica
+
+###Otros objetivos
+
+
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request directamente a su copia del repositorio, no al repositorio principal de la asignatura.
+- [X] Revisar también el primer hito de un proyecto que no sea el propio.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+
+Sesión 13 - Clase del 24 de noviembre de 2014
+------------------------------------------
+###Objetivos de esta sesión
+
+- [X] Entender los objetivos de este tema.
+- [X] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
+- [X] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
+- [X] Entender y saber llevar a cabo la virtualización de dispositivos de red.
+
+###Otros objetivos
+
+- [X] Usar herramientas de administración y monitorización de red en línea de órdenes.
+- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccumii.
+- [X] Dejar de usar Sublime Text por estas 7 razones.(No lo he usado para la asignatura ;-))
+
+
+Sesión 14 - Clase del 28 de noviembre de 2014
+------------------------------------------
+###Objetivos de esta sesión
+
+- [X] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
+- [X] Aprender a ''enjaular'' usuarios.
+
+###Otros objetivos
+
+- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmuii.
+- [X] Dejar de usar Sublime Text por estas 7 razones.
+- [X] Aplicar conocimientos de administración de un sistema Linux: usuarios, permisos.
+- [X] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
+- [X] Comprender que existe vida en los servidores web fuera del Apache.
+- [ ] Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
+- [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
+- [ ] Probar la nube de fi-ware para alojar proyectos y hacer pruebas.
+
+
+Sesión 15 - Clase del 1 de diciembre de 2014
+------------------------------------------
+###Objetivos de esta sesión
+
+- [X] Entender el concepto de contenedores
+- [X] Configurar el sistema para poder crear y usar contenedores
+- [X] Crear y usar contenedores
+
+###Otros objetivos
+
+- [X] Entregar el segundo hito de la práctica.
+- [X] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
+- [ ] Retomar la costumbre de hacer git pull upstream master al principio de cada sesión.
+
+
+Sesión 16 - Clase del 5 de diciembre de 2014
+------------------------------------------
+###Objetivos de esta sesión
+
+- [X] Entender los sistemas de orquestación de máquinas virtuales.
+- [X] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
+
+###Otros objetivos
+
+- [X] Ver el papel de los tápers o containers como base de experimentación y prácticas de muchos de los conceptos de virtualización.
+- [X] Poner Granada, Spain en el perfil de GitHub.
+- [X] Hablar del material y la mecánica de la asignatura hasta este momento.
+
+
+Sesión 17 - Clase del 12 de diciembre de 2014
+------------------------------------------
+
+###Objetivos de esta sesión
+
+- [X] Resolver problemas con juju.
+- [X] Configuración compleja de sistemas con él.
+- [X] Entender el concepto de hipervisor y trabajar con ellos.
+
+###Otros objetivos
+
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+
+Sesión 18 - Clase del 15 de diciembre de 2014
+------------------------------------------
+
+###Objetivos de esta sesión
+
+- [X] Resolver problemas con juju.
+- [ ] Entender cómo funciona docker y qué implica.
+
+###Otros objetivos
+
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+
+Sesión 19 - Clase del 19 de diciembre de 2014
+------------------------------------------
+
+###Objetivos de esta sesión
+
+- [X] Resolver problemas con juju.
+- [ ] Entender cómo funciona docker y qué implica.
+
+Otros objetivos
+
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+- [X] Desarrollar funcionalidad en los proyectos (Se intentó al menos en la sesión. Tiempo dedicado fuera de esta sesión también)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

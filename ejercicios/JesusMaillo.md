@@ -33,7 +33,7 @@ El primero podemos encontrarlo [aqui](http://aws.amazon.com/es/ec2/pricing/) con
 El tiempo por horas utilizado al 1% es de 26.31552€. Hacen un total de 465,315€
 
 El tiempo por horas utilizado al 10% es de 269,808€. Haven un total de 708,808€
- 
+
 El segundo lo podemos encontrar [aqui](http://azure.microsoft.com/es-es/pricing/calculator/?scenario=cloud) con unas características:
 
 >4 CPU, 14 G Ram, 250 SSD.
@@ -49,7 +49,7 @@ El segundo lo podemos encontrar [aqui](http://azure.microsoft.com/es-es/pricing/
 
 *Corrección de Luis Baca Ruiz*
 
-Si cogemos el primer caso que expones 
+Si cogemos el primer caso que expones
 
 * 4 CPU, 15 GB Ram, 80 SSD
 
@@ -192,7 +192,7 @@ Modificaremos el fichero etc/cgconfig.conf para que se cumplan los requisitos es
 **3 - Usar un programa que muestre en tiempo real la carga del sistema tal como htopy comprobar los efectos de la migración en tiempo real de una tarea pesada de un procesador a otro (si se tiene dos núcleos en el sistema).**
 
 Para el estudio de la migración se ha utilizado el editor de textos libre office.
-El grupo ejer9 tiene dentro los subgrupos prueba y migracion. Prueba será ejecutado en el núcleo 0 y migración en el núcleo 3. 
+El grupo ejer9 tiene dentro los subgrupos prueba y migracion. Prueba será ejecutado en el núcleo 0 y migración en el núcleo 3.
 
 Asignamos el proceso como se ha realizado en el ejercicio anterior y observamos que su uso es aproximadamente del 1%.
 
@@ -200,7 +200,7 @@ Asignamos el proceso como se ha realizado en el ejercicio anterior y observamos 
 
 **4 - Configurar un servidor para que el servidor web que se ejecute reciba mayor prioridad de entrada/salida que el resto de los usuarios.**
 
-Igual que el apartado dos, pero sobre la prioridad de salida. 
+Igual que el apartado dos, pero sobre la prioridad de salida.
 
     mount { blkio = /cgroup/blkio }
 
@@ -238,7 +238,7 @@ Puesto que no soporta virtualización hardware, lo otra opción es instalar la v
 Existen numerosas aplicaciones que pueden ser incluidas dentro del concepto SaaS. Veamos con algunos ejemplos de los más conocidos a que se refiere:
 
 Gestores de correo electrónico como Gmail, Outlook y Yahoo también son ejemplos de aplicaciones SaaS.
-Google Docs permite trabajar con un editor de textos desde la web. 
+Google Docs permite trabajar con un editor de textos desde la web.
 
 Todas ellas son consideradas como SaaS (Software as a Service – Software como servicio) por cumplir unas características básicas:
 
@@ -272,34 +272,15 @@ https://jmailloh-wpejercicio3.rhcloud.com/
 ###Ejercicio 4:
 **Crear un script para un documento Google y cambiarle el nombre con el que aparece en el menú, así como la función a la que llama.**
 
-El código que va a ser ejecutado es el del tutorial de google.
+El siguiente script modifica el nombre del archivo que abrimos.
 
 ```
-function createAndSendDocument() {
- // Create a new Google Doc named 'Hello, world!'
- var doc = DocumentApp.create('Hello, world!');
-
- // Access the body of the document, then add a paragraph.
- doc.getBody().appendParagraph('This document was created by Google Apps Script.');
-
- // Get the URL of the document.
- var url = doc.getUrl();
-
- // Get the email address of the active user - that's you.
- var email = Session.getActiveUser().getEmail();
-
- // Get the name of the document to use as an email subject line.
- var subject= doc.getName();
-
- // Append a new string to the "url" variable to use as an email body.
- var body = 'Link to your doc: ' + url;
-
- // Send yourself an email with a link to the document.
- GmailApp.sendEmail(email, subject, body);
+function ejer4(){
+  var doc = DocumentApp.getActiveDocument();
+  doc.setName("Ejercicio4")
 }
 ```
 
- En esta función se crea un documento llamado hello, world!, se escribe una frase en el y se envia por correo al usuario activo, que somos nosotros mismos.
 
 ###Ejercicio 5:
 **Buscar un sistema de automatización de la construcción para el lenguaje de programación y entorno de desarrollo que usemos habitualmente.**
@@ -313,12 +294,316 @@ Para Python existe [Pynt](http://pynt.sourceforge.net/), el cual no he llegado a
 ###Ejercicio 6:
 **Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma.**
 
-En el ejercicio tercero elegí OpenShift, el cual provee la automaticación mediante [Jenkins](http://jenkins-ci.org/). No lo hace de forma directa.
+En el ejercicio tercero elegí OpenShift, el cual provee la integración continua mediante [Jenkins](http://jenkins-ci.org/).
+
+No lo hace de forma directa, para ello hay que instalar cartuchos propios para cada uno de los proyectos, dependiendo del lenguaje utilizado.
 
 Si algún compañero quiere completar como lo realiza Jenkins sería perfecto.
 
 ###Ejercicio 7:
 **Buscar un entorno de pruebas para el lenguaje de programación y entorno de desarrollo que usemos habitualmente.**
 
-Para python se puede utilizar el módulo [unittest](https://docs.python.org/2/library/unittest.html). 
+Para python se puede utilizar el módulo [unittest](https://docs.python.org/2/library/unittest.html).
 En [este](http://pythontesting.net/framework/unittest/unittest-introduction/) enlace se puede ver un tutorial sobre su uso.
+
+Sí es cierto que para programar los tests en python, se puede usar [unittest](https://docs.python.org/2/library/unittest.html), pero para ejecutarlos no se suele hacer a mano. Habitualmente, en el entorno python, se utiliza [nose](https://nose.readthedocs.org/en/latest/) que ejecuta los test de forma automática y los resultados se dan en OK o No Ok, si se han pasado o no.
+
+- - -
+
+##Tema 3
+
+###Ejercicio 1:
+**Crear un espacio de nombres y montar en él una imagen ISO de un CD de forma que no se pueda leer más que desde él. Pista: en ServerFault nos explican como hacerlo, usando el dispositivo loopback**
+
+Comenzamos creando el espacio de nombre UTS, con la instrucción:
+
+```
+sudo unshare -u /bin/bash
+```
+
+El siguiente paso sería montar la iso:
+
+```
+mount -o loop -t iso9660 mi_archivo.iso /mnt/test
+```
+
+Donde loop indica que el comando mount use el primer /dev/loopX disponible
+
+###Ejercicio 2:
+**1.- Mostrar los puentes configurados en el sistema operativo.**
+
+Para mostrar los puentes de red configurados en el sistema lo hacemos con el comando:
+```
+brctl show
+```
+```
+bridge name	bridge id		STP enabled	interfaces
+virbr0		8000.000000000000	yes	
+```
+
+**2.- Crear un interfaz virtual y asignarlo al interfaz de la tarjeta wifi, si se tiene, o del fijo, si no se tiene.**
+
+El primer paso sería crear una nueva interfaz, la cual denominaré ejer2
+```
+brctl addbr ejer2
+```
+
+Y lo asociamos a eth0:
+```
+brctl addif ejer2 eno16777736
+```
+
+###Ejercicio 3:
+**1.- Usar debootstrap (o herramienta similar en otra distro) para crear un sistema mínimo que se pueda ejecutar más adelante.**
+
+Los ejercicios que requieren de deboostrap los he realizado en otra máquina que tiene Ubuntu 12.04
+
+La versión que voy a instalar es Quantal como se muestra en el guión del tema:
+```
+sudo debootstrap --arch=amd64 quantal /home/jaulas/quantal/ http://archive.ubuntu.com/ubuntu
+```
+
+**2.- Experimentar con la creación de un sistema Fedora dentro de Debian usando Rinse.**
+
+La versión que voy a instalar es Fedora-core-10 suministrada por Rinse. Lo hacemos con la siguiente orden autenticados como root.
+```
+rinse --arch i386 --distribution fedora-core-10 --directory /home/jaulas/fedora
+```
+
+Podemos comprobar el correcto funcionamiento de ambas accediendo con la orden chroot.
+
+###Ejercicio 4:
+**Instalar alguna sistema debianita y configurarlo para su uso. Trabajando desde terminal, probar a ejecutar alguna aplicación o instalar las herramientas necesarias para compilar una y ejecutarla.**
+
+Utilizamos la versión instalada Quantal. Instalaremos python y crearemos un hola mundo para finalmente ejecutarlo.
+
+```
+sudo su
+chroot /home/quantal
+apt-get install python
+apt-get install nano
+nano holamundo.py
+python holamundo.py
+```
+
+El programa contenía print("Hola Mundo") y funcionó correctamente.
+
+###Ejercicio 5:
+**Instalar una jaula chroot para ejecutar el servidor web de altas prestaciones nginx.**
+
+Actualizamos el repositorio para que encuentre nginx.
+
+Para obtener la llave nos hace falta instalar wget. La descargamos una vez instalado y la apadimos cn el comando apt-key.
+
+Actualizamos el repositorio y ya podemos instalarlo. Para arrancar el servidor:
+
+```
+service nginx start
+```
+
+###Ejercicio 6:
+**Crear una jaula y enjaular un usuario usando `jailkit`, que previamente se habrá tenido que instalar.**
+
+Para la instalación de jailkit haríamos:
+
+```
+wget "http://olivier.sessink.nl/jailkit/jailkit-2.17.tar.gz"
+tar -xzvf "jailkit-2.17.tar.gz"
+cd jailkit-2.17/
+./configure
+make
+sudo make install
+
+```
+
+Creamos un directorio para la jaula y le damos permisos de superusuario.
+
+```
+mkdir Prueba
+sudo chown root:root "Prueba/"
+```
+
+Creamos el entorno añadimos el usuario y lo enjaulamos.
+
+```
+sudo jk_init -v "Prueba/" basicshell
+sudo jk_init -v "Prueba/" editors
+sudo jk_init -v "Prueba/" extendedshell
+sudo jk_init -v "Prueba/" netutils
+sudo jk_init -v "Prueba/" ssh
+sudo jk_init -v "Prueba/" sftp
+
+sudo adduser Calculin
+
+sudo jk_jailuser -m -j "Prueba/" Calculin
+```
+
+- - -
+
+##Tema 4
+
+###Ejercicio 1:
+**Instala LXC en tu versión de Linux favorita. Normalmente la versión en desarrollo, disponible tanto en GitHub como en el sitio web está bastante más avanzada; para evitar problemas sobre todo con las herramientas que vamos a ver más adelante, conviene que te instales la última versión y si es posible una igual o mayor a la 1.0.**
+
+Para instalar LXC en Fedora tenemos que descargarnos de la web [https://thm.fedorapeople.org/lxc/fedora-19/x86_64/](https://thm.fedorapeople.org/lxc/fedora-19/x86_64/) los siguientes paquetes:
+
+
+E instalarlos con:
+
+```
+sudo rpm -Uvh *.rpm
+```
+
+
+
+
+###Ejercicio 2:
+**Comprobar qué interfaces puente se han creado y explicarlos.**
+
+Lo comprobamos mediante el comando:
+
+```
+brctl show
+```
+
+bridge name	bridge id		STP enabled	interfaces
+virbr0		8000.000000000000	yes	
+
+El puente que ha creado es para permitir a los contenedores tener acceso a internet.
+
+###Ejercicio 3:
+**1.- Crear y ejecutar un contenedor basado en Debian.**
+
+Primero tenemos que crear el contenedor:
+
+```
+lxc-create -t debian -n caja
+```
+
+Tenemos que montar el cgroup con:
+
+```
+mount -t cgroup cgroup /sys/fs/cgroup
+```
+
+Iniciamos:
+
+```
+lxc-start -n caja
+```
+
+**2.- Crear y ejecutar un contenedor basado en otra distribución, tal como Fedora. Nota En general, crear un contenedor basado en tu distribución y otro basado en otra que no sea la tuya. Fedora, al parecer, tiene problemas si estás en Ubuntu 13.04 o superior, así que en tal caso usa cualquier otra distro. Por ejemplo, Óscar Zafra ha logrado instalar Gentoo usando un script descargado desde su sitio, como indica en este comentario en el issue.**
+
+Como se indica en el propio enunciado, he utilizado el script para la instalación de Gentoo.
+
+###Ejercicio 4:
+**1.- Instalar lxc-webpanel y usarlo para arrancar, parar y visualizar las máquinas virtuales que se tengan instaladas.**
+
+La instalación la podemos hacer descargando desde GitHub directamente instalandolo:
+
+```
+wget http://lxc-webpanel.github.io/tools/install.sh -O - | bash
+```
+
+Accedemos con el navegador en la dirección http://localhost:5000. Donde el usuario es admin y la contraseña es admin también.
+
+**2.- Desde el panel restringir los recursos que pueden usar: CPU shares, CPUs que se pueden usar (en sistemas multinúcleo) o cantidad de memoria.**
+
+En nuestra izquierda quedan los contenedores. Seleccionamos uno y acedemos a las características y parámetros que se pueden modificar.
+
+###Ejercicio 5:
+**Comparar las prestaciones de un servidor web en una jaula y el mismo servidor en un contenedor. Usar nginx.**
+
+###Ejercicio 6:
+**1.- Instalar juju.**
+
+Actualizamos el repo para obtener la ultima versión de juju y posteriormente lo instalamos:
+
+```
+sudo apt-get install juju
+```
+
+**2.- Usándolo, instalar MySQL en un táper.**
+
+Para instalar la MySQL tenemos que crear primero un táper. Lo creamos e instalamos:
+
+```
+juju bootstrap
+juju deploy mysql
+```
+
+###Ejercicio 7:
+**1.- Destruir toda la configuración creada anteriormente.**
+
+Para destruir la configuración anterior tenemos que eliminar MySQL y después el táper.
+
+```
+sudo su
+juju remove-service mysql
+juju destroy-machine 1
+```
+
+**2.- Volver a crear la máquina anterior y añadirle mediawiki y una relación entre ellos.**
+
+Como super usuario creamos la máquina añadimos mediawiki y los relacionamos:
+```
+juju add-machine
+juju deploy mediawiki
+juju deploy mysql
+juju add-relation mediawiki:slave mysql:db
+juju expose mediawiki
+```
+
+**3.- Crear un script en shell para reproducir la configuración usada en las máquinas que hagan falta.**
+
+El script sería la ejecución de estas ordenes:
+
+```
+#!/bin/bash
+
+juju deploy mediawiki
+juju deploy mysql
+juju add-relation mediawiki:slave mysql:db
+```
+
+###Ejercicio 8:
+**Instalar libvirt. Te puede ayudar esta guía para Ubuntu.**
+
+Se instala como se anuncia en el tutorial:
+
+```
+sudo apt-get install kvm libvirt-bin
+```
+
+###Ejercicio 9:
+**Instalar un contenedor usando virt-install.**
+
+Se va a instalar de Ubuntu con 512 MB de RAM, 2G de disco y un solo nucleo virtual. Se instala desde la ISO que indicada:
+
+```
+sudo virt-install --name ubuntu --ram 512 --vcpu 1 --disk path=/home/ubuntu,size=2 -c /home/jesus/lubuntu-14.10-desktop-i386.iso
+```
+
+###Ejercicio 10:
+**Instalar docker.**
+
+Instalamos docker con el comando:
+
+```
+sudo apt-get install docker.io
+```
+
+###Ejercicio 11:
+**1.- Instalar a partir de docker una imagen alternativa de Ubuntu y alguna adicional, por ejemplo de CentOS.**
+
+**2.- Buscar e instalar una imagen que incluya MongoDB.**
+
+###Ejercicio 12:
+**Crear un usuario propio e instalar nginx en el contenedor creado de esta forma.**
+
+###Ejercicio 13:
+**Crear a partir del contenedor anterior una imagen persistente con commit.**
+
+###Ejercicio 14:
+**Crear una imagen con las herramientas necesarias para el proyecto de la asignatura sobre un sistema operativo de tu elección.**
+

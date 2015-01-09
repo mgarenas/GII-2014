@@ -3,6 +3,9 @@ Ejercicios de Jose Manuel Rosell Sánchez
 
 ## Sesión 17-octubre-2014
 
+Tema 1
+======
+
 ###Ejercicio 1
 
 El servidor ha sido sacado de la página web de *PcComponentes*, y se puede consultar [aquí.](http://www.pccomponentes.com/fujitsu_primergy_rx300_s8_formato_rack.html)
@@ -163,6 +166,9 @@ Un ejemplo de Saas sería la web de [phixr](http://es.phixr.com/photo/userindex)
 
 ## Sesión 7-Noviembre-2014
 
+Tema 2
+======
+
 ###Ejercicio 1
 
 Se instala **virtualenv** para Python con la orden `sudo apt-get install libc6-dev python-dev python-virtualenv`.
@@ -215,10 +221,163 @@ El lenguaje de programación que utilizo habitualmente es **JAVA** y el sistema 
 
 El entorno de pruebas para el lenguaje de programación *Python* es *UnitTest*, aunque comúnmente se denomina *PyUnit*. [En este enlace](http://magmax.org/blog/2011/09/27/python-pruebas-2/) podemos encontrar un pequeño ejemplo de como hacer pruebas a una función en Python, codificado desde cualquier editor de texto y ejecutado desde la línea de comandos.
 
+## Sesión 24-Noviembre-2014
+
+Tema 3
+======
+
+###Ejercicio 1
+
+Se crea un archivo .iso a partir de cualquier archivo con la orden `genisoimage -o prueba_iso.iso prueba_iso.md`, donde *prueba_iso.iso* es el archivo que queremos obtener y *prueba_iso.md* el fichero a partir del cual generar el archivo .iso. Creamos un directorio y creamos un espacio de nombres en ese directorio con la orden `sudo unshare miDirectorio`. Ahora montamos el archivo .iso en este nombre de espacios con la orden `mount -o loop prueba_iso.md /mnt/miDirectorio`.
+
+###Ejercicio 2
+1. Con el comando `brctl show` muestra todos los puentes configurados en el sistema operativo. En mi caso particular, existe uno, con el nombre *docker0*
+2. Creamos una interfaz virtual con el comando `sudo brctl addbr prueba`. Para asignarla a la interfaz ethernet se utiliza el siguiente comando `sudo brctl addif prueba eth0`
+
+## Sesión 1-Diciembre-2014
+
+Tema 4
+======
+
+###Ejercicio 1
+
+En Ubuntu 14.04 se instala con el comando `sudo apt-get install lxc`.
+
+###Ejercicio 2
+
+Al instalar el contenedor, se crea la interfaz puente *lxcbr0*, con las siguientes características:
+
+```
+4: lxcbr0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default 
+    link/ether e2:33:7a:19:67:f9 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.3.1/24 brd 10.0.3.255 scope global lxcbr0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::e033:7aff:fe19:67f9/64 scope link 
+       valid_lft forever preferred_lft forever
+
+```
+ donde tiene una ip *10.0.3.1/24* que no es local, ya que las locales son del tipo *192.168.x.x*, simula como si fuese otra máquina diferente, aunque está alojada en la misma máquina.
+
+###Ejercicio 3
+1. Creado en el *ejercicio 2*, se puede arrancar el contenedor con el siguiente comando: `sudo lxc-start -n una-caja`, donde *una-caja* es el contenedor que tiene instalado el sistema operativop Debian.
+
+2. 
+
+###Ejercicio 4
+1. Para instalar *lxc-webpanel* se necesitan permisos root, para ello primero de todo ejecutamos `sudo su` y seguidamente ejecutamos `wget http://lxc-webpanel.github.com/tools/install.sh -O - | bash`, y con esto tenemos instalado *lxc-webpanel*. Para gestionar los contenedores, accedemos a la url **localhost:5000** y como usuario ponemos *admin* y como contraseña *admin*.
+
+2. Una vez dentro del panel para restringir los recursos al contenedor *una-caja*, pulsamos sobre el nombre del contendor. Nos aparece la configuración del contenedor, en *CPU Shares* ponemos 1024, en la opción *CPU* ponemos 1 (que indica que solo puede ejecutar un procesador), y, por último, en *Memory Limit* ponemos 1024 MB ( que indica que solo puede utilizar 1GB de memoria RAM). Cuando tenemos todo configurado, pulsamos sobre el botón *Apply* para aplicar los cambios.
+
+###Ejercicio 5
+
+###Ejercicio 6
+1. Para instalar *juju* se utilizan las siguientes órdenes:
+```
+sudo add-apt-repository ppa:juju/stable
+sudo apt-get update && sudo apt-get install juju-core
+```
+Ejecutando `juju version` muestra la versión instalada. En mi caso muestra:
+
+> 1.20.13-trusty-amd64
 
 
+2. Primero debemos instalar un taper, para ello ejecutamos la orden `juju bootstrap`. Una vez creado el taper ejecutamos la orden `juju deploy mysql` para instalar mysql en el taper. 
+
+###Ejercicio 7
+1. Para desmontar ejecutamos en orden secuencial:
+```
+juju remove-service mysql
+sudo juju destroy-machine 1
+```
+
+Para ver las máquinas se utiliza `juju status`. **Nunca se elimina la unidad 0**.
+
+2. Añadimos una 'máquina' nueva con la orden `sudo juju add-machine` y seguidamente le instalamos mysql con la orden `juju deploy mysql`. Ahora añadimos *mediawiki* con `juju deploy mediawiki`, y una vez añadido creamos una relación entre mysql y mediawiki, para ello ejecutamos `juju add-relation mediawiki:slave mysql:db`. Ejecutando `juju status` vemos lo siguiente:
+```
+environment: local
+machines:
+  "0":
+    agent-state: started
+    agent-version: 1.20.13.1
+    dns-name: localhost
+    instance-id: localhost
+    series: trusty
+    state-server-member-status: has-vote
+  "2":
+    agent-state: started
+    agent-version: 1.20.13.1
+    dns-name: 10.0.3.250
+    instance-id: jmrosell-local-machine-2
+    series: trusty
+    hardware: arch=amd64
+services:
+  mediawiki:
+    charm: cs:trusty/mediawiki-3
+    exposed: false
+    relations:
+      slave:
+      - mysql
+    units:
+      mediawiki/0:
+        agent-state: started
+        agent-version: 1.20.13.1
+        machine: "2"
+        public-address: 10.0.3.250
+  mysql:
+    charm: cs:trusty/mysql-12
+    exposed: false
+    relations:
+      cluster:
+      - mysql
+      db:
+      - mediawiki
+```
+
+Lo exponemos para su uso público con `sudo juju expose mediawiki`
+
+3. 
+```
+/#!/bin/bash
+juju add-machine
+juju deploy mediawiki
+juju deploy mysql
+juju add-relation mediawiki:slave mysql:db
+juju expose mediawiki
+```
+
+###Ejercicio 8
+Instalamos *libvirt* con:
+> sudo apt-get install kvm libvirt-bin
+Añadimos un usuario al grupo que va a trabajar con las máquinas virtuales:
+> sudo adduser $USER libvirtd
+
+###Ejercicio 9
+Instalamos un contenedor con la orden:
+> sudo virt-install --name ubuntu --ram 512 --disk path=/home/ubuntu,size=4 -c /home/JMRosell/Descargas/lubuntu-14.10-desktop-i386.iso
+
+Donde el nombre del contenedor es *ubuntu*, con 512 MB de memoria RAM, el sitio donde se va a alojar (/home/ubuntu), cuanto tamaño tiene el contenedor 4 GB y por último el path donde se encuentra el archivo ISO que vamos a montar en el contenedor.
+
+###Ejercicio 10
+
+Para instalar *docker* en Ubuntu hay que ejecutar:
+
+> $ sudo apt-get -y install docker.io
+
+> $ ln -sf /usr/bin/docker.io /usr/local/bin/docker
+
+> $ sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
+
+Opcionalmente se puede configurar *Docker* para empezar cuando se arranca el servidor, para ello ejecutar:
+
+> update-rc.d docker.io defaults
+
+###Ejercicio 11
+
+1. Vamos a instalar la imagen alternativa a Ubuntu llamada *tutumcloud*, para ello nos descagamos el [repositorio de GitHub](https://github.com/tutumcloud/tutum-ubuntu) de *tutum* con la orden `git clone`. Nos posicionamos en el directorio y ejecutamos `sudo docker -t tutum/ubuntu:latest .
 
 
+###Ejercicio 12
 
+###Ejercicio 13
 
-
+###Ejercicio 14

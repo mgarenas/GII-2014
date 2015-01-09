@@ -216,10 +216,124 @@ function quieresPipas() {
 	Para app engine y Phyton: appcfg
 
 ###Ejercicio 6 Identificar, dentro del PaaS elegido o cualquier otro en el que se dé uno de alta, cuál es el fichero de automatización de construcción e indicar qué herramienta usa para la construcción y el proceso que sigue en la misma
-	Para Openshift se puede utilizar [Jenkins] (https://developers.openshift.com/en/managing-continuous-integration.html)
+	Para Openshift se puede utilizar [Jenkins](https://developers.openshift.com/en/managing-continuous-integration.html)
 
 ###Ejercicio 7 Buscar un entorno de pruebas para el lenguaje de programación y entorno de desarrollo que usemos habitualmente
 	Shippable
+
+
+Tema 3
+-----
+
+###Ejercicio 1 Crear un espacio de nombres y montar en él una imagen ISO de un CD de forma que no se pueda leer más que desde él. Pista: en ServerFault nos explican como hacerlo, usando el dispositivo loopback
+ 1. Lo primero que hay que hacer es ser superusuario:
+- sudo su
+ 2. Se crea un directorio en el cual se montará el fichero .iso
+- mkdir /mnt/ej1t3cc
+ 3. Se monta el fichero .iso con la orden "mount" seguida de los siguientes argumentos
+- mount -o loop -t iso9660 ubuntu14.04.iso /mnt/ej1t3cc
+
+
+###Ejercicio 2
+#### Mostrar los puentes configurados en el sistema operativo.
+ 1. Se instala brigde utils
+```
+sudo apt-get install bridge utils
+```
+ 2. Se muestran los puentes exsitentes con brctl show
+```
+brctl show
+```
+```
+bridge name	bridge id		STP enabled	interfaces
+docker0		8000.000000000000	no
+```
+#### Crear un interfaz virtual y asignarlo al interfaz de la tarjeta wifi, si se tiene, o del fijo, si no se tiene.
+ 1. Hay que crear una interfaz virtual con "brctl addbr" siendo superusuario
+```
+sudo su
+brctl addbr interfazvirtual
+```
+ 2. Hay que unirla con eth0
+```
+brctl addif interfazvirtual eth0
+```
+ 3. Ahora se comprueba si se ha creado la interfaz
+```
+brctl show
+```
+
+```
+bridge name	bridge id		STP enabled	interfaces
+docker0		8000.000000000000	no
+interfazvirtual		8000.705ab6892974	no		eth0
+
+```
+
+###Ejercicio 3
+####Usar debootstrap (o herramienta similar en otra distro) para crear un sistema mínimo que se pueda ejecutar más adelante.
+####Experimentar con la creación de un sistema Fedora dentro de Debian usando Rinse.
+
+
+###Ejercicio 4 Instalar alguna sistema debianita y configurarlo para su uso. Trabajando desde terminal, probar a ejecutar alguna aplicación o instalar las herramientas necesarias para compilar una y ejecutarla.
+
+
+###Ejercicio 5 Instalar una jaula chroot para ejecutar el servidor web de altas prestaciones nginx
+
+###Ejercicio 6 Crear una jaula y enjaular un usuario usando `jailkit`, que previamente se habrá tenido que instalar.
+
+Tema 4
+-----
+
+###Ejercicio 1 Instala LXC en tu versión de Linux favorita. Normalmente la versión en desarrollo, disponible tanto en GitHub como en el sitio web está bastante más avanzada; para evitar problemas sobre todo con las herramientas que vamos a ver más adelante, conviene que te instales la última versión y si es posible una igual o mayor a la 1.0.
+
+###Ejercicio 2 Comprobar qué interfaces puente se han creado y explicarlos.
+
+###Ejercicio 3 
+####Crear y ejecutar un contenedor basado en Debian.
+
+####Crear y ejecutar un contenedor basado en otra distribución, tal como Fedora. Nota En general, crear un contenedor basado en tu distribución y otro basado en otra que no sea la tuya. Fedora, al parecer, tiene problemas si estás en Ubuntu 13.04 o superior, así que en tal caso usa cualquier otra distro.
+
+###Ejercicio 4
+####Instalar lxc-webpanel y usarlo para arrancar, parar y visualizar las máquinas virtuales que se tengan instaladas.
+####Desde el panel restringir los recursos que pueden usar: CPU shares, CPUs que se pueden usar (en sistemas multinúcleo) o cantidad de memoria.
+
+###Ejercicio 5 Comparar las prestaciones de un servidor web en una jaula y el mismo servidor en un contenedor. Usar nginx.
+
+###Ejercicio 6
+####Instalar juju.
+####Usándolo, instalar MySQL en un táper.
+
+###Ejercicio 7
+####Destruir toda la configuración creada anteriormente
+####Volver a crear la máquina anterior y añadirle mediawiki y una relación entre ellos.
+####Crear un script en shell para reproducir la configuración usada en las máquinas que hagan falta.
+
+###Ejercicio 8 Instalar libvirt
+
+###Ejercicio 9 Instalar un contenedor usando virt-install
+
+###Ejercicio 10 Instalar docker.
+```
+sudo apt-get update
+sudo apt-get install docker.io
+source /etc/bash_completion.d/docker.io
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+```
+
+
+###Ejercicio 11
+####Instalar a partir de docker una imagen alternativa de Ubuntu y alguna adicional, por ejemplo de CentOS.
+####Buscar e instalar una imagen que incluya MongoDB
+
+###Ejercicio 12 Crear un usuario propio e instalar nginx en el contenedor creado de esta forma.
+
+###Ejercicio 13 Crear a partir del contenedor anterior una imagen persistente con commit.
+
+###Ejercicio 14 Crear una imagen con las herramientas necesarias para el proyecto de la asignatura sobre un sistema operativo de tu elección.
+
+
+
 
 Seminario Ruby
 -----
