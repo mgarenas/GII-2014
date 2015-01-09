@@ -1340,4 +1340,66 @@ INFO[0000] -job acceptconnections() = OK (0)
 - - - 
 ## Ejercicio 11.
 
-Lo primero que vamos a hacer es instalar
+Vamos a proceder a instalar las dos imagenes que nos piden:
+
+:floppy_disk:
+
+```bash
+# Instalamos la imagen de ubuntu.
+sudo docker pull ubuntu
+# Instalamos la imagen de CentOS.
+sudo docker pull centos
+
+# Salida 1.
+(...)
+511136ea3c5a: Download complete 
+3b363fd9d7da: Download complete
+607c5d1cca71: Download complete 
+f62feddc05dc: Download complete 
+8eaa4ff06b53: Download complete 
+
+# Salida 2.
+(...)
+44c4bb92fa11: Download complete 
+930cb2a860f7: Download complete 
+fff2c21b0a71: Download complete 
+b7b7ca7a9172: Download complete 
+a1bc79a43c77: Download complete 
+d46fdd618d55: Download complete 
+8988c8cbc051: Download complete 
+```
+
+Para instalar la segunda parte que se nos pide que incluya **MongoDB** hemos encontrado la siguiente [página](http://blog.codiez.co.za/2013/09/setup-a-docker-container-with-mongodb/). Realizamos lo siguiente:
+
+:floppy_disk:
+
+```bash
+# Instalamos la imagen que contiene MongoDB.
+sudo docker pull codiez/mongodb
+
+# Salida.
+(...)
+508e0c005e19: Download complete
+508e0c005e19: Download complete
+8dbd9e392a96: Download complete
+```
+
+Podemos utilizar los siguientes comando que serán importantes para utilizar los sistemas que acabamos de instalar:
+
+:pushpin:
+
+```bash
+# Ejecutamos la imagen.
+sudo docker run <nombre_imagen>
+
+# Comprobamos las imagenes instaladas.
+sudo docker images
+
+# Para ver los contenedores que están ejecutándose.
+sudo docker ps
+
+# Podemos parar el contenedor.
+sudo docker stop <id_contenedor>
+```
+
+- - - 
