@@ -371,3 +371,7 @@ No puedo realizarlo ya que mi ordenador no soporta la virtualización.
 _Instalar docker._
 
 Instalamos _docker_ con `sudo apt-get install docker.io`.
+
+## Ejercicio 11
++  _Instalar a partir de docker una imagen alternativa de Ubuntu y alguna adicional, por ejemplo de CentOS._
++  _Buscar e instalar una imagen que incluya MongoDB._
