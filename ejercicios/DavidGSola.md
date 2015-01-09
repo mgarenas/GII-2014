@@ -261,3 +261,34 @@ Accediendo desde un navegador a la dirección *http://localhost:5000* se accede 
 
 ![Webpanel](http://i.imgur.com/bIdxRej.jpg)
 
+### Ejercicio 5
+
+### Ejercicio 6
+
+Primero se ha añadido el repositorio para que se instale la última versión. Se ha instalado correctamente *juju* con el comando:
+
+> sudo apt-get install juju
+
+### Ejercicio 7
+
+Se ha intentando utilizar *juju* en local. Lo primero fue modificar el fichero enviroments.yaml para que utilizará por defecto **local** en lugar de **amazon**. Pero al intentar lanzar el comando *juju bootstrap* me aparece un fallo que trás buscar en internet he sido incapaz de resolver.
+
+### Ejercicio 8
+
+Se ha instalado correctamente utilizando el comando de la guía:
+
+> sudo apt-get install kvm libvirt-bin
+
+Se ha intentado añadir el usuario al grupo de *libvirt* pero aparece un mensaje avisando que ya existía previamente el usuario.
+
+### Ejercicio 9
+
+He instalado un contenedor del SO Ubuntu con el comando:
+
+> sudo virt-install --name ubuntu --ram 512 --vcpu 1 --disk path=/home/ubuntu,size=2 -c /home/David/Descargas/lubuntu-14.10-desktop-i386.iso
+
+Se le ha asignado 512 MB de RAM, una sola CPU virtual y 2 GB. Por último, la localización de la imagen a partir de la cual se va a crear el contenedor.
+
+### Ejercicio 10
+
+

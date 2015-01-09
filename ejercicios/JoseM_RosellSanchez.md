@@ -277,8 +277,107 @@ sudo add-apt-repository ppa:juju/stable
 sudo apt-get update && sudo apt-get install juju-core
 ```
 Ejecutando `juju version` muestra la versión instalada. En mi caso muestra:
+
+> 1.20.13-trusty-amd64
+
+
+2. Primero debemos instalar un taper, para ello ejecutamos la orden `juju bootstrap`. Una vez creado el taper ejecutamos la orden `juju deploy mysql` para instalar mysql en el taper. 
+
+###Ejercicio 7
+1. Para desmontar ejecutamos en orden secuencial:
 ```
-1.20.13-trusty-amd64
+juju remove-service mysql
+sudo juju destroy-machine 1
 ```
 
-2. Primero debemos instalar un taper, para ello ejecutamos la orden `juju bootstra`. Una vez creado el taper ejecutamos la orden `juju deploy mysql` para instalar mysql en el taper. 
+Para ver las máquinas se utiliza `juju status`. **Nunca se elimina la unidad 0**.
+
+2. Añadimos una 'máquina' nueva con la orden `sudo juju add-machine` y seguidamente le instalamos mysql con la orden `juju deploy mysql`. Ahora añadimos *mediawiki* con `juju deploy mediawiki`, y una vez añadido creamos una relación entre mysql y mediawiki, para ello ejecutamos `juju add-relation mediawiki:slave mysql:db`. Ejecutando `juju status` vemos lo siguiente:
+```
+environment: local
+machines:
+  "0":
+    agent-state: started
+    agent-version: 1.20.13.1
+    dns-name: localhost
+    instance-id: localhost
+    series: trusty
+    state-server-member-status: has-vote
+  "2":
+    agent-state: started
+    agent-version: 1.20.13.1
+    dns-name: 10.0.3.250
+    instance-id: jmrosell-local-machine-2
+    series: trusty
+    hardware: arch=amd64
+services:
+  mediawiki:
+    charm: cs:trusty/mediawiki-3
+    exposed: false
+    relations:
+      slave:
+      - mysql
+    units:
+      mediawiki/0:
+        agent-state: started
+        agent-version: 1.20.13.1
+        machine: "2"
+        public-address: 10.0.3.250
+  mysql:
+    charm: cs:trusty/mysql-12
+    exposed: false
+    relations:
+      cluster:
+      - mysql
+      db:
+      - mediawiki
+```
+
+Lo exponemos para su uso público con `sudo juju expose mediawiki`
+
+3. 
+```
+/#!/bin/bash
+juju add-machine
+juju deploy mediawiki
+juju deploy mysql
+juju add-relation mediawiki:slave mysql:db
+juju expose mediawiki
+```
+
+###Ejercicio 8
+Instalamos *libvirt* con:
+> sudo apt-get install kvm libvirt-bin
+Añadimos un usuario al grupo que va a trabajar con las máquinas virtuales:
+> sudo adduser $USER libvirtd
+
+###Ejercicio 9
+Instalamos un contenedor con la orden:
+> sudo virt-install --name ubuntu --ram 512 --disk path=/home/ubuntu,size=4 -c /home/JMRosell/Descargas/lubuntu-14.10-desktop-i386.iso
+
+Donde el nombre del contenedor es *ubuntu*, con 512 MB de memoria RAM, el sitio donde se va a alojar (/home/ubuntu), cuanto tamaño tiene el contenedor 4 GB y por último el path donde se encuentra el archivo ISO que vamos a montar en el contenedor.
+
+###Ejercicio 10
+
+Para instalar *docker* en Ubuntu hay que ejecutar:
+
+> $ sudo apt-get -y install docker.io
+
+> $ ln -sf /usr/bin/docker.io /usr/local/bin/docker
+
+> $ sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
+
+Opcionalmente se puede configurar *Docker* para empezar cuando se arranca el servidor, para ello ejecutar:
+
+> update-rc.d docker.io defaults
+
+###Ejercicio 11
+
+1. Vamos a instalar la imagen alternativa a Ubuntu llamada *tutumcloud*, para ello nos descagamos el [repositorio de GitHub](https://github.com/tutumcloud/tutum-ubuntu) de *tutum* con la orden `git clone`. Nos posicionamos en el directorio y ejecutamos `sudo docker -t tutum/ubuntu:latest .
+
+
+###Ejercicio 12
+
+###Ejercicio 13
+
+###Ejercicio 14

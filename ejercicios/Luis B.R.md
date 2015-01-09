@@ -766,13 +766,330 @@ sudo brctl addif <interfaz> <puente>
 - - -
 ## Ejercicio 3.
 
-Vamos a instalar *debootstrap*.
+Ya teníamos instalado *debootstrap*. Y además en ejercicios anteriores instalamos tambien otras distribuciones tales como **saucy** y **fedora** en el **ejercicio 3** del tema anterior.
 
 :dvd:
 
 ```bash
 # Creamos el contenedor.
-sudo lxc-create -t deina -n DebanContenedor
+sudo lxc-create -t debian -n DebianContenedor
+
+# El resultado sería algo así.
+(...)
+	LC_IDENTIFICATION = "en_GB.UTF-8",
+	LC_MEASUREMENT = "en_GB.UTF-8",
+	LC_TIME = "en_GB.UTF-8",
+	LC_NAME = "en_GB.UTF-8",
+	LANG = "es_ES.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+update-rc.d: using dependency based boot sequencing
+Root password is 'root', please change !
+
+# El contenedor se creará en `/var/lib/lxc/
+sudo ls /var/lib/lxc/
+DebianContenedor
+
 ```
 
-Tardará un rato :sleeping:...
+Tardará un rato :sleeping:... Pero como decíamos se pude instalar con *debootstrap*. Que ya lo teníamos hecho.
+
+:exclamation: :repeat:
+```bash
+# Indicamos la arquitectura, el sistema, el directorio y de dónde se va a descargar.
+sudo debootstrap --arch=amd64 saucy /home/lewis/Escritorio/CC/saucy/ http://archive.ubuntu.com/ubuntu
+# Tardará un rato... pero la salida final será el algo así.
+(...)
+I: Configuring dmsetup...
+I: Configuring eject...
+I: Configuring ureadahead...
+I: Configuring kbd...
+I: Configuring ubuntu-minimal...
+I: Configuring libc-bin...
+I: Configuring initramfs-tools...
+I: Base system installed successfully.
+```
+
+La creación de un sistema **Fedora** dentro de Debian usando **Rinse**.
+
+:exclamation: :repeat:
+```bash
+# Instalamos el paquete.
+sudo apt-get install rinse
+
+# Ejecutamos la orden para crearnos el sistema.
+# Similar a la que introducimos antes.
+sudo rinse --arch=i386 --distribution fedora-core-7 --directory ~/Escritorio/CC/fedora/
+
+# Al igual que antes tarda un rato.
+(...)
+Running post-install script post-install.sh:
+Setting up YUM cache
+Creating yum.conf
+Bootstrapping yum
+Cleaning up
+Failed to set locale, defaulting to C
+Final tidy...
+Installation complete.
+```
+
+- - -
+## Ejercicio 4.
+
+En [LXC Web Panel](http://lxc-webpanel.github.io/install.html) podemos encontrar cómo instalarlo. De modo que procedemos:
+
+:floppy_disk:
+```bash
+# Nos descargamos lo necesario y lo instalamos.
+wget "http://lxc-webpanel.github.io/tools/install.sh" -O - | bash
+
+# Y nos indicará al final dónde podemos conectarnos.
+(...)
+Checking connectivity... done
+
+Installation complete!
+
+
+Adding /etc/init.d/lwp...
+Done
+Starting server...done.
+Connect you on "http://your-ip-address:5000/"
+```
+
+En el navegador escribimos la dirección `http://localhost:5000` para acceder a la página de acceso y nos pedirá:
+  * **Usuario**: admin
+  * **Contraseña**: admin
+
+En mi caso aparece que tenemos 1 solo contenedor que está parado y que se llama **DebianContenedor**. Tal y como lo indicamos anteriormente.
+Podemos hacer uso de los botones **start** y cuando lo hemos iniciado podemos pararlo **stop** o pausarlo **freeze**.
+
+:arrow_right: Podemos pulsar en el contenedor y ver la información que tiene y también modificarlo.
+
+Para restringir los recursos nos vamos a la **parte inferior** de la pantalla que acabamos de describir y nos aparecerá:
+  - **Memory limit**. Límite de memoria total.
+  - **Memory + Swap limit**. Límite de memoria total junto con la de intercambio.
+  - **CPUs**. Número de procesadores que podrá usar.
+  - **CPU Shares**. Cantidad de procesamiento que puede utilizar de la/s CPU/s.
+  
+Ahí lo podemos modificar todo.
+
+- - - 
+## Ejercicio 5. 
+
+Lo primero que hemos de hacer es acceder a la jaula:
+
+:pushpin:
+
+```bash
+# Accedemos a la jaula.
+sudo chroot "saucy/"
+
+# Comprobamos si está el servicio ejecutandose.
+service nginx status
+# Salida.
+ * nginx is not running
+```
+
+Como no está funcionando, lo que tenemos que hacer es arrancarlo.
+
+:pushpin:
+
+```bash
+# Arrancamos el servicio.
+service nginx start
+
+# Y ya podemos comprobar que está arrancado.
+service nginx status
+# Salida.
+ * nginx is running
+```
+
+Consultamos con `ifconfig -a` qué página es en la que está asociada *nginx* y podemos ver en nuestro caso que está en `10.0.3.1` en el caso del contenedor. Y `127.0.0.1` en el caso de la jaula. Nos aparece un mensaje en el navegador así como:
+
+:arrow_lower_right:
+```
+Welcome to nginx!
+
+If you see this page, the nginx web server is successfully installed and working. Further configuration is required.
+
+For online documentation and support please refer to nginx.org.
+Commercial support is available at nginx.com.
+
+Thank you for using nginx.
+```
+
+Para comparar las prestaciones vamos a utilizar un **Apache Benchmark** con la siguiente orden (desde fuera):
+
+:pushpin:
+
+```bash
+# Benchmark para la jaula.
+ab -n 1000000 -c 10 http://127.0.0.1/index.html
+
+# Benchmark para el contenedor.
+ab -n 1000000 -c 10 http://10.0.3.1/index.html
+```
+
+El resultado del primero sería el que sigue:
+
+:arrow_lower_right:
+
+```
+Server Software:        nginx/1.6.0
+Server Hostname:        127.0.0.1
+Server Port:            80
+
+Document Path:          /index.html
+Document Length:        612 bytes
+
+Concurrency Level:      10
+Time taken for tests:   35.691 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      844000000 bytes
+HTML transferred:       612000000 bytes
+Requests per second:    28018.04 [#/sec] (mean)
+Time per request:       0.357 [ms] (mean)
+Time per request:       0.036 [ms] (mean, across all concurrent requests)
+Transfer rate:          23092.99 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:     0    0   1.0      0     242
+Waiting:        0    0   1.0      0     242
+Total:          0    0   1.0      0     242
+```
+
+Y el del segundo sería:
+
+:arrow_lower_right:
+
+```
+Server Software:        nginx/1.6.0
+Server Hostname:        10.0.3.1
+Server Port:            80
+
+Document Path:          /index.html
+Document Length:        612 bytes
+
+Concurrency Level:      10
+Time taken for tests:   35.632 seconds
+Complete requests:      1000000
+Failed requests:        0
+Write errors:           0
+Total transferred:      844000000 bytes
+HTML transferred:       612000000 bytes
+Requests per second:    28064.29 [#/sec] (mean)
+Time per request:       0.356 [ms] (mean)
+Time per request:       0.036 [ms] (mean, across all concurrent requests)
+Transfer rate:          23131.11 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:     0    0   3.3      0    1045
+Waiting:        0    0   3.3      0    1045
+Total:          0    0   3.3      0    1045
+```
+
+No existe mucha diferencia, en tiempos más o menos es el mismo qel que se ha tomado tanto un **benchmark** como el otro. En cuanto a las *peticiones por segundo* puede notarse también que son muy similares, pero la jaula obtiene unos peores resultados. También si nos fijamos en la *tasa de transferencia* puede verse que es un poco más alta en el contenedor que en la jaula. 
+
+>Estos resultados no deben ser muy concluyentes (puesto que se han realizado solo 1 vez), se debería contrastar un poco más con alguna medida tal como la media, desviación típica de varias pruebas realizadas, etcétera. 
+
+- - - 
+## Ejercicio 6.
+
+Seguimos el guión del tema para instalarlo, para ello:
+
+:floppy_disk:
+
+```bash
+# Añadimos el repositorio.
+sudo add-apt-repository ppa:juju/stable
+
+# Salida.
+ Stable release of Juju fo Ubuntu 12.04 and above.
+ Más información: https://launchpad.net/~juju/+archive/ubuntu/stable
+Pulse [Intro] para continuar o ctrl-c para cancelar
+
+gpg: anillo «/tmp/tmpq5o0z3/secring.gpg» creado
+gpg: anillo «/tmp/tmpq5o0z3/pubring.gpg» creado
+gpg: solicitando clave C8068B11 de hkp servidor keyserver.ubuntu.com
+gpg: /tmp/tmpq5o0z3/trustdb.gpg: se ha creado base de datos de confianza
+gpg: clave C8068B11: clave pública "Launchpad Ensemble PPA" importada
+gpg: Cantidad total procesada: 1
+gpg:               importadas: 1  (RSA: 1)
+OK
+
+```
+
+Actualizamos e instalamos.
+
+:floppy_disk:
+
+```bash
+# Actualizamos el respositorio.
+sudo apt-get update
+
+# Instalamos.
+sudo apt-get install juju-core
+
+# Salida.
+(...)
+(Leyendo la base de datos ... 295389 ficheros o directorios instalados actualmente.)
+Desempaquetando juju-core (de .../juju-core_1.20.1-0ubuntu1~13.10.1~juju1_amd64.deb) ...
+Configurando juju-core (1.20.1-0ubuntu1~13.10.1~juju1) ...
+update-alternatives: utilizando /usr/lib/juju-1.20.1/bin/juju para proveer /usr/bin/juju (juju) en modo automático
+```
+
+A continuación vamos a proceder a usarlo e instalar MySQL en un táper. Lo primero que vamos a hacer es ejecutarlo:
+
+:pushpin:
+
+```bash
+# Lo inicializamos.
+sudo juju init
+
+# Salida.
+A boilerplate environment configuration file has been written to "/home/lewis/.juju/environments.yaml".
+Edit the file to configure your juju environment and run bootstrap.
+```
+
+Aquí nos indica que se ha creado el archivo con la información de entornos en `/home/lewis/.juju/environments.yaml`. Antes de poder instalar nada, y trabajar en local, nos exige que tengamos instalado el `juju-local`. Pues procedemos a instalarlo *(tarda bastante y es bastante pesado)*:
+
+:floppy_disk:
+
+```bash
+# Instalamos el juju local.
+sudo apt-get install juju-local
+
+# Salida.
+(...)
+Añadiendo un nuevo usuario mongodb' (UID 117) con grupo nogroup' ...
+No se crea el directorio personal /home/mongodb'.
+Añadiendo el grupo mongodb' (GID 126) ...
+Hecho.
+Añadiendo al usuario mongodb' al grupo mongodb' ...
+Añadiendo al usuario mongodb al grupo mongodb
+Hecho.
+mongodb start/running, process 4853
+Configurando rsyslog-gnutls (5.8.11-2ubuntu4) ...
+Procesando disparadores para ureadahead ...
+Configurando juju-local (1.20.1-0ubuntu1~13.10.1~juju1) ...
+Procesando disparadores para libc-bin ...
+```
+
+:pushpin:
+
+```bash
+# Podemos ver los contenedores que tenemos en el sistema.
+sudo lxc-ls
+
+# Creamos el táper.
+juju bootstrap
+
+# Instalamos MySQL.
+juju deploy mysql
+```
