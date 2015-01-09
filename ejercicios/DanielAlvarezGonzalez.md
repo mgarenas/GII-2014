@@ -335,3 +335,67 @@ Por último, se ha ejecutado *nginx*. Para comprobar que efectivamente se ha eje
 20484 ?        S      0:00 nginx: worker process
 20485 ?        S      0:00 nginx: worker process
 20640 ?        S+     0:00 grep nginx
+
+
+##Ejercicio 06
+
+Para realizar este ejercicio, lo primero ha sido instalar **jailkit**. Para ver los pasos que he seguido pinchar [aquí](http://www.binarytides.com/install-jailkit-ubuntu-debian/).
+
+Siguiendo los pasos que se explican, he creado un sistema de ficheros poesído por *root*:
+
+**mkdir -p /seguro/jaulas/dorada
+chown -R root:root /seguro**
+
+Una vez creado, se instalan una serie de editores y sus dependencias:
+
+**jk_init -v -j /seguro/jaulas/dorada jk_lsh basicshell netutils editors**
+
+Por último, se añade el usuario que se desee a la jaula:
+**sudo jk_jailuser -m -j /seguro/jaulas/dorada alguien**
+
+Y se configura el fichero /etc/passwd para que pueda acceder desde su shell, quedando el fichero de la siguiente forma:
+
+root:x:0:0:root:/root:/bin/bash
+daniel:x:1000:1000:Daniel,,,:/home/daniel:/bin/bash
+
+***
+
+#Sesión del 1 de Diciembre
+
+##Ejercicio 01
+
+Para instalar la herramienta LXC para la creación de contenedores:
+**sudo apt-get install lxc**
+
+
+##Ejercicio 02
+
+He creado un contenedor llamado *ubuntuContenedor* con la orden **sudo lxc-create -t ubuntu -n contenedorUbuntu**
+
+Una vez creada, la he iniciado de la siguiente forma: **sudo lxc-start -n contenedorUbuntu**
+
+Los puentes creados son los siguientes:
+
+ubuntu@contenedorUbuntu:~$ ifconfig
+eth0      Link encap:Ethernet  HWaddr 00:16:3e:a1:03:5a  
+          inet addr:10.0.3.200  Bcast:10.0.3.255  Mask:255.255.255.0
+          inet6 addr: fe80::216:3eff:fea1:35a/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:48 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:28 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:7944 (7.9 KB)  TX bytes:2781 (2.7 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+
+
+##Ejercicio 03
+
