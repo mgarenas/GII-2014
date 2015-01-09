@@ -192,3 +192,7 @@ Sesión 19 - Clase del 19 de diciembre de 2014
 - [x] Entender cómo funciona `docker` y qué implica.
 - [x] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
 - [x] Desarrollar funcionalidad en los proyectos
+
+Sesión 20 - Clase del 9 de enero de 2014
+----------------------------------------
+- [x] Hacer la práctica. *Juan Julián recomienda dejar a un lado los ejercicios y ponerse con la práctica puesto que tiene más peso.*
