@@ -365,6 +365,7 @@ KVM acceleration can NOT be used
 ## Ejercicio 9
 _Instalar un contenedor usando virt-install._
 
+No puedo realizarlo ya que mi ordenador no soporta la virtualización.
 
 ## Ejercicio 10
 _Instalar docker._
