@@ -501,7 +501,7 @@ Para comprobar el estado se puede usar:
 ### Ejercicio 7.3
 
 Simplemente hay que copiar todos los pasos anteriores en un archivo de tipo script que comience con la directiva `#!/bin/bash`. Habrá que comprobar en la primera línea
-que juju está inicializado, añadiendo `juju init`.
+que *juju* está inicializado, añadiendo `juju init`.
 
 
 * * *
