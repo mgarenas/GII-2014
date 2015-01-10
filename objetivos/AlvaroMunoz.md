@@ -122,10 +122,9 @@ Lista de objetivos de Álvaro Muñoz
 
 ###Otros objetivos
 
-- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
-- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
+- [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [x] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
-- [ ] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
 - [x] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request.
 
 
@@ -139,7 +138,7 @@ Lista de objetivos de Álvaro Muñoz
 
 ###Otros objetivos
 
-- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
+- [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
 - [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [x] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 
@@ -155,8 +154,8 @@ Lista de objetivos de Álvaro Muñoz
 
 ##Otros objetivos
 
-- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
-- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
+- [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [x] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 
 
@@ -171,9 +170,9 @@ Lista de objetivos de Álvaro Muñoz
 - [x] Continuar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md)
 
 ###Otros objetivos
-- [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
+- [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
 - [x] Revisar también el primer hito de un proyecto que no sea el propio.
-- [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+- [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 
 
 
@@ -209,12 +208,11 @@ Lista de objetivos de Álvaro Muñoz
 - [x] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
 - [x] Comprender que existe vida en los servidores web fuera del Apache.
 - [ ] [Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla](https://es.wikipedia.org/wiki/Chroot) como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
-- [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
 
 
 * * *
-##Clase 1-diciembre-2014
-###Objetivos de esta sesión
+## Clase 1-diciembre-2014
+### Objetivos de esta sesión
 
 - [x] Entender el concepto de contenedores
 - [x] Configurar el sistema para poder crear y usar contenedores
@@ -228,7 +226,7 @@ Lista de objetivos de Álvaro Muñoz
 
 
 * * *
-##Clase 5-diciembre-2014
+## Clase 5-diciembre-2014
 ### Objetivos de esta sesión
 
 - [x] Entender los sistemas de orquestación de máquinas virtuales.
@@ -242,14 +240,56 @@ Lista de objetivos de Álvaro Muñoz
 
 
 * * *
-## Clase del 12 de diciembre de 2014
+## Clase 12-diciembre-2014
 
 ### Objetivos de esta sesión
 
 - [ ] Resolver problemas con `juju`.
 - [ ] Configuración compleja de sistemas con él.
-- [ ] Entender el concepto de hipervisor y trabajar con ellos.
+- [x] Entender el concepto de hipervisor y trabajar con ellos.
 
 ### Otros objetivos
 
 - [x] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+
+* * *
+## Clase 15-diciembre-2014
+
+### Objetivos de esta sesión
+
+- [ ] Resolver problemas con `juju`.
+- [ ] Entender cómo funciona `docker` y qué implica.
+
+### Otros objetivos
+
+- [x] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+
+* * *
+## Clase 19-diciembre-2014
+
+### Objetivos de esta sesión
+
+- [ ] Resolver problemas con `juju`.
+- [ ] Entender cómo funciona `docker` y qué implica.
+
+### Otros objetivos
+
+- [x] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+- [x] Desarrollar funcionalidad en los proyectos
+
+
+* * *
+## Clase del 9-enero-2015
+
+### Objetivos de esta sesión
+
+- [ ] Resolver últimos problemas con `docker`.
+- [x] Resolver dudas relacionadas  con la [tercera práctica](http://jj.github.io/IV/documentos/practicas/3.Contenedores).
+
+### Otros objetivos
+
+- [ ] ¿Has modificado algún artículo de la Wikipedia? Pues hazlo ya.
+- [ ] Sigue corrigiendo ejercicios de tus compañeros y discutiéndolos con ellos (usando comentarios a los commits o pull requests)
+- [x] Desarrollar funcionalidad en los proyectos

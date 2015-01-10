@@ -484,16 +484,3 @@ Como *root* hacemos:
 Para ello podemos usar:
 
 	docker pull dockerfile/mongodb
-
-
-* * *
-### Ejercicio 12
-
-* * *
-### Ejercicio 13
-
-* * *
-### Ejercicio 14
-
-
-* * *
