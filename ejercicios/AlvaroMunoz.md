@@ -212,6 +212,8 @@ Algunos inconvenientes podrían ser:
 - Necesidad de confianza en la empresa, ya que tienen la posibilidad de usar los datos del usuario.
 
 
+
+* * *
 TEMA 2
 ======
 
