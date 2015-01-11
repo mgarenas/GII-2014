@@ -107,7 +107,9 @@ Tema1
 	echo 0> cpuset/grupo2/cpuset.cpus
 	echo 0> cpuset/grupo3/cpuset.cpus
 
-	<Incompleto>
+	gedit &
+	firefox &
+	libreoffice &
 	
 	
 	
@@ -227,12 +229,17 @@ Tema 3
 
 ###Ejercicio 1 Crear un espacio de nombres y montar en él una imagen ISO de un CD de forma que no se pueda leer más que desde él. Pista: en ServerFault nos explican como hacerlo, usando el dispositivo loopback
  1. Lo primero que hay que hacer es ser superusuario:
-- sudo su
+```
+sudo su
+```
  2. Se crea un directorio en el cual se montará el fichero .iso
-- mkdir /mnt/ej1t3cc
+```
+mkdir /mnt/ej1t3cc
+```
  3. Se monta el fichero .iso con la orden "mount" seguida de los siguientes argumentos
-- mount -o loop -t iso9660 ubuntu14.04.iso /mnt/ej1t3cc
-
+```
+mount -o loop -t iso9660 ubuntu14.04.iso /mnt/ej1t3cc
+```
 
 ###Ejercicio 2
 #### Mostrar los puentes configurados en el sistema operativo.
@@ -272,20 +279,126 @@ interfazvirtual		8000.705ab6892974	no		eth0
 
 ###Ejercicio 3
 ####Usar debootstrap (o herramienta similar en otra distro) para crear un sistema mínimo que se pueda ejecutar más adelante.
-####Experimentar con la creación de un sistema Fedora dentro de Debian usando Rinse.
 
+ 1. debootstrap ya viene instalado en Ubuntu 14.04
+ 2. Se crea un directorio donde se instalará es SO
+ ```
+ sudo mkdir ubuntu
+ ```
+ 3. Se instala la versión en el directorio que se ha creado (en este caso he instalado Ubuntu 14.04 con 64 bits)
+ ```
+ sudo debootstrap  --arch=amd64 trusty ./ubuntu http://archive.ubuntu.com/ubuntu/
+ ```
+####Experimentar con la creación de un sistema Fedora dentro de Debian usando Rinse.
+ 1. Se instala rinse
+ ```
+ sudo apt-get install rinse
+ ```
+ 2. Al igual que en el caso anterior, se crea un directorio donde se instalará nuestro SO
+ ```
+ sudo mkdir opensuse
+ ```
+ 3. Se instala la versión del SO (la última versión de opensuse que permite instalar Rinse es la 11.1 aunque actualmente existe hasta la 13.2)
+ ```
+ sudo rinse --arch amd64 --distribution opensuse-11.1 --directory ./opensuse
+ ``` 
 
 ###Ejercicio 4 Instalar alguna sistema debianita y configurarlo para su uso. Trabajando desde terminal, probar a ejecutar alguna aplicación o instalar las herramientas necesarias para compilar una y ejecutarla.
-
+ He decidido utilizar la versión de Ubuntu instalada en el ejercicio anterior sobre la que he instalado "g++" y "nano" para crear y compilar
+ un programa en C++. 
+ ```
+ sudo su
+ chroot /home/carlos/ubuntu
+ apt-get install g++
+ apt-get install nano
+ g++ -o hola hola.cpp
+ ./hola
+ ```
+ Funciona perfectamente.
 
 ###Ejercicio 5 Instalar una jaula chroot para ejecutar el servidor web de altas prestaciones nginx
+ Voy a utilizar la jaula ya creada en el ejercicio 3 que contiene Ubuntu 14.04:
+ 1. Accedemos a la jaula
+ ```
+ sudo su
+ chroot /home/carlos/ubuntu
+ ```
+ 2. Actualizamos el repositorio
+ ```
+ apt-get update
+ ```
+ 3. Instalamos las dependencias necesarias
+ ```
+ apt-get install build-essential libssl-dev libpcre3-dev wget
+ ```
+ 4. Descargamos la última versión disponible (1.7.9-diciembre de 2014) y la descomprimimos
+ ```
+ wget http://nginx.org/download/nginx-1.7.9.tar.gz
+ tar xzvf nginx-1.7.9.tar.gz
+ ```
+ 5. Antes de compilar lo ideal sería cambiar valores del código fuente como medida de seguridad pero, dado que no voy a utilizar el servidor web,
+ omito este paso.
+
+ 6. Compilamos
+ ```
+ ./configure
+ make -j 4 && make install
+ ```
+ 7. Descargamos un script que nos permite iniciar, detener, reiniciar y recargar nginx mediante el comando service.
+ ```
+ wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx
+ ```
+ 8. Copiamos el script a /etc/init.d y le damos permiso de ejecución
+ ```
+ mv nginx /etc/init.d/nginx
+ chmod +x /etc/init.d/nginx
+ ```
+ 9. Ejecutamos el servicio
+ ```
+ service nginx start
+ ```
+ 10. Verificamos que todo ha salido bien accediendo desde cualquier a localhost.
 
 ###Ejercicio 6 Crear una jaula y enjaular un usuario usando `jailkit`, que previamente se habrá tenido que instalar.
+ 1. Lo primero que hay que hacer es instalar jailkit. Para ello:
+ - Instalamos las dependencias
+ ```
+ sudo su
+ apt-get install build-essential debhelper autoconf automake libtool flex bison binutils-gold
+ ```
+ - Descargamos la versión más reciente de jailkit (2.17) y descomprimimos
+ ```
+ wget http://olivier.sessink.nl/jailkit/jailkit-2.17.tar.gz
+ tar -vxzf jailkit-2.17.tar.gz
+ ```
+ - Compilamos
+ ```
+ cd jailkit-2.17
+ ./debian/rules binary
+ ```
+ - Instalamos el DEB generado
+ ```
+ cd ..
+ dpkg -i jailkit_2.17-1_amd64.deb
+ ```
+ 2. Creamos la jaula
+ ```
+ mkdir -p /seguro/jaulas/jaula1
+ chown -R root:root /seguro
+ jk_init -v -j /seguro/jaulas/jaula1 jk_lsh basicshell netutils editors 
+ ```
+ 3. Se crea el usuario y se enjaula en la jaula
+ ```
+ useradd usuarionormal
+ passwd usuarionormal
+ jk_jailuser -m -j /seguro/jaulas/jaula1 usuarionormal
+ ```
 
 Tema 4
 -----
 
 ###Ejercicio 1 Instala LXC en tu versión de Linux favorita. Normalmente la versión en desarrollo, disponible tanto en GitHub como en el sitio web está bastante más avanzada; para evitar problemas sobre todo con las herramientas que vamos a ver más adelante, conviene que te instales la última versión y si es posible una igual o mayor a la 1.0.
+sudo apt-get install lxc
 
 ###Ejercicio 2 Comprobar qué interfaces puente se han creado y explicarlos.
 
