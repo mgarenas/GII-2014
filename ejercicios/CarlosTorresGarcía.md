@@ -398,18 +398,110 @@ Tema 4
 -----
 
 ###Ejercicio 1 Instala LXC en tu versión de Linux favorita. Normalmente la versión en desarrollo, disponible tanto en GitHub como en el sitio web está bastante más avanzada; para evitar problemas sobre todo con las herramientas que vamos a ver más adelante, conviene que te instales la última versión y si es posible una igual o mayor a la 1.0.
+1. Instalamos lxc
+```
 sudo apt-get install lxc
+```
+2. Comprobamos que nuestro equipo está preparado para utilizar contenedores
+```
+lxc-checkconfig
+```
 
 ###Ejercicio 2 Comprobar qué interfaces puente se han creado y explicarlos.
+Para comprobar las interfaces que existen actualmente en el sistema basta con utilizar el comando "ifconfig".
+La salida es la siguiente:
+```
+docker0   Link encap:Ethernet  direcciónHW ea:7d:75:72:b8:9a  
+          Direc. inet:172.17.42.1  Difus.:0.0.0.0  Másc:255.255.0.0
+          Dirección inet6: fe80::e87d:75ff:fe72:b89a/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:52 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:0 
+          Bytes RX:0 (0.0 B)  TX bytes:7934 (7.9 KB)
+
+eth0      Link encap:Ethernet  direcciónHW 70:5a:b6:89:29:74  
+          ACTIVO DIFUSIÓN MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:0 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Bucle local  
+          Direc. inet:127.0.0.1  Másc:255.0.0.0
+          Dirección inet6: ::1/128 Alcance:Anfitrión
+          ACTIVO BUCLE FUNCIONANDO  MTU:65536  Métrica:1
+          Paquetes RX:416 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:416 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:0 
+          Bytes RX:39981 (39.9 KB)  TX bytes:39981 (39.9 KB)
+
+lxcbr0    Link encap:Ethernet  direcciónHW 1a:03:c0:77:c8:39  
+          Direc. inet:10.0.3.1  Difus.:10.0.3.255  Másc:255.255.255.0
+          Dirección inet6: fe80::1803:c0ff:fe77:c839/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:58 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:0 
+          Bytes RX:0 (0.0 B)  TX bytes:9173 (9.1 KB)
+
+wlan0     Link encap:Ethernet  direcciónHW 70:f1:a1:48:be:ed  
+          Direc. inet:192.168.1.101  Difus.:192.168.1.255  Másc:255.255.255.0
+          Dirección inet6: fe80::72f1:a1ff:fe48:beed/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:9831 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:6511 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:6275520 (6.2 MB)  TX bytes:1328958 (1.3 MB)
+
+```
+Como se puede comprobar, la interfaz que se ha creado al instalar lxc ha sido lxcbr0 la cual es una interfaz puente para trabajar con jaulas.
 
 ###Ejercicio 3 
 ####Crear y ejecutar un contenedor basado en Debian.
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Creamos el contenedor basado en Debian
+```
+lxc-create -t ubuntu -n ubuntuContenedor
+```
+3. Ejecutamos el contenedor
+```
+sudo lxc-start -n ubuntuContenedor
+```
 
 ####Crear y ejecutar un contenedor basado en otra distribución, tal como Fedora. Nota En general, crear un contenedor basado en tu distribución y otro basado en otra que no sea la tuya. Fedora, al parecer, tiene problemas si estás en Ubuntu 13.04 o superior, así que en tal caso usa cualquier otra distro.
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Creamos un contenedor basado en Redhat (opensusue)
+```
+lxc-create -t fedora -n fedoraContenedor
+```
+3. Ejecutamos el contenedor
+```
+sudo lxc-start -n fedoraContenedor
+```
 
 ###Ejercicio 4
 ####Instalar lxc-webpanel y usarlo para arrancar, parar y visualizar las máquinas virtuales que se tengan instaladas.
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Descargamos el script que instala lxc-webpanel y lo ejecutamos
+```
+wget http://lxc-webpanel.github.com/tools/install.sh -O - | bash
+```
+3. Abrimos un navegador y vamos a localhost:5000. Tanto para nombre de usuario como para contraseña utilizamos "admin".
 ####Desde el panel restringir los recursos que pueden usar: CPU shares, CPUs que se pueden usar (en sistemas multinúcleo) o cantidad de memoria.
+ 1. Abrimos lxc-webpanel tal accediendo desde un navegador a localhost:5000 y usando "admin" como usuario y contraseña.
+ 2. Se selecciona el contenedor a limitar.
+ 3. Se especifican las limitaciones.
+ 4. Se pulsa sobre el botón verde "Apply".
 
 ###Ejercicio 5 Comparar las prestaciones de un servidor web en una jaula y el mismo servidor en un contenedor. Usar nginx.
 
@@ -427,14 +519,20 @@ sudo apt-get install lxc
 ###Ejercicio 9 Instalar un contenedor usando virt-install
 
 ###Ejercicio 10 Instalar docker.
+1. Pasamos a superusuario
 ```
-sudo apt-get update
-sudo apt-get install docker.io
+sudo su
+```
+2. Actualizamos el repositorio
+```
+apt-get update
+```
+3. Instalamos y configuramos Docker
+```
+apt-get install docker.io
 source /etc/bash_completion.d/docker.io
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
 ```
-
-
 ###Ejercicio 11
 ####Instalar a partir de docker una imagen alternativa de Ubuntu y alguna adicional, por ejemplo de CentOS.
 ####Buscar e instalar una imagen que incluya MongoDB
