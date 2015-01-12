@@ -42,16 +42,16 @@ Teniendo esto en cuenta realizamos los calulos para
 ### Ejercicio 4
 
 Para realizar el ejercicio se han introducido dentro del simulador, se han seguido los siguientes:
-- docker version
-- docker search tutorial
-- docker pull learn/tutorial
-- docker run learn/tutorial apt-get install -y ping
-- docker ps -l
-- docker commit 6982 learn/ping
-- docker ps -l
-- docker run learn/ping ping google.com
-- docker ps -l
-- docker inspect efe
+> docker version
+> docker search tutorial
+> docker pull learn/tutorial
+> docker run learn/tutorial apt-get install -y ping
+> docker ps -l
+> docker commit 6982 learn/ping
+> docker ps -l
+> docker run learn/ping ping google.com
+> docker ps -l
+> docker inspect efe
 
 ### Ejercicio 5
 
@@ -61,15 +61,15 @@ Se ha instalado el sistema de gestión de fuentes git con el commando:
 ### Ejercicio 6
 
 Para realizar este ejercicio se han seguido las siguientes órdenes.
-- He creado en GitHub un nuevo repositorio con el nombre "MiProyecto" junto con el archivo README
-- git clone https://github.com/Georgevik/MiProyecto.git
-- cd MiProyecto
-- gedit README.md
-- git commit -m "Primera modificacion"
+> He creado en GitHub un nuevo repositorio con el nombre "MiProyecto" junto con el archivo README
+> git clone https://github.com/Georgevik/MiProyecto.git
+> cd MiProyecto
+> gedit README.md
+> git commit -m "Primera modificacion"
 
 ### Ejercicio 7
-- apt-get install cgroup-lite
-- ls blkio cpuacct devices hugetlb perf_event cpu cpuset freezer memory systemd
+> apt-get install cgroup-lite
+> ls blkio cpuacct devices hugetlb perf_event cpu cpuset freezer memory systemd
 
 ### Ejercicio 8
 
@@ -92,7 +92,7 @@ Tambien es util en el momento de proveer una granja de hosting. Con un solo orde
 **Parte 2**
 
 No he podido hacer el ejercicio ya que no me deja montar el cgroup. No obstante, en teoria una vez creado los procesos, la prioridad se estableceria de la siguiente forma en el fichero "cgconfig.conf"
-
+```
 group procesos_usuario{ 
     cpu{
        cpu.shares = "200"; 
@@ -103,7 +103,7 @@ group procesos_sistema{
        cpu.shares = "800"; 
     }
 }
-
+```
 **Parte 3, 4**
 
 No he podido realizarlo por el problema que he tenido en el Ejercicio 8.
@@ -114,16 +114,18 @@ No he podido realizarlo por el problema que he tenido en el Ejercicio 8.
 El modelo de procesador es: Intel(R) Core(TM) i5-3427U CPU @ 1.80GHz
 
 La salida que obtengo con el comando es:
+```
 flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor **vmx** ds_cpl smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
-
+```
 Como podemos ver, mi procesador tiene activado el flag de vmx
 
 ### Ejercicio 11
 
 He tenido que instalar el paquete cpu-checker y la salida al comando "kvm-ok" es la siguiente:
+```
 INFO: /dev/kvm exists
 KVM acceleration can be used
-
+```
 ### Ejercicio 12
 
 Un ejemplo claro de de SaaS son los servicios de correo como Gmail, Yahoo o Hotmail. Además de servicios de correo electrónico tambien herramientas como Drive o incluso Dropbox, en algunos aspectos, también podemos considerarlo ejemplos de servicios SaaS de almacenamiento en la "nube".
@@ -134,20 +136,22 @@ Un ejemplo claro de de SaaS son los servicios de correo como Gmail, Yahoo o Hotm
 
 ### Ejercicio 1
 Se va a instalar un entrono virtual para Python. Para ello, se han utilizado los siguientes comandos
-- sudo apt-get install python-pip
-- sudo pip install https://github.com/pypa/virtualenv/tarball/develop
-- sudo apt-get install curl
-- curl -O https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.9.tar.gz
-- tar xvfz virtualenv-1.9.tar.gz
-- cd virtualenv-1.9
-- sudo python setup.py install
+> sudo apt-get install python-pip
+> sudo pip install https://github.com/pypa/virtualenv/tarball/develop
+> sudo apt-get install curl
+> curl -O https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.9.tar.gz
+> tar xvfz virtualenv-1.9.tar.gz
+> cd virtualenv-1.9
+> sudo python setup.py install
 
 Ejecutamos el entorno usando
-- virtualenv ENV
+> virtualenv ENV
 y creamos el ejecutable 
+```
 New python executable in ENV/bin/python
 Installing setuptools............done.
 Installing pip...............done.
+```
 
 ### Ejercicio 2
 Me he registrado en **Heroku**
@@ -212,6 +216,7 @@ Seguimos las instrucciones del archivo INSTALL para instal LXC
 ### Ejercicio 2
 Comprobamos las interfaces con
 > ifconfig
+
 Y vemos la nueva interfaz "lxcbr0". 
 
 ### Ejercicio 3
@@ -367,8 +372,8 @@ dfaad36d8984: Download complete
 
 #### Ejercicio 11.2
 Para instalar MongoDB utilizaremos la imagen de **codiez/mongodb** que se instala de la misma manera que ubuntu y centOS montrando como resultado la siguiente salida:
-
+```
 508e0c005e19: Pulling dependent layers 
 8dbd9e392a96: Download complete 
 f0ab8043e4e8: Downloading 9.709 MB/426.3 MB 11m37s
-
+```
