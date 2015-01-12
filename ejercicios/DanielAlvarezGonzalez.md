@@ -399,3 +399,118 @@ lo        Link encap:Local Loopback
 
 ##Ejercicio 03
 
+El ejercicio pide en general, crear dos contenedores: uno basado en mi distribución y otro en otra distinta. Como para el ejercicio anterior ya creé un conteneder basado en mi distribución (*contenedorUbuntu*), ahora sólo queda crear un contenedor en otra distribución.
+He creado un contenedor basado en Debian con la orden: 
+
+**sudo lxc-create -t debian -n contenedorDebian**
+
+Una vez instalado, compruebo que están los dos contendores:
+
+[daniel: ~/Dropbox/GitHub/CloudComputing ]$ sudo lxc-list
+RUNNING
+
+FROZEN
+
+STOPPED
+  contendorDebian
+  contenedorUbuntu
+
+
+##Ejercicio 04
+
+Para instalar lxc-webpanel lo único que hay que hacer es seguir las instrucciones de la [página oficial](https://lxc-webpanel.github.io/install.html)
+
+Aquí muestro una captura de pantalla de mi **Web Panel**:
+![captura web panel](http://fotos.subefotos.com/d0d4f1019916541e32c67f90352fa86eo.png "Web Panel")
+
+
+Para el segundo apartado he iniciado el contenedor de Debian y le he limitado un poco la memoria que puede usar. En la siguiente imagen se puede ver que el contenedor está iniciado y que la memoria y está al máximo, como viene por defecto. Una vez hechos los cambios hay que darle al botón **Aplicar** que está situado al final de la página de Web Panel y no se ve en la captura.
+
+![Captura contenedorDebian](http://fotos.subefotos.com/02a2ad546d23b56fae2877f99cf4ff3eo.png "Contenedor Debian modificado")
+
+
+
+##Ejercicio 05
+
+Para comparar las prestaciones en ambas situaciones, se ha aplicado en ambas un benchmark de apache con la siguiente orden
+**ab -n 1000000 -c 10 http: //localhost/index.html**
+
+Los resultados para el contenedor han sido:
+	
+	Server Software:        nginx/1.1.19
+	Server Hostname:        localhost
+	Server Port:            80
+
+	Document Path:          /index.html
+	Document Length:        151 bytes
+
+	Concurrency Level:      10
+	Time taken for tests:   64.304 seconds
+	Complete requests:      1000000
+	Failed requests:        0
+	Write errors:           0
+	Total transferred:      362000000 bytes
+	HTML transferred:       151000000 bytes
+	Requests per second:    15551.08 [#/sec] (mean)
+	Time per request:       0.643 [ms] (mean)
+	Time per request:       0.064 [ms] (mean, across all concurrent requests)
+	Transfer rate:          5497.55 [Kbytes/sec] received
+
+	Connection Times (ms)
+	              min  mean[+/-sd] median   max
+	Connect:        0    0   0.1      0      10
+	Processing:     0    0   0.3      0      50
+	Waiting:        0    0   0.3      0      50
+	Total:          0    1   0.3      1      50
+
+	Percentage of the requests served within a certain time (ms)
+	  50%      1
+	  66%      1
+	  75%      1
+	  80%      1
+	  90%      1
+	  95%      1
+	  98%      1
+	  99%      1
+	 100%     50 (longest request)
+
+Y aquí muestro los resultados del mismo test para la jaula:
+
+	Server Software:        nginx/1.2.1
+	Server Hostname:        127.0.0.1
+	Server Port:            80
+
+	Document Path:          /index.html
+	Document Length:        151 bytes
+
+	Concurrency Level:      10
+	Time taken for tests:   55.696 seconds
+	Complete requests:      1000000
+	Failed requests:        0
+	Write errors:           0
+	Total transferred:      361000000 bytes
+	HTML transferred:       151000000 bytes
+	Requests per second:    17954.49 [#/sec] (mean)
+	Time per request:       0.557 [ms] (mean)
+	Time per request:       0.056 [ms] (mean, across all concurrent requests)
+	Transfer rate:          6329.66 [Kbytes/sec] received
+
+	Connection Times (ms)
+	              min  mean[+/-sd] median   max
+	Connect:        0    0   0.1      0       7
+	Processing:     0    0   0.2      0      22
+	Waiting:        0    0   0.2      0      22
+	Total:          0    1   0.2      1      23
+
+	Percentage of the requests served within a certain time (ms)
+	  50%      1
+	  66%      1
+	  75%      1
+	  80%      1
+	  90%      1
+	  95%      1
+	  98%      1
+	  99%      1
+	 100%     23 (longest request)
+
+Como se puede ver, aunque los resultados no difieren mucho, son mejores para la jaula. El tiempo de ejecución del test es menor (tanto en general como individual por cada petición). Además, el ratio de transferencia de datos es mayor en la jaula y el número de peticiones por segundo también es mayor.
