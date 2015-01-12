@@ -81,3 +81,48 @@
 - [x] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 - [x] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
 - [ ] Usar el apartado de *Material adicional* abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request.
+
+# Tema 3
+
+#Clase del 24 de noviembre de 2014
+
+## Objetivos de esta sesión
+
+- [x] 1. Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
+- [x] 2. Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
+- [x] 3. Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
+- [ ] 4. Entender y saber llevar a cabo la virtualización de dispositivos de red.
+
+## Otros objetivos
+
+- [ ]  Usar herramientas de administración y monitorización de red en línea de órdenes.
+- [x] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
+- [x] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54).
+
+# Tema 4
+#Clase del 1 de diciembre de 2014
+
+
+##Objetivos de esta sesión
+
+- [x] 1. Entender el concepto de contenedores
+- [x] 2. Configurar el sistema para poder crear y usar contenedores
+- [x] 3. Crear y usar contenedores
+
+## Otros objetivos
+
+- [x] Entregar el segundo hito de la práctica. 
+- [x] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
+- [x] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
+
+#Clase del 12 de diciembre de 2014
+
+##Objetivos de esta sesión
+
+- [x] Resolver problemas con `juju`.
+- [x] Configuración compleja de sistemas con él.
+- [ ] Entender el concepto de hipervisor y trabajar con ellos.
+
+##Otros objetivos
+
+- [x] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.

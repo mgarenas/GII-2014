@@ -140,7 +140,7 @@ Lista de objetivos de Carlos Torres García
 - [X] Último día de entrega de la primera práctica. 
 - [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
 - [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
-- [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+- [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 
 
 ## Sesión 17-noviembre-2014
@@ -154,7 +154,7 @@ Lista de objetivos de Carlos Torres García
 
 - [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura. 
 - [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
-- [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
+- [X] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 
 ## Sesión 21-Noviembre-2014
 
@@ -186,15 +186,15 @@ Lista de objetivos de Carlos Torres García
 ## Sesión 28-noviembre-2014
 
 ### Objetivos de la clase
-- [ ] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
-- [ ] Aprender a ''enjaular'' usuarios.
+- [X] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
+- [X] Aprender a ''enjaular'' usuarios.
 
 ## Otros objetivos
 - [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ivgii.
 - [X] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54).
 - [X] Aplicar conocimientos de administración de un sistema Linux: usuarios, permisos.
-- [ ] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
-- [ ] Comprender que existe vida en los servidores web fuera del Apache.
+- [X] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
+- [X] Comprender que existe vida en los servidores web fuera del Apache.
 - [ ] [Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla](https://es.wikipedia.org/wiki/Chroot) como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
 - [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
 - [ ] Probar [la nube de fi-ware](https://cloud.lab.fi-ware.org/) para alojar proyectos y hacer pruebas. 
@@ -251,6 +251,18 @@ Lista de objetivos de Carlos Torres García
 ### Otros objetivos
 - [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
 - [ ] Desarrollar funcionalidad en los proyectos
+
+## Sesión 9-enero-2015
+###Objetivos de la clase 
+
+- [ ] Resolver últimos problemas con `docker`.
+- [ ] Resolver dudas relacionadas  con la [tercera práctica](http://jj.github.io/IV/documentos/practicas/3.Contenedores).
+
+###Otros objetivos
+
+- [ ] ¿Has modificado algún artículo de la Wikipedia? Pues hazlo ya.
+- [ ] Sigue corrigiendo ejercicios de tus compañeros y discutiéndolos con ellos (usando comentarios a los commits o pull requests)
+- [X] Desarrollar funcionalidad en los proyectos
 
 
 ## Seminario Ruby
