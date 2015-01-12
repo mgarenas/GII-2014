@@ -42,16 +42,16 @@ Teniendo esto en cuenta realizamos los calulos para
 ### Ejercicio 4
 
 Para realizar el ejercicio se han introducido dentro del simulador, se han seguido los siguientes:
-> docker version
-> docker search tutorial
-> docker pull learn/tutorial
-> docker run learn/tutorial apt-get install -y ping
-> docker ps -l
-> docker commit 6982 learn/ping
-> docker ps -l
-> docker run learn/ping ping google.com
-> docker ps -l
-> docker inspect efe
+>docker version
+>docker search tutorial
+>docker pull learn/tutorial
+>docker run learn/tutorial apt-get install -y ping
+>docker ps -l
+>docker commit 6982 learn/ping
+>docker ps -l
+>docker run learn/ping ping google.com
+>docker ps -l
+>docker inspect efe
 
 ### Ejercicio 5
 
@@ -61,15 +61,15 @@ Se ha instalado el sistema de gestión de fuentes git con el commando:
 ### Ejercicio 6
 
 Para realizar este ejercicio se han seguido las siguientes órdenes.
-> He creado en GitHub un nuevo repositorio con el nombre "MiProyecto" junto con el archivo README
-> git clone https://github.com/Georgevik/MiProyecto.git
-> cd MiProyecto
-> gedit README.md
-> git commit -m "Primera modificacion"
+He creado en GitHub un nuevo repositorio con el nombre "MiProyecto" junto con el archivo README
+>git clone https://github.com/Georgevik/MiProyecto.git
+>cd MiProyecto
+>gedit README.md
+>git commit -m "Primera modificacion"
 
 ### Ejercicio 7
-> apt-get install cgroup-lite
-> ls blkio cpuacct devices hugetlb perf_event cpu cpuset freezer memory systemd
+>apt-get install cgroup-lite
+>ls blkio cpuacct devices hugetlb perf_event cpu cpuset freezer memory systemd
 
 ### Ejercicio 8
 
@@ -136,16 +136,16 @@ Un ejemplo claro de de SaaS son los servicios de correo como Gmail, Yahoo o Hotm
 
 ### Ejercicio 1
 Se va a instalar un entrono virtual para Python. Para ello, se han utilizado los siguientes comandos
-> sudo apt-get install python-pip
-> sudo pip install https://github.com/pypa/virtualenv/tarball/develop
-> sudo apt-get install curl
-> curl -O https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.9.tar.gz
-> tar xvfz virtualenv-1.9.tar.gz
-> cd virtualenv-1.9
-> sudo python setup.py install
+>sudo apt-get install python-pip
+>sudo pip install https://github.com/pypa/virtualenv/tarball/develop
+>sudo apt-get install curl
+>curl -O https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.9.tar.gz
+>tar xvfz virtualenv-1.9.tar.gz
+>cd virtualenv-1.9
+>sudo python setup.py install
 
 Ejecutamos el entorno usando
-> virtualenv ENV
+>virtualenv ENV
 y creamos el ejecutable 
 ```
 New python executable in ENV/bin/python
@@ -183,27 +183,27 @@ Tanto en NetBeans, Eclipse o Android Studio que son los entornos de desarrollo c
 
 ### Ejercicio 1
 Entramos en un espacio de nombres con las siguientes sentencias
-> sudo unshare -u /bin/bash
-> hostname manolete
+>sudo unshare -u /bin/bash
+>hostname manolete
 
 Creamos la ISO con el siguiente comando
-> genisoimage -o myISO.iso text_iso.md 
+>genisoimage -o myISO.iso text_iso.md 
 
 Montamos la ISO con loopback 
-> mkdir /mnt/myfolder/
-> mount -o loop myISO.iso /mnt/myfolder/
+>mkdir /mnt/myfolder/
+>mount -o loop myISO.iso /mnt/myfolder/
 
 ### Ejercicio 2
 #### 2.1
 Vemos los puentes del sistema operativo con:
-> ip addr show
+>ip addr show
 
 #### 2.2
 Creamos una interfaz virtual
-> sudo brctl addbr manolete
+>sudo brctl addbr manolete
 
 Lo asignamos
-> sudo brctl addif manolete wlan0
+>sudo brctl addif manolete wlan0
 
 Al ejecutar la sentencia me indica que la operación no se puede realizar. Puede deberse a que se a que actualmente estoy utilizando dicha red. No puedo hacerle el bridge a otra red puesto que no tengo, ni siquiera la eth0
 
@@ -215,20 +215,19 @@ Seguimos las instrucciones del archivo INSTALL para instal LXC
 
 ### Ejercicio 2
 Comprobamos las interfaces con
-> ifconfig
-
+>ifconfig
 Y vemos la nueva interfaz "lxcbr0". 
 
 ### Ejercicio 3
 #### Ejercicio 3.1
 Se ha instalado un ubuntu con la siguiente orden
-> sudo lxc-create -t ubuntu -n micaja
-> sudo lxc-start -n micaja
+>sudo lxc-create -t ubuntu -n micaja
+>sudo lxc-start -n micaja
 
 #### Ejercicio 3.2
 Se ha instalado un fedora con la siguiente orden
-> sudo lxc-create -t fedora -n mifedora
-> sudo lxc-start -n mifedora
+>sudo lxc-create -t fedora -n mifedora
+>sudo lxc-start -n mifedora
 
 ###Ejercicio 4
 #### Ejercicio 4.1
