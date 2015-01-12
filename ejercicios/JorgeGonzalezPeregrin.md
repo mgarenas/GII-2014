@@ -235,8 +235,140 @@ Entramos en el panel abriendo un browser con la direccion "http://localhost:5000
 ![Imgur](http://i.imgur.com/h4KznGe.png)
 
 ###Ejercicio 5
+Para un servidor web, la virtualización en jaulas puede resultar un tanto restrictivo, puesto que no se puede realizar nada sobre tu servidor que no este ya. Es decir, debido al tipo de virtualización la configuración que posea la jaula es la que tendrá el servidor web, por tanto, si se quieren instalar cosas nuevas o cambiar puertos este tipo de virtualización nos vendría demasiado limitada. Las jaulas se pueden utilizar como servicio web cuando no necesitamos en nuestro servicio web más allá de un Apache y una base de datos MySQL. En el momento que queramos modificar algo más interno las necesitamos pasarnos a contenedores.
+
+Como servidor web, un contenedor puede ser util para albergar jaulas. Este negocio parte de comprar nosotros un contenedor en un servidor, de manera que podamos crear jaulas dentro de él y venderlas. Esto se debe a que este tipo de virtualización se enceuntra sobre el Sistema Operativo, por lo que nos permite instalar programas con libertad.
+
 
 ###Ejercicio 6
+#### Ejercicio 6.1
+Los pasos que he seguido para instalar juju han sido:
+>sudo apt-get install juju
+>sudo add-apt-repository ppa:juju/stable
+>sudo apt-get update && sudo apt-get install juju-core
+>sudo apt-get install juju-local
 
+#### Ejercicio 6.2
+Instalamos MySQL primero inicializacon del taper 
+>juju bootstrap
+y luego desplenado un MySQL
+>juju deploy mysql 
+Comprobamos que hemos instalado MySQL con:
+>juju status
+```shell
+environment: local
+machines:
+  "0":
+    agent-state: started
+    agent-version: 1.20.14.1
+    dns-name: localhost
+    instance-id: localhost
+    series: trusty
+    state-server-member-status: has-vote
+  "1":
+    instance-id: pending
+    series: trusty
+services:
+  mysql:
+    charm: cs:trusty/mysql-14
+    exposed: false
+    relations:
+      cluster:
+      - mysql
+    units:
+      mysql/0:
+        agent-state: pending
+        machine: "1"
+```
 
+###Ejercicio 7
+#### Ejercicio 7.1
+>sudo juju destroy-unit mysql/0
+>sudo juju destroy-machine 1
+Si volvemos a hacer juju status vemos que hemos eliminado todo
+```
+georgevik@georgevik-K52JK:~$ juju status
+environment: local
+machines:
+  "0":
+    agent-state: started
+    agent-version: 1.20.14.1
+    dns-name: localhost
+    instance-id: localhost
+    series: trusty
+    state-server-member-status: has-vote
+services:
+  mysql:
+    charm: cs:trusty/mysql-14
+    exposed: false
+    relations:
+      cluster:
+      - mysql
+```
+#### Ejercicio 7.2
+>juju deploy mysql
+>juju deploy mediawiki
+>juju add-relation mediawiki:db mysql
+#### Ejercicio 7.3
+
+### Ejercicio 8
+>sudo apt-get install kvm libvirt-bin
+>sudo adduser $USER libvirtd
+
+### Ejercicio 9
+>sudo apt-get install virtinst
+Con este comando podemos instalar maquinas virtuales directamente. Para ello necesitamos una iso con el sistema operativo de la maquina virtual. En este caso hemos cogido el de Ubuntu 14.04 y con la siguiente orden creamos la maquina:
+>sudo virt-install -n virt-ubuntu -r 512 --disk path=/var/lib/libvirt/images/ubuntuvirtual.img,bus=virtio,size=5 -c /home/georgevik/Escritorio/ubuntu-14.04.iso --accelerate --network network=default,model=virtio --connect=qemu:///system --vnc --noautoconsole -v
+
+```
+Empezando la instalación...
+Creando dominio...                                       |    0 B     00:01     
+La instalación del dominio continúa en progreso. Puede reconectarse a 
+la consola para completar el proceso de instalación.
+```
+
+Vemos como se ha creado correctamente la máquina virtual y se encuentra en ejecución
+```
+georgevik@georgevik-K52JK:~$ sudo virsh -c qemu:///system list
+ Id    Nombre                         Estado
+----------------------------------------------------
+ 5     virt-ubuntu                    ejecutando
+```
+
+### Ejercicio 10
+El siguiente enlace muestra los pasos para instalar Docker en Ubuntu. https://docs.docker.com/installation/ubuntulinux/
+En nuestro caso, hemos utilizado los pasos para ubuntu 14.04 
+>sudo apt-get install docker.io
+>source /etc/bash_completion.d/docker.io
+>echo deb https://get.docker.com/ubuntu docker main > /etc/apt/sources.list.d/docker.list
+>apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+>apt-get update
+>apt-get install -y lxc-docker
+
+Con esto ya tenemos listo el docker para usarse. Con el siguiente comando ejecutamos el docker:
+>sudo docker -d &
+
+### Ejercicio 11
+#### Ejercicio 11.1
+Instalamos las dos imagene con los siguientes comandos
+>sudo docker pull ubuntu
+>sudo docker pull centos
+
+Y nos devuelve salida de este tipo para ambos comandos
+```
+209ea56fda6d: Download complete 
+607c5d1cca71: Download complete 
+dbbd544a49e2: Download complete 
+f62feddc05dc: Download complete 
+98b540cf0569: Download complete 
+ef70b517e969: Download complete 
+dfaad36d8984: Download complete 
+```
+
+#### Ejercicio 11.2
+Para instalar MongoDB utilizaremos la imagen de **codiez/mongodb** que se instala de la misma manera que ubuntu y centOS montrando como resultado la siguiente salida:
+
+508e0c005e19: Pulling dependent layers 
+8dbd9e392a96: Download complete 
+f0ab8043e4e8: Downloading 9.709 MB/426.3 MB 11m37s
 
