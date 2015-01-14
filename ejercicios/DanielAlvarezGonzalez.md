@@ -399,3 +399,217 @@ lo        Link encap:Local Loopback
 
 ##Ejercicio 03
 
+El ejercicio pide en general, crear dos contenedores: uno basado en mi distribución y otro en otra distinta. Como para el ejercicio anterior ya creé un conteneder basado en mi distribución (*contenedorUbuntu*), ahora sólo queda crear un contenedor en otra distribución.
+He creado un contenedor basado en Debian con la orden: 
+
+**sudo lxc-create -t debian -n contenedorDebian**
+
+Una vez instalado, compruebo que están los dos contendores:
+
+[daniel: ~/Dropbox/GitHub/CloudComputing ]$ sudo lxc-list
+RUNNING
+
+FROZEN
+
+STOPPED
+  contendorDebian
+  contenedorUbuntu
+
+
+##Ejercicio 04
+
+Para instalar lxc-webpanel lo único que hay que hacer es seguir las instrucciones de la [página oficial](https://lxc-webpanel.github.io/install.html)
+
+Aquí muestro una captura de pantalla de mi **Web Panel**:
+![captura web panel](http://fotos.subefotos.com/d0d4f1019916541e32c67f90352fa86eo.png "Web Panel")
+
+
+Para el segundo apartado he iniciado el contenedor de Debian y le he limitado un poco la memoria que puede usar. En la siguiente imagen se puede ver que el contenedor está iniciado y que la memoria y está al máximo, como viene por defecto. Una vez hechos los cambios hay que darle al botón **Aplicar** que está situado al final de la página de Web Panel y no se ve en la captura.
+
+![Captura contenedorDebian](http://fotos.subefotos.com/02a2ad546d23b56fae2877f99cf4ff3eo.png "Contenedor Debian modificado")
+
+
+
+##Ejercicio 05
+
+Para comparar las prestaciones en ambas situaciones, se ha aplicado en ambas un benchmark de apache con la siguiente orden
+**ab -n 1000000 -c 10 http: //localhost/index.html**
+
+Los resultados para el contenedor han sido:
+	
+	Server Software:        nginx/1.1.19
+	Server Hostname:        localhost
+	Server Port:            80
+
+	Document Path:          /index.html
+	Document Length:        151 bytes
+
+	Concurrency Level:      10
+	Time taken for tests:   64.304 seconds
+	Complete requests:      1000000
+	Failed requests:        0
+	Write errors:           0
+	Total transferred:      362000000 bytes
+	HTML transferred:       151000000 bytes
+	Requests per second:    15551.08 [#/sec] (mean)
+	Time per request:       0.643 [ms] (mean)
+	Time per request:       0.064 [ms] (mean, across all concurrent requests)
+	Transfer rate:          5497.55 [Kbytes/sec] received
+
+	Connection Times (ms)
+	              min  mean[+/-sd] median   max
+	Connect:        0    0   0.1      0      10
+	Processing:     0    0   0.3      0      50
+	Waiting:        0    0   0.3      0      50
+	Total:          0    1   0.3      1      50
+
+	Percentage of the requests served within a certain time (ms)
+	  50%      1
+	  66%      1
+	  75%      1
+	  80%      1
+	  90%      1
+	  95%      1
+	  98%      1
+	  99%      1
+	 100%     50 (longest request)
+
+Y aquí muestro los resultados del mismo test para la jaula:
+
+	Server Software:        nginx/1.2.1
+	Server Hostname:        127.0.0.1
+	Server Port:            80
+
+	Document Path:          /index.html
+	Document Length:        151 bytes
+
+	Concurrency Level:      10
+	Time taken for tests:   55.696 seconds
+	Complete requests:      1000000
+	Failed requests:        0
+	Write errors:           0
+	Total transferred:      361000000 bytes
+	HTML transferred:       151000000 bytes
+	Requests per second:    17954.49 [#/sec] (mean)
+	Time per request:       0.557 [ms] (mean)
+	Time per request:       0.056 [ms] (mean, across all concurrent requests)
+	Transfer rate:          6329.66 [Kbytes/sec] received
+
+	Connection Times (ms)
+	              min  mean[+/-sd] median   max
+	Connect:        0    0   0.1      0       7
+	Processing:     0    0   0.2      0      22
+	Waiting:        0    0   0.2      0      22
+	Total:          0    1   0.2      1      23
+
+	Percentage of the requests served within a certain time (ms)
+	  50%      1
+	  66%      1
+	  75%      1
+	  80%      1
+	  90%      1
+	  95%      1
+	  98%      1
+	  99%      1
+	 100%     23 (longest request)
+
+Como se puede ver, aunque los resultados no difieren mucho, son mejores para la jaula. El tiempo de ejecución del test es menor (tanto en general como individual por cada petición). Además, el ratio de transferencia de datos es mayor en la jaula y el número de peticiones por segundo también es mayor.
+
+
+
+##Ejercicio 06
+
+Para instalar juju basta con seguir los pasos del guión de la práctica, añadiendo el repositorio y ejecutando:
+
+**sudo apt-get update && sudo apt-get install juju-core**
+
+Una vez que hemos instalado juju, instalamos MongoDB para las bases de datos:
+
+**sudo apt-get install mongodb-server**
+
+
+Una vez instalado todo y confugurado el *evironment.yaml*, ejecutamos **juju bootstrap** para crear un contenedor del gusto de juju. 
+
+Para terminar, lo único que hay que hacer para instalar mySQL en el táper creado, es ejecutar **juju deploy mysql**
+
+Nota: Debido a problemas de espacio en mi partición de Ubuntu, no he podido hacerlo en mi máquina, a pesar de que los pasos a realizar son sencillos.
+
+
+##Ejercicio 07
+
+Para eliminar la configuración creada en el ejercicio 6, primero hay que eliminar mySQL: las cosas hay que eliminarlas en orden inverso a su creación.
+
+	sudo juju destroy-service mysql/0
+
+Después, podemos destruir el entorno completo:
+
+	sudo juju destroy-environment local
+
+Ahora, volveríamos a crear el contenedor como en el ejercicio anterior y añadir los servicios y su relación:
+
+	juju deploy mediawiki
+	juju deploy mysql
+	juju add-relation mediawiki:db mysql
+
+Exponemos el servicio
+	juju expose mediawiki
+
+
+##Ejercicio 08
+
+Para instalar **libvir** seguimos el [tutorial](https://help.ubuntu.com/12.04/serverguide/libvirt.html)
+
+Primero instalamos los paquetes necesarios:
+	
+	sudo apt-get install kvm libvirt-bin
+
+Añadimos nuestro usuario a libvir:
+	
+	sudo adduser $USER libvirtd
+
+Ahora podemos acceder al paquete:
+	
+	virsh
+
+
+##Ejercicio 09
+
+Seguiremos el mismo [tutorial](https://help.ubuntu.com/12.04/serverguide/libvirt.html) que en el ejercicio anterior.
+
+Lo primero es instalar el paquete virt-install
+	
+	sudo apt-get install virtinst
+
+Descargamos la iso del sistema que queramos virtualizar y creamos nuestro contenedor:
+
+	sudo virt-install -n virt-ubuntu_14 -r 512 --disk path=/var/lib/libvirt/images/virt-ubuntuserver.img,bus=virtio,size=5 -c ubuntu-14.04.1-desktop-amd64.iso --accelerate --network network=default,model=virtio --connect=qemu:///system --vnc --noautoconsole -v
+
+
+Ahora, podemos ver las máquinas virtuales existen y su estado:
+	
+	[ daniel: ~/Downloads ]$ sudo virsh -c qemu:///system list
+ 	Id Name                 State
+	----------------------------------
+  	1 virt-ubuntu_14       running
+
+
+##Ejercicio 10
+
+Como la instalación de docker es poco menos que un dolor, podemos acceder a este [script](https://get.docker.com/ubuntu/) y ejecutarlo tal que así:
+
+	curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+
+Vemos parte de la salida:
+	curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+	Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --secret-keyring /tmp/tmp.BiafJRplKa --trustdb-name /etc/apt/trustdb.gpg --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+	gpg: requesting key A88D21E9 from hkp server keyserver.ubuntu.com
+	gpg: key A88D21E9: public key "Docker Release Tool (releasedocker) <docker@dotcloud.com>" imported
+	gpg: Total number processed: 1
+	gpg:               imported: 1  (RSA: 1)
+	Hit http://extras.ubuntu.com precise Release.gpg
+	Hit http://archive.canonical.com precise Release.gpg                           
+	Hit http://repository.spotify.com stable Release.gpg                           
+	Hit http://ppa.launchpad.net precise Release.gpg                               
+	Hit http://dl.google.com stable Release.gpg    
+
+Por defecto, docker se lanza en cuanto termina la instalación. De lo contrario, tipando **sudo docker -d** lanzaríamos docker.
