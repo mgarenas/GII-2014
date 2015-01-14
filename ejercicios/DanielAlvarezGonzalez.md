@@ -514,3 +514,102 @@ Y aquí muestro los resultados del mismo test para la jaula:
 	 100%     23 (longest request)
 
 Como se puede ver, aunque los resultados no difieren mucho, son mejores para la jaula. El tiempo de ejecución del test es menor (tanto en general como individual por cada petición). Además, el ratio de transferencia de datos es mayor en la jaula y el número de peticiones por segundo también es mayor.
+
+
+
+##Ejercicio 06
+
+Para instalar juju basta con seguir los pasos del guión de la práctica, añadiendo el repositorio y ejecutando:
+
+**sudo apt-get update && sudo apt-get install juju-core**
+
+Una vez que hemos instalado juju, instalamos MongoDB para las bases de datos:
+
+**sudo apt-get install mongodb-server**
+
+
+Una vez instalado todo y confugurado el *evironment.yaml*, ejecutamos **juju bootstrap** para crear un contenedor del gusto de juju. 
+
+Para terminar, lo único que hay que hacer para instalar mySQL en el táper creado, es ejecutar **juju deploy mysql**
+
+Nota: Debido a problemas de espacio en mi partición de Ubuntu, no he podido hacerlo en mi máquina, a pesar de que los pasos a realizar son sencillos.
+
+
+##Ejercicio 07
+
+Para eliminar la configuración creada en el ejercicio 6, primero hay que eliminar mySQL: las cosas hay que eliminarlas en orden inverso a su creación.
+
+	sudo juju destroy-service mysql/0
+
+Después, podemos destruir el entorno completo:
+
+	sudo juju destroy-environment local
+
+Ahora, volveríamos a crear el contenedor como en el ejercicio anterior y añadir los servicios y su relación:
+
+	juju deploy mediawiki
+	juju deploy mysql
+	juju add-relation mediawiki:db mysql
+
+Exponemos el servicio
+	juju expose mediawiki
+
+
+##Ejercicio 08
+
+Para instalar **libvir** seguimos el [tutorial](https://help.ubuntu.com/12.04/serverguide/libvirt.html)
+
+Primero instalamos los paquetes necesarios:
+	
+	sudo apt-get install kvm libvirt-bin
+
+Añadimos nuestro usuario a libvir:
+	
+	sudo adduser $USER libvirtd
+
+Ahora podemos acceder al paquete:
+	
+	virsh
+
+
+##Ejercicio 09
+
+Seguiremos el mismo [tutorial](https://help.ubuntu.com/12.04/serverguide/libvirt.html) que en el ejercicio anterior.
+
+Lo primero es instalar el paquete virt-install
+	
+	sudo apt-get install virtinst
+
+Descargamos la iso del sistema que queramos virtualizar y creamos nuestro contenedor:
+
+	sudo virt-install -n virt-ubuntu_14 -r 512 --disk path=/var/lib/libvirt/images/virt-ubuntuserver.img,bus=virtio,size=5 -c ubuntu-14.04.1-desktop-amd64.iso --accelerate --network network=default,model=virtio --connect=qemu:///system --vnc --noautoconsole -v
+
+
+Ahora, podemos ver las máquinas virtuales existen y su estado:
+	
+	[ daniel: ~/Downloads ]$ sudo virsh -c qemu:///system list
+ 	Id Name                 State
+	----------------------------------
+  	1 virt-ubuntu_14       running
+
+
+##Ejercicio 10
+
+Como la instalación de docker es poco menos que un dolor, podemos acceder a este [script](https://get.docker.com/ubuntu/) y ejecutarlo tal que así:
+
+	curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+
+Vemos parte de la salida:
+	curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+	Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --secret-keyring /tmp/tmp.BiafJRplKa --trustdb-name /etc/apt/trustdb.gpg --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+	gpg: requesting key A88D21E9 from hkp server keyserver.ubuntu.com
+	gpg: key A88D21E9: public key "Docker Release Tool (releasedocker) <docker@dotcloud.com>" imported
+	gpg: Total number processed: 1
+	gpg:               imported: 1  (RSA: 1)
+	Hit http://extras.ubuntu.com precise Release.gpg
+	Hit http://archive.canonical.com precise Release.gpg                           
+	Hit http://repository.spotify.com stable Release.gpg                           
+	Hit http://ppa.launchpad.net precise Release.gpg                               
+	Hit http://dl.google.com stable Release.gpg    
+
+Por defecto, docker se lanza en cuanto termina la instalación. De lo contrario, tipando **sudo docker -d** lanzaríamos docker.
