@@ -152,21 +152,98 @@
 
 ###Otros objetivos
 - [X] Usar herramientas de administración y monitorización de red en línea de órdenes.
-- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
+- [X] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
 - [X] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54). Yo soy adicto a gedit.
 
 ## Clase del 28 de noviembre de 2014
 
 ###Objetivos de esta sesión
-- [ ] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
-- [ ] Aprender a "enjaular" usuarios.
+- [X] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
+- [X] Aprender a "enjaular" usuarios.
 
 ###Otros objetivos
-- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
+- [X] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
 - [X] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54). Yo soy adicto a gedit.
-- [ ] Aplicar conocimientos de administración de un sistema Linux: usuarios, permisos.
-- [ ] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
+- [X] Aplicar conocimientos de administración de un sistema Linux: usuarios, permisos.
+- [X] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
 - [X] Comprender que existe vida en los servidores web fuera del Apache.
 - [ ] [Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla](https://es.wikipedia.org/wiki/Chroot) como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
 - [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
-- [ ] Probar [la nube de fi-ware](https://cloud.lab.fi-ware.org/) para alojar proyectos y hacer pruebas.
+- [X] Probar [la nube de fi-ware](https://cloud.lab.fi-ware.org/) para alojar proyectos y hacer pruebas.
+
+## Clase del 1 de diciembre de 2014
+
+###Objetivos de esta sesión
+- [X] Entender el concepto de contenedores.
+- [X] Configurar el sistema para poder crear y usar contenedores.
+- [X] Crear y usar contenedores.
+
+###Otros objetivos
+- [X] Entregar el segundo hito de la práctica.
+- [X] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
+- [X] Retomar la costumbre de hacer git pull upstream master al principio de cada sesión.
+
+## Clase del 5 de diciembre de 2014
+
+###Objetivos de esta sesión
+- [X] Entender los sistemas de orquestación de máquinas virtuales.
+- [X] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
+
+###Otros objetivos
+- [X] Ver el papel de los tápers o containers como base de experimentación y prácticas de muchos de los conceptos de virtualización.
+- [X] Poner Granada, Spain en el perfil de GitHub.
+- [X] Hablar del material y la mecánica de la asignatura hasta este momento.
+
+## Clase del 12 de diciembre de 2014
+
+###Objetivos de esta sesión
+- [X] Resolver problemas con juju.
+- [X] Configuración compleja de sistemas con él.
+- [X] Entender el concepto de hipervisor y trabajar con ellos.
+
+###Otros objetivos
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+## Clase del 15 de diciembre de 2014
+
+###Objetivos de esta sesión
+- [X] Resolver problemas con juju.
+- [X] Entender cómo funciona docker y qué implica.
+
+###Otros objetivos
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+## Clase del 19 de diciembre de 2014
+
+###Objetivos de esta sesión
+- [X] Resolver problemas con juju.
+- [X] Entender cómo funciona docker y qué implica.
+
+###Otros objetivos
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+- [X] Desarrollar funcionalidad en los proyectos.
+
+## Clase del 9 de enero de 2015
+
+###Objetivos de esta sesión
+- [X] Resolver últimos problemas con docker.
+- [X] Resolver dudas relacionadas con la tercera práctica.
+
+###Otros objetivos
+- [X] ¿Has modificado algún artículo de la Wikipedia? Pues hazlo ya.
+- [X] Sigue corrigiendo ejercicios de tus compañeros y discutiéndolos con ellos (usando comentarios a los commits o pull requests).
+- [X] Desarrollar funcionalidad en los proyectos.
+
+## Clase del 12 de enero de 2015
+
+###Objetivos de esta sesión
+- [X] Terminar la familiarización con Ruby.
+- [X] Recordar conceptos de almacenamiento físico.
+- [X] Entender el concepto de FUSE y usarlo en la práctica.
+- [X] Crear y manipular formatos de provisionamiento delgado.
+
+###Otros objetivos
+- [X] Tener flexibilidad para saber cuando usar lenguajes nuevos y aprenderlos sobre la marcha.
+- [X] Usar herramientas de la asignatura para tareas de utilidad en la administración de sistemas u otras asignaturas.
+- [X] Modificar/mejorar algún artículo de la Wikipedia.
+- [X] Desarrollar funcionalidad en los proyectos
