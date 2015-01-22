@@ -91,7 +91,7 @@ Tema1
 		cpu    cpuset   freezer  memory   systemd
 	
 
-###Ejercicio 8.1 Crear diferentes grupos de control sobre un sistema operativo Linux. Ejecutar en uno de ellos el navegador, en otro un procesador de textos y en uno último cualquier otro proceso. Comparar el uso de recursos de unos y otros durante un tiempo determinado.
+###Ejercicio 8.1 Crear diferentes grupos de control sobre un sistema operativo Linux. Ejecutar en uno de ellos el navegador, en otro un procesador #antiPostureode textos y en uno último cualquier otro proceso. Comparar el uso de recursos de unos y otros durante un tiempo determinado.
 		
 	sudo su	
 	cd /sys/fs/cgroup
@@ -507,17 +507,84 @@ wget http://lxc-webpanel.github.com/tools/install.sh -O - | bash
 
 ###Ejercicio 6
 ####Instalar juju.
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Tal y como se indica en la página de la asignatura, añadimos y actualizamos el repositorio e instalamos juju
+```
+add-apt-repository ppa:juju/stable
+apt-get update && apt-get install juju-core
+```
 ####Usándolo, instalar MySQL en un táper.
-
+1. Dejamos de ser superusuario
+```
+exit
+```
+2. Accedemos a /.juju/environments.yaml y sustituimos la línea "default:amazon" por "default:local"
+3. Instalamos MongoDB
+```
+apt-get install mongodb-server
+```
+4. Instalamos juju-local
+```
+apt-get install juju-local
+```
+5. Creamos el táper
+```
+juju bootstrap
+```
+6. Desplegamos MySQL
+```
+juju deploy mysql
+```
 ###Ejercicio 7
 ####Destruir toda la configuración creada anteriormente
+Lo más rápido es destruir el entorno completo
+```
+sudo juju destroy-environment local
+```
 ####Volver a crear la máquina anterior y añadirle mediawiki y una relación entre ellos.
+Creamos el táper y desplegamos mediawiki y MySQL y especificamos su relación (ya que mediawiki utiliza MySQL)
+```
+juju bootstrap
+juju deploy mysql
+juju deploy mediawiki
+juju add-relation mediawiki:db mysql
+juju expose mediawiki
+```
 ####Crear un script en shell para reproducir la configuración usada en las máquinas que hagan falta.
 
 ###Ejercicio 8 Instalar libvirt
-
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Instalamos libvirt tal y como se indica en su página
+```
+apt-get install kvm libvirt-bin
+```
+3. Si el usuario que utilizamos habitualmente  no forma parte del grupo "libvirt", lo añadimos
+```
+adduser carlos libvirtd
+```
 ###Ejercicio 9 Instalar un contenedor usando virt-install
-
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Instalamos virtinst y virt-viewer
+```
+apt-get install virtinst virt-viewer
+```
+3. Creamos el directorio donde se instalará el contenedor
+```
+mkdir /vir
+```
+3. Instalamos con virt-install una ISO que hemos descargado previamente (el contenedor ocupará 5GB)
+```
+virt-install -r 1024 --accelerate -n LinuxMint17 --disk /virt/mint17_64.img,size=5 --cdrom linuxmint17.1_64.is
+```
 ###Ejercicio 10 Instalar docker.
 1. Pasamos a superusuario
 ```
@@ -535,15 +602,27 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8
 ```
 ###Ejercicio 11
 ####Instalar a partir de docker una imagen alternativa de Ubuntu y alguna adicional, por ejemplo de CentOS.
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Buscamos las versiones de centos que se encuentran disponibles en el repositorio de docker
+```
+docker search centos
+```
+3. Instalamos la versión que consideremos más oportuna (la última)
+```
+docker pull centos
+```
 ####Buscar e instalar una imagen que incluya MongoDB
-
-###Ejercicio 12 Crear un usuario propio e instalar nginx en el contenedor creado de esta forma.
-
-###Ejercicio 13 Crear a partir del contenedor anterior una imagen persistente con commit.
-
-###Ejercicio 14 Crear una imagen con las herramientas necesarias para el proyecto de la asignatura sobre un sistema operativo de tu elección.
-
-
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Instalamos alguna imagen que incluya MongoBD
+```
+docker pull dockerfile/mongodb
+```
 
 
 Seminario Ruby
