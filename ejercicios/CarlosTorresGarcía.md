@@ -573,13 +573,17 @@ adduser carlos libvirtd
 ```
 sudo su
 ```
-2. Instalamos virtinst
+2. Instalamos virtinst y virt-viewer
 ```
-apt-get install virtinst
+apt-get install virtinst virt-viewer
 ```
-3. Instalamos con virt-install una ISO que hemos descargado
+3. Creamos el directorio donde se instalará el contenedor
 ```
-
+mkdir /vir
+```
+3. Instalamos con virt-install una ISO que hemos descargado previamente (el contenedor ocupará 5GB)
+```
+virt-install -r 1024 --accelerate -n LinuxMint17 --disk /virt/mint17_64.img,size=5 --cdrom linuxmint17.1_64.is
 ```
 ###Ejercicio 10 Instalar docker.
 1. Pasamos a superusuario
@@ -598,9 +602,27 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8
 ```
 ###Ejercicio 11
 ####Instalar a partir de docker una imagen alternativa de Ubuntu y alguna adicional, por ejemplo de CentOS.
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Buscamos las versiones de centos que se encuentran disponibles en el repositorio de docker
+```
+docker search centos
+```
+3. Instalamos la versión que consideremos más oportuna (la última)
+```
+docker pull centos
+```
 ####Buscar e instalar una imagen que incluya MongoDB
-
-
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Instalamos alguna imagen que incluya MongoBD
+```
+docker pull dockerfile/mongodb
+```
 
 
 Seminario Ruby
