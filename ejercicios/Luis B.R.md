@@ -1093,3 +1093,313 @@ juju bootstrap
 # Instalamos MySQL.
 juju deploy mysql
 ```
+
+- - -
+## Ejercicio 7
+
+:one: Lo primero de todo que vamos a realizar es borrar toda la configuración que hasta ahora se ha creado:
+
+:pushpin:
+
+```bash
+# Destruimos el servicio de mysql
+sudo juju destroy-service mysql
+# También el servicio de mediawiki
+sudo juju destroy-service mediakiki
+# Podemos también destruir el entorno local.
+sudo juju destroy-environment local
+
+#Salida
+WARNING! this command will destroy the "local" environment (type: local)
+This includes all machines, services, data and other resources.
+
+Continue [y/N]? y
+```
+
+:two: Ahora volvemos a crear la máquina anterior y añadirle *mediawiki* y una relación entre ellos. Para esto, lo que tenemos que hacer primero es seguir los mismos pasos que antes:
+
+:pushpin:
+
+```bash
+# Hacemos bootstrap.
+sudo juju bootstrap
+
+# Desplegamos mediawiki y mysql.
+sudo juju deploy mediawiki
+sudo juju deploy mysql
+
+# Establecemos la relación.
+sudo juju add-relation mediawiki:db mysql
+
+# Exponemos el servicio y listo
+sudo juju expose mediawiki
+```
+
+:three: Lo último que vamos a hacer es crear un script en *shell* para reproducir la configuración usada en las máquina que haga falta. Básicamente lo que tenemos que hacer es agrupar en un *script* el código anteriormente expuesto.
+
+:pushpin:
+
+```bash
+#!/bin/bash
+# Ejercicio 7
+# -----------
+# Configura juju con MySQL y mediawiki.
+
+# Inicializamos juju.
+juju init
+
+# Escogemos el entorno.
+juju switch local
+# Creamos el contenedor.
+juju bootstrap
+
+# Desplegamos los servicios que queremos.
+juju deploy mediawiki
+juju deploy mysql
+
+# Establecemos la relación entre los dos servicios.
+juju add-relation mediawiki:db mysql
+
+# Exponemos el servicio.
+juju expose mediawiki
+```
+
+- - - 
+## Ejercicio 8.
+
+Vamos a proceder a instalar según el tutorial que se nos proprociona.
+
+:pushpin:
+
+```bash
+# Comprobamos que nuestro sistema soporta las extensiones de virtualización para KVM.
+kvm-ok
+
+# Salida.
+INFO: /dev/kvm exists
+KVM acceleration can be used
+```
+
+Puesto que es compatible procedemos a realizar la instalación.
+
+:floppy_disk:
+
+```bash
+# Instalamos el software.
+sudo apt-get install kvm libvirt-bin
+
+# Añadimos el usuario que va a manejar las máquinas virtuales.
+sudo adduser $USER libvirtd
+
+# Accedemos una vez instalado el paquete.
+virsh
+```
+
+- - - 
+## Ejercicio 9.
+
+Procedmos a instalar **virt-install** de la siguiente manera:
+
+:floppy_disk:
+
+```bash
+# Instalamos el paquete de 'virt-install'.
+sudo apt-get install virtinst
+
+# Salida.
+(...)
+Seleccionando el paquete virtinst previamente no seleccionado.
+Desempaquetando virtinst (de .../virtinst_0.600.4-2ubuntu2.1_all.deb) ...
+Procesando disparadores para man-db ...
+Configurando python-libvirt (1.1.1-0ubuntu8.11) ...
+Configurando python-urlgrabber (3.9.1-4ubuntu2) ...
+Configurando virtinst (0.600.4-2ubuntu2.1) ...
+```
+
+:floppy_disk:
+
+```bash
+# Instalamos el paquete 'vrt-viewer' para acceder a 
+#   la consola de la máquina usando la interfaz gráfica.
+sudo apt-get install virt-viewer
+
+# Salida.
+(...)
+Configurando libspice-client-gtk-3.0-4:amd64 (0.20-0nocelt3) ...
+Configurando libgvnc-1.0-0 (0.5.2-1ubuntu2) ...
+Configurando libgtk-vnc-2.0-0 (0.5.2-1ubuntu2) ...
+Configurando virt-viewer (0.5.6-2) ...
+update-alternatives: utilizando /usr/bin/spice-xpi-client-remote-viewer para proveer /usr/bin/spice-xpi-client (spice-xpi-client) en modo automático
+Procesando disparadores para libc-bin ...
+```
+
+Una vez hecho esto necesitamos una imagen **iso** del sistema operativo que vamos a descargar y con la imagen descargada se realiza la instalación:
+
+:dvd:
+
+```bash
+# Instalamos la máquina virtual con las siguientes opciones:
+#   1) -n virt-ubuntuserver : Nombre de la máquina virtual.
+#   2) -r 512 : Cantidad de memoria RAM (MB).
+#   3) --disk path=/var/lib/libvirt/images/virt-ubuntuserver.img,bus=virtio,size=5 : La ruta donde se almacenarán recursos que usará el sistema.
+#   4) -c miISO.iso : Imagen ISO que vamos a instalar.
+#   5) --accelerate : Indica que se utilizará aceleración del kernel.
+#   6) --network network=default,model=virtio : Interfaz y modelo de red.
+#   7) --connect=qemu:///system : Indica el hipervisor.
+#   8) --vnc : Para exportar la consola usando VNC.
+#   9) --noautoconsole : Para que no se conecte automáticamente a la consola de la máquina virtual.
+#  10) -v : Que la máquina esté totalmente virtualizada.
+#
+#   Para ver todas estas opciones consultar el manual: 'man virt-install'
+sudo virt-install -n virt-ubuntuserver -r 512 --disk path=/var/lib/libvirt/images/virt-ubuntuserver.img,bus=virtio,size=5 -c miISO.iso --accelerate --network network=default,model=virtio --connect=qemu:///system --vnc --noautoconsole -v
+
+# Podemos ver las máquinas virtuales instaladas.
+sudo virsh -c qemu:///system list
+
+# Salida.
+ Id    Nombre                         Estado
+----------------------------------------------------
+ 1     virt-ubuntuserver              ejecutando
+```
+
+- - -
+## Ejercicio 10.
+
+Vamos ahora a instalar **Docker**, existen varias formas de realizar la instalación una de ellas es mediante el *script* que nos proporcionan en la siguiente url: 
+
+[https://get.docker.com/ubuntu/](https://get.docker.com/ubuntu/)
+
+:floppy_disk:
+
+```bash
+#Descargamos el script y lo ejecutamos.
+curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+
+# Salida.
+(...)
+Desempaquetando lxc-docker (de .../lxc-docker_1.4.1_amd64.deb) ...
+Procesando disparadores para man-db ...
+Procesando disparadores para ureadahead ...
+ureadahead will be reprofiled on next reboot
+Configurando aufs-tools (1:3.2+20130722-1ubuntu1) ...
+Configurando lxc-docker-1.4.1 (1.4.1) ...
+docker start/running, process 4745
+Procesando disparadores para ureadahead ...
+Configurando lxc-docker (1.4.1) ...
+Procesando disparadores para libc-bin ...
+```
+
+Tardará un rato para realizar la instalación :sleeping:... También podemos ver el contenido del script que acabamos de ejecutar que sería el siguiente:
+
+:pushpin:
+
+```bash
+# Check that HTTPS transport is available to APT
+if [ ! -e /usr/lib/apt/methods/https ]; then
+  apt-get update
+  apt-get install -y apt-transport-https
+fi
+
+# Add the repository to your APT sources
+echo deb https://get.docker.com/ubuntu docker main > /etc/apt/sources.list.d/docker.list
+
+# Then import the repository key
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+
+# Install docker
+apt-get update
+apt-get install -y lxc-docker
+
+#
+# Alternatively, just use the curl-able install.sh script provided at https://get.docker.com
+#
+```
+
+Y listo, ahora simplemente para ejecutar el servicio **docker** tenemos que ejecutar el siguiente comando:
+
+:pushpin:
+
+```bash
+# Ejecutamos el servicio docker.
+sudo docker -d
+
+# Salida.
+INFO[0000] +job serveapi(unix:///var/run/docker.sock)   
+INFO[0000] +job init_networkdriver()                    
+INFO[0000] Listening for HTTP on unix (/var/run/docker.sock) 
+INFO[0000] -job init_networkdriver() = OK (0)           
+INFO[0000] WARNING: Your kernel does not support cgroup swap limit. 
+INFO[0000] Loading containers: start.                   
+
+INFO[0000] Loading containers: done.                    
+INFO[0000] docker daemon: 1.4.1 5bc2ff8; execdriver: native-0.2; graphdriver: aufs 
+INFO[0000] +job acceptconnections()                     
+INFO[0000] -job acceptconnections() = OK (0)    
+```
+
+- - - 
+## Ejercicio 11.
+
+Vamos a proceder a instalar las dos imagenes que nos piden:
+
+:floppy_disk:
+
+```bash
+# Instalamos la imagen de ubuntu.
+sudo docker pull ubuntu
+# Instalamos la imagen de CentOS.
+sudo docker pull centos
+
+# Salida 1.
+(...)
+511136ea3c5a: Download complete 
+3b363fd9d7da: Download complete
+607c5d1cca71: Download complete 
+f62feddc05dc: Download complete 
+8eaa4ff06b53: Download complete 
+
+# Salida 2.
+(...)
+44c4bb92fa11: Download complete 
+930cb2a860f7: Download complete 
+fff2c21b0a71: Download complete 
+b7b7ca7a9172: Download complete 
+a1bc79a43c77: Download complete 
+d46fdd618d55: Download complete 
+8988c8cbc051: Download complete 
+```
+
+Para instalar la segunda parte que se nos pide que incluya **MongoDB** hemos encontrado la siguiente [página](http://blog.codiez.co.za/2013/09/setup-a-docker-container-with-mongodb/). Realizamos lo siguiente:
+
+:floppy_disk:
+
+```bash
+# Instalamos la imagen que contiene MongoDB.
+sudo docker pull codiez/mongodb
+
+# Salida.
+(...)
+508e0c005e19: Download complete
+508e0c005e19: Download complete
+8dbd9e392a96: Download complete
+```
+
+Podemos utilizar los siguientes comando que serán importantes para utilizar los sistemas que acabamos de instalar:
+
+:pushpin:
+
+```bash
+# Ejecutamos la imagen.
+sudo docker run <nombre_imagen>
+
+# Comprobamos las imagenes instaladas.
+sudo docker images
+
+# Para ver los contenedores que están ejecutándose.
+sudo docker ps
+
+# Podemos parar el contenedor.
+sudo docker stop <id_contenedor>
+```
+
+- - - 
