@@ -365,8 +365,13 @@ KVM acceleration can NOT be used
 ## Ejercicio 9
 _Instalar un contenedor usando virt-install._
 
+No puedo realizarlo ya que mi ordenador no soporta la virtualización.
 
 ## Ejercicio 10
 _Instalar docker._
 
 Instalamos _docker_ con `sudo apt-get install docker.io`.
+
+## Ejercicio 11
++  _Instalar a partir de docker una imagen alternativa de Ubuntu y alguna adicional, por ejemplo de CentOS._
++  _Buscar e instalar una imagen que incluya MongoDB._
