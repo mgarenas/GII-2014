@@ -167,3 +167,127 @@ Lista de objetivos de Daniel Díaz Salas
 - [ ] Entregar el segundo hito de la práctica. 
 - [ ] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
 - [ ] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
+
+#Clase del 5 de diciembre de 2014
+##Objetivos de esta sesión
+
+- [ ] Entender los sistemas de orquestación de máquinas virtuales.
+- [ ] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
+
+##Otros objetivos
+
+- [ ] Ver el papel de los *tápers* o *containers* como base de experimentación y prácticas de muchos de los conceptos de virtualización.
+- [x] Poner Granada, Spain en el perfil de GitHub.
+- [x] Hablar del material y la mecánica de la asignatura hasta este momento.
+
+#Clase del 12 de diciembre de 2014
+##Objetivos de esta sesión
+
+- [ ] Resolver problemas con `juju`.
+- [ ] Configuración compleja de sistemas con él.
+- [ ] Entender el concepto de hipervisor y trabajar con ellos.
+
+##Otros objetivos
+
+- [ ] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+#Clase del 15 de diciembre de 2014
+##Objetivos de esta sesión
+- [ ] Resolver problemas con `juju`.
+- [ ] Entender cómo funciona `docker` y qué implica.
+
+##Otros objetivos
+
+- [ ] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+#Clase del 19 de diciembre de 2014
+##Objetivos de esta sesión
+
+- [ ] Resolver problemas con `juju`.
+- [ ] Entender cómo funciona `docker` y qué implica.
+
+##Otros objetivos
+
+- [ ] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+- [ ] Desarrollar funcionalidad en los proyectos
+
+#Clase del 9 de enero de 2015
+##Objetivos de esta sesión
+
+- [ ] Resolver últimos problemas con `docker`.
+- [ ] Resolver dudas relacionadas  con la [tercera práctica](http://jj.github.io/IV/documentos/practicas/3.Contenedores).
+
+##Otros objetivos
+
+- [ ] ¿Has modificado algún artículo de la Wikipedia? Pues hazlo ya.
+- [ ] Sigue corrigiendo ejercicios de tus compañeros y discutiéndolos con ellos (usando comentarios a los commits o pull requests)
+- [ ] Desarrollar funcionalidad en los proyectos
+
+# Clase del 12 de enero de 2015
+## Objetivos de la asignatura
+
+- [ ] Terminar la familiarización con Ruby
+- [ ] Recordar conceptos de almacenamiento físico.
+- [ ] Entender el concepto de FUSE y usarlo en la práctica.
+- [ ] Crear y manipular formatos de provisionamiento delgado. 
+
+
+## Objetivos generales
+
+- [ ] Tener flexibilidad para saber cuando usar lenguajes nuevos y aprenderlos sobre la marcha.
+- [ ] Usar herramientas de la asignatura para tareas de utilidad en la administración de sistemas u otras asignaturas. 
+- [ ] Modificar/mejorar algún artículo de la Wikipedia.
+- [ ] Desarrollar funcionalidad en los proyectos
+
+# Clase del 16 de enero de 2015
+## Objetivos de la asignatura
+
+- [ ] Entender diferentes tipos de sistemas de ficheros virtuales
+- [ ] Aprender a provisionar almacenamiento en la nube.
+
+
+## Objetivos generales
+
+- [ ] Comenzar a usar IaaS de algún tipo.
+- [ ] Entender los pasos necesarios para montar una infraestructura virtual a partir de sus componentes.
+- [ ] Desarrollar funcionalidad en los proyectos
+
+# Clase del 19 de enero de 2015
+## Objetivos de la asignatura
+
+- [ ] Entender los diferentes componentes de la infraestructura como servicio.
+- [ ] Aprender a usar máquinas virtuales, localmente y en la nube.
+- [ ] Comprender las bases físicas de las infraestructuras virtuales.
+
+## Objetivos generales
+
+- [ ] Usar IaaS de algún tipo.
+- [ ] Manejar desde línea de órdenes cuestiones de almacenamiento virtual.
+- [ ] Comprender la importancia de la medición y experimentación en la gestión de sistemas informáticos.
+- [ ] Desarrollar funcionalidad en los proyectos.
+
+# Clase del 23 de enero de 2015
+## Objetivos de la asignatura
+
+- [ ] Entender el concepto de provisionamiento de máquinas virtuales.
+- [ ] Usar Chef para provisionamiento de una máquina virtual.
+- [ ] Comprender la utilidad de provisionamiento externo de máquinas virtuales.
+
+## Objetivos generales
+
+- [ ] Tener listas máquinas virtuales para pruebas, localmente con un gestor de máquinas virtuales o en la nube.
+- [ ] Manejar desde línea de órdenes cuestiones de almacenamiento virtual.
+- [ ] Desarrollar funcionalidad en los proyectos.
+
+# Clase del 26 de enero de 2015
+## Objetivos de la asignatura
+
+- [ ] Entender el [último hito del proyecto](http://jj.github.io/CC/documentos/practicas/4.Aplicaciones).
+- [ ] Usar diversas herramientas para provisionamiento de una máquina virtual.
+- [ ] Comprender la utilidad de provisionamiento externo de máquinas virtuales.
+
+## Objetivos generales
+
+- [ ] Aprender a usar máquinas virtuales.
+- [ ] Elegir un sistema de provisionamiento.
+- [ ] Entender los objetivos del último proyecto (y de la asignatura).

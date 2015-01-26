@@ -259,3 +259,146 @@ Ejercicio 7
 Habitualmente yo uso Java para programar cosas, y para realizar pruebas se usa JUnit.
 
 Los test en Django se hacen usando el módulo [unittest](https://docs.python.org/3/library/unittest.html#module-unittest) que está en la biblioteca estándar de Python.
+
+#Tema 3
+
+Ejercicio 1
+-----------
+
+>sudo unshare -u /bin/bash
+>mount -o loop -t iso9660 ubuntu-14.04.1-desktop-amd64.iso /mnt/test
+
+Ejercicio 2
+-----------
+
+###Primera parte###
+
+>ip addr show
+bridge name bridge id       STP enabled interfaces
+alcantara       8000.c80aa9a0f0b7   no      eth0
+
+###Segunda parte###
+Crear una interfaz nueva
+>sudo btctl addif ejercicio2
+
+Asignarlo al interfaz de la tarjeta wifi
+>sudo brctl addif ejercicio2 wlan0
+
+Por desgracia no deja hacerlo:
+>can't add wlan0 to bridge ejercicio2: Operation not supported
+
+Ejercicio 3
+-----------
+
+Crear una carpeta donde va a ir la distro
+>mkdir ~/CC
+mkdir ~/CC/Tema3Ejer3
+
+Crear el sistema con deboostrap
+>sudo debootstrap --arch=amd64 saucy ~/CC/Tema3Ejer3/ http://archive.ubuntu.com/ubuntu
+
+Ejercicio 4
+-----------
+
+Ejercicio 5
+-----------
+
+Ejercicio 6
+-----------
+
+
+#Tema 4
+
+Ejercicio 1
+-----------
+
+>sudo apt-get install lxc
+
+Ejercicio 2
+-----------
+
+> sudo lxc-create -t ubuntu -n una-caja
+> sudo lxc-start -n una-caja
+> ip addr show
+
+4: lxcbr0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether fe:5c:a7:02:55:db brd ff:ff:ff:ff:ff:ff
+    inet 10.0.3.1/24 brd 10.0.3.255 scope global lxcbr0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::7cb9:4ff:fe29:5db0/64 scope link 
+       valid_lft forever preferred_lft forever
+6: vethAY1US6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master lxcbr0 state UP group default qlen 1000
+    link/ether fe:5c:a7:02:55:db brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::fc5c:a7ff:fe02:55db/64 scope link 
+       valid_lft forever preferred_lft forever
+
+
+Ejercicio 3
+-----------
+###Primera parte###
+> sudo lxc-create -t debian -n ejer3
+> sudo lxc-start -n ejer3
+ 
+###Segunda parte###
+He usado el script del compañero.
+
+Ejercicio 4
+-----------
+###Primera parte###
+>wget http://lxc-webpanel.github.io/tools/install.sh -O - | bash
+
+Al utilizar este comando me da el siguiente error:
+> No se puede escribir a “-” (Tubería rota).
+
+Que no he sido capaz de arreglar.
+
+###Segunda parte###
+Al no haber sido capaz de hacer la primera parte no puedo hacer la segunda.
+
+Ejercicio 5
+-----------
+>sudo apt-get install nginx
+
+Para ejecutarlo:
+>service nginx start
+
+Metiéndote en localhost:80 aparece la pantalla de nginx.
+No sé qué más hacer.
+
+Ejercicio 6
+-----------
+###Primera Parte###
+>sudo add-apt-repository ppa:juju/stable
+sudo apt-get update && sudo apt-get install juju-core
+
+Cambiamos la línea
+>default: Amazon
+
+a
+
+>default: local
+
+Como resulta que necesito más funcionalidad que la que trae juju-core instalo todo juju
+>sudo apt-get install juju
+
+También necesito juju-local
+>sudo apt-get install juju-local
+###Segunda Parte###
+
+Ejercicio 7
+-----------
+
+Ejercicio 8
+-----------
+
+Ejercicio 9
+-----------
+
+Ejercicio 10
+------------
+
+Ejercicio 11
+------------
+
+
+
