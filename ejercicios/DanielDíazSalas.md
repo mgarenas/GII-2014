@@ -377,6 +377,12 @@ Cambiamos la línea
 a
 
 >default: local
+
+Como resulta que necesito más funcionalidad que la que trae juju-core instalo todo juju
+>sudo apt-get install juju
+
+También necesito juju-local
+>sudo apt-get install juju-local
 ###Segunda Parte###
 
 Ejercicio 7
