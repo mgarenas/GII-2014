@@ -300,8 +300,78 @@ Crear el sistema con deboostrap
 Ejercicio 4
 -----------
 
+Ejercicio 5
+-----------
+
+Ejercicio 6
+-----------
 
 
+#Tema 4
+
+Ejercicio 1
+-----------
+
+>sudo apt-get install lxc
+
+Ejercicio 2
+-----------
+
+> sudo lxc-create -t ubuntu -n una-caja
+> sudo lxc-start -n una-caja
+> ip addr show
+
+4: lxcbr0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether fe:5c:a7:02:55:db brd ff:ff:ff:ff:ff:ff
+    inet 10.0.3.1/24 brd 10.0.3.255 scope global lxcbr0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::7cb9:4ff:fe29:5db0/64 scope link 
+       valid_lft forever preferred_lft forever
+6: vethAY1US6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master lxcbr0 state UP group default qlen 1000
+    link/ether fe:5c:a7:02:55:db brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::fc5c:a7ff:fe02:55db/64 scope link 
+       valid_lft forever preferred_lft forever
+
+
+Ejercicio 3
+-----------
+###Primera parte###
+> sudo lxc-create -t debian -n ejer3
+> sudo lxc-start -n ejer3
+ 
+###Segunda parte###
+He usado el script del compañero.
+
+Ejercicio 4
+-----------
+###Primera parte###
+>wget http://lxc-webpanel.github.io/tools/install.sh -O - | bash
+    
+
+
+###Segunda parte###
+
+
+Ejercicio 5
+-----------
+
+Ejercicio 6
+-----------
+
+Ejercicio 7
+-----------
+
+Ejercicio 8
+-----------
+
+Ejercicio 9
+-----------
+
+Ejercicio 10
+------------
+
+Ejercicio 11
+------------
 
 
 
