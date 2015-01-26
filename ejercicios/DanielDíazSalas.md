@@ -346,17 +346,38 @@ Ejercicio 4
 -----------
 ###Primera parte###
 >wget http://lxc-webpanel.github.io/tools/install.sh -O - | bash
-    
 
+Al utilizar este comando me da el siguiente error:
+> No se puede escribir a “-” (Tubería rota).
+
+Que no he sido capaz de arreglar.
 
 ###Segunda parte###
-
+Al no haber sido capaz de hacer la primera parte no puedo hacer la segunda.
 
 Ejercicio 5
 -----------
+>sudo apt-get install nginx
+
+Para ejecutarlo:
+>service nginx start
+
+Metiéndote en localhost:80 aparece la pantalla de nginx.
+No sé qué más hacer.
 
 Ejercicio 6
 -----------
+###Primera Parte###
+>sudo add-apt-repository ppa:juju/stable
+sudo apt-get update && sudo apt-get install juju-core
+
+Cambiamos la línea
+>default: Amazon
+
+a
+
+>default: local
+###Segunda Parte###
 
 Ejercicio 7
 -----------
