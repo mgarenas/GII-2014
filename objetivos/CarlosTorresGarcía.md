@@ -202,9 +202,9 @@ Lista de objetivos de Carlos Torres García
 ## Sesión 1-diciembre-2014
 
 ### Objetivos de la clase
-- [ ] Entender el concepto de contenedores
-- [ ] Configurar el sistema para poder crear y usar contenedores
-- [ ] Crear y usar contenedores
+- [X] Entender el concepto de contenedores
+- [X] Configurar el sistema para poder crear y usar contenedores
+- [X] Crear y usar contenedores
 
 ### Otros objetivos
 - [ ] Entregar el segundo hito de la práctica. 
@@ -214,8 +214,8 @@ Lista de objetivos de Carlos Torres García
 ## Sesión 4-diciembre-2014
 
 ### Objetivos de la clase
-- [ ] Entender los sistemas de orquestación de máquinas virtuales.
-- [ ] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
+- [X] Entender los sistemas de orquestación de máquinas virtuales.
+- [X] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
 
 ### Otros objetivos
 - [ ] Ver el papel de los tápers o containers como base de experimentación y prácticas de muchos de los conceptos de virtualización.
@@ -226,18 +226,18 @@ Lista de objetivos de Carlos Torres García
 ## Sesión 12-diciembre-2014
 
 ### Objetivos de la clase
-- [ ] Resolver problemas con juju.
-- [ ] Configuración compleja de sistemas con él.
-- [ ] Entender el concepto de hipervisor y trabajar con ellos.
+- [X] Resolver problemas con juju.
+- [X] Configuración compleja de sistemas con él.
+- [X] Entender el concepto de hipervisor y trabajar con ellos.
 
 ### Otros objetivos
-- [ ] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa
 
 ## Sesión 15-diciembre-2014
 
 ### Objetivos de la clase
-- [ ] Resolver problemas con `juju`.
-- [ ] Entender cómo funciona `docker` y qué implica.
+- [X] Resolver problemas con `juju`.
+- [X] Entender cómo funciona `docker` y qué implica.
 
 ### Otros objetivos
 - [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
@@ -245,24 +245,54 @@ Lista de objetivos de Carlos Torres García
 ## Sesión 19-diciembre-2014
 
 ### Objetivos de la clase
-- [ ] Resolver problemas con `juju`.
-- [ ] Entender cómo funciona `docker` y qué implica.
+- [X] Resolver problemas con `juju`.
+- [X] Entender cómo funciona `docker` y qué implica.
 
 ### Otros objetivos
 - [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
 - [ ] Desarrollar funcionalidad en los proyectos
 
 ## Sesión 9-enero-2015
-###Objetivos de la clase 
+### Objetivos de la clase 
 
-- [ ] Resolver últimos problemas con `docker`.
-- [ ] Resolver dudas relacionadas  con la [tercera práctica](http://jj.github.io/IV/documentos/practicas/3.Contenedores).
+- [X] Resolver últimos problemas con `docker`.
+- [] Resolver dudas relacionadas  con la [tercera práctica](http://jj.github.io/IV/documentos/practicas/3.Contenedores).
 
-###Otros objetivos
+### Otros objetivos
 
 - [ ] ¿Has modificado algún artículo de la Wikipedia? Pues hazlo ya.
 - [ ] Sigue corrigiendo ejercicios de tus compañeros y discutiéndolos con ellos (usando comentarios a los commits o pull requests)
 - [X] Desarrollar funcionalidad en los proyectos
+
+## Sesión del 12 de enero de 2015
+### Objetivos de la clase
+
+- [X] Terminar la familiarización con Ruby
+- [X] Recordar conceptos de almacenamiento físico.
+- [X] Entender el concepto de FUSE y usarlo en la práctica.
+- [ ] Crear y manipular formatos de provisionamiento delgado. 
+
+
+### Otros objetivos
+
+- [X] Tener flexibilidad para saber cuando usar lenguajes nuevos y aprenderlos sobre la marcha.
+- [ ] Usar herramientas de la asignatura para tareas de utilidad en la administración de sistemas u otras asignaturas. 
+- [ ] Modificar/mejorar algún artículo de la Wikipedia.
+- [X] Desarrollar funcionalidad en los proyectos.
+
+
+## Sesión del 19 de enero de 2015
+### Objetivos de la clase
+
+- [ ] Entender los diferentes componentes de la infraestructura como servicio.
+- [X] Aprender a usar máquinas virtuales, localmente y en la nube.
+- [X] Comprender las bases físicas de las infraestructuras virtuales.
+
+### Otros objetivos
+- [ ] Usar IaaS de algún tipo.
+- [ ] Manejar desde línea de órdenes cuestiones de almacenamiento virtual.
+- [ ] Comprender la importancia de la medición y experimentación en la gestión de sistemas informáticos.
+- [ ] Desarrollar funcionalidad en los proyectos.
 
 
 ## Seminario Ruby

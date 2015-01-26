@@ -628,3 +628,550 @@ Luego podemos proceder a montar la imagen iso:
 	```
 		sudo rinse --arch=amd64 --directory /home/silt/fedora8 --distribution fedora-core-8
 	```
+
+### 4)Instalar alguna sistema debianita y configurarlo para su uso. Trabajando desde terminal, probar a ejecutar alguna aplicación o instalar las herramientas necesarias para compilar una y ejecutarla.
+
+Aprobechamos el sistema ubuntu que instalamos en el ejercicio anterior usando debootstrap.
+
+	´´´
+		silt@ubuntu:~$ sudo chroot /home/silt/ubuntu
+		root@ubuntu:/#
+		root@ubuntu:/# mount -t proc proc /proc
+		root@ubuntu:/# sudo apt-get install language-pack-es
+	´´´
+
+Ahora, vamos a instalar el paquete de build-essential, instalar nano y crear un pequeño hello world en c++.
+
+	´´´
+		root@ubuntu:/# apt-get install build-essential
+		root@ubuntu:/# apt-get install nano
+		root@ubuntu:/# nano hello_world.cpp
+	´´´
+	
+El código del programa es:
+	
+	´´´c++
+		#include <iostream>
+
+		using namespace std;
+
+		int main(){
+			cout << "Hello world!" << endl;
+
+			return 0;
+		}
+	```
+
+Ahora, lo compilamos y lo ejecutamos.
+
+	```
+		root@ubuntu:/# make hello_world
+		g++     hello_world.cpp   -o hello_world
+		root@ubuntu:/# ./hello_world
+		Hello world!
+	```
+
+### 5) Instalar una jaula chroot para ejecutar el servidor web de altas prestaciones nginx.
+Accedemos a la jaula ya creada en los ejercicios anteriores y ejecutamos los siguientes comandos para instalar nginx.
+
+	´´´
+		echo "deb http://ppa.launchpad.net/nginx/stable/ubuntu $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/nginx-stable.list
+		sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C300EE8C
+		sudo apt-get update
+		sudo apt-get install nginx
+	´´´
+
+Por último, ejecutamos el siguiente comando para iniciar el servicio.
+
+	```
+		sudo service nginx start
+	```
+
+Para detenerlo.
+
+	```
+		sudo service nginx stop
+	```
+### 6) Crear una jaula y enjaular un usuario usando `jailkit`, que previamente se habrá tenido que instalar.
+Instalamos jailkit.
+
+	```
+		silt@ubuntu:~$ cd jailkit-2.17
+		silt@ubuntu:~/jailkit-2.17$ ./configure && make && sudo make install
+	```
+
+Tras innstalar, creamos la jaula,
+
+	```
+		root@ubuntu:/home/silt/jailkit-2.17# mkdir -p /seguro/jaulas/dorada
+		root@ubuntu:/home/silt/jailkit-2.17# chown -R root:root /seguro
+		root@ubuntu:/home/silt/jailkit-2.17# jk_init -v -j /seguro/jaulas/dorada jk_lsh basicshell netutils editors	
+	```
+
+Añadimos el usuario
+	
+	```
+		root@ubuntu:/home/silt/jailkit-2.17# adduser test
+		root@ubuntu:/home/silt/jailkit-2.17# sudo jk_jailuser -m -j /seguro/jaulas/dorada test
+	```	
+
+###==================================================================================================
+#Tema 4
+###==================================================================================================
+### 1) Instala LXC en tu versión de Linux favorita. Normalmente la versión en desarrollo, disponible tanto en [GitHub](http://github.com/lxc/lxc) como en el [sitio web](http://linxcontainers.com/) está bastante más avanzada; para evitar problemas sobre todo con las herramientas que vamos a ver más adelante, conviene que te instales la última versión y si es posible una igual o mayor a la 1.0.
+
+Descargamos la última versión y la instalamos ejecutando los siguientes comandos;
+
+	```
+		./autogen.sh
+		./configure
+		make 
+		sudo make install
+	```
+
+Si no tenemos aclocal ejecutamos:
+
+	```
+		sudo apt-get install autotools-dev
+		sudo apt-get install automake
+	```
+
+Para poder usarlo con sudo:
+	```
+		sudo cp /usr/local/lib/liblxc* /usr/lib/x86_64-linux-gnu
+	```
+
+### 2) Comprobar qué interfaces puente se han creado y explicarlos.
+```
+	ifconfig
+	lxcbr0    Link encap:Ethernet  direcciónHW fe:84:8a:f0:48:89  
+		      Direc. inet:10.0.3.1  Difus.:10.0.3.255  Másc:255.255.255.0
+		      Dirección inet6: fe80::54bb:68ff:fe89:7bf2/64 Alcance:Enlace
+		      ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+		      Paquetes RX:77 errores:0 perdidos:0 overruns:0 frame:0
+		      Paquetes TX:129 errores:0 perdidos:0 overruns:0 carrier:0
+		      colisiones:0 long.colaTX:0 
+		      Bytes RX:7572 (7.5 KB)  TX bytes:17455 (17.4 KB)
+
+```
+
+La nueva interfz creada, lxcbr0, es necesaria para poder dar conexión a internet a los contenedores a través de la conexión de la máquina anfitriona. Es un puente de red.
+
+### 3)
+
+1. Crear y ejecutar un contenedor basado en Debian.
+
+Orden:
+```
+	sudo lxc-create -t ubuntu -n ubuntu
+```
+
+Resultado:
+```
+	Generation complete.
+	Processing triggers for libc-bin (2.19-0ubuntu6.4) ...
+	Processing triggers for initramfs-tools (0.103ubuntu4.2) ...
+	Download complete
+	Copy /usr/local/var/cache/lxc/trusty/rootfs-amd64 to /usr/local/var/lib/lxc/una-caja/rootfs ... 
+	Copying rootfs to /usr/local/var/lib/lxc/una-caja/rootfs ...
+	Generating locales...
+	  es_ES.UTF-8... up-to-date
+	Generation complete.
+	Creating SSH2 RSA key; this may take some time ...
+	Creating SSH2 DSA key; this may take some time ...
+	Creating SSH2 ECDSA key; this may take some time ...
+	Creating SSH2 ED25519 key; this may take some time ...
+	update-rc.d: warning: default stop runlevel arguments (0 1 6) do not match ssh Default-Stop values (none)
+	invoke-rc.d: policy-rc.d denied execution of start.
+
+	Current default time zone: 'Europe/Madrid'
+	Local time is now:      lun dic 15 17:38:02 CET 2014.
+	Universal Time is now:  Mon Dec 15 16:38:02 UTC 2014.
+
+
+	##
+	# The default user is 'ubuntu' with password 'ubuntu'!
+	# Use the 'sudo' command to run tasks as root in the container.
+	##
+```
+
+Ejecutar:
+```
+	sudo lxc-start -n ubuntu
+	Ubuntu 14.04.1 LTS ubuntu console
+
+	ubuntu login: <4>init: setvtrgb main process (418) terminated with status 1
+ 	* Stopping save kernel messages   ...done.
+	<4>init: plymouth-upstart-bridge main process ended, respawning
+```
+
+
+2. Crear y ejecutar un contenedor basado en otra distribución, tal como Fedora. Nota En general, crear un contenedor basado en tu distribución y otro basado en otra que no sea la tuya. Fedora, al parecer, tiene problemas si estás en Ubuntu 13.04 o superior, así que en tal caso usa cualquier otra distro. Por ejemplo, [Óscar Zafra ha logrado instalar Gentoo usando un script descargado desde su sitio, como indica en este comentario en el issue](https://github.com/IV-GII/GII-2013/issues/87#issuecomment-28639976).
+
+He instalado fedora.
+
+```
+	sudo lxc-create -t fedora -n fedora
+
+	¡Listo!
+	Fixing up rpm databases
+	Download complete.
+	Copy /var/cache/lxc/fedora/x86_64/20/rootfs to /var/lib/lxc/fedora/rootfs ... 
+	Copying rootfs to /var/lib/lxc/fedora/rootfs ...
+	Storing root password in '/var/lib/lxc/fedora/tmp_root_pass'
+	Expirando contraseña para el usuario root.
+	passwd: Éxito
+	installing fedora-release package
+	El paquete fedora-release-20-3.noarch ya se encuentra instalado con su versión más reciente
+	Nada para hacer
+
+	Container rootfs and config have been created.
+	Edit the config file to check/enable networking setup.
+
+	You have successfully built a Fedora container and cache.  This cache may
+	be used to create future containers of various revisions.  The directory
+	/var/cache/lxc/fedora/x86_64/bootstrap contains a bootstrap
+	which may no longer needed and can be removed.
+
+	A LiveOS directory exists at /var/cache/lxc/fedora/x86_64/LiveOS.
+	This is only used in the creation of the bootstrap run-time-environment
+	and may be removed.
+
+	The temporary root password is stored in:
+
+		    '/var/lib/lxc/fedora/tmp_root_pass'
+
+
+	The root password is set up as expired and will require it to be changed
+	at first login, which you should do as soon as possible.  If you lose the
+	root password or wish to change it without starting the container, you
+	can change it from the host by running the following command (which will
+	also reset the expired flag):
+
+		    chroot /var/lib/lxc/fedora/rootfs passwd
+
+```
+
+Ejecutar:
+```
+	sudo lxc-start -n fedora
+```
+
+### 4) 
+1. Instalar lxc-webpanel y usarlo para arrancar, parar y visualizar las máquinas virtuales que se tengan instaladas.
+Primero, instalar con:
+	```
+		wget http://lxc-webpanel.github.io/tools/install.sh -O - | bash
+	```
+
+Es necesarioser root.
+
+Para poder usarlo, ponemos en el navegador http://localhost:5000. Para el login usar admin tanto para user como para password.
+En las imágenes puede observarse su uso.
+
+![Visualizar](https://github.com/silt99/CC/blob/master/web_panel2.png)
+Format: ![Alt Text](url)
+
+![Arrancar](https://github.com/silt99/CC/blob/master/web_panel1.png)
+Format: ![Alt Text](url)
+
+![Parar](https://github.com/silt99/CC/blob/master/web_panel3.png)
+Format: ![Alt Text](url)
+
+
+
+2. Desde el panel restringir los recursos que pueden usar: CPU shares, CPUs que se pueden usar (en sistemas multinúcleo) o cantidad de memoria.
+
+Todo esto se puede hacer accediendo a las opciones del contenedor clickeando en su nombre en el panel de la izquierda. Justo debajo de IP adress, tenemos las opciones para limitar los recursos:
+	
+	* Memoria (Memory limit)
+	* Memoria y Swap (Memory + Swap limit)
+	* CPUs
+	* CPU shares
+
+### 5) Comparar las prestaciones de un servidor web en una jaula y el mismo servidor en un contenedor. Usar nginx.
+
+Primero, ejeutamos nginx en una jaula:
+	Accedemos a una de las jaulas instaladas en el anterior tema:
+	```silt@ubuntu:~$ sudo chroot /home/silt/ubuntu```
+
+	Iniciamos nginx:
+	```root@ubuntu:/# service nginx start```
+
+Hacemos lo propio con uno de los contenedores anteriores:
+	```
+		sudo lxc-start -n ubuntu
+		ubuntu@ubuntu sudo service nginx start
+	```
+
+Ahora, usar el benchmark para comparar ambas prestaciones. Usaré los parámetros -n 1000000 y -c 20.
+
+Juala:
+	```
+		ab -n 1000000 -c 20 http://127.0.0.1/index.html
+		
+		Benchmarking 127.0.0.1 (be patient)
+
+
+		Server Software:        nginx/1.4.1
+		Server Hostname:        127.0.0.1
+		Server Port:            80
+
+		Document Path:          /index.html
+		Document Length:        612 bytes
+
+		Concurrency Level:      20
+		Time taken for tests:   39.502 seconds
+		Complete requests:      1000000
+		Failed requests:        0
+		Total transferred:      844000000 bytes
+		HTML transferred:       612000000 bytes
+		Requests per second:    25314.87 [#/sec] (mean)
+		Time per request:       0.790 [ms] (mean)
+		Time per request:       0.040 [ms] (mean, across all concurrent requests)
+		Transfer rate:          20864.99 [Kbytes/sec] received
+
+		Connection Times (ms)
+				      min  mean[+/-sd] median   max
+		Connect:        0    0   0.1      0       1
+		Processing:     0    0   0.6      0     144
+		Waiting:        0    0   0.6      0     144
+		Total:          0    1   0.6      1     144
+
+		Percentage of the requests served within a certain time (ms)
+		  50%      1
+		  66%      1
+		  75%      1
+		  80%      1
+		  90%      1
+		  95%      1
+		  98%      1
+		  99%      1
+		 100%    144 (longest request)
+	```
+
+Contenedor:
+	``` 
+		ab -n 1000000 -c 20 http://10.0.3.1/index.html
+
+		Benchmarking 10.0.3.1 (be patient)
+
+
+		Server Software:        nginx/1.4.1
+		Server Hostname:        10.0.3.1
+		Server Port:            80
+
+		Document Path:          /index.html
+		Document Length:        612 bytes
+
+		Concurrency Level:      20
+		Time taken for tests:   40.386 seconds
+		Complete requests:      1000000
+		Failed requests:        0
+		Total transferred:      844000000 bytes
+		HTML transferred:       612000000 bytes
+		Requests per second:    24761.07 [#/sec] (mean)
+		Time per request:       0.808 [ms] (mean)
+		Time per request:       0.040 [ms] (mean, across all concurrent requests)
+		Transfer rate:          20408.54 [Kbytes/sec] received
+
+		Connection Times (ms)
+				      min  mean[+/-sd] median   max
+		Connect:        0    0   0.0      0       1
+		Processing:     0    0   2.1      0     486
+		Waiting:        0    0   2.1      0     486
+		Total:          0    1   2.1      1     487
+
+		Percentage of the requests served within a certain time (ms)
+		  50%      1
+		  66%      1
+		  75%      1
+		  80%      1
+		  90%      1
+		  95%      1
+		  98%      1
+		  99%      1
+		 100%    487 (longest request)
+	```
+	
+	Aparentemente, la jaula funciona un mejor que el contenedor, concretamente tiene 400KB/s más de velocidad de transferencia y tarda casi un segundo menos en la prueba.
+
+### 6) 
+1. Instalar juju.
+```
+	sudo add-apt-repository ppa:juju/stable
+	sudo apt-get update && sudo apt-get install juju-core juju-local
+	sudo juju bootstrap
+```
+
+2. Usándolo, instalar MySQL en un táper.
+```
+	juju deploy mysql
+	Added charm "cs:trusty/mysql-13" to the environment.
+
+	juju status
+	environment: local
+	machines:
+	  "0":
+		agent-state: started
+		agent-version: 1.20.14.1
+		dns-name: localhost
+		instance-id: localhost
+		series: trusty
+		state-server-member-status: has-vote
+	  "1":
+		instance-id: pending
+		series: trusty
+	services:
+	  mysql:
+		charm: cs:trusty/mysql-13
+		exposed: false
+		relations:
+		  cluster:
+		  - mysql
+		units:
+		  mysql/0:
+		    agent-state: pending
+		    machine: "1"
+```
+
+
+### 7)
+
+1. Destruir toda la configuración creada anteriormente.
+
+```
+	sudo juju destroy-unit mysql/0
+	sudo juju destroy-machine 1
+	sudo juju remove-service mysql
+```
+
+o
+
+```
+	sudo juju destroy-environment local
+```
+
+2. Volver a crear la máquina anterior y añadirle mediawiki y una relación entre ellos.
+
+```
+	juju deploy mysql
+	juju deploy mediawiki
+	juju add-relation mediawiki:db mysql:db
+	juju expose mediawiki
+```
+
+3. Crear un script en shell para reproducir la configuración usada en las máquinas que hagan falta.
+
+```
+	juju deploy mysql
+	juju deploy mediawiki
+	juju add-relation mediawiki:db mysql:db
+```
+
+### 8) Instalar libvirt. Te puede ayudar [esta guía para Ubuntu](https://help.ubuntu.com/12.04/serverguide/libvirt.html).
+
+```
+	sudo apt-get install kvm libvirt-bin
+	sudo adduser $USER libvirtd
+	sudo apt-get install virtinst
+```
+
+### 9) Instalar un contenedor usando virt-install.
+
+```
+	sudo virt-install -n web_devel -r 256 --disk path=/var/lib/libvirt/images/web_devel.img,bus=virtio,size=4 -c ubuntu.iso --accelerate --network network=default,model=virtio --connect=qemu:///system --vnc --noautoconsole -v
+```
+
+### 10) Instalar docker.
+
+Ya lo tenía instalado desde el tema 1:
+
+	```
+		silt@silt-Lenovo-Z50-70:~$ sudo docker run -i -t ubuntu /bin/bash
+		Unable to find image 'ubuntu' locally
+		ubuntu:latest: The image you are pulling has been verified sistema de gestión de fuentes git
+		sudo apt-get update
+		sudo apt-get
+		511136ea3c5a: Pull complete 
+		d497ad3926c8: Pull complete 
+		ccb62158e970: Pull complete 
+		e791be0477f2: Pull complete 
+		3680052c0f5c: Pull complete 
+		22093c35d77b: Pull complete 
+		5506de2b643b: Pull complete 
+		Status: Downloaded newer image for ubuntu:latest
+		root@9d1834f0e2cc:/# 
+	```
+
+### 11) 
+1. Instalar a partir de docker una imagen alternativa de Ubuntu y alguna adicional, por ejemplo de CentOS.
+
+Instalando ubuntu-upstart:
+
+```
+	sudo docker pull ubuntu-upstart 
+	Pulling repository ubuntu-upstart
+	cc5568b383b0: Pulling image (latest) from ubuntu-upstart, endpoint: https://regicc5568b383b0: Download complete 
+	511136ea3c5a: Download complete alando
+	3b363fd9d7da: Download complete 
+	607c5d1cca71: Download complete 
+	f62feddc05dc: Download complete 
+	8eaa4ff06b53: Download complete 
+	21caacb06f6e: Download complete 
+	dc080c3e0a99: Download complete 
+	e5c4145a245a: Download complete 
+	d003a990b2c2: Download complete 
+	eaab51298db4: Download complete 
+	bd49bb7feba9: Download complete 
+	b0fc60f5a210: Download complete 
+	46f4a09f73a6: Download complete 
+	5753b8f6c47f: Download complete 
+	a25fe21a520b: Download complete 
+	Status: Downloaded newer image for ubuntu-upstart:latest
+```
+
+Instalar CentOS:
+
+```
+	sudo docker pull centos
+	Pulling repository centos
+	8efe422e6104: Download complete 
+	511136ea3c5a: Download complete 
+	5b12ef8fd570: Download complete 
+	Status: Downloaded newer image for centos:latest
+```
+
+2. Buscar e instalar una imagen que incluya MongoDB.
+
+instalando dockerfile/mongodb:
+
+```
+	sudo docker pull dockerfile/mongodb
+	Pulling repository dockerfile/mongodb
+	0980bbd7909c: Download complete 
+	511136ea3c5a: Download complete 
+	3b363fd9d7da: Download complete 
+	607c5d1cca71: Download complete 
+	f62feddc05dc: Download complete 
+	8eaa4ff06b53: Download complete 
+	6208e07d879f: Download complete 
+	c20edc7e0d45: Download complete 
+	b7e60ab5525f: Download complete 
+	d6bd9059d33b: Download complete 
+	86b06feccb1a: Download complete 
+	37f261a144df: Download complete 
+	fe5bad1d1ac4: Download complete 
+	86481127ffdc: Download complete 
+	e30c891ea0ca: Download complete 
+	a86afe494f70: Download complete 
+	6c89a74b2fcc: Download complete 
+	cc9891f92d78: Download complete 
+	Status: Downloaded newer image for dockerfile/mongodb:latest
+```
+
+### 12) Crear un usuario propio e instalar nginx en el contenedor creado de esta forma.
+
+### 13) Crear a partir del contenedor anterior una imagen persistente con commit.
+
+### 14) Crear una imagen con las herramientas necesarias para el proyecto de la asignatura sobre un sistema operativo de tu elección.

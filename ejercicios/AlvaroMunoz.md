@@ -212,6 +212,8 @@ Algunos inconvenientes podrían ser:
 - Necesidad de confianza en la empresa, ya que tienen la posibilidad de usar los datos del usuario.
 
 
+
+* * *
 TEMA 2
 ======
 
@@ -282,6 +284,8 @@ Python incorpora *unittest* en sus librerías estándares. Con ella se pueden re
 Más info en: http://docs.python-guide.org/en/latest/writing/tests/
 
 
+
+
 * * *
 TEMA 3
 ======
@@ -330,7 +334,7 @@ Primero creamos la carpeta:
 
 Y luego usamos `debootstrap` como administrador:
 
-		debootstrap lenny ./lenny-chroot	http://ftp.us.debian.org/debian
+		sudo debootstrap lenny ./lenny-chroot	http://ftp.us.debian.org/debian
 
 
 * * *
@@ -346,6 +350,7 @@ Lo primero es instalar *rinse*. Después usamos:
 ### Ejercicio 4
 
 
+
 * * *
 ### Ejercicio 5
 
@@ -353,6 +358,8 @@ Lo primero es instalar *rinse*. Después usamos:
 
 * * *
 ### Ejercicio 6
+
+
 
 
 
@@ -441,29 +448,89 @@ Se puede configurar fácilmente arrastrando las barras en las opciones de memori
 * * *
 ### Ejercicio 6.1
 
-	apt-get install juju
+	apt-get install juju-core
 
 
 * * *
 ### Ejercicio 6.2
 
-No tengo 10GB para instalar *MongoDB* y trabajar en local, pero no debe ser un proceso muy complicado. ¿Algún compañero que me indique cómo?
+	sudo apt-get install mongodb-server
+	juju init
+
+Ahora hay que modificar en el archivo environments.yaml la variable `default`, cambiando
+`amazon` por `local`.
+Ahora instalamos el local:
+
+	sudo apt-get install juju-local
+
+Creamos el táper y desplegamos:
+
+	juju bootstrap
+	juju deploy mysql
+	juju deploy mediawiki
+
+Añadimos la relación:
+
+	juju add-relation mediawiki:db mysql
+	juju expose mediawiki
+
 
 * * *
 ### Ejercicio 7.1
 
+Para destruir toda la configuración podemos destruir el entorno completo con:
+
+	juju destroy-environment local
+
+
 * * *
 ### Ejercicio 7.2
 
+	juju bootstrap
+	juju deploy mysql
+	juju deploy mediawiki
+	juju add-relation mediawiki:db mysql
+	juju expose mediawiki
+
+Para comprobar el estado se puede usar:
+
+	juju status
+
+
 * * *
 ### Ejercicio 7.3
+
+Simplemente hay que copiar todos los pasos anteriores en un archivo de tipo script que comience con la directiva `#!/bin/bash`. Habrá que comprobar en la primera línea
+que *juju* está inicializado, añadiendo `juju init`.
 
 
 * * *
 ### Ejercicio 8
 
+Usamos la orden:
+
+	sudo apt-get install kvm libvirt-bin
+
+
 * * *
 ### Ejercicio 9
+
+Se instala `virtinst` mediante:
+
+	sudo apt-get install virtinst
+
+Descargamos la imagen de un SO, por ejemplo Debian:
+
+	sudo wget http://cdimage.debian.org/debian-cd/7.7.0/amd64/iso-cd/debian-7.7.0-amd64-netinst.iso
+
+Renombramos el archivo para no tener que reescribir semejante nombre:
+
+	mv debian-7.7.0-amd64-netinst.iso debian7.iso
+
+Y creamos el contenedor:
+
+	sudo virt-install -r 1024 --accelerate -n Debian7 -f /virtuales/debian7.img --cdrom debian7.iso
+
 
 * * *
 ### Ejercicio 10
@@ -478,22 +545,10 @@ Como *root* hacemos:
 
 	docker pull centos
 
+
 * * *
 ### Ejercicio 11.2
 
 Para ello podemos usar:
 
 	docker pull dockerfile/mongodb
-
-
-* * *
-### Ejercicio 12
-
-* * *
-### Ejercicio 13
-
-* * *
-### Ejercicio 14
-
-
-* * *
