@@ -60,7 +60,7 @@ Sesión 5 - Clase del 27 de octubre de 2014
 - [X] Conocer los diferentes _proyectos propuestos_ para llevarlos a cabo a lo largo de la asignatura.
 
 ### Otros objetivos
-- [ ] Usar *exclusivamente* la línea de órdenes para trabajar con GitHub.
+- [X] Usar *exclusivamente* la línea de órdenes para trabajar con GitHub.
 - [X] Dar de alta la clave SSH para trabajar con GitHub más cómodamente. 
 - [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
@@ -119,7 +119,7 @@ Sesión 9 - Clase del 10 de noviembre de 2014
 - [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
-- [ ] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
+- [X] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
 - [X] Usar el apartado de Material adicional abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request.
 
 
@@ -222,7 +222,7 @@ Sesión 16 - Clase del 5 de diciembre de 2014
 ### Otros objetivos
 - [X] Ver el papel de los tápers o containers como base de experimentación y prácticas de muchos de los conceptos de virtualización.
 - [X] Poner Granada, Spain en el perfil de GitHub.
-- [ ] Hablar del material y la mecánica de la asignatura hasta este momento.
+- [X] Hablar del material y la mecánica de la asignatura hasta este momento.
 
 
 Sesión 17 - Clase del 12 de diciembre de 2014
@@ -268,6 +268,7 @@ Sesión 20 - Clase del 9 de enero de 2015
 - [X] Resolver dudas relacionadas con la tercera práctica.
 
 ### Otros objetivos
-- [ ] ¿Has modificado algún artículo de la Wikipedia? Pues hazlo ya.
+- [X] ¿Has modificado algún artículo de la Wikipedia? Pues hazlo ya.
+      _Modificado https://en.wikipedia.org/wiki/Medical_image_computing_
 - [ ] Sigue corrigiendo ejercicios de tus compañeros y discutiéndolos con ellos (usando comentarios a los commits o pull requests).
 - [X] Desarrollar funcionalidad en los proyectos.
