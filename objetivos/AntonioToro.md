@@ -1,4 +1,4 @@
-﻿Objetivos
+Objetivos
 =========
 
 Sesión 1 - Clase del 10 de octubre de 2014
@@ -60,7 +60,7 @@ Sesión 5 - Clase del 27 de octubre de 2014
 - [X] Conocer los diferentes _proyectos propuestos_ para llevarlos a cabo a lo largo de la asignatura.
 
 ### Otros objetivos
-- [ ] Usar *exclusivamente* la línea de órdenes para trabajar con GitHub.
+- [X] Usar *exclusivamente* la línea de órdenes para trabajar con GitHub.
 - [X] Dar de alta la clave SSH para trabajar con GitHub más cómodamente. 
 - [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
@@ -119,7 +119,7 @@ Sesión 9 - Clase del 10 de noviembre de 2014
 - [ ] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [ ] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [ ] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
-- [ ] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
+- [X] Rellenar la hoja de equivalencias nombre-nick compartida con el grupo de correo.
 - [X] Usar el apartado de Material adicional abajo: buscar material adicional para esta sesión y solicitar la inserción aquí mediante un pull request.
 
 
@@ -169,12 +169,106 @@ Sesión 13 - Clase del 24 de noviembre de 2014
 ---------------------------------------------
 
 ### Objetivos de esta sesión
-- [ ] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
-- [ ] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
-- [ ] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
+- [X] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
+- [X] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
+- [X] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
 - [ ] Entender y saber llevar a cabo la virtualización de dispositivos de red.
 
 ### Otros objetivos
-- [ ] Usar herramientas de administración y monitorización de red en línea de órdenes.
-- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccgii.
+- [X] Usar herramientas de administración y monitorización de red en línea de órdenes.
+- [X] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccgii.
 - [X] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54). *No lo uso*
+
+
+Sesión 14 - Clase del 28 de noviembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
+- [ ] Aprender a "enjaular" usuarios.
+
+### Otros objetivos
+- [X] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmuii.
+- [X] Dejar de usar Sublime Text por estas 7 razones.
+- [X] Aplicar conocimientos de administración de un sistema Linux: usuarios, permisos.
+- [X] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
+- [X] Comprender que existe vida en los servidores web fuera del Apache.
+- [X] Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
+- [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
+- [ ] Probar la nube de fi-ware para alojar proyectos y hacer pruebas.
+
+
+Sesión 15 - Clase del 1 de diciembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Entender el concepto de contenedores.
+- [X] Configurar el sistema para poder crear y usar contenedores.
+- [X] Crear y usar contenedores.
+
+### Otros objetivos
+- [X] Ver el papel de los tápers o containers como base de experimentación y prácticas de muchos de los conceptos de virtualización.
+- [X] Poner Granada, Spain en el perfil de GitHub.
+- [X] Hablar del material y la mecánica de la asignatura hasta este momento.
+
+
+Sesión 16 - Clase del 5 de diciembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [ ] Entender los sistemas de orquestación de máquinas virtuales.
+- [ ] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
+
+### Otros objetivos
+- [X] Ver el papel de los tápers o containers como base de experimentación y prácticas de muchos de los conceptos de virtualización.
+- [X] Poner Granada, Spain en el perfil de GitHub.
+- [X] Hablar del material y la mecánica de la asignatura hasta este momento.
+
+
+Sesión 17 - Clase del 12 de diciembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Resolver problemas con `juju`.
+- [ ] Configuración compleja de sistemas con él.
+- [ ] Entender el concepto de hipervisor y trabajar con ellos.
+
+### Otros objetivos
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+
+Sesión 18 - Clase del 15 de diciembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Resolver problemas con `juju`.
+- [X] Entender cómo funciona `docker` y qué implica.
+
+### Otros objetivos
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+
+Sesión 19 - Clase del 19 de diciembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Resolver problemas con `juju`.
+- [X] Entender cómo funciona `docker` y qué implica.
+
+### Otros objetivos
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+- [X] Desarrollar funcionalidad en los proyectos.
+
+
+Sesión 20 - Clase del 9 de enero de 2015
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Resolver últimos problemas con `docker`.
+- [X] Resolver dudas relacionadas con la tercera práctica.
+
+### Otros objetivos
+- [X] ¿Has modificado algún artículo de la Wikipedia? Pues hazlo ya.
+      _Modificado https://en.wikipedia.org/wiki/Medical_image_computing_
+- [ ] Sigue corrigiendo ejercicios de tus compañeros y discutiéndolos con ellos (usando comentarios a los commits o pull requests).
+- [X] Desarrollar funcionalidad en los proyectos.

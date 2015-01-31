@@ -361,17 +361,87 @@ Mi ordenador no soporta la virtualización. Si lanzo `kvm-ok` el resultado es:
 INFO: Your CPU does not support KVM extensions
 KVM acceleration can NOT be used
 ```
+No obstante, lo que tendría que haccer es `sudo apt-get install kvm libvirt-bin`.
 
 ## Ejercicio 9
 _Instalar un contenedor usando virt-install._
 
 No puedo realizarlo ya que mi ordenador no soporta la virtualización.
 
+Por eso copio aquí lo que ha hecho mi compañero [Jorge González](https://github.com/Georgevik/):
+>`sudo apt-get install virtinst`
+>
+>Con este comando podemos instalar maquinas virtuales directamente. Para ello necesitamos una iso con el
+>sistema operativo de la maquina virtual. En este caso hemos cogido el de Ubuntu 14.04 y con la siguiente
+>orden creamos la maquina:
+>`sudo virt-install -n virt-ubuntu -r 512 --disk path=/var/lib/libvirt/images/ubuntuvirtual.img,bus=virtio,size=5 -c /home/georgevik/Escritorio/ubuntu-14.04.iso --accelerate --network network=default,model=virtio --connect=qemu:///system --vnc --noautoconsole -v`
+>```
+>Empezando la instalación...
+>Creando dominio...                                       |    0 B     00:01
+>La instalación del dominio continúa en progreso. Puede reconectarse a
+>la consola para completar el proceso de instalación.
+>```
+
+>Vemos como se ha creado correctamente la máquina virtual y se encuentra en ejecución
+>```
+>georgevik@georgevik-K52JK:~$ sudo virsh -c qemu:///system list
+>Id    Nombre                         Estado
+>----------------------------------------------------
+>5     virt-ubuntu                    ejecutando
+>```
+
 ## Ejercicio 10
 _Instalar docker._
 
 Instalamos _docker_ con `sudo apt-get install docker.io`.
 
+Ya instalado, para lanzarlo lo único que tendremos que hacer es `sudo docker -d &`.
+
 ## Ejercicio 11
 +  _Instalar a partir de docker una imagen alternativa de Ubuntu y alguna adicional, por ejemplo de CentOS._
 +  _Buscar e instalar una imagen que incluya MongoDB._
+
+1. Voy a instalar la imagen de __Ubuntu__ de __partlab__, para eso utilizo la orden `sudo docker pull partlab/ubuntu`.
+   ```
+   Pulling repository partlab/ubuntu
+   220f670a5152: Pulling image (latest) from partlab/ubuntu, endpoint: https://regi220f670a5152: Download complete
+   511136ea3c5a: Download complete
+   ef3ba9f35b97: Download complete
+   36accde0a93b: Download complete
+   ea198eaf8e7b: Download complete
+   cfaba6b5fefe: Download complete
+   7c25df13077f: Download complete
+   fed5a2d85e04: Download complete
+   14b33c345a2d: Download complete
+   693448329de2: Download complete
+   564941eb5df8: Download complete
+   ```
+   También voy a instalar __CentOS 5.11__ mediante `sudo docker pull centos:5.11`.
+   ```
+   Pulling repository centos
+   c36ca560b9bf: Pulling image (5.11) from centos, endpoint: https://registry-1.docc36ca560b9bf: Download complete
+   511136ea3c5a: Download complete
+   5b12ef8fd570: Download complete
+   ```
+2. Ahora instalamos una imagen con __MongoDB__ con `sudo docker pull dockerfile/mongodb`.
+   ```
+   Pulling repository dockerfile/mongodb
+   e8ddda3ca0be: Download complete
+   511136ea3c5a: Download complete
+   27d47432a69b: Download complete
+   5f92234dcf1e: Download complete
+   51a9c7c1f8bb: Download complete
+   5ba9dab47459: Download complete
+   5ac964b38b8b: Download complete
+   8a75beb8c617: Download complete
+   c240f95f9ab0: Download complete
+   ed8bb587e39a: Download complete
+   69151129842b: Download complete
+   f89142985c75: Download complete
+   e7fc98dc1b07: Download complete
+   2de84ece3e3a: Download complete
+   a4b705c39ab0: Download complete
+   a7d5be1aea27: Download complete
+   b22473a839df: Download complete
+   2c0a430f3535: Download complete
+   ```
