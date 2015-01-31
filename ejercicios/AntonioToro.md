@@ -361,6 +361,7 @@ Mi ordenador no soporta la virtualización. Si lanzo `kvm-ok` el resultado es:
 INFO: Your CPU does not support KVM extensions
 KVM acceleration can NOT be used
 ```
+No obstante, lo que tendría que haccer es `sudo apt-get install kvm libvirt-bin`.
 
 ## Ejercicio 9
 _Instalar un contenedor usando virt-install._
