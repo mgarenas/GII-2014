@@ -180,7 +180,19 @@ Sesión 13 - Clase del 24 de noviembre de 2014
 - [X] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54). *No lo uso*
 
 
-Sesión 31 - Clase del 9 de enero de 2015
+Sesión 19 - Clase del 19 de diciembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Resolver problemas con `juju`.
+- [X] Entender cómo funciona `docker` y qué implica.
+
+### Otros objetivos
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+- [X] Desarrollar funcionalidad en los proyectos.
+
+
+Sesión 20 - Clase del 9 de enero de 2015
 ---------------------------------------------
 
 ### Objetivos de esta sesión
