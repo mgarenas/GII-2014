@@ -372,6 +372,8 @@ _Instalar docker._
 
 Instalamos _docker_ con `sudo apt-get install docker.io`.
 
+Ya instalado, para lanzarlo lo único que tendremos que hacer es `sudo docker -d &`.
+
 ## Ejercicio 11
 +  _Instalar a partir de docker una imagen alternativa de Ubuntu y alguna adicional, por ejemplo de CentOS._
 +  _Buscar e instalar una imagen que incluya MongoDB._
