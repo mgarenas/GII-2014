@@ -398,3 +398,25 @@ Instalamos _docker_ con `sudo apt-get install docker.io`.
    511136ea3c5a: Download complete
    5b12ef8fd570: Download complete
    ```
+2. Ahora instalamos una imagen con __MongoDB__ con `sudo docker pull dockerfile/mongodb`.
+   ```
+   Pulling repository dockerfile/mongodb
+   e8ddda3ca0be: Download complete
+   511136ea3c5a: Download complete
+   27d47432a69b: Download complete
+   5f92234dcf1e: Download complete
+   51a9c7c1f8bb: Download complete
+   5ba9dab47459: Download complete
+   5ac964b38b8b: Download complete
+   8a75beb8c617: Download complete
+   c240f95f9ab0: Download complete
+   ed8bb587e39a: Download complete
+   69151129842b: Download complete
+   f89142985c75: Download complete
+   e7fc98dc1b07: Download complete
+   2de84ece3e3a: Download complete
+   a4b705c39ab0: Download complete
+   a7d5be1aea27: Download complete
+   b22473a839df: Download complete
+   2c0a430f3535: Download complete
+   ```
