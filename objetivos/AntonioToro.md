@@ -1,4 +1,4 @@
-﻿Objetivos
+Objetivos
 =========
 
 Sesión 1 - Clase del 10 de octubre de 2014
@@ -178,3 +178,16 @@ Sesión 13 - Clase del 24 de noviembre de 2014
 - [ ] Usar herramientas de administración y monitorización de red en línea de órdenes.
 - [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccgii.
 - [X] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54). *No lo uso*
+
+
+Sesión 31 - Clase del 9 de enero de 2015
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Resolver últimos problemas con `docker`.
+- [X] Resolver dudas relacionadas con la tercera práctica.
+
+### Otros objetivos
+- [ ] ¿Has modificado algún artículo de la Wikipedia? Pues hazlo ya.
+- [ ] Sigue corrigiendo ejercicios de tus compañeros y discutiéndolos con ellos (usando comentarios a los commits o pull requests).
+- [X] Desarrollar funcionalidad en los proyectos.
