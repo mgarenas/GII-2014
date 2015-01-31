@@ -367,6 +367,28 @@ _Instalar un contenedor usando virt-install._
 
 No puedo realizarlo ya que mi ordenador no soporta la virtualización.
 
+Por eso copio aquí lo que ha hecho mi compañero [Jorge González](https://github.com/Georgevik/):
+>`sudo apt-get install virtinst`
+>Con este comando podemos instalar maquinas virtuales directamente. Para ello necesitamos una iso con el
+>sistema operativo de la maquina virtual. En este caso hemos cogido el de Ubuntu 14.04 y con la siguiente
+>orden creamos la maquina:
+>`sudo virt-install -n virt-ubuntu -r 512 --disk path=/var/lib/libvirt/images/ubuntuvirtual.img,bus=virtio,size=5 -c /home/georgevik/Escritorio/ubuntu-14.04.iso --accelerate --network network=default,model=virtio --connect=qemu:///system --vnc --noautoconsole -v`
+
+>```
+>Empezando la instalación...
+>Creando dominio...                                       |    0 B     00:01
+>La instalación del dominio continúa en progreso. Puede reconectarse a
+>la consola para completar el proceso de instalación.
+>```
+
+>Vemos como se ha creado correctamente la máquina virtual y se encuentra en ejecución
+>```
+>georgevik@georgevik-K52JK:~$ sudo virsh -c qemu:///system list
+>Id    Nombre                         Estado
+>----------------------------------------------------
+>5     virt-ubuntu                    ejecutando
+>```
+
 ## Ejercicio 10
 _Instalar docker._
 
