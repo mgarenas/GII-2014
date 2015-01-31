@@ -169,15 +169,83 @@ Sesión 13 - Clase del 24 de noviembre de 2014
 ---------------------------------------------
 
 ### Objetivos de esta sesión
-- [ ] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
-- [ ] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
-- [ ] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
+- [X] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
+- [X] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
+- [X] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
 - [ ] Entender y saber llevar a cabo la virtualización de dispositivos de red.
 
 ### Otros objetivos
-- [ ] Usar herramientas de administración y monitorización de red en línea de órdenes.
-- [ ] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccgii.
+- [X] Usar herramientas de administración y monitorización de red en línea de órdenes.
+- [X] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccgii.
 - [X] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54). *No lo uso*
+
+
+Sesión 14 - Clase del 28 de noviembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
+- [ ] Aprender a "enjaular" usuarios.
+
+### Otros objetivos
+- [X] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmuii.
+- [X] Dejar de usar Sublime Text por estas 7 razones.
+- [X] Aplicar conocimientos de administración de un sistema Linux: usuarios, permisos.
+- [X] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
+- [X] Comprender que existe vida en los servidores web fuera del Apache.
+- [X] Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
+- [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
+- [ ] Probar la nube de fi-ware para alojar proyectos y hacer pruebas.
+
+
+Sesión 15 - Clase del 1 de diciembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Entender el concepto de contenedores.
+- [X] Configurar el sistema para poder crear y usar contenedores.
+- [X] Crear y usar contenedores.
+
+### Otros objetivos
+- [X] Ver el papel de los tápers o containers como base de experimentación y prácticas de muchos de los conceptos de virtualización.
+- [X] Poner Granada, Spain en el perfil de GitHub.
+- [X] Hablar del material y la mecánica de la asignatura hasta este momento.
+
+
+Sesión 16 - Clase del 5 de diciembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [ ] Entender los sistemas de orquestación de máquinas virtuales.
+- [ ] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
+
+### Otros objetivos
+- [X] Ver el papel de los tápers o containers como base de experimentación y prácticas de muchos de los conceptos de virtualización.
+- [X] Poner Granada, Spain en el perfil de GitHub.
+- [ ] Hablar del material y la mecánica de la asignatura hasta este momento.
+
+
+Sesión 17 - Clase del 12 de diciembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Resolver problemas con `juju`.
+- [ ] Configuración compleja de sistemas con él.
+- [ ] Entender el concepto de hipervisor y trabajar con ellos.
+
+### Otros objetivos
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+
+Sesión 18 - Clase del 15 de diciembre de 2014
+---------------------------------------------
+
+### Objetivos de esta sesión
+- [X] Resolver problemas con `juju`.
+- [X] Entender cómo funciona `docker` y qué implica.
+
+### Otros objetivos
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
 
 
 Sesión 19 - Clase del 19 de diciembre de 2014
