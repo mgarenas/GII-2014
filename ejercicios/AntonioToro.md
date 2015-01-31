@@ -375,3 +375,26 @@ Instalamos _docker_ con `sudo apt-get install docker.io`.
 ## Ejercicio 11
 +  _Instalar a partir de docker una imagen alternativa de Ubuntu y alguna adicional, por ejemplo de CentOS._
 +  _Buscar e instalar una imagen que incluya MongoDB._
+
+1. Voy a instalar la imagen de __Ubuntu__ de __partlab__, para eso utilizo la orden `sudo docker pull partlab/ubuntu`.
+   ```
+   Pulling repository partlab/ubuntu
+   220f670a5152: Pulling image (latest) from partlab/ubuntu, endpoint: https://regi220f670a5152: Download complete
+   511136ea3c5a: Download complete
+   ef3ba9f35b97: Download complete
+   36accde0a93b: Download complete
+   ea198eaf8e7b: Download complete
+   cfaba6b5fefe: Download complete
+   7c25df13077f: Download complete
+   fed5a2d85e04: Download complete
+   14b33c345a2d: Download complete
+   693448329de2: Download complete
+   564941eb5df8: Download complete
+   ```
+   También voy a instalar __CentOS 5.11__ mediante `sudo docker pull centos:5.11`.
+   ```
+   Pulling repository centos
+   c36ca560b9bf: Pulling image (5.11) from centos, endpoint: https://registry-1.docc36ca560b9bf: Download complete
+   511136ea3c5a: Download complete
+   5b12ef8fd570: Download complete
+   ```
