@@ -72,7 +72,7 @@ Sesión 6 - Clase del 31 de octubre de 2014
 
 Sesión 7 - Clase del 3 de noviembre de 2014
 -------------------------------------------
-- [ ]Si todavía no se ha hecho, leed los proyectos propuestos y elegir uno
+- [x]Si todavía no se ha hecho, leed los proyectos propuestos y elegir uno
 - [x]Continuar con la primera práctica: elección de proyecto y grupo. El plazo para entregar las prácticas es de dos semanas: hasta el final de la sesión del 10 de noviembre.
 - [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
@@ -82,8 +82,8 @@ Sesión 8 - Clase del 7 de noviembre de 2014
 -------------------------------------------
 - [x] Entender el concepto de entorno virtual de desarrollo y comenzar a usarlo.
 - [x] Darse de alta en un PaaS y comprender los mecanismos usados para despliegue de aplicaciones así como el uso de los entornos virtuales anteriores.
-- [ ] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS
-- [ ] Si todavía no se ha hecho, leed los proyectos propuestos y elegir uno.
+- [x] Entender los mecanismos de creación y despliegue de aplicaciones en un PaaS
+- [x] Si todavía no se ha hecho, leed los proyectos propuestos y elegir uno.
 - [x] Continuar con la primera práctica: elección de proyecto y grupo. El plazo para entregar las prácticas es de dos semanas: hasta el final de la sesión del 10 de noviembre.
 - [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero.
 - [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
@@ -158,17 +158,41 @@ Sesión 14 - Clase del 28 de noviembre de 2014
 
 Sesión 15 - Clase del 1 de diciembre de 2014
 --------------------------------------------
-- [ ] Entender el concepto de contenedores
-- [ ] Configurar el sistema para poder crear y usar contenedores
-- [ ] Crear y usar contenedores
-- [ ] Entregar el segundo hito de la práctica.
-- [ ] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
-- [ ] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
+- [x] Entender el concepto de contenedores
+- [x] Configurar el sistema para poder crear y usar contenedores
+- [x] Crear y usar contenedores
+- [x] Entregar el segundo hito de la práctica.
+- [x] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
+- [x] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
 
 Sesión 16 - Clase del 5 de diciembre de 2014
 --------------------------------------------
-- [ ] Entender los sistemas de orquestación de máquinas virtuales.
-- [ ] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
-- [ ] Ver el papel de los *tápers* o *containers* como base de experimentación y prácticas de muchos de los conceptos de virtualización.
-- [ ] Poner Granada, Spain en el perfil de GitHub.
-- [ ] Hablar del material y la mecánica de la asignatura hasta este momento.
+- [x] Entender los sistemas de orquestación de máquinas virtuales.
+- [x] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
+- [x] Ver el papel de los _tápers_ o _containers_ como base de experimentación y prácticas de muchos de los conceptos de virtualización.
+- [x] Poner Granada, Spain en el perfil de GitHub.
+- [x] Hablar del material y la mecánica de la asignatura hasta este momento.
+
+Sesión 17 - Clase del 12 de diciembre de 2014
+---------------------------------------------
+- [x] Resolver problemas con `juju`.
+- [x] Configuración compleja de sistemas con él.
+- [x] Entender el concepto de hipervisor y trabajar con ellos.
+- [x] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+Sesión 18 - Clase del 15 de diciembre de 2014
+---------------------------------------------
+- [x] Resolver problemas con `juju`.
+- [x] Entender cómo funciona `docker` y qué implica.
+- [x] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+Sesión 19 - Clase del 19 de diciembre de 2014
+---------------------------------------------
+- [x] Resolver problemas con `juju`.
+- [x] Entender cómo funciona `docker` y qué implica.
+- [x] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+- [x] Desarrollar funcionalidad en los proyectos
+
+Sesión 20 - Clase del 9 de enero de 2014
+----------------------------------------
+- [x] Hacer la práctica. *Juan Julián recomienda dejar a un lado los ejercicios y ponerse con la práctica puesto que tiene más peso.*

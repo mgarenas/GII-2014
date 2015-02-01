@@ -179,6 +179,9 @@ Juan		8000.000000000000	no
 alcantara		8000.000000000000	no	
 jorgeles		8000.0026b0daf2ba	no		eth0
 
+##Ejercicio 3
+Debootstrap instalado.
+
 #Tema 4
 ##Ejercicio 1
 Instalada LXC correctamente.
@@ -224,10 +227,19 @@ Se ha creado un contenedor con Ubuntu y otro con gentoo.
 
 ##Ejercicio 4
 
+Se ha descargado el web panel e instalado de acorde a lo que se indica en la pagina de github. Escribiendo la siguiente orden siendo root:
+
+> wget http://lxc-webpanel.github.com/tools/install.sh -O - | bash
+
+Esta es la imagen que se muestra cuando se inicia el web panel.
+
+![image](http://i.imgur.com/cYH3SGc.png)
+
+
 ##Ejercicio 5
 
 ##Ejercicio 6
-Instaldos juju y mysql dentro de un taper
+Instalados juju y mysql dentro de un tuper
 Added charm "cs:trusty/mysql-12" to the environment.
 
 machines:
@@ -272,11 +284,15 @@ sudo apt-get install kvm libvirt-bin
 sudo adduser $USER libvirtd
 
 ## Ejercicio 9
-
+Me ha sido imposible instalar por problemas con mi ordenador
 ## Ejercicio 10
 
-sudo apt-get install docker
+Instalado docker usando el [tutorial siguiente](http://www.liquidweb.com/kb/how-to-install-docker-on-ubuntu-14-04-lts/)
 
+## Ejercicio 11
+
+
+Una vez instalado se ha instalado una version de Ubuntu utilizadno docker pull ubuntu.
 
 
 

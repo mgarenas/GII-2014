@@ -22,5 +22,7 @@
 * [Clase del 12 de diciembre de 2014](17.md).
 * [Clase del 15 de diciembre de 2014](18.md).
 * [Clase del 19 de diciembre de 2014](19.md).
+* [Clase del 9 de enero de 2015](20.md).
+* [Clase del 12 de enero de 2015](21.md).
 
 

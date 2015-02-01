@@ -1,4 +1,4 @@
-Lista de objetivos de Álvaro Muñoz
+Lista de objetivos de Daniel Álvarez González
 ============================
 
 
@@ -154,7 +154,7 @@ Lista de objetivos de Álvaro Muñoz
 
 ##Otros objetivos
 
-- [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
+- [] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
 - [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 - [x] Asimilar buenas prácticas en el desarrollo y puesta en producción de lenguajes de scripting
 
@@ -170,7 +170,7 @@ Lista de objetivos de Álvaro Muñoz
 - [x] Continuar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md)
 
 ###Otros objetivos
-- [x] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
+- [] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request *directamente a su copia del repositorio*, no al repositorio principal de la asignatura.
 - [x] Revisar también el primer hito de un proyecto que no sea el propio.
 - [x] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
 
@@ -188,8 +188,8 @@ Lista de objetivos de Álvaro Muñoz
 
 ## Otros objetivos
 
-- [x] Usar herramientas de administración y monitorización de red en línea de órdenes.
-- [x] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
+- [] Usar herramientas de administración y monitorización de red en línea de órdenes.
+- [] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
 
 
 
@@ -203,7 +203,7 @@ Lista de objetivos de Álvaro Muñoz
 
 ### Otros objetivos
 
-- [x] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
+- [] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
 - [x] Aplicar conocimientos de administración de un sistema Linux: usuarios, permisos.
 - [x] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
 - [x] Comprender que existe vida en los servidores web fuera del Apache.
@@ -222,7 +222,7 @@ Lista de objetivos de Álvaro Muñoz
 
 - [x] Entregar el segundo hito de la práctica.
 - [x] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
-- [x] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
+- [] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
 
 
 * * *

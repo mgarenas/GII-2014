@@ -91,7 +91,7 @@ Tema1
 		cpu    cpuset   freezer  memory   systemd
 	
 
-###Ejercicio 8.1 Crear diferentes grupos de control sobre un sistema operativo Linux. Ejecutar en uno de ellos el navegador, en otro un procesador de textos y en uno último cualquier otro proceso. Comparar el uso de recursos de unos y otros durante un tiempo determinado.
+###Ejercicio 8.1 Crear diferentes grupos de control sobre un sistema operativo Linux. Ejecutar en uno de ellos el navegador, en otro un procesador #antiPostureode textos y en uno último cualquier otro proceso. Comparar el uso de recursos de unos y otros durante un tiempo determinado.
 		
 	sudo su	
 	cd /sys/fs/cgroup
@@ -107,7 +107,9 @@ Tema1
 	echo 0> cpuset/grupo2/cpuset.cpus
 	echo 0> cpuset/grupo3/cpuset.cpus
 
-	<Incompleto>
+	gedit &
+	firefox &
+	libreoffice &
 	
 	
 	
@@ -220,6 +222,408 @@ function quieresPipas() {
 
 ###Ejercicio 7 Buscar un entorno de pruebas para el lenguaje de programación y entorno de desarrollo que usemos habitualmente
 	Shippable
+
+
+Tema 3
+-----
+
+###Ejercicio 1 Crear un espacio de nombres y montar en él una imagen ISO de un CD de forma que no se pueda leer más que desde él. Pista: en ServerFault nos explican como hacerlo, usando el dispositivo loopback
+ 1. Lo primero que hay que hacer es ser superusuario:
+```
+sudo su
+```
+ 2. Se crea un directorio en el cual se montará el fichero .iso
+```
+mkdir /mnt/ej1t3cc
+```
+ 3. Se monta el fichero .iso con la orden "mount" seguida de los siguientes argumentos
+```
+mount -o loop -t iso9660 ubuntu14.04.iso /mnt/ej1t3cc
+```
+
+###Ejercicio 2
+#### Mostrar los puentes configurados en el sistema operativo.
+ 1. Se instala brigde utils
+```
+sudo apt-get install bridge utils
+```
+ 2. Se muestran los puentes exsitentes con brctl show
+```
+brctl show
+```
+```
+bridge name	bridge id		STP enabled	interfaces
+docker0		8000.000000000000	no
+```
+#### Crear un interfaz virtual y asignarlo al interfaz de la tarjeta wifi, si se tiene, o del fijo, si no se tiene.
+ 1. Hay que crear una interfaz virtual con "brctl addbr" siendo superusuario
+```
+sudo su
+brctl addbr interfazvirtual
+```
+ 2. Hay que unirla con eth0
+```
+brctl addif interfazvirtual eth0
+```
+ 3. Ahora se comprueba si se ha creado la interfaz
+```
+brctl show
+```
+
+```
+bridge name	bridge id		STP enabled	interfaces
+docker0		8000.000000000000	no
+interfazvirtual		8000.705ab6892974	no		eth0
+
+```
+
+###Ejercicio 3
+####Usar debootstrap (o herramienta similar en otra distro) para crear un sistema mínimo que se pueda ejecutar más adelante.
+
+ 1. debootstrap ya viene instalado en Ubuntu 14.04
+ 2. Se crea un directorio donde se instalará es SO
+ ```
+ sudo mkdir ubuntu
+ ```
+ 3. Se instala la versión en el directorio que se ha creado (en este caso he instalado Ubuntu 14.04 con 64 bits)
+ ```
+ sudo debootstrap  --arch=amd64 trusty ./ubuntu http://archive.ubuntu.com/ubuntu/
+ ```
+####Experimentar con la creación de un sistema Fedora dentro de Debian usando Rinse.
+ 1. Se instala rinse
+ ```
+ sudo apt-get install rinse
+ ```
+ 2. Al igual que en el caso anterior, se crea un directorio donde se instalará nuestro SO
+ ```
+ sudo mkdir opensuse
+ ```
+ 3. Se instala la versión del SO (la última versión de opensuse que permite instalar Rinse es la 11.1 aunque actualmente existe hasta la 13.2)
+ ```
+ sudo rinse --arch amd64 --distribution opensuse-11.1 --directory ./opensuse
+ ``` 
+
+###Ejercicio 4 Instalar alguna sistema debianita y configurarlo para su uso. Trabajando desde terminal, probar a ejecutar alguna aplicación o instalar las herramientas necesarias para compilar una y ejecutarla.
+ He decidido utilizar la versión de Ubuntu instalada en el ejercicio anterior sobre la que he instalado "g++" y "nano" para crear y compilar
+ un programa en C++. 
+ ```
+ sudo su
+ chroot /home/carlos/ubuntu
+ apt-get install g++
+ apt-get install nano
+ g++ -o hola hola.cpp
+ ./hola
+ ```
+ Funciona perfectamente.
+
+###Ejercicio 5 Instalar una jaula chroot para ejecutar el servidor web de altas prestaciones nginx
+ Voy a utilizar la jaula ya creada en el ejercicio 3 que contiene Ubuntu 14.04:
+ 1. Accedemos a la jaula
+ ```
+ sudo su
+ chroot /home/carlos/ubuntu
+ ```
+ 2. Actualizamos el repositorio
+ ```
+ apt-get update
+ ```
+ 3. Instalamos las dependencias necesarias
+ ```
+ apt-get install build-essential libssl-dev libpcre3-dev wget
+ ```
+ 4. Descargamos la última versión disponible (1.7.9-diciembre de 2014) y la descomprimimos
+ ```
+ wget http://nginx.org/download/nginx-1.7.9.tar.gz
+ tar xzvf nginx-1.7.9.tar.gz
+ ```
+ 5. Antes de compilar lo ideal sería cambiar valores del código fuente como medida de seguridad pero, dado que no voy a utilizar el servidor web,
+ omito este paso.
+
+ 6. Compilamos
+ ```
+ ./configure
+ make -j 4 && make install
+ ```
+ 7. Descargamos un script que nos permite iniciar, detener, reiniciar y recargar nginx mediante el comando service.
+ ```
+ wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx
+ ```
+ 8. Copiamos el script a /etc/init.d y le damos permiso de ejecución
+ ```
+ mv nginx /etc/init.d/nginx
+ chmod +x /etc/init.d/nginx
+ ```
+ 9. Ejecutamos el servicio
+ ```
+ service nginx start
+ ```
+ 10. Verificamos que todo ha salido bien accediendo desde cualquier a localhost.
+
+###Ejercicio 6 Crear una jaula y enjaular un usuario usando `jailkit`, que previamente se habrá tenido que instalar.
+ 1. Lo primero que hay que hacer es instalar jailkit. Para ello:
+ - Instalamos las dependencias
+ ```
+ sudo su
+ apt-get install build-essential debhelper autoconf automake libtool flex bison binutils-gold
+ ```
+ - Descargamos la versión más reciente de jailkit (2.17) y descomprimimos
+ ```
+ wget http://olivier.sessink.nl/jailkit/jailkit-2.17.tar.gz
+ tar -vxzf jailkit-2.17.tar.gz
+ ```
+ - Compilamos
+ ```
+ cd jailkit-2.17
+ ./debian/rules binary
+ ```
+ - Instalamos el DEB generado
+ ```
+ cd ..
+ dpkg -i jailkit_2.17-1_amd64.deb
+ ```
+ 2. Creamos la jaula
+ ```
+ mkdir -p /seguro/jaulas/jaula1
+ chown -R root:root /seguro
+ jk_init -v -j /seguro/jaulas/jaula1 jk_lsh basicshell netutils editors 
+ ```
+ 3. Se crea el usuario y se enjaula en la jaula
+ ```
+ useradd usuarionormal
+ passwd usuarionormal
+ jk_jailuser -m -j /seguro/jaulas/jaula1 usuarionormal
+ ```
+
+Tema 4
+-----
+
+###Ejercicio 1 Instala LXC en tu versión de Linux favorita. Normalmente la versión en desarrollo, disponible tanto en GitHub como en el sitio web está bastante más avanzada; para evitar problemas sobre todo con las herramientas que vamos a ver más adelante, conviene que te instales la última versión y si es posible una igual o mayor a la 1.0.
+1. Instalamos lxc
+```
+sudo apt-get install lxc
+```
+2. Comprobamos que nuestro equipo está preparado para utilizar contenedores
+```
+lxc-checkconfig
+```
+
+###Ejercicio 2 Comprobar qué interfaces puente se han creado y explicarlos.
+Para comprobar las interfaces que existen actualmente en el sistema basta con utilizar el comando "ifconfig".
+La salida es la siguiente:
+```
+docker0   Link encap:Ethernet  direcciónHW ea:7d:75:72:b8:9a  
+          Direc. inet:172.17.42.1  Difus.:0.0.0.0  Másc:255.255.0.0
+          Dirección inet6: fe80::e87d:75ff:fe72:b89a/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:52 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:0 
+          Bytes RX:0 (0.0 B)  TX bytes:7934 (7.9 KB)
+
+eth0      Link encap:Ethernet  direcciónHW 70:5a:b6:89:29:74  
+          ACTIVO DIFUSIÓN MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:0 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Bucle local  
+          Direc. inet:127.0.0.1  Másc:255.0.0.0
+          Dirección inet6: ::1/128 Alcance:Anfitrión
+          ACTIVO BUCLE FUNCIONANDO  MTU:65536  Métrica:1
+          Paquetes RX:416 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:416 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:0 
+          Bytes RX:39981 (39.9 KB)  TX bytes:39981 (39.9 KB)
+
+lxcbr0    Link encap:Ethernet  direcciónHW 1a:03:c0:77:c8:39  
+          Direc. inet:10.0.3.1  Difus.:10.0.3.255  Másc:255.255.255.0
+          Dirección inet6: fe80::1803:c0ff:fe77:c839/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:58 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:0 
+          Bytes RX:0 (0.0 B)  TX bytes:9173 (9.1 KB)
+
+wlan0     Link encap:Ethernet  direcciónHW 70:f1:a1:48:be:ed  
+          Direc. inet:192.168.1.101  Difus.:192.168.1.255  Másc:255.255.255.0
+          Dirección inet6: fe80::72f1:a1ff:fe48:beed/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:9831 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:6511 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:6275520 (6.2 MB)  TX bytes:1328958 (1.3 MB)
+
+```
+Como se puede comprobar, la interfaz que se ha creado al instalar lxc ha sido lxcbr0 la cual es una interfaz puente para trabajar con jaulas.
+
+###Ejercicio 3 
+####Crear y ejecutar un contenedor basado en Debian.
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Creamos el contenedor basado en Debian
+```
+lxc-create -t ubuntu -n ubuntuContenedor
+```
+3. Ejecutamos el contenedor
+```
+sudo lxc-start -n ubuntuContenedor
+```
+
+####Crear y ejecutar un contenedor basado en otra distribución, tal como Fedora. Nota En general, crear un contenedor basado en tu distribución y otro basado en otra que no sea la tuya. Fedora, al parecer, tiene problemas si estás en Ubuntu 13.04 o superior, así que en tal caso usa cualquier otra distro.
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Creamos un contenedor basado en Redhat (opensusue)
+```
+lxc-create -t fedora -n fedoraContenedor
+```
+3. Ejecutamos el contenedor
+```
+sudo lxc-start -n fedoraContenedor
+```
+
+###Ejercicio 4
+####Instalar lxc-webpanel y usarlo para arrancar, parar y visualizar las máquinas virtuales que se tengan instaladas.
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Descargamos el script que instala lxc-webpanel y lo ejecutamos
+```
+wget http://lxc-webpanel.github.com/tools/install.sh -O - | bash
+```
+3. Abrimos un navegador y vamos a localhost:5000. Tanto para nombre de usuario como para contraseña utilizamos "admin".
+####Desde el panel restringir los recursos que pueden usar: CPU shares, CPUs que se pueden usar (en sistemas multinúcleo) o cantidad de memoria.
+ 1. Abrimos lxc-webpanel tal accediendo desde un navegador a localhost:5000 y usando "admin" como usuario y contraseña.
+ 2. Se selecciona el contenedor a limitar.
+ 3. Se especifican las limitaciones.
+ 4. Se pulsa sobre el botón verde "Apply".
+
+###Ejercicio 5 Comparar las prestaciones de un servidor web en una jaula y el mismo servidor en un contenedor. Usar nginx.
+
+###Ejercicio 6
+####Instalar juju.
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Tal y como se indica en la página de la asignatura, añadimos y actualizamos el repositorio e instalamos juju
+```
+add-apt-repository ppa:juju/stable
+apt-get update && apt-get install juju-core
+```
+####Usándolo, instalar MySQL en un táper.
+1. Dejamos de ser superusuario
+```
+exit
+```
+2. Accedemos a /.juju/environments.yaml y sustituimos la línea "default:amazon" por "default:local"
+3. Instalamos MongoDB
+```
+apt-get install mongodb-server
+```
+4. Instalamos juju-local
+```
+apt-get install juju-local
+```
+5. Creamos el táper
+```
+juju bootstrap
+```
+6. Desplegamos MySQL
+```
+juju deploy mysql
+```
+###Ejercicio 7
+####Destruir toda la configuración creada anteriormente
+Lo más rápido es destruir el entorno completo
+```
+sudo juju destroy-environment local
+```
+####Volver a crear la máquina anterior y añadirle mediawiki y una relación entre ellos.
+Creamos el táper y desplegamos mediawiki y MySQL y especificamos su relación (ya que mediawiki utiliza MySQL)
+```
+juju bootstrap
+juju deploy mysql
+juju deploy mediawiki
+juju add-relation mediawiki:db mysql
+juju expose mediawiki
+```
+####Crear un script en shell para reproducir la configuración usada en las máquinas que hagan falta.
+
+###Ejercicio 8 Instalar libvirt
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Instalamos libvirt tal y como se indica en su página
+```
+apt-get install kvm libvirt-bin
+```
+3. Si el usuario que utilizamos habitualmente  no forma parte del grupo "libvirt", lo añadimos
+```
+adduser carlos libvirtd
+```
+###Ejercicio 9 Instalar un contenedor usando virt-install
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Instalamos virtinst y virt-viewer
+```
+apt-get install virtinst virt-viewer
+```
+3. Creamos el directorio donde se instalará el contenedor
+```
+mkdir /vir
+```
+3. Instalamos con virt-install una ISO que hemos descargado previamente (el contenedor ocupará 5GB)
+```
+virt-install -r 1024 --accelerate -n LinuxMint17 --disk /virt/mint17_64.img,size=5 --cdrom linuxmint17.1_64.is
+```
+###Ejercicio 10 Instalar docker.
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Actualizamos el repositorio
+```
+apt-get update
+```
+3. Instalamos y configuramos Docker
+```
+apt-get install docker.io
+source /etc/bash_completion.d/docker.io
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+```
+###Ejercicio 11
+####Instalar a partir de docker una imagen alternativa de Ubuntu y alguna adicional, por ejemplo de CentOS.
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Buscamos las versiones de centos que se encuentran disponibles en el repositorio de docker
+```
+docker search centos
+```
+3. Instalamos la versión que consideremos más oportuna (la última)
+```
+docker pull centos
+```
+####Buscar e instalar una imagen que incluya MongoDB
+1. Pasamos a superusuario
+```
+sudo su
+```
+2. Instalamos alguna imagen que incluya MongoBD
+```
+docker pull dockerfile/mongodb
+```
+
 
 Seminario Ruby
 -----
