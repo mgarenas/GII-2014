@@ -291,4 +291,44 @@ Se le ha asignado 512 MB de RAM, una sola CPU virtual y 2 GB. Por último, la lo
 
 ### Ejercicio 10
 
+Tengo instalado Ubuntu 12.04 por lo que la instalación de *Docker* no es trivial:
 
+1. Lo primero es instalar el *backported kernel*
+
+> sudo apt-get install linux-image-generic-lts-raring linux-headers-generic-lts-raring
+
+2. Se reinicia el SO.
+3. Se añade el respositorio fuente de *Docker*:
+
+> sudo apt-get install python-software-properties && sudo add-apt-repository ppa:dotcloud/lxc-docker
+
+4. Se actualizan los repositorios de aptitude *apt-get update*.
+5. Finalmente se instala *Docker*:
+
+> sudo apt-get install lxc-docker	
+
+### Ejercicio 11
+
+Para la instalación de Ubuntu:
+
+> sudo docker pull partlab/ubuntu
+
+Cuya salida por consola ha sido: 
+
+```
+Pulling repository partlab/ubuntu
+Pulling image 220f670a5152a192ee6b58d585f66305b5711f91a83f35b2652e12b910e6fd1d (latest) from partlab/ubuntu
+Pulling 220f670a5152a192ee6b58d585f66305b5711f91a83f35b2652e12b910e6fd1d metadata
+Pulling 220f670a5152a192ee6b58d585f66305b5711f91a83f35b2652e12b910e6fd1d fs layer
+Downloading     32 B/32 B (100%)
+Pulling 564941eb5df86253d0701832918eb7c479e0e7690158dee5c785cb6178c9b0ca metadata
+Pulling 564941eb5df86253d0701832918eb7c479e0e7690158dee5c785cb6178c9b0ca fs layer
+Downloading 2.454 MB/24.27 MB (10%)
+...
+```
+
+Para la instalación de CentOS:
+
+> sudo docker pull centos:5.11
+
+Con una salida practicamente idéntica a la de instalación de Ubuntu.
