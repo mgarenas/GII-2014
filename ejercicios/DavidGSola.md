@@ -327,4 +327,8 @@ Downloading 2.454 MB/24.27 MB (10%)
 ...
 ```
 
+Para la instalación de CentOS:
 
+> sudo docker pull centos:5.11
+
+Con una salida practicamente idéntica a la de instalación de Ubuntu.
