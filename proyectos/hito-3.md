@@ -21,3 +21,28 @@ Componentes del equipo
 - - -
 - Grupo de Git: [**BabelTowerTeam**](https://github.com/babeltowerteam)
 - Blog del proyecto: [Aquí](http://babeltowerteam.github.io/cloudsarao/)
+
+
+=======
+
+
+#PROYECTO: APPSAMBLEA
+
+Se ha completado el hito 3:
+
+- [X] Entorno de pruebas: No ha sido necesario ya que Google App Engine ya proporciona el entorno de pruebas.
+- [X] Scripts de pruebas: Se han desarrollado test para comprobar la aplicación antes de desplegarla. Se ha usado [Shippable](https://www.shippable.com/).
+- [X] Se ha completado el modelo de datos y gran parte de la funcionalidad del servidor. Si bien, queda implementar la aplicación cliente en Android y la comuncación entre ambas.
+
+Más información en el [README](https://github.com/Appsamblea/Appsamblea/blob/master/README.md) y en la sección de [documentación](https://github.com/Appsamblea/Appsamblea_docu/blob/master/Descripci%C3%B3n%20del%20proyecto.md)
+
+Componentes del equipo  
+----------------------
+- [Carlos Torres García](https://github.com/carltorres) (togacharls@gmail.com)
+- [Francisco Serrano Carmona](https://github.com/frandai) (frandai2304@gmail.com)
+- [Daniel Díaz Salas](https://github.com/potray) (potrayarrick@gmail.com)
+- [Santiago López Tapia](https://github.com/silt99) (sltapia@gmail.com)
+
+- - -
+- Grupo de Git: [Appsamblea](https://github.com/Appsamblea)
+- Blog del proyecto: [Aquí](http://appsamblea.tumblr.com/post/109878011654/nuevo-blog)
