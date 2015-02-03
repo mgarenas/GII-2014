@@ -46,3 +46,25 @@ Componentes del equipo
 - - -
 - Grupo de Git: [Appsamblea](https://github.com/Appsamblea)
 - Blog del proyecto: [Aquí](http://appsamblea.tumblr.com/post/109878011654/nuevo-blog)
+
+
+=======
+
+#PROYECTO: HarmacenCloud
+
+Se ha completado el hito 3
+
+Debido a que nuestro proyecto se encuentra desarrollado dentro de un entorno GAS (Google App Script), carece de sentido crear una jaula o contenedor para ejecutar los scripts. Directamente, estos se ejecutan sobre los servicios de Google.
+
+No obstante, se ha añadido funcionalidad al proyecto de HarmacenCloud. Para más información pulse aquí [README](https://github.com/HarmaDev/HarmacenCloud/blob/master/hito3.md).
+
+Componentes del equipo  
+----------------------
+- [David González Sola](https://github.com/DavidGSola)
+- [Jorge González Peregrín](https://github.com/Georgevik)
+- [Jorge León Fernández](https://github.com/jorgeles)
+- [Jose Manuel Rosell Sánchez](https://github.com/jmrosell)
+- [Antonio Toro Fernández](https://github.com/antorof)
+
+- - -
+- Grupo de Git: [Appsamblea](https://github.com/HarmaDev)
