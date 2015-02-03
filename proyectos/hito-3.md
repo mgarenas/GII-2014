@@ -67,4 +67,4 @@ Componentes del equipo
 - [Antonio Toro Fernández](https://github.com/antorof)
 
 - - -
-- Grupo de Git: [Appsamblea](https://github.com/HarmaDev)
+- Grupo de Git: [HarmacenCloud](https://github.com/HarmaDev)
