@@ -56,7 +56,7 @@ Se ha completado el hito 3
 
 Debido a que nuestro proyecto se encuentra desarrollado dentro de un entorno GAS (Google App Script), carece de sentido crear una jaula o contenedor para ejecutar los scripts. Directamente, estos se ejecutan sobre los servicios de Google.
 
-No obstante, se ha añadido funcionalidad al proyecto de HarmacenCloud. Para más información pulse aquí [README](https://github.com/HarmaDev/HarmacenCloud/blob/master/hito3.md).
+No obstante, se ha añadido funcionalidad al proyecto de HarmacenCloud. Para más información pulse [aquí](https://github.com/HarmaDev/HarmacenCloud/blob/master/hito3.md).
 
 Componentes del equipo  
 ----------------------
