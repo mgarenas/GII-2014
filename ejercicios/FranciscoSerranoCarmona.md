@@ -59,7 +59,7 @@ Imponemos el 25% del precio de adquisición sin IVA en cada año. [430 € / añ
 cgroup.clone_children  cgroup.procs          notify_on_release  tasks
 cgroup.event_control   cgroup.sane_behavior  release_agent      user
 
-##Ejercicios Práctica 2
+##Ejercicios Tema 2
 
 ###Ejercicio 1
 
@@ -83,6 +83,8 @@ cgroup.event_control   cgroup.sane_behavior  release_agent      user
 
 ###Ejercicio 4
 
+
+
 * Se crea la función en un archivo de Googe:
 
 ```
@@ -97,4 +99,127 @@ function showAlert() {
     DocumentApp.getUi().alert('Una Alerta!');
 }
 ```
+
+
+###Ejercicio 5
+
+* Se usa "Make" y Makefiles para construir con el lenguaje Python
+
+###Ejercicio 6
+
+* OpenShift dispone de un sistema llamado "Action Hooks", los cuales contienen Scripts de construcción. [Más Información] (https://developers.openshift.com/en/managing-action-hooks.html)
+
+###Ejercicio 7
+
+* Django usa el módulo [Unit Test] (https://docs.djangoproject.com/en/1.7/topics/testing/) para los Tests.
+
+##Ejercicios Tema 3
+
+###Ejercicio 1
+
+```
+unshare -u /bin/bash
+mount -o loop -t iso9660 lubuntu-14.10-desktop-amd64.iso /mnt/lubuntu
+```
+
+###Ejercicio 2
+```
+ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 28:b2:bd:4c:7b:74 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.133/24 brd 192.168.1.255 scope global wlan0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::2ab2:bdff:fe4c:7b74/64 scope link 
+       valid_lft forever preferred_lft forever
+3: alcantara: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default 
+    link/ether 82:8c:1c:fc:23:2f brd ff:ff:ff:ff:ff:ff
+```
+
+###Ejercicio 3
+```
+mkdir -p ~/jaulas/saucy
+sudo debootstrap --arch=i386 saucy ~/jaulas/saucy/ http://archive.ubuntu.com/ubuntu
+```
+####Para Rinse:
+```
+sudo rinse --distribution fedora-core-6 --arch amd64 --directory /tmp/test
+```
+
+###Ejercicio 4
+
+* Entramos como CHROOT: sudo chroot /home/jaulas/raring
+* Usamos una aplicación: 
+```
+root@fran-Asus:/# cat /etc/issue
+Ubuntu 13.10 \n \l
+
+```
+
+###Ejercicio 5
+```
+#Añadir el repositorio de NGINX
+echo "deb http://ppa.launchpad.net/nginx/stable/ubuntu $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/nginx-stable.list
+#Añadir las claves del repositorio para que sea confiable
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C300EE8C
+#Actualizar repositorios
+sudo apt-get update
+#instalar NGINX
+sudo apt-get install nginx
+#iniciiar NGINX
+sudo service nginx start
+```
+
+##Ejercicios Tema 4
+
+###Ejercicio 1
+* Instalamos LXC: sudo apt-get install lxc
+* Nos aseguramos de que la versión es mayor que la 1.0: lxc-info --version -> 1.0.7
+
+###Ejercicio 2
+```
+4: lxcbr0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether fe:20:13:6d:3f:e7 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.3.1/24 brd 10.0.3.255 scope global lxcbr0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::30f0:2aff:feb2:c702/64 scope link 
+       valid_lft forever preferred_lft forever
+6: vethB81GC7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master lxcbr0 state UP group default qlen 1000
+    link/ether fe:20:13:6d:3f:e7 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::fc20:13ff:fe6d:3fe7/64 scope link 
+       valid_lft forever preferred_lft forever
+```
+
+* Ha creado los puentes lxcbr0 y vethB81GC7, necesarios para conectar la jaula a internet.
+
+###Ejercicio 4
+
+* Descargamos LXC WebPanel: wget http://lxc-webpanel.github.io/tools/install.sh 
+* Instalamos LXC WebPanel: sudo ./install.sh
+* Accedemos a través de: http://localhost:5000/ (Usuario/Pass: admin/admin)
+* Desde la sección "Containers" se puede limitar el uso de CPU y Memoria.
+
+
+#### Ejercicio 8
+
+* Se Instala libvirt
+
+```
+sudo apt-get install kvm libvirt-bin
+sudo adduser $USER libvirtd
+```
+
+
+
+
+
+
+
+
+
 
