@@ -91,3 +91,82 @@ Lista de objetivos de Francisco Serrano Carmona
 
 - [x] Revisar también el primer hito de un proyecto que no sea el propio. 
 
+
+## Clase del 21 de noviembre de 2014
+
+###Objetivos de esta sesión
+- [X] Consolidar el uso de PaaS/SaaS.
+- [X] Consolidar el uso de sistemas de automatización de la construcción de aplicaciones.
+- [X] Continuar con [la segunda práctica](https://github.com/JJ/CC/blob/master/documentos/practicas/2.XaaS.md).
+
+###Otros objetivos
+- [X] Revisar algún ejercicio de un compañero y sugerir cambios o mejoras. Se puede hacer, de la misma forma, mediante un pull request, en este caso al repo del compañero. Hacer pull request directamente a su copia del repositorio, no al repositorio principal de la asignatura.
+- [X] Revisar también el primer hito de un proyecto que no sea el propio.
+- [X] Auto-corregir los ejercicios de esta forma, comprobando que están correctos.
+
+## Clase del 24 de noviembre de 2014
+
+###Objetivos de esta sesión
+- [X] Entender los objetivos de [este tema](http://jj.github.io/IV/documentos/temas/Tecnicas_de_virtualizacion).
+- [X] Entender la base física y del sistema operativo de las técnicas de virtualización de diferentes subsistemas del ordenador.
+- [X] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
+- [X] Entender y saber llevar a cabo la virtualización de dispositivos de red.
+
+###Otros objetivos
+- [X] Usar herramientas de administración y monitorización de red en línea de órdenes.
+- [X] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
+- [X] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54). Yo soy adicto a gedit.
+
+## Clase del 28 de noviembre de 2014
+
+- [X] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
+- [X] Aprender a "enjaular" usuarios.
+
+###Otros objetivos
+- [X] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
+- [X] Aplicar conocimientos de administración de un sistema Linux: usuarios, permisos.
+- [X] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
+- [X] Comprender que existe vida en los servidores web fuera del Apache.
+
+## Clase del 1 de diciembre de 2014
+
+###Objetivos de esta sesión
+- [X] Entender el concepto de contenedores.
+- [X] Configurar el sistema para poder crear y usar contenedores.
+- [X] Crear y usar contenedores.
+
+###Otros objetivos
+- [X] Entregar el segundo hito de la práctica.
+
+## Clase del 5 de diciembre de 2014
+
+###Objetivos de esta sesión
+- [X] Entender los sistemas de orquestación de máquinas virtuales.
+- [X] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
+
+###Otros objetivos
+- [ ] Ver el papel de los tápers o containers como base de experimentación y prácticas de muchos de los conceptos de virtualización.
+- [ ] Hablar del material y la mecánica de la asignatura hasta este momento.
+
+## Clase del 12 de diciembre de 2014
+
+- [X] Resolver problemas con juju.
+- [X] Configuración compleja de sistemas con él.
+- [X] Entender el concepto de hipervisor y trabajar con ellos.
+
+## Clase del 9 de enero de 2015
+
+###Objetivos de esta sesión
+- [X] Resolver dudas relacionadas con la tercera práctica.
+
+###Otros objetivos
+- [X] ¿Has modificado algún artículo de la Wikipedia? Pues hazlo ya.
+- [X] Desarrollar funcionalidad en los proyectos.
+
+## Clase del 12 de enero de 2015
+
+###Otros objetivos
+- [X] Tener flexibilidad para saber cuando usar lenguajes nuevos y aprenderlos sobre la marcha.
+- [X] Usar herramientas de la asignatura para tareas de utilidad en la administración de sistemas u otras asignaturas.
+- [X] Desarrollar funcionalidad en los proyectos
+
