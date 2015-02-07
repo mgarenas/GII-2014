@@ -168,7 +168,7 @@ Lista de objetivos de David González Sola
 - [x] Comprender la significación de los espacios de nombres para aislamiento de recursos en Linux.
 - [ ] Entender y saber llevar a cabo la virtualización de dispositivos de red.
 
-## Otros objetivos
+### Otros objetivos
 
 - [ ] Usar herramientas de administración y monitorización de red en línea de órdenes.
 - [X] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
@@ -176,32 +176,165 @@ Lista de objetivos de David González Sola
 
 ## Sesión 28 Noviembre-2014
 
-## Objetivos de esta sesión
+### Objetivos de esta sesión
 
-- [ ] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
+- [X] Usar herramientas específicas para configurar una jaula chroot y conocer herramientas similares para otros sistemas operativos.
 - [ ] Aprender a ''enjaular'' usuarios.
 
-## Otros objetivos
+### Otros objetivos
 
 - [X] Ver los proyectos hechos por los compañeros y si os gustan dadles una estrella o fork en GitHub o tuitearlas con el hashtag #ccmii.
 - [X] Dejar de usar Sublime Text por [estas 7 razones](https://medium.com/@jjmerelo/7-reasons-or-another-number-ill-find-along-the-way-you-should-never-ever-use-sublime-text-to-54616989be54).
-- [ ] Aplicar conocimientos de administración de un sistema Linux: usuarios, permisos.
-- [ ] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
-- [ ] Comprender que existe vida en los servidores web fuera del Apache.
-- [ ] [Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla](https://es.wikipedia.org/wiki/Chroot) como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
+- [X] Aplicar conocimientos de administración de un sistema Linux: usuarios, permisos.
+- [X] Entender las consideraciones de seguridad en el uso de este tipo de técnicas.
+- [X] Comprender que existe vida en los servidores web fuera del Apache.
+- [X] [Comprobar la página de chroot en la Wikipedia y mejorarla o modificarla](https://es.wikipedia.org/wiki/Chroot) como iniciación a crear contenido de la Wikipedia relacionado con la asignatura.
 - [ ] Buscar material adicional de la asignatura e insertarlo aquí en su apartado correspondiente con un pull request.
 - [ ] Probar [la nube de fi-ware](https://cloud.lab.fi-ware.org/) para alojar proyectos y hacer pruebas. 
 
 ## Sesión 1 Diciembre-2014
 
-## Objetivos de esta sesión
+### Objetivos de esta sesión
 
-- [ ] Entender el concepto de contenedores
-- [ ] Configurar el sistema para poder crear y usar contenedores
-- [ ] Crear y usar contenedores
+- [X] Entender el concepto de contenedores
+- [X] Configurar el sistema para poder crear y usar contenedores
+- [X] Crear y usar contenedores
 
-## Otros objetivos
+### Otros objetivos
 
-- [ ] Entregar el segundo hito de la práctica. 
-- [ ] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
-- [ ] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
+- [X] Entregar el segundo hito de la práctica. 
+- [X] Comprobar la aplicación de conocimientos anteriores tales como espacios de nombres, CGROUPS y puentes de red en una aplicación para virtualización.
+- [X] Retomar la costumbre de hacer `git pull upstream master` al principio de cada sesión.
+
+## Sesión 5 Diciembre-2014
+
+### Objetivos de esta sesión
+
+- [ ] Entender los sistemas de orquestación de máquinas virtuales.
+- [ ] Usarlos en la práctica para configurar máquinas virtuales con un fin determinado.
+
+### Otros objetivos
+
+- [X] Ver el papel de los tápers o containers como base de experimentación y prácticas de muchos de los conceptos de virtualización.
+- [X] Poner Granada, Spain en el perfil de GitHub.
+- [X] Hablar del material y la mecánica de la asignatura hasta este momento.
+
+## Sesión 12 Diciembre-2014
+
+### Objetivos de esta sesión
+
+- [X] Resolver problemas con `juju`.
+- [ ] Configuración compleja de sistemas con él.
+- [X] Entender el concepto de hipervisor y trabajar con ellos.
+
+### Otros objetivos
+
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+## Sesisón 15 Diciembre-2014
+
+### Objetivos de esta sesión
+
+- [X] Resolver problemas con `juju`.
+- [X] Entender cómo funciona `docker` y qué implica.
+
+### Otros objetivos
+
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+
+## Sesión 19 Diciembre-2014
+
+### Objetivos de esta sesión
+
+- [X] Resolver problemas con `juju`.
+- [X] Entender cómo funciona `docker` y qué implica.
+
+### Otros objetivos
+
+- [X] Aprender estrategias para resolución de problemas con nuevas aplicaciones: uso de foros, registros de error, preguntar a quien lo sepa.
+- [X] Desarrollar funcionalidad en los proyectos.
+
+## Sesión 9 Enero-2015
+
+### Objetivos de esta sesión
+
+- [X] Resolver últimos problemas con `docker`.
+- [X] Resolver dudas relacionadas con la tercera práctica.
+
+### Otros objetivos
+
+- [X] ¿Has modificado algún artículo de la Wikipedia? Pues hazlo ya.
+- [ ] Sigue corrigiendo ejercicios de tus compañeros y discutiéndolos con ellos (usando comentarios a los commits o pull requests).
+- [X] Desarrollar funcionalidad en los proyectos.
+
+## Sesión 12 Enero-2015
+
+### Objetivos de la asignatura
+
+- [X] Terminar la familiarización con Ruby
+- [X] Recordar conceptos de almacenamiento físico.
+- [ ] Entender el concepto de FUSE y usarlo en la práctica.
+- [ ] Crear y manipular formatos de provisionamiento delgado.
+
+### Objetivos generales
+
+- [X] Tener flexibilidad para saber cuando usar lenguajes nuevos y aprenderlos sobre la marcha.
+- [X] Usar herramientas de la asignatura para tareas de utilidad en la administración de sistemas u otras asignaturas.
+- [X] Modificar/mejorar algún artículo de la Wikipedia.
+- [X] Desarrollar funcionalidad en los proyectos
+
+## Sesión 16 Enero-2015
+
+### Objetivos de la asignatura
+
+- [X] Entender diferentes tipos de sistemas de ficheros virtuales
+- [X] Aprender a provisionar almacenamiento en la nube.
+
+### Objetivos generales
+
+- [X] Comenzar a usar IaaS de algún tipo.
+- [X] Entender los pasos necesarios para montar una infraestructura virtual a partir de sus componentes.
+- [X] Desarrollar funcionalidad en los proyectos
+
+## Sesión 19 Enero-2015
+
+### Objetivos de la asignatura
+
+- [ ] Entender los diferentes componentes de la infraestructura como servicio.
+- [ ] Aprender a usar máquinas virtuales, localmente y en la nube.
+- [ ] Comprender las bases físicas de las infraestructuras virtuales.
+
+### Objetivos generales
+
+- [X] Usar IaaS de algún tipo.
+- [ ] Manejar desde línea de órdenes cuestiones de almacenamiento virtual.
+- [X] Comprender la importancia de la medición y experimentación en la gestión de sistemas informáticos.
+- [X] Desarrollar funcionalidad en los proyectos.
+
+## Sesión 23 Enero-2015
+
+### Objetivos de la asignatura
+
+- [ ] Entender el concepto de provisionamiento de máquinas virtuales.
+- [ ] Usar Chef para provisionamiento de una máquina virtual.
+- [ ] Comprender la utilidad de provisionamiento externo de máquinas virtuales.
+
+### Objetivos generales
+
+- [ ] Tener listas máquinas virtuales para pruebas, localmente con un gestor de máquinas virtuales o en la nube.
+- [ ] Manejar desde línea de órdenes cuestiones de almacenamiento virtual.
+- [X] Desarrollar funcionalidad en los proyectos.
+
+## Sesión 26 Enero-2015
+
+### Objetivos de la asignatura
+
+- [X] Entender el último hito del proyecto.
+- [ ] Usar diversas herramientas para provisionamiento de una máquina virtual.
+- [ ] Comprender la utilidad de provisionamiento externo de máquinas virtuales.
+
+### Objetivos generales
+
+- [ ] Aprender a usar máquinas virtuales.
+- [ ] Elegir un sistema de provisionamiento.
+- [X] Entender los objetivos del último proyecto (y de la asignatura).
