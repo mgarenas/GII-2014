@@ -237,6 +237,67 @@ Actualmente estoy trabajando con python, principalmente para la asignatura con G
 
 ### Ejercicio 1:
 
+```
+sudo unshare -u /bin/bash
+mount -o loop -t iso9660 mi_archivo.iso /mnt/test
+```
+Con estas dos sentencias podremos hacer lo que nos pide el ejercicio, la primera nos crea un espacio de nombres UTS y la segunda nos monta la iso.
+
+
 ### Ejercicio 2:
 
+1- Para mostrar los puentes, usaremos el comando:
+```
+brctl show
+
+bridge name	bridge id		STP enabled	interfaces
+virbr0		8000.000000000000	yes
+```
+
+2-
+
+Crearemos la interfaz con la siguiente orden:
+```
+sudo brctl addbr ejercicio2
+```
+Para asociarlo a la interfaz eth0:
+```
+brctl addif ejercicio2 eth0
+```
+
 ### Ejercicio 3:
+
+1-
+
+Instalamos debootstrap: sudo apt-get install debootstrap
+Para crear un sistema mínimo, ejecutamos: sudo debootstrap --arch=amd64 saucy /home/saucy/ http://archive.ubuntu.com/ubuntu
+
+2-
+
+Instalamos rinse: sudo apt-get install rinse
+Instalamos fedora de manera muy parecedida a como usabamos debootstrap:
+sudo rinse --arch=i386 --distribution fedora-core-7 --directory /home/fedora
+
+
+### Ejercicio 4:
+
+Ya que se instaló Ubunto saucy, lo usaremos para relizar las pruebas y configuraciones. Vamos a instalar g++, para realizar un hola mundo en c++, compilarlo y ejecutarlo.
+
+```
+sudo chroot /home/saucy
+apt-get install g++
+apt-get install nano
+nano prueba.cpp
+g++ prueba.cpp -o prueba
+./prueba
+Hola Mundo
+```
+
+### Ejercicio 5:
+
+### Ejercicio 6:
+
+
+- - -
+
+##TEMA 4:
