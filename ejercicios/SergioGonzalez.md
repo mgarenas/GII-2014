@@ -294,3 +294,10 @@ Hola Mundo
 ```
 
 ### Ejercicio 5:
+
+### Ejercicio 6:
+
+
+- - -
+
+##TEMA 4:
